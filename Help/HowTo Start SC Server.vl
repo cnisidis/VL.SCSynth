@@ -15,7 +15,7 @@
       </p:NodeReference>
       <Patch Id="MGudyn112wIQVWcUSuEyP9">
         <Canvas Id="AH5YSSDMhXbLpgPoF77eS4" CanvasType="Group">
-          <Pad Id="BqGn8viQ22ULLXekbVBu4X" Comment="Boot" Bounds="548,183,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+          <Pad Id="BqGn8viQ22ULLXekbVBu4X" Comment="Boot" Bounds="549,212,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
@@ -33,8 +33,8 @@
             <Pin Id="Twym6RG0CIvPqRvWcO6OHn" Name="SC Folder Path" Kind="InputPin" />
             <Pin Id="PvNYuSZayi8L7EENE7lvTl" Name="Protocol" Kind="InputPin" DefaultValue="TCP" />
             <Pin Id="TaxnM6UV7OgMF5AY9YdjW9" Name="Address" Kind="InputPin" />
-            <Pin Id="K2rrfgsNgI5OD7FySBrZIQ" Name="Verbosity" Kind="InputPin" />
             <Pin Id="NKWyHoPKUCYLWeWmfXZUSF" Name="Port" Kind="InputPin" />
+            <Pin Id="K2rrfgsNgI5OD7FySBrZIQ" Name="Verbosity" Kind="InputPin" />
             <Pin Id="Rg6GtZFNQQaNzXsyX8ELft" Name="Request Status" Kind="InputPin" />
             <Pin Id="VIY9RVUVcMzNCMdzNR6mxC" Name="Boot" Kind="InputPin" />
             <Pin Id="D9KsxbnsHFCNqY0IGVdtok" Name="Kill" Kind="InputPin" />
@@ -45,12 +45,12 @@
             <Pin Id="QdYuFqyItXgMBT2h3ecZ1W" Name="Version" Kind="OutputPin" />
             <Pin Id="AkXB5BpnhDYMsvJsLMrdH2" Name="isListening" Kind="OutputPin" />
           </Node>
-          <Pad Id="BNyZXRtOkA7PT8mpQcxFr8" Comment="Port" Bounds="510,154,38,15" ShowValueBox="true" isIOBox="true" Value="57110">
+          <Pad Id="BNyZXRtOkA7PT8mpQcxFr8" Comment="Port" Bounds="491,134,38,15" ShowValueBox="true" isIOBox="true" Value="57110">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Integer32" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="GgyPFPtyJ50OcJDGfmM7HO" Comment="SC Folder Path" Bounds="427,90,140,15" ShowValueBox="true" isIOBox="true" Value="C:\Program Files\SuperCollider-3.13.0">
+          <Pad Id="GgyPFPtyJ50OcJDGfmM7HO" Comment="SC Folder Path" Bounds="427,-24,140,15" ShowValueBox="true" isIOBox="true" Value="C:\Program Files\SuperCollider-3.13.0">
             <p:TypeAnnotation LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Path" />
             </p:TypeAnnotation>
@@ -63,12 +63,12 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="EWM6tXuf1I6QR0hQFZPYvX" Comment="Protocol" Bounds="448,120,47,15" ShowValueBox="true" isIOBox="true" Value="UDP">
+          <Pad Id="EWM6tXuf1I6QR0hQFZPYvX" Comment="Protocol" Bounds="448,75,47,15" ShowValueBox="true" isIOBox="true" Value="UDP">
             <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
               <Choice Kind="TypeFlag" Name="Protocol" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="SwFTMEN7rK5PDu9Vn1vENp" Comment="Request Status" Bounds="530,257,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+          <Pad Id="SwFTMEN7rK5PDu9Vn1vENp" Comment="Request Server Status" Bounds="530,261,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
@@ -125,6 +125,16 @@
           <Pad Id="BBcx2ZJhwlmN6zxRlROk1S" Comment="Commit hash" Bounds="721,651,50,15" ShowValueBox="true" isIOBox="true" />
           <ControlPoint Id="VX8xiWxsOErMoCzcBuZcH5" Bounds="329,454" />
           <ControlPoint Id="VBxPYt4tmPXQBN0bxR4GYK" Bounds="701,454" />
+          <Pad Id="GKcY50oy58kMHpUyccHJNX" Comment="Address" Bounds="469,104,53,15" ShowValueBox="true" isIOBox="true" Value="127.0.0.1">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="BLUCRWEcMJJOjWA5XJ2FLO" Comment="Verbosity" Bounds="510,158,113,15" ShowValueBox="true" isIOBox="true" Value="Normal">
+            <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
+              <Choice Kind="TypeFlag" Name="Verbosity" />
+            </p:TypeAnnotation>
+          </Pad>
         </Canvas>
         <Patch Id="TnjlKNtsLqiOmyKDkMTslx" Name="Create" />
         <Patch Id="LrYsfrU0W1SNXR6zHavzpI" Name="Update" />
@@ -155,6 +165,8 @@
         <Link Id="NIqKjQ6YMSWLwOHIVwN0Oa" Ids="FKr9LTKWukHPsoAyd3zmya,InJUu8mDKPzPXiHoQ0UxLO" />
         <Link Id="LP6t1otJW4WNTkCNSgXW7w" Ids="EPSD2jlnskgLGLZaF3YxXC,UK9G3CzesYHPkKkPbvaVCk" />
         <Link Id="EHz9LlsMPlZPi7Bt4pHL3N" Ids="Olk5VkVJU8qNtTcygHQJ0Z,BBcx2ZJhwlmN6zxRlROk1S" />
+        <Link Id="HgNggB7dOFqOPkOIqPxDHE" Ids="GKcY50oy58kMHpUyccHJNX,TaxnM6UV7OgMF5AY9YdjW9" />
+        <Link Id="OnquY1YbZopORTYlOT4YFZ" Ids="BLUCRWEcMJJOjWA5XJ2FLO,K2rrfgsNgI5OD7FySBrZIQ" />
       </Patch>
     </Node>
   </Patch>
