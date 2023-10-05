@@ -90,6 +90,7 @@
           <ControlPoint Id="UDTwuUwTH43N1SO7c3BRDS" Bounds="531,289" />
           <Pad Id="PYo3qbmd9NOOKuq448qM2S" Comment="Status" Bounds="512,510,274,108" ShowValueBox="true" isIOBox="true" />
           <Pad Id="ULeN7MQWtKXMjAuNsKuRbz" Comment="Version" Bounds="512,465,218,35" ShowValueBox="true" isIOBox="true" />
+          <ControlPoint Id="R5kvucel2ZnMoOhYvVBoOT" Bounds="472,482" />
         </Canvas>
         <Patch Id="TnjlKNtsLqiOmyKDkMTslx" Name="Create" />
         <Patch Id="LrYsfrU0W1SNXR6zHavzpI" Name="Update" />
@@ -106,7 +107,7 @@
         <Link Id="I00TYKLjGR5LHh2fFGnUCQ" Ids="AkXB5BpnhDYMsvJsLMrdH2,Htp1O2M1GP1OfDEq2oEghe" />
         <Link Id="HgNggB7dOFqOPkOIqPxDHE" Ids="GKcY50oy58kMHpUyccHJNX,TaxnM6UV7OgMF5AY9YdjW9" />
         <Link Id="OnquY1YbZopORTYlOT4YFZ" Ids="BLUCRWEcMJJOjWA5XJ2FLO,K2rrfgsNgI5OD7FySBrZIQ" />
-        <Link Id="HLNRiIPSdSWLsmAsgCn4ea" Ids="ERsTLqECvmnNWFSdiSUxbZ,PYo3qbmd9NOOKuq448qM2S" />
+        <Link Id="HLNRiIPSdSWLsmAsgCn4ea" Ids="ERsTLqECvmnNWFSdiSUxbZ,R5kvucel2ZnMoOhYvVBoOT,PYo3qbmd9NOOKuq448qM2S" />
         <Link Id="L0sm45rD5cqOmYjqhyL8up" Ids="Fpmak7cJ8JULorOei7Sq0m,ULeN7MQWtKXMjAuNsKuRbz" />
       </Patch>
     </Node>
