@@ -194,3 +194,10 @@ public enum ErrorOptions
     SuppressOffLocaly = -1,
     SuppressOnLocaly = -2
 }
+
+public enum RunNodeFlags
+{
+    
+    DoNotExecute = 0,
+    Execute = 1,
+}

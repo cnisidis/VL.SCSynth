@@ -61,7 +61,7 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="G0oDxTQo5mTOAGXOKlKpmT" Comment="Send" Bounds="1134,400,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+          <Pad Id="G0oDxTQo5mTOAGXOKlKpmT" Comment="Send" Bounds="1186,457,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
@@ -69,7 +69,7 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Node Bounds="1039,471,63,19" Id="DTnD3rmTpUoLekpfryeEhd">
+          <Node Bounds="1035,471,63,19" Id="DTnD3rmTpUoLekpfryeEhd">
             <p:NodeReference LastCategoryFullName="VL.SCServer.Messages" LastDependency="VL.SCServer.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="DumpOSC" />
@@ -80,7 +80,7 @@
             <Pin Id="N7FCXFlm9pnLcrEqMdlcjB" Name="Send" Kind="InputPin" />
             <Pin Id="Judf8beo4CmOJxOO6d8fTF" Name="Server" Kind="OutputPin" />
           </Node>
-          <Node Bounds="1039,566,66,19" Id="LNbPp2oPjblPq7mfoGBCp4">
+          <Node Bounds="1035,551,66,19" Id="LNbPp2oPjblPq7mfoGBCp4">
             <p:NodeReference LastCategoryFullName="VL.SCServer.Messages" LastDependency="VL.SCServer.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="Messages" NeedsToBeDirectParent="true" />
@@ -92,7 +92,7 @@
             <Pin Id="Ud1STFs2ScDPEZ76WojK48" Name="Send" Kind="InputPin" />
             <Pin Id="Esc0mPdKiv9LwvFXei51UT" Name="Server" Kind="OutputPin" />
           </Node>
-          <Pad Id="FUtjssHmHUMPsS5s7ksFPi" Comment="Send" Bounds="1163,520,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+          <Pad Id="FUtjssHmHUMPsS5s7ksFPi" Comment="Send" Bounds="1186,537,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
@@ -100,7 +100,7 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="E853B9wVe3FMLqIMbQGYmZ" Comment="Code" Bounds="1070,370,115,15" ShowValueBox="true" isIOBox="true" Value="PrintParsedContent">
+          <Pad Id="E853B9wVe3FMLqIMbQGYmZ" Comment="Code" Bounds="1067,370,115,15" ShowValueBox="true" isIOBox="true" Value="PrintParsedContent">
             <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
               <Choice Kind="TypeFlag" Name="DumpOSCOptions" />
             </p:TypeAnnotation>
