@@ -78,6 +78,7 @@
             <Pin Id="KgjI6Y9AWXMN688vp8tGiT" Name="Server" Kind="InputPin" />
             <Pin Id="UnTvL1vP4NkMYFILUkFvgJ" Name="Code" Kind="InputPin" />
             <Pin Id="N7FCXFlm9pnLcrEqMdlcjB" Name="Send" Kind="InputPin" />
+            <Pin Id="Judf8beo4CmOJxOO6d8fTF" Name="Server" Kind="OutputPin" />
           </Node>
           <Node Bounds="1039,566,66,19" Id="LNbPp2oPjblPq7mfoGBCp4">
             <p:NodeReference LastCategoryFullName="VL.SCServer.Messages" LastDependency="VL.SCServer.vl">
@@ -89,6 +90,7 @@
             <Pin Id="BWaegCODIjoM2yRz6XydgS" Name="Server" Kind="InputPin" />
             <Pin Id="F7iyC1z7ez7O1PZuTqL4x1" Name="Mode" Kind="InputPin" />
             <Pin Id="Ud1STFs2ScDPEZ76WojK48" Name="Send" Kind="InputPin" />
+            <Pin Id="Esc0mPdKiv9LwvFXei51UT" Name="Server" Kind="OutputPin" />
           </Node>
           <Pad Id="FUtjssHmHUMPsS5s7ksFPi" Comment="Send" Bounds="1163,520,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
@@ -98,7 +100,7 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="E853B9wVe3FMLqIMbQGYmZ" Comment="Code" Bounds="1070,370,115,15" ShowValueBox="true" isIOBox="true" Value="Off">
+          <Pad Id="E853B9wVe3FMLqIMbQGYmZ" Comment="Code" Bounds="1070,370,115,15" ShowValueBox="true" isIOBox="true" Value="PrintParsedContent">
             <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
               <Choice Kind="TypeFlag" Name="DumpOSCOptions" />
             </p:TypeAnnotation>
@@ -118,9 +120,9 @@
         <Link Id="K5E44o0A9IlNEPpH3Du43i" Ids="NXwONQHFRKQOo81prhQyrj,GVQmwc0nvpOP48tJmTXQyM" />
         <Link Id="KPUimayTH3LNlEHSnT7VTN" Ids="ONhiV924arwL4UuPkoeszv,KgjI6Y9AWXMN688vp8tGiT" />
         <Link Id="Dvl02T1ElBfOOqzUEBLLqE" Ids="G0oDxTQo5mTOAGXOKlKpmT,N7FCXFlm9pnLcrEqMdlcjB" />
-        <Link Id="CSAZbP5X1NbNgItdwOlNHl" Ids="ONhiV924arwL4UuPkoeszv,BWaegCODIjoM2yRz6XydgS" />
         <Link Id="PLxeXRV6lrqMF0mDpIEhLc" Ids="FUtjssHmHUMPsS5s7ksFPi,Ud1STFs2ScDPEZ76WojK48" />
         <Link Id="K8V8mF8yBh1Pa4JeMvThRr" Ids="E853B9wVe3FMLqIMbQGYmZ,UnTvL1vP4NkMYFILUkFvgJ" />
+        <Link Id="RhE2dlCO26XNynFliAkAsS" Ids="Judf8beo4CmOJxOO6d8fTF,BWaegCODIjoM2yRz6XydgS" />
       </Patch>
     </Node>
   </Patch>
