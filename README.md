@@ -17,6 +17,7 @@ SuperCollider Server replies on the same port it listens to, since TCP is not su
 <cite>This is already managed internaly in order to get Server's Stauts, Verions and other useful information.</cite>
 
 
+
 ## Server Options
 
 So far only few options are being supported (the plan is to add all the available options). The idea was to keep it simple and minimal by adding olny essential things.
@@ -74,3 +75,8 @@ A <i>Record<U,T></i> type object holding two fields:
 - Name or Index can be either type of String or Integer32
 - Value can be an Integer32, Float32 or String
 
+
+## Before You Go
+SCServer is still in progress, so changes will be often and may cause breaking changes. 
+
+One important thing (which still needs some polishing) is that you have to set the SuperCollider installation folder manually every time you introduce the SCServer node.
