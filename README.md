@@ -14,7 +14,9 @@ Therefore it is bundled with all the appropriate functionalities to build your o
 
 SuperCollider Server replies on the same port it listens to, since TCP is not supported yet in this version, you can get the OSC responses (via UDP) by exposing the hidden "Data" output pin on the OSCClient.
 
-<cite>This is already managed internaly in order to get Server's Stauts, Verions and other useful information.</cite>
+![Expose Data Pin](/img/OSCClient-Data-pin_00.png)
+
+<cite>This functionality is already managed internaly in order to get Server's Stauts, Verions and other useful information.</cite>
 
 
 
