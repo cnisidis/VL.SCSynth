@@ -37,7 +37,7 @@
             <p:NodeReference LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="SCServer" />
-              <Choice Kind="ProcessAppFlag" Name="Server" />
+              <Choice Kind="ProcessAppFlag" Name="SCServer (Executor)" />
             </p:NodeReference>
             <Pin Id="SlP1xnu94jQOjBjbPqUUev" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="ElOgoIdCz8yQNrdlnSaPkX" Name="SC Folder Path" Kind="InputPin" />

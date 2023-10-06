@@ -2749,7 +2749,7 @@
     ************************ DumpOSC ************************
 
 -->
-        <Node Name="DumpOSC" Bounds="988,417" Id="Mjjhw7gKn5LQI2jF81muAo" Summary="Display incoming OSC messages." Remarks="Turns on and off printing of the contents of incoming Open Sound Control messages. This is useful when debugging your command stream." Tags="dump,osc,debug">
+        <Node Name="DumpOSC" Bounds="975,417" Id="Mjjhw7gKn5LQI2jF81muAo" Summary="Display incoming OSC messages." Remarks="Turns on and off printing of the contents of incoming Open Sound Control messages. This is useful when debugging your command stream." Tags="dump,osc,debug">
           <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
             <Choice Kind="ContainerDefinition" Name="Process" />
           </p:NodeReference>
@@ -3058,7 +3058,7 @@
     ************************ Notify ************************
 
 -->
-        <Node Name="Notify" Bounds="988,481" Id="A5MABKfPWi1LL0mnz6ij42" Summary="Register to receive notifications from server" Remarks="If the first argument is 1, server will remember your return address and send you notifications; if 0, server will stop sending notifications." Tags="notifications,server,receive,register">
+        <Node Name="Notify" Bounds="975,481" Id="A5MABKfPWi1LL0mnz6ij42" Summary="Register to receive notifications from server" Remarks="If the first argument is 1, server will remember your return address and send you notifications; if 0, server will stop sending notifications." Tags="notifications,server,receive,register">
           <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
             <Choice Kind="ContainerDefinition" Name="Process" />
           </p:NodeReference>
@@ -3300,7 +3300,7 @@
     ************************ Error ************************
 
 -->
-        <Node Name="Error" Bounds="988,545" Id="LaCXzukV3JtLi5sJLCwtqT" Summary="Enable/disable error message posting." Remarks="Temporary error suppression may not affect asynchronous commands in every case." Tags="error,suppress">
+        <Node Name="Error" Bounds="975,545" Id="LaCXzukV3JtLi5sJLCwtqT" Summary="Enable/disable error message posting." Remarks="Temporary error suppression may not affect asynchronous commands in every case." Tags="error,suppress">
           <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
             <Choice Kind="ContainerDefinition" Name="Process" />
           </p:NodeReference>
@@ -3484,7 +3484,7 @@
     ************************ ReceiveSynthDef ************************
 
 -->
-        <Node Name="ReceiveSynthDef" Bounds="988,609" Id="TOGeFivT6ENM5PbygXt0tR" Summary="Receive a synth definition file." Remarks="Loads a file of synth definitions from a buffer in the message. Resident definitions with the same names are overwritten.&#xD;&#xA;&#xD;&#xA;Asynchronous.&#xD;&#xA;    Replies to sender with /done when complete." Tags="send,receive,synthdef,compiled,bytes">
+        <Node Name="ReceiveSynthDef" Bounds="975,609" Id="TOGeFivT6ENM5PbygXt0tR" Summary="Receive a synth definition file." Remarks="Loads a file of synth definitions from a buffer in the message. Resident definitions with the same names are overwritten.&#xD;&#xA;&#xD;&#xA;Asynchronous.&#xD;&#xA;    Replies to sender with /done when complete." Tags="send,receive,synthdef,compiled,bytes">
           <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
             <Choice Kind="ContainerDefinition" Name="Process" />
           </p:NodeReference>
@@ -3648,7 +3648,7 @@
     ************************ LoadSynthDef ************************
 
 -->
-        <Node Name="LoadSynthDef" Bounds="988,673" Id="GQV3ZAnUzDzOjANhFuGFGt" Summary="Load synth definition." Remarks="Loads a file of synth definitions. Resident definitions with the same names are overwritten.&#xD;&#xA;&#xD;&#xA;Asynchronous.&#xD;&#xA;    Replies to sender with /done when complete." Tags="load,synthdef,sc,file">
+        <Node Name="LoadSynthDef" Bounds="975,673" Id="GQV3ZAnUzDzOjANhFuGFGt" Summary="Load synth definition." Remarks="Loads a file of synth definitions. Resident definitions with the same names are overwritten.&#xD;&#xA;&#xD;&#xA;Asynchronous.&#xD;&#xA;    Replies to sender with /done when complete." Tags="load,synthdef,sc,file">
           <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
             <Choice Kind="ContainerDefinition" Name="Process" />
           </p:NodeReference>
@@ -3814,7 +3814,7 @@
     ************************ LoadSynthDefDirectory ************************
 
 -->
-        <Node Name="LoadSynthDefDirectory" Bounds="988,737" Id="PXdnMMmjyRWOVxzR5QPvSZ" Summary="Load a directory of synth Definitions" Remarks="Asynchronous.&#xD;&#xA;    Replies to sender with /done when complete." Tags="Synthdef,dir,load">
+        <Node Name="LoadSynthDefDirectory" Bounds="975,737" Id="PXdnMMmjyRWOVxzR5QPvSZ" Summary="Load a directory of synth Definitions" Remarks="Asynchronous.&#xD;&#xA;    Replies to sender with /done when complete." Tags="Synthdef,dir,load">
           <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
             <Choice Kind="ContainerDefinition" Name="Process" />
           </p:NodeReference>
@@ -4121,7 +4121,7 @@
     ************************ DeleteSynthDef ************************
 
 -->
-        <Node Name="DeleteSynthDef" Bounds="988,801" Id="OPtX26L0Q6zMK4oZ3Mys1c" Summary="Delete synth definition." Remarks="Removes a synth definition. The definition is removed immediately, and does not wait for synth nodes based on that definition to end." Tags="remove,delete,synthdef">
+        <Node Name="DeleteSynthDef" Bounds="975,801" Id="OPtX26L0Q6zMK4oZ3Mys1c" Summary="Delete synth definition." Remarks="Removes a synth definition. The definition is removed immediately, and does not wait for synth nodes based on that definition to end." Tags="remove,delete,synthdef">
           <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
             <Choice Kind="ContainerDefinition" Name="Process" />
           </p:NodeReference>
@@ -4386,7 +4386,7 @@
     ************************ RunNode ************************
 
 -->
-        <Node Name="RunNode" Bounds="983,927" Id="DOh0vygIQcBMX8xojJsWkr" Summary="Turn node on or off." Remarks="If the run flag set to zero then the node will not be executed.&#xD;&#xA;    If the run flag is set back to one, then it will be executed.&#xD;&#xA;&#xD;&#xA;Using this method to start and stop nodes can cause a click if the node is not silent at the time run flag is toggled." Tags="run,node,synth,group,execute">
+        <Node Name="RunNode" Bounds="975,927" Id="DOh0vygIQcBMX8xojJsWkr" Summary="Turn node on or off." Remarks="If the run flag set to zero then the node will not be executed.&#xD;&#xA;    If the run flag is set back to one, then it will be executed.&#xD;&#xA;&#xD;&#xA;Using this method to start and stop nodes can cause a click if the node is not silent at the time run flag is toggled." Tags="run,node,synth,group,execute">
           <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
             <Choice Kind="ContainerDefinition" Name="Process" />
           </p:NodeReference>
@@ -4588,7 +4588,7 @@
     ************************ SetNodeValue ************************
 
 -->
-        <Node Name="SetNodeValue" Bounds="982,1077" Id="RuDfFM2mpuXN9qkcJUg9az" Summary="Set a node's control value(s)." Remarks="Takes a list of pairs of control indices and values and sets the controls to those values. If the node is a group, then it sets the controls of every node in the group.&#xD;&#xA;&#xD;&#xA;This message now supports array type tags ($[ and $]) in the control/value component of the OSC message. Arrayed control values are applied in the manner of n_setn (i.e., sequentially starting at the indexed or named control)." Tags="set,control,value,parameter,node,synth,group,name,string,control">
+        <Node Name="SetNodeValue" Bounds="975,1077" Id="RuDfFM2mpuXN9qkcJUg9az" Summary="Set a node's control value(s)." Remarks="Takes a list of pairs of control indices and values and sets the controls to those values. If the node is a group, then it sets the controls of every node in the group.&#xD;&#xA;&#xD;&#xA;This message now supports array type tags ($[ and $]) in the control/value component of the OSC message. Arrayed control values are applied in the manner of n_setn (i.e., sequentially starting at the indexed or named control)." Tags="set,control,value,parameter,node,synth,group,name,string,control">
           <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
             <Choice Kind="ContainerDefinition" Name="Process" />
           </p:NodeReference>
