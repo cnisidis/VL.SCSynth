@@ -4,7 +4,7 @@ Super Collider Server Lib - foundation for vvvv and SC integration
 
 ## What is this?
 
-VL.SCServer (SuperCollider Server[5]) is a minimal implementation of a standalone server executor (scsynth[10]) using the [VL.IO.OSC](https://github.com/vvvv/VL.IO.OSC) lib. 
+VL.SCServer (SuperCollider Server)[^5] is a minimal implementation of a standalone server executor (scsynth)[^10] using the [VL.IO.OSC](https://github.com/vvvv/VL.IO.OSC) lib. 
 
 <cite>Read More abuot SuperCollider [here](https://supercollider.github.io/)</cite>
 
@@ -85,5 +85,6 @@ SCServer is still in progress, so changes will be often and may cause breaking c
 
 One important thing (which still needs some polishing) is that you have to set the SuperCollider installation folder manually every time you introduce the SCServer node. 
 
-[5]: See [Client vs Server Documentation](https://doc.sccode.org/Guides/ClientVsServer.html)
-[10]: [scsynth](https://github.com/supercollider/supercollider/wiki/scsynth-development) – A real-time audio server
+[^5]: See [Client vs Server Documentation](https://doc.sccode.org/Guides/ClientVsServer.html)
+
+[^10]: [scsynth](https://github.com/supercollider/supercollider/wiki/scsynth-development) – A real-time audio server
