@@ -87,16 +87,6 @@
             <Pin Id="AeWd15oS1L2NtgQajdwINj" Name="Input" Kind="InputPin" />
             <Pin Id="MWR3NzVZrwYMOhrvFnlGJG" Name="Result" Kind="OutputPin" />
           </Node>
-          <Node Bounds="227,138,51,26" Id="MpNCv8J8mLbLdPkSWPC9bx">
-            <p:NodeReference LastCategoryFullName="Primitive.String" LastDependency="VL.CoreLib.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="OperationCallFlag" Name="Replace (Char)" />
-            </p:NodeReference>
-            <Pin Id="NAxCseIaAR1OEg4k257QWc" Name="Input" Kind="StateInputPin" />
-            <Pin Id="Qwt2D9pkXzBN0YNpSk8YQP" Name="Old Char" Kind="InputPin" DefaultValue="\" />
-            <Pin Id="Shn1hEpgJiRNwvvRrE14uw" Name="New Char" Kind="InputPin" DefaultValue="/" />
-            <Pin Id="O49VsV0VKTLPnEebTH36au" Name="Output" Kind="StateOutputPin" />
-          </Node>
           <Pad Id="Hd2Bmo6xD6YOw5mWwlH423" Comment="Send" Bounds="307,111,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
@@ -176,7 +166,7 @@
           </Pad>
           <Pad Id="KqPQDSTzpCRNsIDXFvRutg" Comment="isListening" Bounds="418,-282,35,35" ShowValueBox="true" isIOBox="true" />
           <Pad Id="IHvGHC9yqggLhKgwnIOops" Comment="Status" Bounds="231,-210,112,100" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="Fe6rspjWogBOQsunb2IF4v" Comment="SC Folder Path" Bounds="187,-541,140,15" ShowValueBox="true" isIOBox="true" Value="C:\Program Files\SuperCollider-3.13.0">
+          <Pad Id="Fe6rspjWogBOQsunb2IF4v" Comment="SC Folder Path" Bounds="187,-541,329,15" ShowValueBox="true" isIOBox="true" Value="C:\Program Files\SuperCollider-3.13.0">
             <p:TypeAnnotation LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Path" />
             </p:TypeAnnotation>
@@ -249,8 +239,6 @@
           <Fragment Id="RStQ1PaZnasNdCcZEOzX6k" Patch="BcIbLF1JZZsNqcjpD5rZdD" Enabled="true" />
         </ProcessDefinition>
         <Link Id="Mw7wrDE61O7QZWePYKsZ9B" Ids="UTfS3QxIKOtNu9qp8DBUhX,AeWd15oS1L2NtgQajdwINj" />
-        <Link Id="AyuYVth00FvLxSuxlsvllR" Ids="O49VsV0VKTLPnEebTH36au,KUkL4eajA53M44pYEwfZTG" />
-        <Link Id="CobCmV2yO7cL3A7U5kocKe" Ids="MWR3NzVZrwYMOhrvFnlGJG,NAxCseIaAR1OEg4k257QWc" />
         <Link Id="BCdLdaNxTySNG986iSyt5e" Ids="Hd2Bmo6xD6YOw5mWwlH423,Jcy77TKoEcwQbtRU8EYIEe" />
         <Link Id="Nj0trK9o3DcO0HTUsqdxsw" Ids="JXFFMEP4hjaP9MlpwoLVdo,SCLlZ09HlgdP4hPC41B69B" />
         <Link Id="RXJpl56b7pEPsHmqtuXENe" Ids="MJD6fXkYfWTLjOE6QeGVqH,Sw5VWixSYsAPgeTF1NTYxi" />
@@ -274,6 +262,7 @@
         <Link Id="BztMqLvCisaNqghgDES67l" Ids="TsRybkPxkdQMk15blCSker,R2DbaWJRlafPVLFeFIIvAv" />
         <Link Id="HaiD7Vyhog2OXSI66Xdlsz" Ids="E4RCQpB4RkbLy8gwlmHURu,NdhgBVWb5mLO9Sl8bUDJtI" />
         <Link Id="PoD3Sv7z82KNrRw4rgFRTL" Ids="B92WyLYg4oVNkBcyUN3RxW,BL49bCOLohkQUgar3UkzCb" />
+        <Link Id="KU30GD8YOUaMGgE6dSipac" Ids="MWR3NzVZrwYMOhrvFnlGJG,KUkL4eajA53M44pYEwfZTG" />
       </Patch>
     </Node>
   </Patch>
