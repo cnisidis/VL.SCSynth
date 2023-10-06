@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="BFPViO9nyjzMnGE2BYSCjG" LanguageVersion="2023.5.3-0189-g3b1140fa91" Version="0.128">
-  <NugetDependency Id="U3TLytxHDABMYnjTvm5xFx" Location="VL.CoreLib" Version="2023.5.3-0189-g3b1140fa91" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="BFPViO9nyjzMnGE2BYSCjG" LanguageVersion="2023.5.3-0203-g579cc42b10" Version="0.128">
+  <NugetDependency Id="U3TLytxHDABMYnjTvm5xFx" Location="VL.CoreLib" Version="2023.5.3-0203-g579cc42b10" />
   <Patch Id="ShXX7BXUsXdMKEJsjwHcxw">
     <Canvas Id="G8Ha9tZakeSL4Cm2thg6ek" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
@@ -206,7 +206,7 @@
             </p:ValueBoxSettings>
           </Pad>
           <Overlay Id="LGZ5TrfdqoEPKv75AUmc2u" Name="Control the Synth" Bounds="144,659,480,464" />
-          <Node Bounds="252,1022,92,19" Id="O8Q1pTaU6YtM4DMsRvUhHy">
+          <Node Bounds="225,1012,92,19" Id="O8Q1pTaU6YtM4DMsRvUhHy">
             <p:NodeReference LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="SynthParameters" />
@@ -218,7 +218,7 @@
             <Pin Id="FIFRyeFlLbvL6Nm6bCF1SL" Name="Count" Kind="OutputPin" />
             <Pin Id="HcmzSnnxBqXMedlHPUZEEQ" Name="Has Changed" Kind="OutputPin" />
           </Node>
-          <Pad Id="TsRybkPxkdQMk15blCSker" Comment="Name or Index" Bounds="251,924,35,34" ShowValueBox="true" isIOBox="true">
+          <Pad Id="TsRybkPxkdQMk15blCSker" Comment="Name or Index" Bounds="224,914,35,34" ShowValueBox="true" isIOBox="true">
             <p:TypeAnnotation LastCategoryFullName="Collections" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Spread" />
               <p:TypeArguments>
@@ -231,7 +231,7 @@
               <Item>freq</Item>
             </p:Value>
           </Pad>
-          <Pad Id="E4RCQpB4RkbLy8gwlmHURu" Comment="" Bounds="391,921,35,34" ShowValueBox="true" isIOBox="true" Value="439.91">
+          <Pad Id="E4RCQpB4RkbLy8gwlmHURu" Comment="" Bounds="364,911,35,34" ShowValueBox="true" isIOBox="true" Value="439.91">
             <p:TypeAnnotation LastCategoryFullName="Collections" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Spread" />
               <p:TypeArguments>
@@ -278,5 +278,4 @@
     </Node>
   </Patch>
   <NugetDependency Id="TzkkvhXSlh0LCIcXqISBTW" Location="VL.SCServer" Version="0.0.0" />
-  <NugetDependency Id="JRSd1kG6u87PwYLZNMGrU3" Location="VL.IO.OSC" Version="1.0.20" />
 </Document>

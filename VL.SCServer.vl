@@ -4256,7 +4256,7 @@
     ************************ DeleteNode ************************
 
 -->
-        <Node Name="DeleteNode" Bounds="979,976" Id="HNRKFaKGfzJOuEZDX8AXQs" Summary="Delete a node." Remarks="Stops a node abruptly, removes it from its group, and frees its memory. A list of node IDs may be specified. Using this method can cause a click if the node is not silent at the time it is freed." Tags="delete,remove,node,synth,group">
+        <Node Name="DeleteNode" Bounds="975,880" Id="HNRKFaKGfzJOuEZDX8AXQs" Summary="Delete a node." Remarks="Stops a node abruptly, removes it from its group, and frees its memory. A list of node IDs may be specified. Using this method can cause a click if the node is not silent at the time it is freed." Tags="delete,remove,node,synth,group">
           <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
             <Choice Kind="ContainerDefinition" Name="Process" />
           </p:NodeReference>
@@ -4387,7 +4387,7 @@
     ************************ RunNode ************************
 
 -->
-        <Node Name="RunNode" Bounds="984,1016" Id="DOh0vygIQcBMX8xojJsWkr" Summary="Turn node on or off." Remarks="If the run flag set to zero then the node will not be executed.&#xD;&#xA;    If the run flag is set back to one, then it will be executed.&#xD;&#xA;&#xD;&#xA;Using this method to start and stop nodes can cause a click if the node is not silent at the time run flag is toggled." Tags="run,node,synth,group,execute">
+        <Node Name="RunNode" Bounds="983,927" Id="DOh0vygIQcBMX8xojJsWkr" Summary="Turn node on or off." Remarks="If the run flag set to zero then the node will not be executed.&#xD;&#xA;    If the run flag is set back to one, then it will be executed.&#xD;&#xA;&#xD;&#xA;Using this method to start and stop nodes can cause a click if the node is not silent at the time run flag is toggled." Tags="run,node,synth,group,execute">
           <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
             <Choice Kind="ContainerDefinition" Name="Process" />
           </p:NodeReference>
@@ -4589,7 +4589,7 @@
     ************************ SetNodeValue ************************
 
 -->
-        <Node Name="SetNodeValue" Bounds="988,1057" Id="RuDfFM2mpuXN9qkcJUg9az" Summary="Set a node's control value(s)." Remarks="Takes a list of pairs of control indices and values and sets the controls to those values. If the node is a group, then it sets the controls of every node in the group.&#xD;&#xA;&#xD;&#xA;This message now supports array type tags ($[ and $]) in the control/value component of the OSC message. Arrayed control values are applied in the manner of n_setn (i.e., sequentially starting at the indexed or named control)." Tags="set,control,value,parameter,node,synth,group,name,string">
+        <Node Name="SetNodeValue" Bounds="982,1077" Id="RuDfFM2mpuXN9qkcJUg9az" Summary="Set a node's control value(s)." Remarks="Takes a list of pairs of control indices and values and sets the controls to those values. If the node is a group, then it sets the controls of every node in the group.&#xD;&#xA;&#xD;&#xA;This message now supports array type tags ($[ and $]) in the control/value component of the OSC message. Arrayed control values are applied in the manner of n_setn (i.e., sequentially starting at the indexed or named control)." Tags="set,control,value,parameter,node,synth,group,name,string,control">
           <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
             <Choice Kind="ContainerDefinition" Name="Process" />
           </p:NodeReference>
@@ -5904,10 +5904,77 @@
             </Node>
             <ControlPoint Id="LswLjl1ApTWN6HNI0mCQKl" Bounds="1157,735" />
             <ControlPoint Id="ERMu4m6hDBkOJENUfkcHv3" Bounds="1083,737" />
+            <!--
+
+    ************************ ArgsToData ************************
+
+-->
+            <Node Name="ArgsToData" Bounds="1354,355,130,358" Id="Mk8mtY7jTdjPrSvYRT9osV">
+              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                <Choice Kind="OperationDefinition" Name="Operation" />
+              </p:NodeReference>
+              <Patch Id="KjtIGVfmY24QbzHQdFEJ7Y" IsGeneric="true">
+                <ControlPoint Id="Uh1zrbLci6CLfUNbetVomF" Bounds="1368,373" />
+                <Link Id="ENDvRUEfDPMOQFnoxMMjEy" Ids="L5gff8YNt4qQbTolfD5lVD,Uh1zrbLci6CLfUNbetVomF" IsHidden="true" />
+                <ControlPoint Id="UsLX1PWImC6LTuqg912dZW" Bounds="1440,376" />
+                <Link Id="MCYgFHO6ieJO3GkO7Pt7bX" Ids="HxzemvGFDFpN1kAuSLZZfb,UsLX1PWImC6LTuqg912dZW" IsHidden="true" />
+                <ControlPoint Id="MBrBOjtwDuqNbB4wBzILUi" Bounds="1370,696" />
+                <Link Id="G8oDwZdZb3hN7qufxi166a" Ids="MBrBOjtwDuqNbB4wBzILUi,Ung7ZeOr69NLABOIbASl41" IsHidden="true" />
+                <Node Bounds="1370,588,70,19" Id="LZzyPIlCnbkP5HHk6Fh6BH">
+                  <p:NodeReference LastCategoryFullName="IO.OSC" LastDependency="VL.IO.OSC.vl" OverloadStrategy="AllPinsThatAreNotCommon">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="Category" Name="OSC" NeedsToBeDirectParent="true" />
+                    <Choice Kind="OperationCallFlag" Name="ArgsToData" />
+                    <PinReference Kind="InputPin" Name="Context">
+                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="IO.OSC" LastDependency="VL.IO.OSC.vl">
+                        <Choice Kind="TypeFlag" Name="SerializationContext" />
+                      </p:DataTypeReference>
+                    </PinReference>
+                    <PinReference Kind="OutputPin" Name="Context" ParameterModifier="ref">
+                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="IO.OSC" LastDependency="VL.IO.OSC.vl">
+                        <Choice Kind="TypeFlag" Name="SerializationContext" />
+                      </p:DataTypeReference>
+                    </PinReference>
+                    <PinReference Kind="InputPin" Name="Args">
+                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Collections" LastDependency="VL.CoreLib.vl">
+                        <Choice Kind="TypeFlag" Name="Sequence" />
+                        <p:TypeArguments>
+                          <TypeParameterReference />
+                        </p:TypeArguments>
+                      </p:DataTypeReference>
+                    </PinReference>
+                  </p:NodeReference>
+                  <Pin Id="RsbGMPyMeMIQNmeT74QX23" Name="Context" Kind="InputPin" />
+                  <Pin Id="CYtIPlHiWSPP51iAhLlcKp" Name="Args" Kind="InputPin" />
+                  <Pin Id="Dl5jSRYHi8OL8R16EGmoA7" Name="Context" Kind="OutputPin" />
+                </Node>
+                <Link Id="AxJLSccgpN9OzvNRVq3tek" Ids="Uh1zrbLci6CLfUNbetVomF,RsbGMPyMeMIQNmeT74QX23" />
+                <Link Id="DbICjyGKlhjMke28BfskHj" Ids="Dl5jSRYHi8OL8R16EGmoA7,MBrBOjtwDuqNbB4wBzILUi" />
+                <Pin Id="L5gff8YNt4qQbTolfD5lVD" Name="Context" Kind="InputPin" />
+                <Pin Id="HxzemvGFDFpN1kAuSLZZfb" Name="Args" Kind="InputPin">
+                  <p:TypeAnnotation LastCategoryFullName="Collections" LastDependency="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="Spread" />
+                    <p:TypeArguments>
+                      <TypeReference>
+                        <Choice Kind="TypeFlag" Name="SynthParameter" />
+                      </TypeReference>
+                    </p:TypeArguments>
+                  </p:TypeAnnotation>
+                </Pin>
+                <Pin Id="Ung7ZeOr69NLABOIbASl41" Name="Context" Kind="OutputPin">
+                  <p:TypeAnnotation LastCategoryFullName="IO.OSC" LastDependency="VL.IO.OSC.vl">
+                    <Choice Kind="TypeFlag" Name="SerializationContext" />
+                    <FullNameCategoryReference ID="IO.OSC" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Link Id="Stmh0qhq4OAMV5w0dpjaGM" Ids="UsLX1PWImC6LTuqg912dZW,CYtIPlHiWSPP51iAhLlcKp" />
+              </Patch>
+            </Node>
           </Canvas>
-          <ProcessDefinition Id="LeseCTdWP01QUJJMmxfYMm">
+          <ProcessDefinition Id="LeseCTdWP01QUJJMmxfYMm" HasStateOut="true">
             <Fragment Id="Jij1J0EfSBzMjXw7pBUlMB" Patch="G5iDzUAoolqLWZFEFf57dX" Enabled="true" />
             <Fragment Id="OdDtmjU847jMmZV2lSkynd" Patch="HapWUAeqFGvO4kvVDGwyRw" Enabled="true" />
+            <Fragment Id="QGMYcVKdqzzOtg1WSbgWWo" Patch="Mk8mtY7jTdjPrSvYRT9osV" />
           </ProcessDefinition>
           <Link Id="K8qqBHpJdZhQNDnZvckjyu" Ids="AXzIYVmmBwXPTVcSGW6xcc,Cz0vzWOOUY0LR9ATlQVHal" IsHidden="true" />
           <Link Id="JnkBCBVatqHQdSXp5TrrcY" Ids="T0DH6c1V76vMzIioaCYXGx,PY6cy9xOrlqNNqiGk07ekt" IsHidden="true" />
@@ -6080,109 +6147,120 @@
                 <Pin Id="CEAWJChfCNFM0sEfwL1cMv" Name="Context" Kind="OutputPin" />
               </Patch>
             </Node>
-            <!--
+            <Node Bounds="865,231,224,511" Id="NoHi9WEgXRLN7FJRST4FS1">
+              <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                <CategoryReference Kind="Category" Name="Control" />
+                <Choice Kind="ProcessAppFlag" Name="Comment" />
+              </p:NodeReference>
+              <Patch Id="MuvWUa8QBmWLR29nBlLHTt" ManuallySortedPins="true">
+                <Patch Id="IJofipgopINNMGoIqwGaxx" Name="Create" ManuallySortedPins="true" />
+                <Patch Id="HNz1SLQKvh5MkMvfuRa1iL" Name="Update" ManuallySortedPins="true" />
+                <!--
 
     ************************ ArgsToData ************************
 
 -->
-            <Node Name="ArgsToData" Bounds="894,313,183,361" Id="UOLiWIGDZVMOhM0xuuKRZY">
-              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
-                <Choice Kind="OperationDefinition" Name="Operation" />
-              </p:NodeReference>
-              <Patch Id="LXpStBsFHB8LYj8rC02gtk" IsGeneric="true">
-                <ControlPoint Id="FxAusbPEl67POnxKwzuFPM" Bounds="908,333" />
-                <Link Id="QK7TAYiBSN7Lk7ArqsvZvt" Ids="FgWLQUpdcqEOCl1HZxxYWD,FxAusbPEl67POnxKwzuFPM" IsHidden="true" />
-                <ControlPoint Id="Ho9bGGhl0aLN8Ega7nLGhp" Bounds="908,657" />
-                <Link Id="Sa0jb3TdUuvP74Id92r84d" Ids="Ho9bGGhl0aLN8Ega7nLGhp,HRzv3hJJhNzPzo4nPDFaPM" IsHidden="true" />
-                <ControlPoint Id="NPEZYakJR0zPRQeC0UpHkC" Bounds="973,331" />
-                <Link Id="Rhy5i6WGq8oNTnYTSPl75X" Ids="IctgDx9eGXhPvuaNfviFl7,NPEZYakJR0zPRQeC0UpHkC" IsHidden="true" />
-                <Node Bounds="970,371,95,26" Id="T62fUOGU8LyMSNW8nZTdrs">
-                  <p:NodeReference LastCategoryFullName="VL.SCServer.SynthParameter" LastDependency="VL.SCServer.vl">
-                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <CategoryReference Kind="RecordType" Name="SynthParameter" NeedsToBeDirectParent="true" />
-                    <Choice Kind="OperationCallFlag" Name="Split" />
+                <Node Name="ArgsToData" Bounds="894,313,183,361" Id="UOLiWIGDZVMOhM0xuuKRZY">
+                  <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                    <Choice Kind="OperationDefinition" Name="Operation" />
                   </p:NodeReference>
-                  <Pin Id="UiDmAh0Gh49P8hsLnRIeNd" Name="Input" Kind="StateInputPin" />
-                  <Pin Id="PGKjEiI6Vc8OKajSWvXl1N" Name="Output" Kind="OutputPin" IsHidden="true" />
-                  <Pin Id="JpumbC6k5vDNykE8jdj35Y" Name="Name or Index" Kind="OutputPin" />
-                  <Pin Id="KaGDVk1wYLpPqie3O50Urb" Name="Value" Kind="OutputPin" />
+                  <Patch Id="LXpStBsFHB8LYj8rC02gtk" IsGeneric="true">
+                    <ControlPoint Id="FxAusbPEl67POnxKwzuFPM" Bounds="908,333" />
+                    <Link Id="QK7TAYiBSN7Lk7ArqsvZvt" Ids="FgWLQUpdcqEOCl1HZxxYWD,FxAusbPEl67POnxKwzuFPM" IsHidden="true" />
+                    <ControlPoint Id="Ho9bGGhl0aLN8Ega7nLGhp" Bounds="908,657" />
+                    <Link Id="Sa0jb3TdUuvP74Id92r84d" Ids="Ho9bGGhl0aLN8Ega7nLGhp,HRzv3hJJhNzPzo4nPDFaPM" IsHidden="true" />
+                    <ControlPoint Id="NPEZYakJR0zPRQeC0UpHkC" Bounds="973,331" />
+                    <Link Id="Rhy5i6WGq8oNTnYTSPl75X" Ids="IctgDx9eGXhPvuaNfviFl7,NPEZYakJR0zPRQeC0UpHkC" IsHidden="true" />
+                    <Node Bounds="970,371,95,19" Id="T62fUOGU8LyMSNW8nZTdrs">
+                      <p:NodeReference LastCategoryFullName="VL.SCServer.SynthParameter" LastDependency="VL.SCServer.vl">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="RecordType" Name="SynthParameter" NeedsToBeDirectParent="true" />
+                        <Choice Kind="OperationCallFlag" Name="Split" />
+                      </p:NodeReference>
+                      <Pin Id="UiDmAh0Gh49P8hsLnRIeNd" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="PGKjEiI6Vc8OKajSWvXl1N" Name="Output" Kind="OutputPin" IsHidden="true" />
+                      <Pin Id="JpumbC6k5vDNykE8jdj35Y" Name="Name or Index" Kind="OutputPin" />
+                      <Pin Id="KaGDVk1wYLpPqie3O50Urb" Name="Value" Kind="OutputPin" />
+                    </Node>
+                    <Link Id="Nu29UIGJ4DbLmDdNlCh8CW" Ids="NPEZYakJR0zPRQeC0UpHkC,UiDmAh0Gh49P8hsLnRIeNd" />
+                    <Pin Id="FgWLQUpdcqEOCl1HZxxYWD" Name="Context" Kind="InputPin" />
+                    <Pin Id="IctgDx9eGXhPvuaNfviFl7" Name="Args" Kind="InputPin">
+                      <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
+                        <Choice Kind="TypeFlag" Name="SynthParameter" />
+                      </p:TypeAnnotation>
+                    </Pin>
+                    <Pin Id="HRzv3hJJhNzPzo4nPDFaPM" Name="Context" Kind="OutputPin" />
+                    <Pad Id="Pzjp1fvgtTiLLqiHgPV9ve" Bounds="953,447,35,19" ShowValueBox="true" isIOBox="true" Value="">
+                      <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                        <Choice Kind="TypeFlag" Name="String" />
+                      </p:TypeAnnotation>
+                      <p:ValueBoxSettings>
+                        <p:fontsize p:Type="Int32">9</p:fontsize>
+                        <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+                      </p:ValueBoxSettings>
+                    </Pad>
+                    <Link Id="K0BeLdLFtH0PGMLL80lbXT" Ids="JpumbC6k5vDNykE8jdj35Y,EOEODrfX2UDNksRWWI24MY" />
+                    <Link Id="ISybn8N0e1OLvJDJByAN2f" Ids="FxAusbPEl67POnxKwzuFPM,JTHQFSb4nPdOABBP3d2AFr" />
+                    <Node Bounds="906,471,70,19" Id="VujUTUWyyFzMSBW43rALbT">
+                      <p:NodeReference LastCategoryFullName="IO.OSC" LastDependency="VL.IO.OSC.vl" OverloadStrategy="AllPinsThatAreNotCommon">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="Category" Name="OSC" NeedsToBeDirectParent="true" />
+                        <Choice Kind="OperationCallFlag" Name="ArgsToData" />
+                        <PinReference Kind="InputPin" Name="Context">
+                          <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="IO.OSC" LastDependency="VL.IO.OSC.vl">
+                            <Choice Kind="TypeFlag" Name="SerializationContext" />
+                          </p:DataTypeReference>
+                        </PinReference>
+                        <PinReference Kind="OutputPin" Name="Context" ParameterModifier="ref">
+                          <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="IO.OSC" LastDependency="VL.IO.OSC.vl">
+                            <Choice Kind="TypeFlag" Name="SerializationContext" />
+                          </p:DataTypeReference>
+                        </PinReference>
+                        <PinReference Kind="InputPin" Name="Args">
+                          <p:DataTypeReference p:Type="TypeParameterReference" />
+                        </PinReference>
+                      </p:NodeReference>
+                      <Pin Id="JTHQFSb4nPdOABBP3d2AFr" Name="Context" Kind="InputPin" />
+                      <Pin Id="EOEODrfX2UDNksRWWI24MY" Name="Args" Kind="InputPin" />
+                      <Pin Id="KAxLa8qPZ2oQFGd6UcP5Q0" Name="Context" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="907,551,70,19" Id="EhMPGiau5F6MwmH6lLnA4e">
+                      <p:NodeReference LastCategoryFullName="IO.OSC" LastDependency="VL.IO.OSC.vl" OverloadStrategy="AllPinsThatAreNotCommon">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="Category" Name="OSC" NeedsToBeDirectParent="true" />
+                        <Choice Kind="OperationCallFlag" Name="ArgsToData" />
+                        <PinReference Kind="InputPin" Name="Context">
+                          <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="IO.OSC" LastDependency="VL.IO.OSC.vl">
+                            <Choice Kind="TypeFlag" Name="SerializationContext" />
+                          </p:DataTypeReference>
+                        </PinReference>
+                        <PinReference Kind="OutputPin" Name="Context" ParameterModifier="ref">
+                          <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="IO.OSC" LastDependency="VL.IO.OSC.vl">
+                            <Choice Kind="TypeFlag" Name="SerializationContext" />
+                          </p:DataTypeReference>
+                        </PinReference>
+                        <PinReference Kind="InputPin" Name="Args">
+                          <p:DataTypeReference p:Type="TypeParameterReference" />
+                        </PinReference>
+                      </p:NodeReference>
+                      <Pin Id="LsDm5toFzCLMPZ7m98d1Jr" Name="Context" Kind="InputPin" />
+                      <Pin Id="VGfvdArhiiULtavZE6tUWG" Name="Args" Kind="InputPin" />
+                      <Pin Id="UUSmVHfGXHcPIZF422KXbI" Name="Context" Kind="OutputPin" />
+                    </Node>
+                    <Link Id="SjvG2Mb92sDPaVyAPXfABm" Ids="KAxLa8qPZ2oQFGd6UcP5Q0,LsDm5toFzCLMPZ7m98d1Jr" />
+                    <Link Id="Ewd3CtHT1d3MIblJ8DR80P" Ids="KaGDVk1wYLpPqie3O50Urb,VGfvdArhiiULtavZE6tUWG" />
+                    <Link Id="KWwtPMqWuUJMxqfjc1Kzys" Ids="UUSmVHfGXHcPIZF422KXbI,Ho9bGGhl0aLN8Ega7nLGhp" />
+                  </Patch>
                 </Node>
-                <Link Id="Nu29UIGJ4DbLmDdNlCh8CW" Ids="NPEZYakJR0zPRQeC0UpHkC,UiDmAh0Gh49P8hsLnRIeNd" />
-                <Pin Id="FgWLQUpdcqEOCl1HZxxYWD" Name="Context" Kind="InputPin" />
-                <Pin Id="IctgDx9eGXhPvuaNfviFl7" Name="Args" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
-                    <Choice Kind="TypeFlag" Name="SynthParameter" />
-                  </p:TypeAnnotation>
-                </Pin>
-                <Pin Id="HRzv3hJJhNzPzo4nPDFaPM" Name="Context" Kind="OutputPin" />
-                <Pad Id="Pzjp1fvgtTiLLqiHgPV9ve" Bounds="953,447,35,19" ShowValueBox="true" isIOBox="true" Value="">
-                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
-                    <Choice Kind="TypeFlag" Name="String" />
-                  </p:TypeAnnotation>
-                  <p:ValueBoxSettings>
-                    <p:fontsize p:Type="Int32">9</p:fontsize>
-                    <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
-                  </p:ValueBoxSettings>
-                </Pad>
-                <Link Id="K0BeLdLFtH0PGMLL80lbXT" Ids="JpumbC6k5vDNykE8jdj35Y,EOEODrfX2UDNksRWWI24MY" />
-                <Link Id="ISybn8N0e1OLvJDJByAN2f" Ids="FxAusbPEl67POnxKwzuFPM,JTHQFSb4nPdOABBP3d2AFr" />
-                <Node Bounds="906,471,70,19" Id="VujUTUWyyFzMSBW43rALbT">
-                  <p:NodeReference LastCategoryFullName="IO.OSC" LastDependency="VL.IO.OSC.vl" OverloadStrategy="AllPinsThatAreNotCommon">
-                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <CategoryReference Kind="Category" Name="OSC" NeedsToBeDirectParent="true" />
-                    <Choice Kind="OperationCallFlag" Name="ArgsToData" />
-                    <PinReference Kind="InputPin" Name="Context">
-                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="IO.OSC" LastDependency="VL.IO.OSC.vl">
-                        <Choice Kind="TypeFlag" Name="SerializationContext" />
-                      </p:DataTypeReference>
-                    </PinReference>
-                    <PinReference Kind="OutputPin" Name="Context" ParameterModifier="ref">
-                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="IO.OSC" LastDependency="VL.IO.OSC.vl">
-                        <Choice Kind="TypeFlag" Name="SerializationContext" />
-                      </p:DataTypeReference>
-                    </PinReference>
-                    <PinReference Kind="InputPin" Name="Args">
-                      <p:DataTypeReference p:Type="TypeParameterReference" />
-                    </PinReference>
-                  </p:NodeReference>
-                  <Pin Id="JTHQFSb4nPdOABBP3d2AFr" Name="Context" Kind="InputPin" />
-                  <Pin Id="EOEODrfX2UDNksRWWI24MY" Name="Args" Kind="InputPin" />
-                  <Pin Id="KAxLa8qPZ2oQFGd6UcP5Q0" Name="Context" Kind="OutputPin" />
-                </Node>
-                <Node Bounds="907,551,70,19" Id="EhMPGiau5F6MwmH6lLnA4e">
-                  <p:NodeReference LastCategoryFullName="IO.OSC" LastDependency="VL.IO.OSC.vl" OverloadStrategy="AllPinsThatAreNotCommon">
-                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <CategoryReference Kind="Category" Name="OSC" NeedsToBeDirectParent="true" />
-                    <Choice Kind="OperationCallFlag" Name="ArgsToData" />
-                    <PinReference Kind="InputPin" Name="Context">
-                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="IO.OSC" LastDependency="VL.IO.OSC.vl">
-                        <Choice Kind="TypeFlag" Name="SerializationContext" />
-                      </p:DataTypeReference>
-                    </PinReference>
-                    <PinReference Kind="OutputPin" Name="Context" ParameterModifier="ref">
-                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="IO.OSC" LastDependency="VL.IO.OSC.vl">
-                        <Choice Kind="TypeFlag" Name="SerializationContext" />
-                      </p:DataTypeReference>
-                    </PinReference>
-                    <PinReference Kind="InputPin" Name="Args">
-                      <p:DataTypeReference p:Type="TypeParameterReference" />
-                    </PinReference>
-                  </p:NodeReference>
-                  <Pin Id="LsDm5toFzCLMPZ7m98d1Jr" Name="Context" Kind="InputPin" />
-                  <Pin Id="VGfvdArhiiULtavZE6tUWG" Name="Args" Kind="InputPin" />
-                  <Pin Id="UUSmVHfGXHcPIZF422KXbI" Name="Context" Kind="OutputPin" />
-                </Node>
-                <Link Id="SjvG2Mb92sDPaVyAPXfABm" Ids="KAxLa8qPZ2oQFGd6UcP5Q0,LsDm5toFzCLMPZ7m98d1Jr" />
-                <Link Id="Ewd3CtHT1d3MIblJ8DR80P" Ids="KaGDVk1wYLpPqie3O50Urb,VGfvdArhiiULtavZE6tUWG" />
-                <Link Id="KWwtPMqWuUJMxqfjc1Kzys" Ids="UUSmVHfGXHcPIZF422KXbI,Ho9bGGhl0aLN8Ega7nLGhp" />
               </Patch>
+              <Pin Id="MmkeJ6J4t44ODqm2MifI3U" Name="Node Context" Kind="InputPin" IsHidden="true" />
             </Node>
           </Canvas>
           <ProcessDefinition Id="PjBzeld2kuSLigIfhLZ9B7" IsHidden="true">
             <Fragment Id="Snw9aYAbZXlMYDVaoAf6qr" Patch="BwPvXmpegGwNO8EHTepCph" Enabled="true" />
             <Fragment Id="DJaN3YVB1QFLJPcSM8mTNY" Patch="BSI2KzUv9J2Pu4TtxeAbY7" />
             <Fragment Id="D4YModo6rKfMEMZrXuzT04" Patch="VQoF3I4MT8MNet3h1aYGCZ" />
-            <Fragment Id="UW6G1Njk4TcLc3yLC40ylG" Patch="UOLiWIGDZVMOhM0xuuKRZY" />
           </ProcessDefinition>
           <Slot Id="NFyDcLKwumYMZ52ehp9ScN" Name="Value" />
           <Link Id="IZiwkOSFRogNnO1YfEqsi8" Ids="UN7t1tMcGE2NfdWcD6XRtw,VUIYwF12QQtQI2kui2QqVL" IsHidden="true" />
@@ -6243,6 +6321,5 @@
     </Node>
   </Patch>
   <ProjectDependency Id="OUk8ovQ8k3pQZnYZ1N6uEX" Location="./csharp/VL.SCServer.Utils/VL.SCServer.Utils.csproj" />
-  <NugetDependency Id="MCfiGmWIYphLgHCTCD3l8z" Location="VL.IO.OSC" Version="1.0.20" />
-  <NugetDependency Id="K4w64yEFFzAQDKiYauikco" Location="VL.SCServer" Version="0.0.0" />
+  <NugetDependency Id="MCfiGmWIYphLgHCTCD3l8z" Location="VL.IO.OSC" IsForward="true" Version="1.0.20" />
 </Document>
