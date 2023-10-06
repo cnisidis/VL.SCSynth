@@ -136,7 +136,7 @@
             <Pin Id="DOmF0UOx6lRNc6QhGDZNt8" Name="Send" Kind="InputPin" />
             <Pin Id="UmCnNIEokk4LUgQrGf6uRJ" Name="Server" Kind="OutputPin" />
           </Node>
-          <Pad Id="EFOji4nFfCLMXH3w3B4smS" Comment="SynthDef Name" Bounds="1111,285,35,15" ShowValueBox="true" isIOBox="true" Value="vvvvExample">
+          <Pad Id="EFOji4nFfCLMXH3w3B4smS" Comment="SynthDef Name" Bounds="1116,286,89,17" ShowValueBox="true" isIOBox="true" Value="vvvvExample">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -172,7 +172,7 @@
               <Choice Kind="TypeFlag" Name="RunNodeFlags" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="HbQ9nkwjU26QZ5DM6OVT2e" Comment="" Bounds="1225,636,35,49" ShowValueBox="true" isIOBox="true" Value="50, 0.14">
+          <Pad Id="HbQ9nkwjU26QZ5DM6OVT2e" Comment="" Bounds="1225,636,35,49" ShowValueBox="true" isIOBox="true" Value="71.96, 0.14">
             <p:TypeAnnotation LastCategoryFullName="Collections" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Spread" />
               <p:TypeArguments>

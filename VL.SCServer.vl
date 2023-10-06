@@ -5,10 +5,10 @@
     <Canvas Id="AwyIswtQM0uMA77uZO68bz" DefaultCategory="VL.SCServer" CanvasType="FullCategory">
       <!--
 
-    ************************ Server ************************
+    ************************ SCServer (Executor) ************************
 
 -->
-      <Node Name="Server" Bounds="394,228" Id="UHKS5BM1FQVNMTJZglxSDh">
+      <Node Name="SCServer (Executor)" Bounds="394,228" Id="UHKS5BM1FQVNMTJZglxSDh">
         <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
           <Choice Kind="ClassDefinition" Name="Class" />
         </p:NodeReference>
@@ -78,9 +78,9 @@
                 <Patch Id="Eb1DFwH4jJgMsotU5us3p1" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="UdoTRq0UKIKMYA3mpAUOyD" Name="Then" ParticipatingElements="BS0oifj1uzRLZUXTbjzd9H" ManuallySortedPins="true" />
                 <Node Bounds="511,100,105,26" Id="BS0oifj1uzRLZUXTbjzd9H">
-                  <p:NodeReference LastCategoryFullName="VL.SCServer.ServerSettings" LastDependency="VL.SCServer.vl">
+                  <p:NodeReference LastCategoryFullName="VL.SCServer.SCServerSettings" LastDependency="VL.SCServer.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <CategoryReference Kind="ClassType" Name="ServerSettings" />
+                    <CategoryReference Kind="ClassType" Name="SCServerSettings" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
                   </p:NodeReference>
                   <Pin Id="DdQ1E8rDslKO3A8rONwXre" Name="Node Context" Kind="InputPin" IsHidden="true" />
@@ -264,7 +264,7 @@
               <ControlPoint Id="EetYZ6dCKeVQRuMKAOqN0K" Bounds="931,225" Alignment="Top" />
             </Node>
             <Node Bounds="799,172,91,26" Id="JV7iZyzpBSGM3SpKr39EUS">
-              <p:NodeReference LastCategoryFullName="VL.SCServer.ServerSettings" LastDependency="VL.SCServer.vl">
+              <p:NodeReference LastCategoryFullName="VL.SCServer.SCServerSettings" LastDependency="VL.SCServer.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="GetSCFolderPath" />
               </p:NodeReference>
@@ -412,21 +412,20 @@
                 <Choice Kind="ApplicationStatefulRegion" Name="If" />
               </p:NodeReference>
               <Pin Id="UDDVzc19vSGMZDtEhBwhTB" Name="Condition" Kind="InputPin" />
+              <ControlPoint Id="RAaSzjfmjS4LX9HMgcQHWM" Bounds="1074,497" Alignment="Bottom" />
+              <ControlPoint Id="AJBdr3nQ6APO0OyiaWLOym" Bounds="1074,428" Alignment="Top" />
               <Patch Id="JMNAEZCGFm1M8S04OFUMLT" ManuallySortedPins="true">
                 <Patch Id="HnKGOiumIuSPhY2kc84oQR" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="MoiXob9xZe8NtMrfUyHC3T" Name="Then" ManuallySortedPins="true" />
                 <Node Bounds="1009,451,67,26" Id="B0WBXahmTEiLU1QWPPGSKa">
-                  <p:NodeReference LastCategoryFullName="VL.SCServer.ServerSettings" LastDependency="VL.SCServer.vl">
+                  <p:NodeReference LastCategoryFullName="System.Conversion" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="ToString" />
                   </p:NodeReference>
                   <Pin Id="OvN2r2LYlLVOjlHpPYBC3y" Name="Input" Kind="StateInputPin" />
-                  <Pin Id="DFtQNiH4uP4PGBVNHTjTLR" Name="Output" Kind="StateOutputPin" />
                   <Pin Id="QrUYDwWNWyaNuNqlfV8oPi" Name="Result" Kind="OutputPin" />
                 </Node>
               </Patch>
-              <ControlPoint Id="RAaSzjfmjS4LX9HMgcQHWM" Bounds="1074,497" Alignment="Bottom" />
-              <ControlPoint Id="AJBdr3nQ6APO0OyiaWLOym" Bounds="1074,428" Alignment="Top" />
             </Node>
             <!--
 
@@ -560,7 +559,7 @@
                       <ControlPoint Id="UHR3VDBzM2qOPcYsfrDHiz" Bounds="768,1078" />
                       <Link Id="ExANIVLx1ivNngGcqQ8qWh" Ids="UHR3VDBzM2qOPcYsfrDHiz,QGDf9r1IxQ4OpAO4su7E0e" IsHidden="true" />
                       <Node Bounds="564,981,165,26" Id="Tz6x3K9f7vjN7dX2kW8JS8">
-                        <p:NodeReference LastCategoryFullName="VL.SCServer.Server.ServerStatus" LastDependency="VL.SCServer.vl">
+                        <p:NodeReference LastCategoryFullName="VL.SCServer.SCServer (Executor).ServerStatus" LastDependency="VL.SCServer.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <CategoryReference Kind="ClassType" Name="ServerStatus" />
                           <Choice Kind="OperationCallFlag" Name="Create" />
@@ -1020,9 +1019,9 @@
               </Patch>
             </Node>
             <Node Bounds="798,28,105,26" Id="Eh4GI3919Y9QVdeNg6ahiI">
-              <p:NodeReference LastCategoryFullName="VL.SCServer.ServerSettings" LastDependency="VL.SCServer.vl">
+              <p:NodeReference LastCategoryFullName="VL.SCServer.SCServerSettings" LastDependency="VL.SCServer.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <CategoryReference Kind="ClassType" Name="ServerSettings" />
+                <CategoryReference Kind="ClassType" Name="SCServerSettings" />
                 <Choice Kind="OperationCallFlag" Name="Create" />
               </p:NodeReference>
               <Pin Id="Emtzz1S0KUlLncW2cxf6L7" Name="Node Context" Kind="InputPin" IsHidden="true" />
@@ -1036,9 +1035,9 @@
             </Node>
             <Pad Id="CvOR5GV6UKENSPpzbl5luZ" SlotId="RthyQUAXEGAOCiIKpGfmNV" Bounds="1956,-251" />
             <Node Bounds="1955,-215,105,26" Id="BdEQfYVXKDNPJzDZ9wl1x6">
-              <p:NodeReference LastCategoryFullName="VL.SCServer.ServerSettings" LastDependency="VL.SCServer.vl">
+              <p:NodeReference LastCategoryFullName="VL.SCServer.SCServerSettings" LastDependency="VL.SCServer.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <CategoryReference Kind="ClassType" Name="ServerSettings" />
+                <CategoryReference Kind="ClassType" Name="SCServerSettings" />
                 <Choice Kind="OperationCallFlag" Name="Split" />
               </p:NodeReference>
               <Pin Id="VnWTL5eFfg7QRVJIi5I4bu" Name="Input" Kind="StateInputPin" />
@@ -1272,7 +1271,7 @@
                       <Pin Id="GKKfMkCpjotPnVXMIHqF7k" Name="Next TypeTag Index" Kind="OutputPin" Bounds="1064,765" />
                       <Pin Id="Ekc5Y2UEb91LdG6Om8kza8" Name="Next Byte Index" Kind="OutputPin" Bounds="424,985" />
                       <Node Bounds="691,1128,105,26" Id="LDPjmzFdpwAPoGSKIRA8Sd">
-                        <p:NodeReference LastCategoryFullName="VL.SCServer.Server.ServerVersion" LastDependency="VL.SCServer.vl">
+                        <p:NodeReference LastCategoryFullName="VL.SCServer.SCServer (Executor).ServerVersion" LastDependency="VL.SCServer.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <CategoryReference Kind="RecordType" Name="ServerVersion" />
                           <Choice Kind="OperationCallFlag" Name="Create" />
@@ -1817,7 +1816,7 @@
           <Link Id="RZYvLnxH9x4O1um8JszNt6" Ids="Kfj3F0mEhyuP3HnZHeIump,LkswCZ4T3lzLUbk6hArFrB" />
           <Slot Id="RthyQUAXEGAOCiIKpGfmNV" Name="Settings">
             <p:TypeAnnotation p:Type="TypeReference">
-              <Choice Kind="TypeFlag" Name="ServerSettings" />
+              <Choice Kind="TypeFlag" Name="SCServerSettings" />
             </p:TypeAnnotation>
           </Slot>
           <Link Id="Ba2qrs5em5GM6LOgVc29ZJ" Ids="KNrHRpgbGilMXtM8Mmr0Qw,COlljRw17xCMqlrGmr6Xa4" />
@@ -2057,10 +2056,10 @@
       </Node>
       <!--
 
-    ************************ ServerSettings ************************
+    ************************ SCServerSettings ************************
 
 -->
-      <Node Name="ServerSettings" Bounds="503,229" Id="PStPwmqrAqPN8d8wu9ffA3">
+      <Node Name="SCServerSettings" Bounds="593,227" Id="PStPwmqrAqPN8d8wu9ffA3">
         <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
           <Choice Kind="ClassDefinition" Name="Class" />
         </p:NodeReference>
@@ -2525,7 +2524,7 @@
             <Canvas Id="EUYHLdgn3EENZ0R3rh2v1b" CanvasType="Group">
               <ControlPoint Id="HD6Wj6ZO5gIOzHSu327kAK" Bounds="581,312" />
               <Node Bounds="578,383,58,26" Id="IImBhpqq4ezN3uJ57QUng9">
-                <p:NodeReference LastCategoryFullName="VL.SCServer.Server" LastDependency="VL.SCServer.vl">
+                <p:NodeReference LastCategoryFullName="VL.SCServer.SCServer (Executor)" LastDependency="VL.SCServer.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="GetOSCClient" />
                 </p:NodeReference>
@@ -2579,7 +2578,7 @@
                 <Pin Id="NlG8AFgvTx3NLdS29Q3Yr9" Name="Value" Kind="OutputPin" />
               </Node>
               <Node Bounds="577,471,124,26" Id="H9WOw4QZDxnNWp8rMWFAHh">
-                <p:NodeReference LastCategoryFullName="VL.SCServer.Server" LastDependency="VL.SCServer.vl">
+                <p:NodeReference LastCategoryFullName="VL.SCServer.SCServer (Executor)" LastDependency="VL.SCServer.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="GetAvailableCommands" />
                 </p:NodeReference>
@@ -2603,7 +2602,7 @@
             <Patch Id="KSMN1eusFXcMi4qwy1mdFd" Name="Update">
               <Pin Id="A8ESve9poI2LNVmoD52cfm" Name="Server" Kind="InputPin">
                 <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
-                  <Choice Kind="TypeFlag" Name="Server" />
+                  <Choice Kind="TypeFlag" Name="SCServer (Executor)" />
                 </p:TypeAnnotation>
               </Pin>
               <Pin Id="RAxEzUpeA3VPTydOKTOxga" Name="Command" Kind="InputPin" Bounds="773,307" />
@@ -2639,7 +2638,7 @@
             <Canvas Id="IHQ8SLTmh0LL3BkH7mddpi" CanvasType="Group">
               <ControlPoint Id="QiUbFdb5vjOLzHcCF3LRqo" Bounds="677,428" />
               <Node Bounds="674,499,58,26" Id="OmvtdRk407QNyLee8Od46J">
-                <p:NodeReference LastCategoryFullName="VL.SCServer.Server" LastDependency="VL.SCServer.vl">
+                <p:NodeReference LastCategoryFullName="VL.SCServer.SCServer (Executor)" LastDependency="VL.SCServer.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="GetOSCClient" />
                 </p:NodeReference>
@@ -2694,7 +2693,7 @@
                 <Pin Id="K9YSlQ17nMGLu3kPNntaaE" Name="Value" Kind="OutputPin" />
               </Node>
               <Node Bounds="673,587,124,26" Id="UUZjv79YCmYNqYf8xgAP3h">
-                <p:NodeReference LastCategoryFullName="VL.SCServer.Server" LastDependency="VL.SCServer.vl">
+                <p:NodeReference LastCategoryFullName="VL.SCServer.SCServer (Executor)" LastDependency="VL.SCServer.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="GetAvailableCommands" />
                 </p:NodeReference>
@@ -2735,7 +2734,7 @@
             <Patch Id="LoKAnZXuxDkLFkfG6xPIOh" Name="Update">
               <Pin Id="VX5nAsQ6tF1QLfAbqTCLCx" Name="Server" Kind="InputPin">
                 <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
-                  <Choice Kind="TypeFlag" Name="Server" />
+                  <Choice Kind="TypeFlag" Name="SCServer (Executor)" />
                 </p:TypeAnnotation>
               </Pin>
               <Pin Id="RNuR2DrKIRFOoTuL5THHQG" Name="Command" Kind="InputPin" Bounds="773,307" />
@@ -2964,7 +2963,7 @@
                   <Patch Id="IC73VNHQ5BWPL4hORYrmGQ" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="CxDdwwS2r8rMrfu8FwpZod" Name="Then" ManuallySortedPins="true" />
                   <Node Bounds="777,573,58,26" Id="Aa4YMYeXF1xPLEPtX2walQ">
-                    <p:NodeReference LastCategoryFullName="VL.SCServer.Server" LastDependency="VL.SCServer.vl">
+                    <p:NodeReference LastCategoryFullName="VL.SCServer.SCServer (Executor)" LastDependency="VL.SCServer.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="GetOSCClient" />
                     </p:NodeReference>
@@ -3019,7 +3018,7 @@
             <Patch Id="Grm1uSaPc1hNX2rJVNvK8n" Name="Update">
               <Pin Id="AJTrnvkthz0QWNpXgWsXdW" Name="Server" Kind="InputPin" Bounds="735,287">
                 <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
-                  <Choice Kind="TypeFlag" Name="Server" />
+                  <Choice Kind="TypeFlag" Name="SCServer (Executor)" />
                 </p:TypeAnnotation>
               </Pin>
               <Pin Id="DwblssychviQPBn2Y7Jt5G" Name="Send" Kind="InputPin" Bounds="929,357" />
@@ -4036,7 +4035,7 @@
                   <Patch Id="BJ3REcFGbXwP0cBSWv24Z3" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="Q7EcamkqtcjPl4nYgyJZsi" Name="Then" ManuallySortedPins="true" />
                   <Node Bounds="777,573,58,26" Id="BgsrL4C4EO1QbE1ZD92p5a">
-                    <p:NodeReference LastCategoryFullName="VL.SCServer.Server" LastDependency="VL.SCServer.vl">
+                    <p:NodeReference LastCategoryFullName="VL.SCServer.SCServer (Executor)" LastDependency="VL.SCServer.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="GetOSCClient" />
                     </p:NodeReference>
@@ -4091,7 +4090,7 @@
             <Patch Id="OFjegz2OHXNPS0218Ns7LM" Name="Update">
               <Pin Id="M0HirpKmgwTLMxAk9vOiBD" Name="Server" Kind="InputPin" Bounds="735,287">
                 <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
-                  <Choice Kind="TypeFlag" Name="Server" />
+                  <Choice Kind="TypeFlag" Name="SCServer (Executor)" />
                 </p:TypeAnnotation>
               </Pin>
               <Pin Id="CKeQo9j2o42PUAGzuXck28" Name="Send" Kind="InputPin" Bounds="929,357" />
@@ -5143,7 +5142,7 @@
                   <Patch Id="BkaUZBP9fCsNn8PpNltRUk" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="IH0LLHV6jUGNH0dmfn0tfp" Name="Then" ManuallySortedPins="true" />
                   <Node Bounds="804,593,58,26" Id="T6nFjR8EcZMOjI8v1715UP">
-                    <p:NodeReference LastCategoryFullName="VL.SCServer.Server" LastDependency="VL.SCServer.vl">
+                    <p:NodeReference LastCategoryFullName="VL.SCServer.SCServer (Executor)" LastDependency="VL.SCServer.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="GetOSCClient" />
                     </p:NodeReference>
@@ -5245,7 +5244,7 @@
             <Patch Id="B6AXOXaEdRWNtKYsxjVtQq" Name="Update">
               <Pin Id="NEu3Y2e0svyLENBwOTRokH" Name="Server" Kind="InputPin" Bounds="735,287">
                 <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
-                  <Choice Kind="TypeFlag" Name="Server" />
+                  <Choice Kind="TypeFlag" Name="SCServer (Executor)" />
                 </p:TypeAnnotation>
               </Pin>
               <Pin Id="G2pwy6ibmddMzp7lsgCanS" Name="Node ID" Kind="InputPin" Bounds="784,412">
@@ -5489,7 +5488,7 @@
     ************************ SCClient ************************
 
 -->
-      <Node Name="SCClient" Bounds="399,269" Id="UFFMgPkKF6UNa0hCYEjoYM">
+      <Node Name="SCClient" Bounds="403,272" Id="UFFMgPkKF6UNa0hCYEjoYM">
         <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
           <Choice Kind="ClassDefinition" Name="Class" />
         </p:NodeReference>
@@ -5568,13 +5567,17 @@
                 <Choice Kind="ApplicationStatefulRegion" Name="If" />
               </p:NodeReference>
               <Pin Id="NoPeKKDoxBaLgnT1fppu5S" Name="Condition" Kind="InputPin" />
+              <ControlPoint Id="Abnj0ezUsRtQTTbfl1a3Gg" Bounds="270,461" Alignment="Bottom" />
+              <ControlPoint Id="InQbRSxeRJ5M33kiOklJYv" Bounds="271,294" Alignment="Top" />
+              <ControlPoint Id="J0K3rhnibJtOSCIwItEJGq" Bounds="291,461" Alignment="Bottom" />
+              <ControlPoint Id="GUBN2bAkmRSNuhJPQr9rPu" Bounds="291,294" Alignment="Top" />
               <Patch Id="VVFSCCBC6lvPY2nRYvdpSr" ManuallySortedPins="true">
                 <Patch Id="C3WZu0muUSpNRmMrkj0Iyn" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="UTQZh0NgbcFOBIjZKCVEWz" Name="Then" ManuallySortedPins="true" />
                 <Node Bounds="165,311,68,26" Id="BBW5fTkXK81OjwdlTND3Be">
-                  <p:NodeReference LastCategoryFullName="VL.SCServer.Server" LastDependency="VL.SCServer.vl">
+                  <p:NodeReference LastCategoryFullName="VL.SCServer.SCServer (Executor)" LastDependency="VL.SCServer.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <CategoryReference Kind="ClassType" Name="Server" />
+                    <CategoryReference Kind="ClassType" Name="SCServer (Executor)" />
                     <Choice Kind="OperationCallFlag" Name="GetSettings" />
                   </p:NodeReference>
                   <Pin Id="MqUYKfBSkneMymsFiPoTav" Name="Input" Kind="StateInputPin" />
@@ -5582,9 +5585,9 @@
                   <Pin Id="S6qr2BgWmOXPFRvDclgHfT" Name="Settings" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="228,372,105,26" Id="RnixFGgX6dZPfQFOWQzt7P">
-                  <p:NodeReference LastCategoryFullName="VL.SCServer.ServerSettings" LastDependency="VL.SCServer.vl">
+                  <p:NodeReference LastCategoryFullName="VL.SCServer.SCServerSettings" LastDependency="VL.SCServer.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <CategoryReference Kind="ClassType" Name="ServerSettings" />
+                    <CategoryReference Kind="ClassType" Name="SCServerSettings" />
                     <Choice Kind="OperationCallFlag" Name="Split" />
                   </p:NodeReference>
                   <Pin Id="A90To28FXnhO79lCh20w86" Name="Input" Kind="StateInputPin" />
@@ -5605,10 +5608,6 @@
                   <Pin Id="HdnTji4S9N8M2Tglsuq0et" Name="Result" Kind="OutputPin" />
                 </Node>
               </Patch>
-              <ControlPoint Id="Abnj0ezUsRtQTTbfl1a3Gg" Bounds="270,461" Alignment="Bottom" />
-              <ControlPoint Id="InQbRSxeRJ5M33kiOklJYv" Bounds="271,294" Alignment="Top" />
-              <ControlPoint Id="J0K3rhnibJtOSCIwItEJGq" Bounds="291,461" Alignment="Bottom" />
-              <ControlPoint Id="GUBN2bAkmRSNuhJPQr9rPu" Bounds="291,294" Alignment="Top" />
             </Node>
             <Pad Id="AHLIep94q6nMFJUDeu5jXU" SlotId="Nu7Pyxm6vyANWoYI7JNLdK" Bounds="271,518" />
             <Pad Id="PHCl1WJ5DamNSEhfmgzSql" SlotId="Nu7Pyxm6vyANWoYI7JNLdK" Bounds="271,196" />
@@ -5761,7 +5760,7 @@
           <Patch Id="TT8qqi3mjZrPylAmB1KQZt" Name="FromSCSynth">
             <Pin Id="QYqkmnTlHrWLraig8UF5qx" Name="SCSynth" Kind="InputPin">
               <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
-                <Choice Kind="TypeFlag" Name="Server" />
+                <Choice Kind="TypeFlag" Name="SCServer (Executor)" />
               </p:TypeAnnotation>
             </Pin>
           </Patch>
