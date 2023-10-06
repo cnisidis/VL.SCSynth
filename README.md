@@ -4,7 +4,9 @@ Super Collider Server Lib - foundation for vvvv and SC integration
 
 ## What is this?
 
-VL.SCServer (Super Collider Server) is a minimal implementation of a standalone server executor (scsynth). 
+VL.SCServer (SuperCollider Server [^5]) is a minimal implementation of a standalone server executor (scsynth[^10]) using the [VL.IO.OSC](https://github.com/vvvv/VL.IO.OSC) lib. 
+
+<cite>Read More abuot SuperCollider [here](https://supercollider.github.io/)</cite>
 
 It supports all major OSC messages for manipulating the server itself and its nodes, such as SynthDefs, Synths, Groups and Busses.
 
@@ -70,6 +72,7 @@ Implemented according to [Server Command Reference](https://doc.sccode.org/Refer
 |SetNodeValue<T, U>|/n_set|Using SynthParameter Object|
 
 
+
 ## SynthParameter
 
 A <i>Record<U,T></i> type object holding two fields:
@@ -77,8 +80,10 @@ A <i>Record<U,T></i> type object holding two fields:
 - Name or Index can be either type of String or Integer32
 - Value can be an Integer32, Float32 or String
 
-
 ## Before You Go
 SCServer is still in progress, so changes will be often and may cause breaking changes. 
 
 One important thing (which still needs some polishing) is that you have to set the SuperCollider installation folder manually every time you introduce the SCServer node. 
+
+[^5] See [Client vs Server Documentation](https://doc.sccode.org/Guides/ClientVsServer.html)
+[^10] [scsynth](https://github.com/supercollider/supercollider/wiki/scsynth-development) – A real-time audio server
