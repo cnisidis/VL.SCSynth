@@ -201,3 +201,12 @@ public enum RunNodeFlags
     DoNotExecute = 0,
     Execute = 1,
 }
+
+public enum AddActions
+{
+    AddToHead =0,
+    AddToTail =1,
+    AddBefore =2,
+    AddAfter =3,
+    Replace =4
+}
