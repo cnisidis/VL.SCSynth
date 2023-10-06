@@ -37,7 +37,7 @@ So far only few options are being supported (the plan is to add all the availabl
 
 
 
-## Server Commands & Messages
+## Server Commands & Messages (WIP)
 Implemented according to [Server Command Reference](https://doc.sccode.org/Reference/Server-Command-Reference.html)
 
 
@@ -79,4 +79,4 @@ A <i>Record<U,T></i> type object holding two fields:
 ## Before You Go
 SCServer is still in progress, so changes will be often and may cause breaking changes. 
 
-One important thing (which still needs some polishing) is that you have to set the SuperCollider installation folder manually every time you introduce the SCServer node.
+One important thing (which still needs some polishing) is that you have to set the SuperCollider installation folder manually every time you introduce the SCServer node. 
