@@ -6,7 +6,7 @@ Super Collider Server Lib - foundation for vvvv and SC integration
 
 VL.SCServer (SuperCollider Server)[^5] is a minimal implementation of a standalone server executor (scsynth)[^10] using the [VL.IO.OSC](https://github.com/vvvv/VL.IO.OSC) lib. 
 
-<cite>Read More abuot SuperCollider [here](https://supercollider.github.io/)</cite>
+<cite>Read More about SuperCollider [here](https://supercollider.github.io/)</cite>
 
 It supports all major OSC messages for manipulating the server itself and its nodes, such as SynthDefs, Synths, Groups and Busses.
 
