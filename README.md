@@ -8,9 +8,11 @@ VL.SCServer (SuperCollider Server)[^5] is a minimal implementation of a standalo
 
 <cite>Read More about SuperCollider [here](https://supercollider.github.io/)</cite>
 
-It supports all major OSC messages for manipulating the server itself and its nodes, such as SynthDefs, Synths, Groups and Busses.
+It supports all major OSC messages for manipulating the server itself and its nodes, such as SynthDefs, Synths, Groups and Busses (check the list below)[^20].
 
 Therefore it is bundled with all the appropriate functionalities to build your own messages and queries.
+
+SCServer comes with an integrated SCClient (for receiving scynth responses). However SCClient can be used to access an active SuperCollider server by any machine, locally or internally. 
 
 ## Some usefull notes
 
@@ -20,9 +22,13 @@ SuperCollider Server replies on the same port it listens to, since TCP is not su
 
 <cite>This functionality is already managed internaly in order to get Server's Stauts, Verions and other useful information.</cite>
 
+Both SCServer and SCClient are inheriting their methods from ISCSynth. This name was picked in order to signify that both are implementing and sharing methods to communicate directly with any active scsynth.
+
+In example, once you started scsynth (either via SCServer or directly or by using the SC IDE), you can access it by introducing a SCClient on the VL side, respecting the IP Address and the binded port.
 
 
-## Server Options
+
+## SCServer Options
 
 So far only few options are being supported (the plan is to add all the available options). The idea was to keep it simple and minimal by adding olny essential things.
 
@@ -43,7 +49,7 @@ So far only few options are being supported (the plan is to add all the availabl
 
 
 
-## Server Commands & Messages (WIP)
+## [^20]:Server Commands & Messages (WIP)
 Implemented according to [Server Command Reference](https://doc.sccode.org/Reference/Server-Command-Reference.html)
 
 
