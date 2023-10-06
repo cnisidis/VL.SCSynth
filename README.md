@@ -8,7 +8,7 @@ VL.SCServer (SuperCollider Server)[^5] is a minimal implementation of a standalo
 
 <cite>Read More about SuperCollider [here](https://supercollider.github.io/)</cite>
 
-It supports all major OSC messages for manipulating the server itself and its nodes, such as SynthDefs, Synths, Groups and Busses (check the list below)[^20].
+It supports all major OSC messages for manipulating the server itself and its nodes, such as SynthDefs, Synths, Groups and Busses (check [this list](#scserver-options) below).
 
 Therefore it is bundled with all the appropriate functionalities to build your own messages and queries.
 
@@ -49,7 +49,7 @@ So far only few options are being supported (the plan is to add all the availabl
 
 
 
-## [^20]:Server Commands & Messages (WIP)
+## Server Commands & Messages (WIP)
 Implemented according to [Server Command Reference](https://doc.sccode.org/Reference/Server-Command-Reference.html)
 
 
