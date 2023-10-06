@@ -32,6 +32,8 @@ So far only few options are being supported (the plan is to add all the availabl
 
 - Bind a certain IP address.
 
+- Bind a port for vice-versa communication.
+
 
 <i>for more info regarding the scsynth arguments see:</i>
 
