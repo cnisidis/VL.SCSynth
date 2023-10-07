@@ -210,3 +210,9 @@ public enum AddActions
     AddAfter =3,
     Replace =4
 }
+
+public enum NodeType
+{
+    Synth =0,
+    Group =1
+}
