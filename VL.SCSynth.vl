@@ -8666,6 +8666,37 @@
           <Link Id="RXhaUj7Ql5WPUkA3XGmHu7" Ids="A4Y6RKWIcTjMIqbrAsXkEZ,SOqHVaUpn6uPC4oeSzgldO" />
         </Patch>
       </Node>
+      <!--
+
+    ************************ ISCNode ************************
+
+-->
+      <Node Name="ISCNode" Bounds="801,350" Id="Ursj5UxMSpiMj453bW1XfO">
+        <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+          <Choice Kind="InterfaceDefinition" Name="Interface" />
+        </p:NodeReference>
+        <Patch Id="Rzv2dk648TbNcZYgoZAXBh">
+          <Canvas Id="KLPDsRDjUCCMgrVOhr3bM6" CanvasType="Group" />
+          <!--
+
+    ************************  ************************
+
+-->
+          <ProcessDefinition Id="NXq4sfEbBkHPBoMYy2CGaO" IsHidden="true">
+            <Fragment Id="U3r0F5xDgXZLDTRiEB3olt" Patch="FQmVZImhD2VMwF7xEyY6ke" />
+          </ProcessDefinition>
+          <Patch Id="FQmVZImhD2VMwF7xEyY6ke" Name="GetParent" />
+        </Patch>
+      </Node>
+      <Pad Id="VIyrHSnMwrUNq48e7pjg9D" Bounds="918,333,346,19" ShowValueBox="true" isIOBox="true" Value="--&gt; ISCNode is the basic interface for Synths and Groups">
+        <p:TypeAnnotation>
+          <Choice Kind="TypeFlag" Name="String" />
+        </p:TypeAnnotation>
+        <p:ValueBoxSettings>
+          <p:fontsize p:Type="Int32">9</p:fontsize>
+          <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+        </p:ValueBoxSettings>
+      </Pad>
     </Canvas>
     <!--
 
