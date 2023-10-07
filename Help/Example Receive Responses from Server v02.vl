@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="KnFuXEAzAfbNRlXSc96dVu" LanguageVersion="2023.5.3-0203-g579cc42b10" Version="0.128">
-  <NugetDependency Id="D8llDVs7y94OlT72zRz2QQ" Location="VL.CoreLib" Version="2023.5.3-0203-g579cc42b10" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="KnFuXEAzAfbNRlXSc96dVu" LanguageVersion="2023.5.3-0210-g711a1c31d4" Version="0.128">
+  <NugetDependency Id="D8llDVs7y94OlT72zRz2QQ" Location="VL.CoreLib" Version="2023.5.3-0210-g711a1c31d4" />
   <Patch Id="QzHsf5ouFWuOXOknEd79uT">
     <Canvas Id="JJo6QtElTGQP3LSYppDcDC" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -37,20 +37,6 @@
             <Pin Id="CXD89pAsKqsMpNZBGKT1ap" Name="isRunning" Kind="OutputPin" />
             <Pin Id="NNmJO0S343zOs5YoBEziSv" Name="isListening" Kind="OutputPin" />
           </Node>
-          <Node Bounds="498,301,48,19" Id="FVpgZQgwkYrO3IuCcQQBBT">
-            <p:NodeReference LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="OperationCallFlag" Name="ToPath (Explicit)" />
-            </p:NodeReference>
-            <Pin Id="Nms3gKYRIQWMUBObJTPujw" Name="Input" Kind="InputPin" />
-            <Pin Id="E5v6iMQW1t7Lvdzj0wrQz4" Name="Is Directory" Kind="InputPin" />
-            <Pin Id="GbUt9hNTWdXPzuWpmiGvsD" Name="Result" Kind="OutputPin" />
-          </Node>
-          <Pad Id="A5Y51vOVDEkO3UT692FpuR" Comment="" Bounds="501,235,238,15" ShowValueBox="true" isIOBox="true" Value="C:\Program Files\SuperCollider-3.13.0">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
-              <Choice Kind="TypeFlag" Name="String" />
-            </p:TypeAnnotation>
-          </Pad>
           <Pad Id="UOnfA6E0rf3MXySVXY5u6K" Comment="Boot" Bounds="622,286,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
@@ -69,7 +55,7 @@
             <Pin Id="GoaJ6BziNZLLQHeTrZq6hg" Name="SCSynth" Kind="InputPin" />
             <Pin Id="UsxYZUUYAMePIRIUMEsTPH" Name="Enabled" Kind="InputPin" />
             <Pin Id="TyTGwnDPiowOSogTWvTUWF" Name="Update" Kind="InputPin" />
-            <Pin Id="FQ7eCDsZTL9MdmEzZZ66h4" Name="Enable Log" Kind="ApplyPin" />
+            <Pin Id="FQ7eCDsZTL9MdmEzZZ66h4" Name="Console Log" Kind="ApplyPin" DefaultValue="True" />
             <Pin Id="RxX1dBQqjiuLhUP7v4rwaJ" Name="Id" Kind="InputPin" />
             <Pin Id="PRxCkQVSUZtQAurrTPV6SH" Name="Server IP" Kind="InputPin" />
             <Pin Id="DrTeWuiEA8DQb7jV9stYE6" Name="Port" Kind="InputPin" />
@@ -78,7 +64,7 @@
             <Pin Id="VrEB0hJ1lOPMzjpUbafaI7" Name="Is Open" Kind="OutputPin" />
           </Node>
           <Pad Id="Dg4jntMcOGfPeecjswGKuu" Comment="Is Open" Bounds="980,395,35,35" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="JszAUKUUoeFM5OSO5FVTSE" Comment="Enabled" Bounds="876,299,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+          <Pad Id="JszAUKUUoeFM5OSO5FVTSE" Comment="Enabled" Bounds="801,259,35,35" ShowValueBox="true" isIOBox="true" Value="True">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
@@ -131,7 +117,7 @@
             <Pin Id="Ubbx0KqyBpCOUtXEH7oLJu" Name="SendOnChange" Kind="InputPin" DefaultValue="True" />
             <Pin Id="E2BjIU1uuTcMJSg5lXIJgr" Name="Server" Kind="OutputPin" />
           </Node>
-          <Pad Id="EJPXvpiCOs9NyYVjw30sNz" Comment="Node ID" Bounds="876,575,35,49" ShowValueBox="true" isIOBox="true" Value="0">
+          <Pad Id="EJPXvpiCOs9NyYVjw30sNz" Comment="Node ID" Bounds="876,575,48,34" ShowValueBox="true" isIOBox="true" Value="0">
             <p:TypeAnnotation LastCategoryFullName="Collections" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Spread" />
               <p:TypeArguments>
@@ -162,11 +148,6 @@
             <Pin Id="FWbvlolu7kKMfJ5ztsjjjy" Name="Send" Kind="InputPin" />
             <Pin Id="CqC9QUrk2UKMt9OLIce2VW" Name="Server" Kind="OutputPin" />
           </Node>
-          <Pad Id="R2gMJMgyvWBNQak9vwCPbY" Comment="FilePath Expression" Bounds="1114,412,140,15" ShowValueBox="true" isIOBox="true" Value="D:\Projects\VL_Repos\VL.SCSynth\Help\Assets\synthdefs\vvvvExample.scsyndef">
-            <p:TypeAnnotation LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
-              <Choice Kind="TypeFlag" Name="Path" />
-            </p:TypeAnnotation>
-          </Pad>
           <Pad Id="CpdhHwqHeyILTfBcp1oGWX" Comment="Send" Bounds="1166,352,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
@@ -196,7 +177,7 @@
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="DKrmHHqrVcBMI9vFP5KlvH" Comment="Send" Bounds="1274,476,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+          <Pad Id="DKrmHHqrVcBMI9vFP5KlvH" Comment="Send" Bounds="1231,452,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
@@ -259,6 +240,39 @@
             </p:TypeAnnotation>
           </Pad>
           <Pad Id="BXm32nR0Oa2QOK8xGr1ahj" Comment="On Data" Bounds="1228,785,35,35" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="498,234,192,19" Id="MHC38B7TjNkP1gdmCvrElV">
+            <p:NodeReference LastCategoryFullName="VL.SCSynth.Paths" LastDependency="VL.SCSynth.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="SuperColliderFolderInstallation" />
+            </p:NodeReference>
+            <Pin Id="CBRGgD4SV7eLHPWL1iGLFz" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="CfPvwQiQQQLL156ZUZ8Z4Y" Name="Reload" Kind="InputPin" />
+            <Pin Id="LLsMnaGmfx6QdIgblIVcAJ" Name="Special Folder" Kind="InputPin" DefaultValue="ProgramFiles" />
+            <Pin Id="DyBL7sGDPxpLm3Kt52sQx3" Name="SuperColliderFolder" Kind="OutputPin" />
+            <Pin Id="CBFjAumZmeWLyVttQIadRg" Name="Count" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="1113,309,76,19" Id="AyngSJ5brrSQd91o61fhLF">
+            <p:NodeReference LastCategoryFullName="VL.SCSynth.Paths" LastDependency="VL.SCSynth.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="HelperAssets" />
+            </p:NodeReference>
+            <Pin Id="BgUn1qiYPlvNWff9hy6PvV" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="MdR0B9lGysdLCoaCO3yQZq" Name="File" Kind="InputPin" />
+            <Pin Id="AxnHAfvrChHNCm1UrHyvxn" Name="Asset" Kind="OutputPin" />
+          </Node>
+          <Pad Id="GqTGHeS8fGTNbAFBEzwAEU" Comment="File" Bounds="1115,283,145,15" ShowValueBox="true" isIOBox="true" Value="\synthdefs\vvvvExample.scsyndef">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="KR3tfRsabkZONBEugKPCh5" Comment="Console Log" Bounds="917,258,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
         </Canvas>
         <Patch Id="LTWdG22dzPgLzNGjeFkUMU" Name="Create" />
         <Patch Id="CypQcAkHjXfNsB9aFRGQMx" Name="Update" />
@@ -266,8 +280,6 @@
           <Fragment Id="OqS5gS2ZahMMNvCZLckuA6" Patch="LTWdG22dzPgLzNGjeFkUMU" Enabled="true" />
           <Fragment Id="P05UNDDR3w8PRVg0KVVsbQ" Patch="CypQcAkHjXfNsB9aFRGQMx" Enabled="true" />
         </ProcessDefinition>
-        <Link Id="JybwGKLQS4BPdwfyLTeuGB" Ids="GbUt9hNTWdXPzuWpmiGvsD,B4F5z4qDTdpLSoDlHJu35G" />
-        <Link Id="PEdFQmxEEGWNAWliweG74j" Ids="A5Y51vOVDEkO3UT692FpuR,Nms3gKYRIQWMUBObJTPujw" />
         <Link Id="M1aRSBkMbQ9PfO8zih2Qj0" Ids="UOnfA6E0rf3MXySVXY5u6K,E69Zhrfol4QOUxD02ROhot" />
         <Link Id="MngQjelfJDMMrAS6XDe165" Ids="CXD89pAsKqsMpNZBGKT1ap,GIzpjJJUMpgMFgJXU6Ctgf" />
         <Link Id="B4nmSQYi5SeLbWctpFQGOH" Ids="VrEB0hJ1lOPMzjpUbafaI7,Dg4jntMcOGfPeecjswGKuu" />
@@ -280,7 +292,6 @@
         <Link Id="FZgVBhSoBkHP6Ehd2JidTy" Ids="EJPXvpiCOs9NyYVjw30sNz,BiiUcwbg0T0LAHNiDbuiui" />
         <Link Id="MgZ3zCMlBjxMwsMUA9ZiX0" Ids="PUu82RaPd25PsTrztCOUlw,E8CxL24Deo4LfbPMWeuiaM" />
         <Link Id="AgSHCPQuHi8Mh72T3HSJoO" Ids="LU3Dj7RjYARQdsMk2gXA3W,KseRnRieGLyMG0PJirv8zR" />
-        <Link Id="K0xjkUaVKVWNT1jOSdscwS" Ids="R2gMJMgyvWBNQak9vwCPbY,GbAm2014rASNd2FJnxNBX0" />
         <Link Id="QjRueM5444MNlRkyNCLPh4" Ids="CpdhHwqHeyILTfBcp1oGWX,FWbvlolu7kKMfJ5ztsjjjy" />
         <Link Id="Pd6EDXX8BDWOZDihviOMN7" Ids="CqC9QUrk2UKMt9OLIce2VW,OslpoLQRshHMBzmr2CAeQx" />
         <Link Id="BOGArnoSgIFPlmN9jgTSDd" Ids="E9dCLk3CN3ePLTKGMI7gPi,OVCrn54IKDFMezWPj6ght2" />
@@ -292,6 +303,10 @@
         <Link Id="Mib8mq7j7OdPXXla9i84AM" Ids="UJjydQUzdQHL8d0uZD4a3u,HxB3pz59y3mOTUu4Npciih" />
         <Link Id="BJ0uxVeFmSAP4hbp6sOC0S" Ids="MjVsRyRxbFgMZAqCmQni28,Ub7roYmU32eQQeRw0LiclK" />
         <Link Id="UWejZg0bUstMvg4BFJ15SI" Ids="P5QxtOs1TMDPWyGmB8L5ow,BXm32nR0Oa2QOK8xGr1ahj" />
+        <Link Id="MyOjpA6y878MyQR1FZDTRx" Ids="DyBL7sGDPxpLm3Kt52sQx3,B4F5z4qDTdpLSoDlHJu35G" />
+        <Link Id="LVj7KvOCN6WOZ9LIu6c3w3" Ids="GqTGHeS8fGTNbAFBEzwAEU,MdR0B9lGysdLCoaCO3yQZq" />
+        <Link Id="SSNi8VyfqdVLcOJVPemxGI" Ids="AxnHAfvrChHNCm1UrHyvxn,GbAm2014rASNd2FJnxNBX0" />
+        <Link Id="BtJfvZOwqRGNg3URsIUnD5" Ids="KR3tfRsabkZONBEugKPCh5,FQ7eCDsZTL9MdmEzZZ66h4" />
       </Patch>
     </Node>
   </Patch>
