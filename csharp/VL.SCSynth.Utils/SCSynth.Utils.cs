@@ -5,7 +5,7 @@ using System;
 ///For examples, see:
 ///https://thegraybook.vvvv.org/reference/extending/writing-nodes.html#examples
 
-namespace VL.SCServer;
+namespace VL.SCSynth;
 
 public enum Protocol
 {
