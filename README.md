@@ -1,10 +1,10 @@
-# VL.SCServer
-SuperCollider Server Lib - foundation for vvvv and SC integration
+# VL.SCSynth
+SuperCollider Server-Client Lib - foundation for vvvv and SC integration
 
 
 ## What is this?
 
-VL.SCServer (SuperCollider Server)[^5] is a minimal implementation of a standalone server executor (scsynth)[^10] using the [VL.IO.OSC](https://github.com/vvvv/VL.IO.OSC) lib. 
+VL.SCSynth (SuperCollider Server)[^5] is a minimal implementation of a standalone server executor (scsynth)[^10] using the [VL.IO.OSC](https://github.com/vvvv/VL.IO.OSC) lib. 
 
 <cite>Read more about SuperCollider [here](https://supercollider.github.io/)</cite>
 

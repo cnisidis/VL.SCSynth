@@ -2,7 +2,7 @@
 <Document xmlns:p="property" xmlns:r="reflection" Id="APO6VRyJc5WLmhZFfQmN2L" LanguageVersion="2023.5.3-0203-g579cc42b10" Version="0.128">
   <NugetDependency Id="CHl4kjm5afgQNbqskX3upM" Location="VL.CoreLib" Version="2023.5.3-0203-g579cc42b10" />
   <Patch Id="OkNZwt5yj5SLI5Z6rCbDue">
-    <Canvas Id="AwyIswtQM0uMA77uZO68bz" DefaultCategory="VL.SCServer" CanvasType="FullCategory">
+    <Canvas Id="AwyIswtQM0uMA77uZO68bz" DefaultCategory="VL.SCSynth" CanvasType="FullCategory">
       <!--
 
     ************************ SCServer (Executor) ************************
@@ -78,7 +78,7 @@
                 <Patch Id="Eb1DFwH4jJgMsotU5us3p1" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="UdoTRq0UKIKMYA3mpAUOyD" Name="Then" ParticipatingElements="BS0oifj1uzRLZUXTbjzd9H" ManuallySortedPins="true" />
                 <Node Bounds="511,100,105,26" Id="BS0oifj1uzRLZUXTbjzd9H">
-                  <p:NodeReference LastCategoryFullName="VL.SCServer.SCServerSettings" LastDependency="VL.SCServer.vl">
+                  <p:NodeReference LastCategoryFullName="VL.SCSynth.SCServerSettings" LastDependency="VL.SCSynht.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="ClassType" Name="SCServerSettings" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
@@ -264,7 +264,7 @@
               <ControlPoint Id="EetYZ6dCKeVQRuMKAOqN0K" Bounds="931,225" Alignment="Top" />
             </Node>
             <Node Bounds="799,172,91,26" Id="JV7iZyzpBSGM3SpKr39EUS">
-              <p:NodeReference LastCategoryFullName="VL.SCServer.SCServerSettings" LastDependency="VL.SCServer.vl">
+              <p:NodeReference LastCategoryFullName="VL.SCSynth.SCServerSettings" LastDependency="VL.SCSynht.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="GetSCFolderPath" />
               </p:NodeReference>
@@ -559,7 +559,7 @@
                       <ControlPoint Id="UHR3VDBzM2qOPcYsfrDHiz" Bounds="768,1078" />
                       <Link Id="ExANIVLx1ivNngGcqQ8qWh" Ids="UHR3VDBzM2qOPcYsfrDHiz,QGDf9r1IxQ4OpAO4su7E0e" IsHidden="true" />
                       <Node Bounds="564,981,165,26" Id="Tz6x3K9f7vjN7dX2kW8JS8">
-                        <p:NodeReference LastCategoryFullName="VL.SCServer.SCServer (Executor).ServerStatus" LastDependency="VL.SCServer.vl">
+                        <p:NodeReference LastCategoryFullName="VL.SCSynth.SCServer (Executor).ServerStatus" LastDependency="VL.SCSynht.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <CategoryReference Kind="ClassType" Name="ServerStatus" />
                           <Choice Kind="OperationCallFlag" Name="Create" />
@@ -1019,7 +1019,7 @@
               </Patch>
             </Node>
             <Node Bounds="798,28,105,26" Id="Eh4GI3919Y9QVdeNg6ahiI">
-              <p:NodeReference LastCategoryFullName="VL.SCServer.SCServerSettings" LastDependency="VL.SCServer.vl">
+              <p:NodeReference LastCategoryFullName="VL.SCSynth.SCServerSettings" LastDependency="VL.SCSynht.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="ClassType" Name="SCServerSettings" />
                 <Choice Kind="OperationCallFlag" Name="Create" />
@@ -1035,7 +1035,7 @@
             </Node>
             <Pad Id="CvOR5GV6UKENSPpzbl5luZ" SlotId="RthyQUAXEGAOCiIKpGfmNV" Bounds="1956,-251" />
             <Node Bounds="1955,-215,105,26" Id="BdEQfYVXKDNPJzDZ9wl1x6">
-              <p:NodeReference LastCategoryFullName="VL.SCServer.SCServerSettings" LastDependency="VL.SCServer.vl">
+              <p:NodeReference LastCategoryFullName="VL.SCSynth.SCServerSettings" LastDependency="VL.SCSynht.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="ClassType" Name="SCServerSettings" />
                 <Choice Kind="OperationCallFlag" Name="Split" />
@@ -1271,7 +1271,7 @@
                       <Pin Id="GKKfMkCpjotPnVXMIHqF7k" Name="Next TypeTag Index" Kind="OutputPin" Bounds="1064,765" />
                       <Pin Id="Ekc5Y2UEb91LdG6Om8kza8" Name="Next Byte Index" Kind="OutputPin" Bounds="424,985" />
                       <Node Bounds="691,1128,105,26" Id="LDPjmzFdpwAPoGSKIRA8Sd">
-                        <p:NodeReference LastCategoryFullName="VL.SCServer.SCServer (Executor).ServerVersion" LastDependency="VL.SCServer.vl">
+                        <p:NodeReference LastCategoryFullName="VL.SCSynth.SCServer (Executor).ServerVersion" LastDependency="VL.SCSynht.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <CategoryReference Kind="RecordType" Name="ServerVersion" />
                           <Choice Kind="OperationCallFlag" Name="Create" />
@@ -1698,7 +1698,7 @@
               <Pin Id="ULE0ELzhXVRPaX6gegoG3d" Name="Node Context" Kind="InputPin" IsHidden="true" />
             </Node>
             <Node Bounds="-331,241,108,19" Id="GJE3xNHN3eCOlWjwREGXWE">
-              <p:NodeReference LastCategoryFullName="VL.SCServer.Commands" LastDependency="VL.SCServer.vl">
+              <p:NodeReference LastCategoryFullName="VL.SCSynth.Commands" LastDependency="VL.SCSynht.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="AvailableCommands" />
               </p:NodeReference>
@@ -2548,7 +2548,7 @@
             <Canvas Id="EUYHLdgn3EENZ0R3rh2v1b" CanvasType="Group">
               <ControlPoint Id="HD6Wj6ZO5gIOzHSu327kAK" Bounds="581,312" />
               <Node Bounds="578,383,58,26" Id="IImBhpqq4ezN3uJ57QUng9">
-                <p:NodeReference LastCategoryFullName="VL.SCServer.SCServer (Executor)" LastDependency="VL.SCServer.vl">
+                <p:NodeReference LastCategoryFullName="VL.SCSynth.SCServer (Executor)" LastDependency="VL.SCSynht.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="GetOSCClient" />
                 </p:NodeReference>
@@ -2602,7 +2602,7 @@
                 <Pin Id="NlG8AFgvTx3NLdS29Q3Yr9" Name="Value" Kind="OutputPin" />
               </Node>
               <Node Bounds="577,471,124,26" Id="H9WOw4QZDxnNWp8rMWFAHh">
-                <p:NodeReference LastCategoryFullName="VL.SCServer.SCServer (Executor)" LastDependency="VL.SCServer.vl">
+                <p:NodeReference LastCategoryFullName="VL.SCSynth.SCServer (Executor)" LastDependency="VL.SCSynht.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="GetAvailableCommands" />
                 </p:NodeReference>
@@ -2622,17 +2622,6 @@
               <Fragment Id="NAdY9wKkw49QaYBpn9heHp" Patch="KSMN1eusFXcMi4qwy1mdFd" Enabled="true" />
             </ProcessDefinition>
             <Link Id="FCTdwsiw0ssMAMqmysmj6d" Ids="A8ESve9poI2LNVmoD52cfm,HD6Wj6ZO5gIOzHSu327kAK" IsHidden="true" />
-            <Patch Id="DOlj8ZWWin2N3TmhL7iKEp" Name="Create" />
-            <Patch Id="KSMN1eusFXcMi4qwy1mdFd" Name="Update">
-              <Pin Id="A8ESve9poI2LNVmoD52cfm" Name="Server" Kind="InputPin">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
-                  <Choice Kind="TypeFlag" Name="SCServer (Executor)" />
-                </p:TypeAnnotation>
-              </Pin>
-              <Pin Id="RAxEzUpeA3VPTydOKTOxga" Name="Command" Kind="InputPin" Bounds="773,307" />
-              <Pin Id="JocN7RXaMWDOn4bdewObwI" Name="Bundled Per Frame" Kind="InputPin" Bounds="800,421" />
-              <Pin Id="SWEhlNNpLjBOuKOgNqGQoS" Name="Send" Kind="InputPin" Bounds="825,458" />
-            </Patch>
             <Link Id="CoZXPqdxzJCNRZBTU4gUw1" Ids="HD6Wj6ZO5gIOzHSu327kAK,OHu1oyTjF5PQTqLvMyZP2U" />
             <Link Id="UdEbsb5ROYROpC1eOYhIrA" Ids="LVOv1P0Z5IiQdqU3m00tHA,F8AnP0ef4HJNXBsokJffz8" />
             <Link Id="JyOYPhbktSEOEeusDboH2x" Ids="EWXxG27SCH0Ny67m7iyDQz,PZDY2qArhokNN9xEXCzOCi,PldYI8KobUgMZAifIWsQdc" />
@@ -2647,6 +2636,17 @@
             <Link Id="MVNzMWH4Fb5OStQFC4hGRw" Ids="RWp4HivQ9SCN2a6xD1ol41,HdVeknmVPVcNCKoASeuOTT" />
             <Link Id="Ud4CaIIDbg6NVSt5wMysOB" Ids="SWEhlNNpLjBOuKOgNqGQoS,RWp4HivQ9SCN2a6xD1ol41" IsHidden="true" />
             <Link Id="U7XrXy6rabQNvinmncG8Vc" Ids="NlG8AFgvTx3NLdS29Q3Yr9,UH7SPTaqMaZOC27533yYsE" />
+            <Patch Id="DOlj8ZWWin2N3TmhL7iKEp" Name="Create" />
+            <Patch Id="KSMN1eusFXcMi4qwy1mdFd" Name="Update">
+              <Pin Id="A8ESve9poI2LNVmoD52cfm" Name="Server" Kind="InputPin">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynht.vl">
+                  <Choice Kind="TypeFlag" Name="SCServer (Executor)" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="RAxEzUpeA3VPTydOKTOxga" Name="Command" Kind="InputPin" Bounds="773,307" />
+              <Pin Id="JocN7RXaMWDOn4bdewObwI" Name="Bundled Per Frame" Kind="InputPin" Bounds="800,421" />
+              <Pin Id="SWEhlNNpLjBOuKOgNqGQoS" Name="Send" Kind="InputPin" Bounds="825,458" />
+            </Patch>
           </Patch>
         </Node>
         <!--
@@ -2662,7 +2662,7 @@
             <Canvas Id="IHQ8SLTmh0LL3BkH7mddpi" CanvasType="Group">
               <ControlPoint Id="QiUbFdb5vjOLzHcCF3LRqo" Bounds="677,428" />
               <Node Bounds="674,499,58,26" Id="OmvtdRk407QNyLee8Od46J">
-                <p:NodeReference LastCategoryFullName="VL.SCServer.SCServer (Executor)" LastDependency="VL.SCServer.vl">
+                <p:NodeReference LastCategoryFullName="VL.SCSynth.SCServer (Executor)" LastDependency="VL.SCSynht.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="GetOSCClient" />
                 </p:NodeReference>
@@ -2717,7 +2717,7 @@
                 <Pin Id="K9YSlQ17nMGLu3kPNntaaE" Name="Value" Kind="OutputPin" />
               </Node>
               <Node Bounds="673,587,124,26" Id="UUZjv79YCmYNqYf8xgAP3h">
-                <p:NodeReference LastCategoryFullName="VL.SCServer.SCServer (Executor)" LastDependency="VL.SCServer.vl">
+                <p:NodeReference LastCategoryFullName="VL.SCSynth.SCServer (Executor)" LastDependency="VL.SCSynht.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="GetAvailableCommands" />
                 </p:NodeReference>
@@ -2757,7 +2757,7 @@
             <Patch Id="T8BPXaSwpITPGQV0zhWarA" Name="Create" />
             <Patch Id="LoKAnZXuxDkLFkfG6xPIOh" Name="Update">
               <Pin Id="VX5nAsQ6tF1QLfAbqTCLCx" Name="Server" Kind="InputPin">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynht.vl">
                   <Choice Kind="TypeFlag" Name="SCServer (Executor)" />
                 </p:TypeAnnotation>
               </Pin>
@@ -2804,7 +2804,7 @@
                   <Patch Id="EMDvIQc3RzkPvX5rjE8GIS" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="Gjv2U6cxjbyPPxj0aEW7dL" Name="Then" ManuallySortedPins="true" />
                   <Node Bounds="693,346,77,26" Id="BMkhWbXqnchNncfcddzf34">
-                    <p:NodeReference LastCategoryFullName="VL.SCServer.ISCSynth" LastDependency="VL.SCServer.vl">
+                    <p:NodeReference LastCategoryFullName="VL.SCSynth.ISCSynth" LastDependency="VL.SCSynht.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="InterfaceTypeFlag" Name="ISCSynth" />
                       <Choice Kind="OperationCallFlag" Name="GetOSCClient" />
@@ -2924,22 +2924,6 @@
             <Link Id="H7gWG4HSdrMN5XqN4p8cbj" Ids="Mfvjb5i0XaDOqo5oQU7loh,MypWb3aDsqFLddDCcZoRO2" />
             <Link Id="PTwR70AR2JCMaW1mRQzIWW" Ids="MypWb3aDsqFLddDCcZoRO2,KqRCoUAi293LHNyn9LTGJW" />
             <Link Id="KLNajq73UOaM5BoRrILxDF" Ids="KqRCoUAi293LHNyn9LTGJW,BqAHH0lktO4LZKgupcTkHX" IsHidden="true" />
-            <Patch Id="P6gED9XKwZ9PG2VsFqxXqN" Name="Create" />
-            <Patch Id="DV3Yd4ZqH4UPd0NTqYCwjQ" Name="Update">
-              <Pin Id="CTcyGcfa0u5OXokZkniWU2" Name="ISCSynth" Kind="InputPin" Bounds="735,287">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
-                  <Choice Kind="TypeFlag" Name="ISCSynth" />
-                </p:TypeAnnotation>
-              </Pin>
-              <Pin Id="KkSRFt3VIFNNbrGPqdVLWU" Name="Code" Kind="InputPin" DefaultValue="PrintParsedContent">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.Utils.csproj">
-                  <Choice Kind="TypeFlag" Name="DumpOSCOptions" />
-                </p:TypeAnnotation>
-              </Pin>
-              <Pin Id="PiUIFcw1FAYMK29gPRvDDR" Name="Send" Kind="InputPin" Bounds="929,357" />
-              <Pin Id="BqAHH0lktO4LZKgupcTkHX" Name="Server" Kind="OutputPin" Bounds="697,817" />
-              <Pin Id="Ir73fcaiKodL4E8EOzvHU3" Name="SendOnChange" Kind="InputPin" DefaultValue="True" />
-            </Patch>
             <Link Id="EgddD6DDwagMDP6OXaGgyQ" Ids="R8zgloidxIcPm4P8VO1vvi,V3dyqq9DR6BQbXaOnZC6oV" />
             <Link Id="A3fq5XstUmEO0JzMoBTcgF" Ids="R8zgloidxIcPm4P8VO1vvi,Aebvz14OCvxMotZd0fopY5" />
             <Link Id="KIatKiFd66pNF596UU3IMI" Ids="M3ba0wgw7s4PHaL4N2NTUZ,NDmxel6hQx0QIgr0n5meW2" />
@@ -2950,6 +2934,22 @@
             <Link Id="DC1CphNMZeMO2eNkZTZiwY" Ids="Eh9Z3cgGMCKPDOVUHUC51v,OLtYlukt0IoNYNhe8E4Qqc" />
             <Link Id="QfaXx90jcOnMpnMZtC4i9c" Ids="Ir73fcaiKodL4E8EOzvHU3,Eh9Z3cgGMCKPDOVUHUC51v" IsHidden="true" />
             <Link Id="IAWMnF6yUkRLDxqkIRtl6N" Ids="NPpmTOKZbdCP0sDPJqXALJ,KEAjGLUYvetMX6518IPg77" />
+            <Patch Id="P6gED9XKwZ9PG2VsFqxXqN" Name="Create" />
+            <Patch Id="DV3Yd4ZqH4UPd0NTqYCwjQ" Name="Update">
+              <Pin Id="CTcyGcfa0u5OXokZkniWU2" Name="ISCSynth" Kind="InputPin" Bounds="735,287">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynht.vl">
+                  <Choice Kind="TypeFlag" Name="ISCSynth" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="KkSRFt3VIFNNbrGPqdVLWU" Name="Code" Kind="InputPin" DefaultValue="PrintParsedContent">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.Utils.csproj">
+                  <Choice Kind="TypeFlag" Name="DumpOSCOptions" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="PiUIFcw1FAYMK29gPRvDDR" Name="Send" Kind="InputPin" Bounds="929,357" />
+              <Pin Id="Ir73fcaiKodL4E8EOzvHU3" Name="SendOnChange" Kind="InputPin" DefaultValue="True" />
+              <Pin Id="BqAHH0lktO4LZKgupcTkHX" Name="Server" Kind="OutputPin" Bounds="697,817" />
+            </Patch>
           </Patch>
         </Node>
         <!--
@@ -2987,7 +2987,7 @@
                   <Patch Id="IC73VNHQ5BWPL4hORYrmGQ" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="CxDdwwS2r8rMrfu8FwpZod" Name="Then" ManuallySortedPins="true" />
                   <Node Bounds="777,573,58,26" Id="Aa4YMYeXF1xPLEPtX2walQ">
-                    <p:NodeReference LastCategoryFullName="VL.SCServer.SCServer (Executor)" LastDependency="VL.SCServer.vl">
+                    <p:NodeReference LastCategoryFullName="VL.SCSynth.SCServer (Executor)" LastDependency="VL.SCSynht.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="GetOSCClient" />
                     </p:NodeReference>
@@ -3038,16 +3038,6 @@
               </Node>
               <ControlPoint Id="Qr57VzSo8dULvjWee5iiRc" Bounds="777,1007" />
             </Canvas>
-            <Patch Id="IqaWUlyoS0tOkISLFBOVdz" Name="Create" />
-            <Patch Id="Grm1uSaPc1hNX2rJVNvK8n" Name="Update">
-              <Pin Id="AJTrnvkthz0QWNpXgWsXdW" Name="Server" Kind="InputPin" Bounds="735,287">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
-                  <Choice Kind="TypeFlag" Name="SCServer (Executor)" />
-                </p:TypeAnnotation>
-              </Pin>
-              <Pin Id="DwblssychviQPBn2Y7Jt5G" Name="Send" Kind="InputPin" Bounds="929,357" />
-              <Pin Id="CHqdljbJ1GyM8A0lbTrydf" Name="Server" Kind="OutputPin" Bounds="777,1007" />
-            </Patch>
             <ProcessDefinition Id="ShHFIxC8AXUNu4Ct3WJi9b">
               <Fragment Id="UaSGSOks0szNoOGpRo3yaA" Patch="IqaWUlyoS0tOkISLFBOVdz" Enabled="true" />
               <Fragment Id="QIUXUpeDlfMQaMqpxnrCir" Patch="Grm1uSaPc1hNX2rJVNvK8n" Enabled="true" />
@@ -3066,6 +3056,16 @@
             <Link Id="AprwVU089RcNJWqPksQYjS" Ids="F26Lm6N6sP9LbuQg6WvL4U,JCTUfCIuv9xLim5lO7c20p" />
             <Link Id="PsX0Zs1HKqZQNEhXTE5YHJ" Ids="JCTUfCIuv9xLim5lO7c20p,Qr57VzSo8dULvjWee5iiRc" />
             <Link Id="OTjQBp7R7hWNUUWvffikOa" Ids="Qr57VzSo8dULvjWee5iiRc,CHqdljbJ1GyM8A0lbTrydf" IsHidden="true" />
+            <Patch Id="IqaWUlyoS0tOkISLFBOVdz" Name="Create" />
+            <Patch Id="Grm1uSaPc1hNX2rJVNvK8n" Name="Update">
+              <Pin Id="AJTrnvkthz0QWNpXgWsXdW" Name="Server" Kind="InputPin" Bounds="735,287">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynht.vl">
+                  <Choice Kind="TypeFlag" Name="SCServer (Executor)" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="DwblssychviQPBn2Y7Jt5G" Name="Send" Kind="InputPin" Bounds="929,357" />
+              <Pin Id="CHqdljbJ1GyM8A0lbTrydf" Name="Server" Kind="OutputPin" Bounds="777,1007" />
+            </Patch>
           </Patch>
         </Node>
         <Pad Id="UE34pP4uoJHM2bAiCZGUuS" Bounds="1210,360,108,19" ShowValueBox="true" isIOBox="true" Value="Empty Messages">
@@ -3113,7 +3113,7 @@
                   <Patch Id="Vic5qD6gozMM5UGk44dyFe" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="IkgTrdqKABULJfG8OswFP8" Name="Then" ManuallySortedPins="true" />
                   <Node Bounds="711,552,77,26" Id="ECha0LP0RIcOfPwjDc08Rm">
-                    <p:NodeReference LastCategoryFullName="VL.SCServer.ISCSynth" LastDependency="VL.SCServer.vl">
+                    <p:NodeReference LastCategoryFullName="VL.SCSynth.ISCSynth" LastDependency="VL.SCSynht.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="InterfaceTypeFlag" Name="ISCSynth" NeedsToBeDirectParent="true" />
                       <Choice Kind="OperationCallFlag" Name="GetOSCClient" />
@@ -3200,11 +3200,13 @@
                       <Choice Kind="ApplicationStatefulRegion" Name="If" />
                     </p:NodeReference>
                     <Pin Id="Qh5pEMPlF3SPZ6KihuZ6l6" Name="Condition" Kind="InputPin" />
+                    <ControlPoint Id="Im7fSR5cZeWMLsuVxRNy67" Bounds="912,599" Alignment="Bottom" />
+                    <ControlPoint Id="NzeykXSxk1rOrn1FYqz5Wo" Bounds="912,531" Alignment="Top" />
                     <Patch Id="KvY5qgry5BJPA9L1Dp7sgi" ManuallySortedPins="true">
                       <Patch Id="T4uja08SddiPRd2gi9fPVm" Name="Create" ManuallySortedPins="true" />
                       <Patch Id="FuOq7Bs8mNMNnNkDeFcZI0" Name="Then" ManuallySortedPins="true" />
                       <Node Bounds="868,554,47,26" Id="FYNpoFWiF5vNC1uoRuPa6v">
-                        <p:NodeReference LastCategoryFullName="VL.SCServer.ISCSynth" LastDependency="VL.SCServer.vl">
+                        <p:NodeReference LastCategoryFullName="VL.SCSynth.ISCSynth" LastDependency="VL.SCSynht.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <CategoryReference Kind="InterfaceTypeFlag" Name="ISCSynth" NeedsToBeDirectParent="true" />
                           <Choice Kind="OperationCallFlag" Name="GetId" />
@@ -3214,8 +3216,6 @@
                         <Pin Id="KUNh0qwm6FcNzlVpeaF74j" Name="Id" Kind="OutputPin" />
                       </Node>
                     </Patch>
-                    <ControlPoint Id="Im7fSR5cZeWMLsuVxRNy67" Bounds="912,599" Alignment="Bottom" />
-                    <ControlPoint Id="NzeykXSxk1rOrn1FYqz5Wo" Bounds="912,531" Alignment="Top" />
                   </Node>
                   <Node Bounds="990,513,81,85" Id="RWBKg2Sa0xDLl7YU1o69IV">
                     <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
@@ -3278,27 +3278,6 @@
             <Link Id="F6PM6HCyFtjLsjv5bKN5Jd" Ids="ELyNMH8sg02P9eJOFqCa3y,D5gh5fYkr3KLmebo028CTp" />
             <Link Id="HErrvixgOxaNxv4r9QhVAg" Ids="D5gh5fYkr3KLmebo028CTp,HigKpJR1tlOMddC5cmePgZ" />
             <Link Id="L3jaiLieKsmQd0OJYayIWg" Ids="HigKpJR1tlOMddC5cmePgZ,LHBEsG5c43lLhbh6GIIj1x" IsHidden="true" />
-            <Patch Id="JJxtUfFlglIOtbKMeTvI7x" Name="Create" />
-            <Patch Id="CgkrTkbily3M4h5P6BQ842" Name="Update">
-              <Pin Id="D6bxH14I7rPP4qOmWhX3U1" Name="ISCSynth" Kind="InputPin" Bounds="735,287">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
-                  <Choice Kind="TypeFlag" Name="ISCSynth" />
-                </p:TypeAnnotation>
-              </Pin>
-              <Pin Id="APzrnDHLKyLObxUfDaf8H8" Name="Code" Kind="InputPin" DefaultValue="Receive">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.Utils.csproj">
-                  <Choice Kind="TypeFlag" Name="NotifyOptions" />
-                </p:TypeAnnotation>
-              </Pin>
-              <Pin Id="GgXxW2ItEDoPUDqdaTCTof" Name="Client ID" Kind="InputPin" Bounds="836,339" Visibility="Optional">
-                <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
-                  <Choice Kind="TypeFlag" Name="Integer32" />
-                </p:TypeAnnotation>
-              </Pin>
-              <Pin Id="JFekmIJeUw2QAyDCduwpRD" Name="Send" Kind="InputPin" Bounds="929,357" />
-              <Pin Id="LHBEsG5c43lLhbh6GIIj1x" Name="Server" Kind="OutputPin" Bounds="717,1016" />
-              <Pin Id="DHLespYR2rxNxL1A6ib3Ia" Name="SendOnChange" Kind="InputPin" DefaultValue="True" />
-            </Patch>
             <Link Id="QsGiZoJAf99LX3aMvt7cQp" Ids="RZ6bvE5bNbQOtCP55XmrNG,SXFTSBZHQonLe7DtUz1Ewr" />
             <Link Id="AjOvReG4nY2N3SZiqIOj5Z" Ids="RZ6bvE5bNbQOtCP55XmrNG,SZaWOZnRbfLMM6wfO0JUjE" />
             <Link Id="IJ2T2RLxgThQK66Shwezw9" Ids="HqvKInVyRdWO8TaJsI2xaq,RiXhN3hfatBQYWIWjobCn0" />
@@ -3317,6 +3296,27 @@
             <Link Id="SlfbTnsJQ6dO7lubHnu56n" Ids="FXfP9vXtDy6NMnbsSgtQ3Y,MeeHamjFlnAPGO9OhPr9cK" />
             <Link Id="NvYtFsBwF7bNgjqosQ53Fn" Ids="JPdTeSz6VDcOSS7kdL802Q,PG3uwTlstESOJtZdFd42Mc" />
             <Link Id="Fulwj1qEfVULTxOtkOwi6T" Ids="DHLespYR2rxNxL1A6ib3Ia,JPdTeSz6VDcOSS7kdL802Q" IsHidden="true" />
+            <Patch Id="JJxtUfFlglIOtbKMeTvI7x" Name="Create" />
+            <Patch Id="CgkrTkbily3M4h5P6BQ842" Name="Update">
+              <Pin Id="D6bxH14I7rPP4qOmWhX3U1" Name="ISCSynth" Kind="InputPin" Bounds="735,287">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynht.vl">
+                  <Choice Kind="TypeFlag" Name="ISCSynth" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="APzrnDHLKyLObxUfDaf8H8" Name="Code" Kind="InputPin" DefaultValue="Receive">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.Utils.csproj">
+                  <Choice Kind="TypeFlag" Name="NotifyOptions" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="GgXxW2ItEDoPUDqdaTCTof" Name="Client ID" Kind="InputPin" Bounds="836,339" Visibility="Optional">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="TypeFlag" Name="Integer32" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="JFekmIJeUw2QAyDCduwpRD" Name="Send" Kind="InputPin" Bounds="929,357" />
+              <Pin Id="DHLespYR2rxNxL1A6ib3Ia" Name="SendOnChange" Kind="InputPin" DefaultValue="True" />
+              <Pin Id="LHBEsG5c43lLhbh6GIIj1x" Name="Server" Kind="OutputPin" Bounds="717,1016" />
+            </Patch>
           </Patch>
         </Node>
         <!--
@@ -3355,7 +3355,7 @@
                   <Patch Id="RddAjidqkoCNHdm4y0oa5g" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="BTI93aBURrnPDMGYHm64Gf" Name="Then" ManuallySortedPins="true" />
                   <Node Bounds="788,552,77,26" Id="OqAFnDBP0lLMSik8PuKEWU">
-                    <p:NodeReference LastCategoryFullName="VL.SCServer.ISCSynth" LastDependency="VL.SCServer.vl">
+                    <p:NodeReference LastCategoryFullName="VL.SCSynth.ISCSynth" LastDependency="VL.SCSynht.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="InterfaceTypeFlag" Name="ISCSynth" NeedsToBeDirectParent="true" />
                       <Choice Kind="OperationCallFlag" Name="GetOSCClient" />
@@ -3474,22 +3474,6 @@
             <Link Id="Hr5igfdPgBLPgJwOXUkJyA" Ids="TptcfrD1IVtLR2xCt1JHz7,HmdSdTqWJaMPUuo0uJJf1L" />
             <Link Id="Hjhz5ajmcibNXgaeQw3S5T" Ids="HmdSdTqWJaMPUuo0uJJf1L,PYvxB8mvX44MEtHy86Luoe" />
             <Link Id="GDtqdfn55eXLEMfouI0q84" Ids="PYvxB8mvX44MEtHy86Luoe,KwqatKHsiTaNrRp3jwwfMi" IsHidden="true" />
-            <Patch Id="CzUond5KN4fPtU6Gw25dk9" Name="Create" />
-            <Patch Id="L90rxfNxS09Okcadg6rIDa" Name="Update">
-              <Pin Id="AMji4T0PupzLUTSsLmiYhc" Name="Server" Kind="InputPin" Bounds="735,287">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
-                  <Choice Kind="TypeFlag" Name="ISCSynth" />
-                </p:TypeAnnotation>
-              </Pin>
-              <Pin Id="SXUP5BUMo6WNXdgiaSiha3" Name="Mode" Kind="InputPin" DefaultValue="On">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.Utils.csproj">
-                  <Choice Kind="TypeFlag" Name="ErrorOptions" />
-                </p:TypeAnnotation>
-              </Pin>
-              <Pin Id="RV9iUU4RaWNMOcjaCFVRVK" Name="Send" Kind="InputPin" Bounds="929,357" />
-              <Pin Id="KwqatKHsiTaNrRp3jwwfMi" Name="Server" Kind="OutputPin" Bounds="794,1015" />
-              <Pin Id="N44HXq7wyFSL0BHs52dFBF" Name="SendOnChange" Kind="InputPin" DefaultValue="True" />
-            </Patch>
             <Link Id="FRAbainyzYQLNbm7589OBa" Ids="C5mCQ4hreMwNY9Gv4x2EIv,Q36HSs8iVkTMlN2ZkH3cUe" />
             <Link Id="CNx1Ee6WNFrPBNyl0MOhAn" Ids="TNLKSjXEaBuPC3QBw9vwtw,C5mCQ4hreMwNY9Gv4x2EIv" />
             <Link Id="BpxkE4KCkp9LlRE3N1s4WH" Ids="Pwc8RpyrYEKQVvV1zDsNlJ,NC0aZEEuu5uQMoVIWwcUQp" />
@@ -3501,6 +3485,22 @@
             <Link Id="D4x9QPFPWe5Oq2zbopyuN8" Ids="TKq0FwfwC8OOXeDAaPGfHv,Irk4QnAxcNSLhDyru58iaC" />
             <Link Id="DNp4ctgdG4gPQMOSkaUWPq" Ids="VXhvjmzgpH8QKvbnxarqux,A23soHixb6VPymmSeDd5OY" />
             <Link Id="GAUYLXsdG7mPd0yRQgID3M" Ids="N44HXq7wyFSL0BHs52dFBF,VXhvjmzgpH8QKvbnxarqux" IsHidden="true" />
+            <Patch Id="CzUond5KN4fPtU6Gw25dk9" Name="Create" />
+            <Patch Id="L90rxfNxS09Okcadg6rIDa" Name="Update">
+              <Pin Id="AMji4T0PupzLUTSsLmiYhc" Name="Server" Kind="InputPin" Bounds="735,287">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynht.vl">
+                  <Choice Kind="TypeFlag" Name="ISCSynth" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="SXUP5BUMo6WNXdgiaSiha3" Name="Mode" Kind="InputPin" DefaultValue="On">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.Utils.csproj">
+                  <Choice Kind="TypeFlag" Name="ErrorOptions" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="RV9iUU4RaWNMOcjaCFVRVK" Name="Send" Kind="InputPin" Bounds="929,357" />
+              <Pin Id="N44HXq7wyFSL0BHs52dFBF" Name="SendOnChange" Kind="InputPin" DefaultValue="True" />
+              <Pin Id="KwqatKHsiTaNrRp3jwwfMi" Name="Server" Kind="OutputPin" Bounds="794,1015" />
+            </Patch>
           </Patch>
         </Node>
         <!--
@@ -3538,7 +3538,7 @@
                   <Patch Id="D83fkE9HdRZLxqXTmIybCc" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="PGgKrkZXX08LwlNTT87uVJ" Name="Then" ManuallySortedPins="true" />
                   <Node Bounds="688,683,77,26" Id="NcxTQFTgwewPW2Yh1hqddM">
-                    <p:NodeReference LastCategoryFullName="VL.SCServer.ISCSynth" LastDependency="VL.SCServer.vl">
+                    <p:NodeReference LastCategoryFullName="VL.SCSynth.ISCSynth" LastDependency="VL.SCSynht.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="InterfaceTypeFlag" Name="ISCSynth" NeedsToBeDirectParent="true" />
                       <Choice Kind="OperationCallFlag" Name="GetOSCClient" />
@@ -3631,10 +3631,14 @@
             <Link Id="DXIqWrmzGFZMK1PBdlIrJp" Ids="VN2dNypLr9WMhhwBYK3Roz,RqyjaAs6q4YLRc0uMadVg2" />
             <Link Id="Bnfxe6ffvsqQJCNRNRtr43" Ids="RqyjaAs6q4YLRc0uMadVg2,PcTlWeyGxBUPvk5zu6OtOy" />
             <Link Id="TkMWBlZilS4MZb3MO7uakJ" Ids="PcTlWeyGxBUPvk5zu6OtOy,GjHf1jTC4DwNW06RXPCDy0" IsHidden="true" />
+            <Link Id="HGrI6Ej3v6LLECr63Sp9Ta" Ids="NrKozewWo7HNeEY9w2WplI,V4jt94mVA07PctF3Zu97uA" />
+            <Link Id="LmqbGxCi5rEOFJFwZIhKpA" Ids="NRJgTCoMv9mMdLyFU3iZIC,NrKozewWo7HNeEY9w2WplI" />
+            <Link Id="GrMgEqKmFEJLuE9tc2jZAq" Ids="JSU3MPeX0C7NTUg2fjpDLN,ByA5m8Nsv8bQVI8JeakeCz" />
+            <Link Id="MfmNlCaezeIOxPXOyzhOzC" Ids="JSU3MPeX0C7NTUg2fjpDLN,AiSbA46thdMNmuHctoNVai" />
             <Patch Id="SrmrBAh2XwqPjycvBCY7SV" Name="Create" />
             <Patch Id="G4uBVuFZlqCPkAL2H3xI3O" Name="Update">
               <Pin Id="Sz3p5FrqVm8OHlfqlz5aXO" Name="Server" Kind="InputPin" Bounds="735,287">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynht.vl">
                   <Choice Kind="TypeFlag" Name="ISCSynth" />
                 </p:TypeAnnotation>
               </Pin>
@@ -3661,10 +3665,6 @@
               <Pin Id="JMAt6GM02EbLLTYQsHnNsk" Name="Send" Kind="InputPin" Bounds="929,357" />
               <Pin Id="GjHf1jTC4DwNW06RXPCDy0" Name="Server" Kind="OutputPin" Bounds="693,1136" />
             </Patch>
-            <Link Id="HGrI6Ej3v6LLECr63Sp9Ta" Ids="NrKozewWo7HNeEY9w2WplI,V4jt94mVA07PctF3Zu97uA" />
-            <Link Id="LmqbGxCi5rEOFJFwZIhKpA" Ids="NRJgTCoMv9mMdLyFU3iZIC,NrKozewWo7HNeEY9w2WplI" />
-            <Link Id="GrMgEqKmFEJLuE9tc2jZAq" Ids="JSU3MPeX0C7NTUg2fjpDLN,ByA5m8Nsv8bQVI8JeakeCz" />
-            <Link Id="MfmNlCaezeIOxPXOyzhOzC" Ids="JSU3MPeX0C7NTUg2fjpDLN,AiSbA46thdMNmuHctoNVai" />
           </Patch>
         </Node>
         <!--
@@ -3702,7 +3702,7 @@
                   <Patch Id="LadWwyerZ0DLxAdx4YvJyI" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="NLPdm1BnIgvLGfKKuVDJlD" Name="Then" ManuallySortedPins="true" />
                   <Node Bounds="695,693,77,26" Id="FBLLhZs2jtoNsjExhC3EoP">
-                    <p:NodeReference LastCategoryFullName="VL.SCServer.ISCSynth" LastDependency="VL.SCServer.vl">
+                    <p:NodeReference LastCategoryFullName="VL.SCSynth.ISCSynth" LastDependency="VL.SCSynht.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="InterfaceTypeFlag" Name="ISCSynth" NeedsToBeDirectParent="true" />
                       <Choice Kind="OperationCallFlag" Name="GetOSCClient" />
@@ -3808,7 +3808,7 @@
             <Patch Id="JqFgXuhN3kGNj8ViFs3NmM" Name="Create" />
             <Patch Id="NoqsopLDCsfOrGnhuDxoou" Name="Update">
               <Pin Id="GpbJGavZjsyQYQWC1bIIT3" Name="SCSynth" Kind="InputPin" Bounds="735,287">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynht.vl">
                   <Choice Kind="TypeFlag" Name="ISCSynth" />
                 </p:TypeAnnotation>
               </Pin>
@@ -3868,7 +3868,7 @@
                   <Patch Id="F307ezwACCfPVv4xXKQK7c" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="UVj0833s3d2Oa69Hyz54oD" Name="Then" ManuallySortedPins="true" />
                   <Node Bounds="688,663,77,26" Id="LaH6u4M0el3PVbTgH8CW6r">
-                    <p:NodeReference LastCategoryFullName="VL.SCServer.ISCSynth" LastDependency="VL.SCServer.vl">
+                    <p:NodeReference LastCategoryFullName="VL.SCSynth.ISCSynth" LastDependency="VL.SCSynht.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="InterfaceTypeFlag" Name="ISCSynth" NeedsToBeDirectParent="true" />
                       <Choice Kind="OperationCallFlag" Name="GetOSCClient" />
@@ -3999,7 +3999,7 @@
             <Patch Id="CgUscQAFCrAM5VyNJsVSvL" Name="Create" />
             <Patch Id="MVrO2nWNCn4L7u340JlP7f" Name="Update">
               <Pin Id="MzaCZ3PRYx9PnOXGRI9HVW" Name="SCSynth" Kind="InputPin" Bounds="735,287">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynht.vl">
                   <Choice Kind="TypeFlag" Name="ISCSynth" />
                 </p:TypeAnnotation>
               </Pin>
@@ -4059,7 +4059,7 @@
                   <Patch Id="BJ3REcFGbXwP0cBSWv24Z3" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="Q7EcamkqtcjPl4nYgyJZsi" Name="Then" ManuallySortedPins="true" />
                   <Node Bounds="777,573,58,26" Id="BgsrL4C4EO1QbE1ZD92p5a">
-                    <p:NodeReference LastCategoryFullName="VL.SCServer.SCServer (Executor)" LastDependency="VL.SCServer.vl">
+                    <p:NodeReference LastCategoryFullName="VL.SCSynth.SCServer (Executor)" LastDependency="VL.SCSynht.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="GetOSCClient" />
                     </p:NodeReference>
@@ -4110,16 +4110,6 @@
               </Node>
               <ControlPoint Id="KOiySQE6EmZOEHB4V5zwIv" Bounds="777,1007" />
             </Canvas>
-            <Patch Id="KDKcD1Q2jVvPlSeAcschfI" Name="Create" />
-            <Patch Id="OFjegz2OHXNPS0218Ns7LM" Name="Update">
-              <Pin Id="M0HirpKmgwTLMxAk9vOiBD" Name="Server" Kind="InputPin" Bounds="735,287">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
-                  <Choice Kind="TypeFlag" Name="SCServer (Executor)" />
-                </p:TypeAnnotation>
-              </Pin>
-              <Pin Id="CKeQo9j2o42PUAGzuXck28" Name="Send" Kind="InputPin" Bounds="929,357" />
-              <Pin Id="C48sUOx21LjOhgJ6gc5utY" Name="Server" Kind="OutputPin" Bounds="777,1007" />
-            </Patch>
             <ProcessDefinition Id="RcuzkCuXgJzMzXA6MMnKAz">
               <Fragment Id="CLkfRzpubibOjpkAoTgDZZ" Patch="KDKcD1Q2jVvPlSeAcschfI" Enabled="true" />
               <Fragment Id="EC57p6hlUvyPdeb4PormwL" Patch="OFjegz2OHXNPS0218Ns7LM" Enabled="true" />
@@ -4138,6 +4128,16 @@
             <Link Id="LjgrdU5Ec2VP0033leSZke" Ids="R144Kj0vZtdLdOkR9XdPiO,IzYch0BLn6uNJv1laBCq97" />
             <Link Id="MD6B0zRhonQOXeSANnhuQe" Ids="IzYch0BLn6uNJv1laBCq97,KOiySQE6EmZOEHB4V5zwIv" />
             <Link Id="AneLAPcNBBVOlO9yGiAFuL" Ids="KOiySQE6EmZOEHB4V5zwIv,C48sUOx21LjOhgJ6gc5utY" IsHidden="true" />
+            <Patch Id="KDKcD1Q2jVvPlSeAcschfI" Name="Create" />
+            <Patch Id="OFjegz2OHXNPS0218Ns7LM" Name="Update">
+              <Pin Id="M0HirpKmgwTLMxAk9vOiBD" Name="Server" Kind="InputPin" Bounds="735,287">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynht.vl">
+                  <Choice Kind="TypeFlag" Name="SCServer (Executor)" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="CKeQo9j2o42PUAGzuXck28" Name="Send" Kind="InputPin" Bounds="929,357" />
+              <Pin Id="C48sUOx21LjOhgJ6gc5utY" Name="Server" Kind="OutputPin" Bounds="777,1007" />
+            </Patch>
           </Patch>
         </Node>
         <!--
@@ -4175,7 +4175,7 @@
                   <Patch Id="M0UxcdvGv5hNGGg5JAT2VF" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="A8w10RtEaLlOy1UHSOAQge" Name="Then" ManuallySortedPins="true" />
                   <Node Bounds="616,643,77,26" Id="QGBkRF0LyYvNnG0PtZFCrw">
-                    <p:NodeReference LastCategoryFullName="VL.SCServer.ISCSynth" LastDependency="VL.SCServer.vl">
+                    <p:NodeReference LastCategoryFullName="VL.SCSynth.ISCSynth" LastDependency="VL.SCSynht.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="InterfaceTypeFlag" Name="ISCSynth" NeedsToBeDirectParent="true" />
                       <Choice Kind="OperationCallFlag" Name="GetOSCClient" />
@@ -4252,7 +4252,7 @@
             <Patch Id="S3hQ3FPjXo9MngoaziPDzv" Name="Create" />
             <Patch Id="BX4X3q4uMpZOQ51M2QQCEr" Name="Update">
               <Pin Id="Bt7932Xm2foNEVJ6FEabPQ" Name="SCSynth" Kind="InputPin" Bounds="735,287">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynht.vl">
                   <Choice Kind="TypeFlag" Name="ISCSynth" />
                 </p:TypeAnnotation>
               </Pin>
@@ -4309,7 +4309,7 @@
                   <Patch Id="M2nJcVjVT8JN64gpSKaSmi" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="UPXIGcu4NH9Mqg3FkW9d2y" Name="Then" ManuallySortedPins="true" />
                   <Node Bounds="688,625,77,26" Id="FszrBeQQvc9QYCAgndIq5q">
-                    <p:NodeReference LastCategoryFullName="VL.SCServer.ISCSynth" LastDependency="VL.SCServer.vl">
+                    <p:NodeReference LastCategoryFullName="VL.SCSynth.ISCSynth" LastDependency="VL.SCSynht.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="InterfaceTypeFlag" Name="ISCSynth" NeedsToBeDirectParent="true" />
                       <Choice Kind="OperationCallFlag" Name="GetOSCClient" />
@@ -4379,10 +4379,14 @@
             <Link Id="MESrVFZn4IFPOa148Ol98b" Ids="MCGJT8zCXtnO46MhmkZer8,NF1Vxw5t1nWPVnk2lYQtSd" />
             <Link Id="M0P2hXc8BYyOSQDfm7yiJW" Ids="NF1Vxw5t1nWPVnk2lYQtSd,FYqe9I2v8h1NN5jM6GcTw6" IsHidden="true" />
             <Link Id="U9oBwMxjFuRPlTDaK1LbO8" Ids="LyOQt1WgccPPrH5hEMieVA,RaHUBJVRNNMLSRq6utU6gC" />
+            <Link Id="GCLTqlcQAbZM6kkRQvrete" Ids="IIxJO8GaprwMAzQcGtncxg,UDTFHuzrWnhQHvWcYIRjdb" />
+            <Link Id="Frm09107ByaPSa08qfqhrZ" Ids="KYJcUzXodhFLjulezHmXNr,IIxJO8GaprwMAzQcGtncxg" />
+            <Link Id="D9ttvgDqOUTN9PKi9xzhuH" Ids="SDo4xitYVs1QK3Ebdx3K6p,ClJ9hbL5Z8SMDT3isOoncw" />
+            <Link Id="MVzVnLJVLFlMC90fEpUWiV" Ids="SDo4xitYVs1QK3Ebdx3K6p,LVloOfOr4dzMzQ2MUvuDyF" />
             <Patch Id="IlCsHJFTwE5OwHnmddb3im" Name="Create" />
             <Patch Id="PQcL9a6bo3KLC8LQpvzBeO" Name="Update">
               <Pin Id="LlIynhGN70pMzLCTlBX3e8" Name="SCSynth" Kind="InputPin" Bounds="735,287">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynht.vl">
                   <Choice Kind="TypeFlag" Name="ISCSynth" />
                 </p:TypeAnnotation>
               </Pin>
@@ -4399,10 +4403,6 @@
               <Pin Id="B8qkqkIzpXkQTkTlWUxZh1" Name="Send" Kind="InputPin" Bounds="929,357" />
               <Pin Id="FYqe9I2v8h1NN5jM6GcTw6" Name="Server" Kind="OutputPin" Bounds="693,1136" />
             </Patch>
-            <Link Id="GCLTqlcQAbZM6kkRQvrete" Ids="IIxJO8GaprwMAzQcGtncxg,UDTFHuzrWnhQHvWcYIRjdb" />
-            <Link Id="Frm09107ByaPSa08qfqhrZ" Ids="KYJcUzXodhFLjulezHmXNr,IIxJO8GaprwMAzQcGtncxg" />
-            <Link Id="D9ttvgDqOUTN9PKi9xzhuH" Ids="SDo4xitYVs1QK3Ebdx3K6p,ClJ9hbL5Z8SMDT3isOoncw" />
-            <Link Id="MVzVnLJVLFlMC90fEpUWiV" Ids="SDo4xitYVs1QK3Ebdx3K6p,LVloOfOr4dzMzQ2MUvuDyF" />
           </Patch>
         </Node>
         <!--
@@ -4438,7 +4438,7 @@
                 <ControlPoint Id="Bc4XGTjt8YnP9GPwSLEDMt" Bounds="694,556" Alignment="Top" />
                 <Patch Id="EbF9MOenhqoNZjHvjEkTyk" ManuallySortedPins="true">
                   <Node Bounds="690,573,77,26" Id="DdnZTqhng5fLsTr31vqA9x">
-                    <p:NodeReference LastCategoryFullName="VL.SCServer.ISCSynth" LastDependency="VL.SCServer.vl">
+                    <p:NodeReference LastCategoryFullName="VL.SCSynth.ISCSynth" LastDependency="VL.SCSynht.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="InterfaceTypeFlag" Name="ISCSynth" NeedsToBeDirectParent="true" />
                       <Choice Kind="OperationCallFlag" Name="GetOSCClient" />
@@ -4580,10 +4580,14 @@
             <Link Id="LRQO2KmxhPHQJtJXQeiBFt" Ids="DmbRVzKENJNMBRJy6CGYXa,N2FR84aiVs6LZMk5iZBiXc" />
             <Link Id="RCb3StkydwhLVtaBq770lI" Ids="BYSunbftyjkO80KM1H20ov,AvAVkwfcYmrL8T8iZerRTq" />
             <Link Id="UOcV9QJCGcuMShSB7TbXTF" Ids="J13Rp5V7862OWYRFTV7EG1,JmftHk3QSBXLBT50a7TbV6" />
+            <Link Id="QckKBQknDxULp2yRgjHris" Ids="Bc4XGTjt8YnP9GPwSLEDMt,R5UjHgAjtelOfRRwbNr13R" />
+            <Link Id="OOMzNXv1n3rLBpITvj1wkP" Ids="VxGg3IRvYGaMI8yyKalxb0,Bc4XGTjt8YnP9GPwSLEDMt" />
+            <Link Id="RqmnMOLmlnALeFza9ZlSwS" Ids="HYwAHzAOnoQQXA4SI6w0nF,I7EZPtAF0IJQGSW31XAIj7" />
+            <Link Id="DfLJ4Q4ufVjLreSCF16GHR" Ids="HYwAHzAOnoQQXA4SI6w0nF,Fsrq4xpMynCMtRQHYnLvr8" />
             <Patch Id="FyuETkHQdr6LmaIPqXCel3" Name="Create" />
             <Patch Id="Qf0BGdjuyu8OUofwpZXcL2" Name="Update">
               <Pin Id="AaKGs3xnLpzQUY9uGP2zo7" Name="SCSynth" Kind="InputPin" Bounds="735,287">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynht.vl">
                   <Choice Kind="TypeFlag" Name="ISCSynth" />
                 </p:TypeAnnotation>
               </Pin>
@@ -4601,10 +4605,6 @@
               <Pin Id="TpPCr3FUH8aPjJuEPajeQN" Name="SendOnChange" Kind="InputPin" DefaultValue="True" />
               <Pin Id="Br2bOa15qmrLoD4jZVbrdU" Name="Server" Kind="OutputPin" Bounds="693,1136" />
             </Patch>
-            <Link Id="QckKBQknDxULp2yRgjHris" Ids="Bc4XGTjt8YnP9GPwSLEDMt,R5UjHgAjtelOfRRwbNr13R" />
-            <Link Id="OOMzNXv1n3rLBpITvj1wkP" Ids="VxGg3IRvYGaMI8yyKalxb0,Bc4XGTjt8YnP9GPwSLEDMt" />
-            <Link Id="RqmnMOLmlnALeFza9ZlSwS" Ids="HYwAHzAOnoQQXA4SI6w0nF,I7EZPtAF0IJQGSW31XAIj7" />
-            <Link Id="DfLJ4Q4ufVjLreSCF16GHR" Ids="HYwAHzAOnoQQXA4SI6w0nF,Fsrq4xpMynCMtRQHYnLvr8" />
           </Patch>
         </Node>
         <!--
@@ -4640,7 +4640,7 @@
                 <ControlPoint Id="HK9cF3m4Kp4PATUhTKfTuP" Bounds="642,517" Alignment="Top" />
                 <Patch Id="S1tO1gMIYdoLvPj7Tk6pcd" ManuallySortedPins="true">
                   <Node Bounds="638,600,77,26" Id="D56gyIOFu7VMIXFVwCtdO1">
-                    <p:NodeReference LastCategoryFullName="VL.SCServer.ISCSynth" LastDependency="VL.SCServer.vl">
+                    <p:NodeReference LastCategoryFullName="VL.SCSynth.ISCSynth" LastDependency="VL.SCSynht.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="InterfaceTypeFlag" Name="ISCSynth" NeedsToBeDirectParent="true" />
                       <Choice Kind="OperationCallFlag" Name="GetOSCClient" />
@@ -4776,7 +4776,7 @@
             <Patch Id="FH6J7S1zbRMM6H2qRFgZyc" Name="Create" />
             <Patch Id="KZsSHRxLw6lNL3rkq3eogE" Name="Update">
               <Pin Id="OBifW2D4PFkL4zCWCOCwg4" Name="SCSynth" Kind="InputPin" Bounds="735,287">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynht.vl">
                   <Choice Kind="TypeFlag" Name="ISCSynth" />
                 </p:TypeAnnotation>
               </Pin>
@@ -4843,7 +4843,7 @@
                 <ControlPoint Id="Di1wyAVdBiYPzbM0TPXHC7" Bounds="710,678" Alignment="Top" />
                 <Patch Id="CPXsQqMaT67L7frQNJsVqo" ManuallySortedPins="true">
                   <Node Bounds="707,719,77,26" Id="UEMIGiXhdyMPJvUegTWjpt">
-                    <p:NodeReference LastCategoryFullName="VL.SCServer.ISCSynth" LastDependency="VL.SCServer.vl">
+                    <p:NodeReference LastCategoryFullName="VL.SCSynth.ISCSynth" LastDependency="VL.SCSynht.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="InterfaceTypeFlag" Name="ISCSynth" NeedsToBeDirectParent="true" />
                       <Choice Kind="OperationCallFlag" Name="GetOSCClient" />
@@ -5077,10 +5077,12 @@
             <Link Id="REmh5XSARtZLdY010dFb1T" Ids="OZjgf6RLrWJPzm1oKukxNm,B0CEtUB7U1lO1qJ9VidvY6" />
             <Link Id="KwyTaW9eANFMqaaOHrn7Bg" Ids="BmwtYmi9PIoL6Ahz8n7Kkj,RrroSqR0aE1PHArCOdw36M" />
             <Link Id="VvyJmEfQc9gQW0jVBOb0Je" Ids="OcyYG45xOjQOIbrsl9rq90,OZjgf6RLrWJPzm1oKukxNm" IsFeedback="true" />
+            <Link Id="MKi1huWt7BnNheltmBKRUG" Ids="AQvyB4rPCLXP3X2YcKl4jr,Iddpgj39tDtPBRvCGiKV7l" />
+            <Link Id="KzMw9bb6apqMvn9owzwp3m" Ids="AQvyB4rPCLXP3X2YcKl4jr,Ar5zzCBxsEULC2X9Bkq2vX" />
             <Patch Id="M7NLrVP1XtWPuJ0kjO3Hmq" Name="Create" />
             <Patch Id="PngT3B192ckOSy30pTvZHf" Name="Update">
               <Pin Id="KIRgsHH2o47Nmz4w3iIBkd" Name="SCSynth" Kind="InputPin" Bounds="735,287">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynht.vl">
                   <Choice Kind="TypeFlag" Name="ISCSynth" />
                 </p:TypeAnnotation>
               </Pin>
@@ -5127,8 +5129,6 @@
               <Pin Id="DLSIiGbcnt6LwIcvVXI6Y6" Name="Send" Kind="InputPin" Bounds="929,357" />
               <Pin Id="CFxCwAKxtKSPebD9CuJvOb" Name="Server" Kind="OutputPin" Bounds="693,1136" />
             </Patch>
-            <Link Id="MKi1huWt7BnNheltmBKRUG" Ids="AQvyB4rPCLXP3X2YcKl4jr,Iddpgj39tDtPBRvCGiKV7l" />
-            <Link Id="KzMw9bb6apqMvn9owzwp3m" Ids="AQvyB4rPCLXP3X2YcKl4jr,Ar5zzCBxsEULC2X9Bkq2vX" />
           </Patch>
         </Node>
         <!--
@@ -5166,7 +5166,7 @@
                   <Patch Id="BkaUZBP9fCsNn8PpNltRUk" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="IH0LLHV6jUGNH0dmfn0tfp" Name="Then" ManuallySortedPins="true" />
                   <Node Bounds="804,593,58,26" Id="T6nFjR8EcZMOjI8v1715UP">
-                    <p:NodeReference LastCategoryFullName="VL.SCServer.SCServer (Executor)" LastDependency="VL.SCServer.vl">
+                    <p:NodeReference LastCategoryFullName="VL.SCSynth.SCServer (Executor)" LastDependency="VL.SCSynht.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="GetOSCClient" />
                     </p:NodeReference>
@@ -5264,32 +5264,6 @@
               <ControlPoint Id="LukSQRLAH4OO4eLaMvqKAB" Bounds="940,381" />
               <ControlPoint Id="MVzBEzenOmZOOD7JHvDi36" Bounds="1101,510" />
             </Canvas>
-            <Patch Id="Q7i3nZDcqhyQNTWAyQDhLl" Name="Create" />
-            <Patch Id="B6AXOXaEdRWNtKYsxjVtQq" Name="Update">
-              <Pin Id="NEu3Y2e0svyLENBwOTRokH" Name="Server" Kind="InputPin" Bounds="735,287">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
-                  <Choice Kind="TypeFlag" Name="SCServer (Executor)" />
-                </p:TypeAnnotation>
-              </Pin>
-              <Pin Id="G2pwy6ibmddMzp7lsgCanS" Name="Node ID" Kind="InputPin" Bounds="784,412">
-                <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
-                  <Choice Kind="TypeFlag" Name="Integer32" />
-                </p:TypeAnnotation>
-              </Pin>
-              <Pin Id="GPVTdFKUkbKNVkm1Fs22lq" Name="Index" Kind="InputPin" Bounds="768,413">
-                <p:TypeAnnotation LastCategoryFullName="Collections" LastDependency="VL.CoreLib.vl">
-                  <Choice Kind="TypeFlag" Name="Spread" />
-                  <p:TypeArguments>
-                    <TypeReference>
-                      <Choice Kind="TypeFlag" Name="String" />
-                    </TypeReference>
-                  </p:TypeArguments>
-                </p:TypeAnnotation>
-              </Pin>
-              <Pin Id="GamVeIkm2ODNHK7Liypt6l" Name="Send" Kind="InputPin" Bounds="929,357" />
-              <Pin Id="NEjF8NvqYisPHrTKR5T7jN" Name="SendOnChange" Kind="InputPin" DefaultValue="True" />
-              <Pin Id="IwVW9UOxtCCLLJyJ3rHO4y" Name="Server" Kind="OutputPin" Bounds="693,1136" />
-            </Patch>
             <ProcessDefinition Id="HPHJfFXykRTNl3m4xIqhLf">
               <Fragment Id="REXhYNrBhZoPcySDS4ROsI" Patch="Q7i3nZDcqhyQNTWAyQDhLl" Enabled="true" />
               <Fragment Id="NFsR5toVfgbL1oBOe3h19x" Patch="B6AXOXaEdRWNtKYsxjVtQq" Enabled="true" />
@@ -5320,6 +5294,32 @@
             <Link Id="PS5CVMqZHfWQN4WKfYquAt" Ids="NEjF8NvqYisPHrTKR5T7jN,MVzBEzenOmZOOD7JHvDi36" IsHidden="true" />
             <Link Id="DGxxiyhPXjeNUQrMgpdSQD" Ids="EhjeORSAWrFM8zHPGkiE6Y,E9lN1CYvSnEOjUSpfsWNst" />
             <Link Id="KkzzeFIYY49LOduSuHecwV" Ids="LukSQRLAH4OO4eLaMvqKAB,CXWs1PMmWcyPGldqvLV12h" />
+            <Patch Id="Q7i3nZDcqhyQNTWAyQDhLl" Name="Create" />
+            <Patch Id="B6AXOXaEdRWNtKYsxjVtQq" Name="Update">
+              <Pin Id="NEu3Y2e0svyLENBwOTRokH" Name="Server" Kind="InputPin" Bounds="735,287">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynht.vl">
+                  <Choice Kind="TypeFlag" Name="SCServer (Executor)" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="G2pwy6ibmddMzp7lsgCanS" Name="Node ID" Kind="InputPin" Bounds="784,412">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="TypeFlag" Name="Integer32" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="GPVTdFKUkbKNVkm1Fs22lq" Name="Index" Kind="InputPin" Bounds="768,413">
+                <p:TypeAnnotation LastCategoryFullName="Collections" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="TypeFlag" Name="Spread" />
+                  <p:TypeArguments>
+                    <TypeReference>
+                      <Choice Kind="TypeFlag" Name="String" />
+                    </TypeReference>
+                  </p:TypeArguments>
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="GamVeIkm2ODNHK7Liypt6l" Name="Send" Kind="InputPin" Bounds="929,357" />
+              <Pin Id="NEjF8NvqYisPHrTKR5T7jN" Name="SendOnChange" Kind="InputPin" DefaultValue="True" />
+              <Pin Id="IwVW9UOxtCCLLJyJ3rHO4y" Name="Server" Kind="OutputPin" Bounds="693,1136" />
+            </Patch>
           </Patch>
         </Node>
         <!--
@@ -5357,7 +5357,7 @@
                   <Patch Id="FXRMAOxC0JJQIQs2C2wWU5" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="C8rKLWMnVesNqAjQEtDtxs" Name="Then" ManuallySortedPins="true" />
                   <Node Bounds="695,693,77,26" Id="FbLZMcOZJ1zM9uPiYMzLEv">
-                    <p:NodeReference LastCategoryFullName="VL.SCServer.ISCSynth" LastDependency="VL.SCServer.vl">
+                    <p:NodeReference LastCategoryFullName="VL.SCSynth.ISCSynth" LastDependency="VL.SCSynht.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="InterfaceTypeFlag" Name="ISCSynth" NeedsToBeDirectParent="true" />
                       <Choice Kind="OperationCallFlag" Name="GetOSCClient" />
@@ -5472,7 +5472,7 @@
             <Patch Id="L5DDKkCe88YN3l2DovcGWX" Name="Create" />
             <Patch Id="MZeEWZu6iuqOqPDGDRuSNk" Name="Update">
               <Pin Id="D3mosMzagMGMcl2c0rNQW4" Name="SCSynth" Kind="InputPin" Bounds="735,287">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynht.vl">
                   <Choice Kind="TypeFlag" Name="ISCSynth" />
                 </p:TypeAnnotation>
               </Pin>
@@ -5541,7 +5541,7 @@
                   <Patch Id="KGqpNqbYmZ3LbrtniT0eYU" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="Pfxh61grLt1OlZc1sdgYmH" Name="Then" ManuallySortedPins="true" />
                   <Node Bounds="688,625,77,26" Id="QloXcpSYlQSNNnDULUSlKl">
-                    <p:NodeReference LastCategoryFullName="VL.SCServer.ISCSynth" LastDependency="VL.SCServer.vl">
+                    <p:NodeReference LastCategoryFullName="VL.SCSynth.ISCSynth" LastDependency="VL.SCSynht.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="InterfaceTypeFlag" Name="ISCSynth" NeedsToBeDirectParent="true" />
                       <Choice Kind="OperationCallFlag" Name="GetOSCClient" />
@@ -5651,7 +5651,7 @@
             <Patch Id="NPT21i69q9eQR7Rf118Zjl" Name="Create" />
             <Patch Id="LlH0HtciYloPTRkyaDIQGh" Name="Update">
               <Pin Id="Jeu15Q5uKqTP3snxrGVPKi" Name="SCSynth" Kind="InputPin" Bounds="735,287">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynht.vl">
                   <Choice Kind="TypeFlag" Name="ISCSynth" />
                 </p:TypeAnnotation>
               </Pin>
@@ -5715,7 +5715,7 @@
                   <Patch Id="ISKgHwlgjjvO9hrBUpYPeq" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="D2dTgex7LREPhpqIZhJb2k" Name="Then" ManuallySortedPins="true" />
                   <Node Bounds="688,625,77,26" Id="U8DN5gfe2wMOIBzwUOWq3S">
-                    <p:NodeReference LastCategoryFullName="VL.SCServer.ISCSynth" LastDependency="VL.SCServer.vl">
+                    <p:NodeReference LastCategoryFullName="VL.SCSynth.ISCSynth" LastDependency="VL.SCSynht.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="InterfaceTypeFlag" Name="ISCSynth" NeedsToBeDirectParent="true" />
                       <Choice Kind="OperationCallFlag" Name="GetOSCClient" />
@@ -5825,7 +5825,7 @@
             <Patch Id="DCKW260Qqv7NoePPxII743" Name="Create" />
             <Patch Id="QAr7y3AQDS5Lfud6auZhg2" Name="Update">
               <Pin Id="ECBr2LFqDr2MI2t1CYwSY1" Name="SCSynth" Kind="InputPin" Bounds="735,287">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynht.vl">
                   <Choice Kind="TypeFlag" Name="ISCSynth" />
                 </p:TypeAnnotation>
               </Pin>
@@ -5887,7 +5887,7 @@
                 <ControlPoint Id="M82ZV0J2So2PsaCY00QdoA" Bounds="694,556" Alignment="Top" />
                 <Patch Id="PeaI6K48qHGPnQYFrEOSpH" ManuallySortedPins="true">
                   <Node Bounds="690,573,77,26" Id="RE0L7cQyZ8xOZdMn4mRCoZ">
-                    <p:NodeReference LastCategoryFullName="VL.SCServer.ISCSynth" LastDependency="VL.SCServer.vl">
+                    <p:NodeReference LastCategoryFullName="VL.SCSynth.ISCSynth" LastDependency="VL.SCSynht.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="InterfaceTypeFlag" Name="ISCSynth" NeedsToBeDirectParent="true" />
                       <Choice Kind="OperationCallFlag" Name="GetOSCClient" />
@@ -6003,10 +6003,11 @@
             <Link Id="PpsYUfaRfbQMQricUIBGuD" Ids="VxDgsH6R3mALBzFgjnSr5B,RIdwGYXLykoPgMLHfytkI1" />
             <Link Id="NCkTQwGKOvYOEjzQf9r11g" Ids="VxDgsH6R3mALBzFgjnSr5B,UTTSgO2r4p3NURAwn5dO3F" />
             <Link Id="LKhKAM9robmOYTSUXTqEy6" Ids="TFzqmLZCucvQDkkZhaYv8M,P5wWfviYEIHMkXk0VZeugo" />
+            <Link Id="GPuUqL8KNSqO9KQZi7OhJG" Ids="TFzqmLZCucvQDkkZhaYv8M,FowN2eJXVw0QczFiJtXghN" />
             <Patch Id="Gfss8pw7BRZOWMArgx8nEk" Name="Create" />
             <Patch Id="MOo5u7SYVxbMw6v7Y8KR5m" Name="Update">
               <Pin Id="VnUNCXJfJi2LNhU64lylNi" Name="SCSynth" Kind="InputPin" Bounds="735,287">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynht.vl">
                   <Choice Kind="TypeFlag" Name="ISCSynth" />
                 </p:TypeAnnotation>
               </Pin>
@@ -6024,7 +6025,6 @@
               <Pin Id="PU41WEUdGWCNLE97qcXHBl" Name="SendOnChange" Kind="InputPin" DefaultValue="True" />
               <Pin Id="OsyBJpHq1wXPtryPY8hMmX" Name="Server" Kind="OutputPin" Bounds="693,1136" />
             </Patch>
-            <Link Id="GPuUqL8KNSqO9KQZi7OhJG" Ids="TFzqmLZCucvQDkkZhaYv8M,FowN2eJXVw0QczFiJtXghN" />
           </Patch>
         </Node>
         <Pad Id="HSAaR8rJK9qPzYHaTL82qE" Bounds="1478,405,243,33" ShowValueBox="true" isIOBox="true" Value="Replies to Commands">
@@ -6063,11 +6063,13 @@
                   <Choice Kind="ApplicationStatefulRegion" Name="If" />
                 </p:NodeReference>
                 <Pin Id="UTkflWvM6DRLG5qiFe6ppx" Name="Condition" Kind="InputPin" />
+                <ControlPoint Id="KfZQkAtDKerQMoQPb9UA6J" Bounds="637,644" Alignment="Bottom" />
+                <ControlPoint Id="CCKVv8L8tQnQTNZ0STAeZr" Bounds="635,477" Alignment="Top" />
                 <Patch Id="OOaZ2YUSqMIQaJluDmHzPQ" ManuallySortedPins="true">
                   <Patch Id="JObSTHfN3IYNRnAyRCoq6A" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="JmDCfhhMI1JPkbiz83CafW" Name="Then" ManuallySortedPins="true" />
                   <Node Bounds="544,494,94,26" Id="Ph8FKGs2ou0OOZ5wvevnr3">
-                    <p:NodeReference LastCategoryFullName="VL.SCServer.ISCSynth" LastDependency="VL.SCServer.vl">
+                    <p:NodeReference LastCategoryFullName="VL.SCSynth.ISCSynth" LastDependency="VL.SCSynht.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="InterfaceTypeFlag" Name="ISCSynth" NeedsToBeDirectParent="true" />
                       <Choice Kind="OperationCallFlag" Name="GetOSCResponse" />
@@ -6097,8 +6099,6 @@
                     </p:TypeAnnotation>
                   </Pad>
                 </Patch>
-                <ControlPoint Id="KfZQkAtDKerQMoQPb9UA6J" Bounds="637,644" Alignment="Bottom" />
-                <ControlPoint Id="CCKVv8L8tQnQTNZ0STAeZr" Bounds="635,477" Alignment="Top" />
               </Node>
               <ControlPoint Id="KGwaxjXnqfDOLEr4cp80kK" Bounds="549,258" />
               <!--
@@ -6168,7 +6168,7 @@
                         <Link Id="U1AnWQ8si7bOLSExmS05bA" Ids="CWp655QbG9mMVaWQBUpkU8,IZ9O1Ru4v7HOdNrGoFKp4H" />
                         <Link Id="Czw8XSrSDKsNGQgNBWIVsS" Ids="D73LMyB46cDPs6fZdvRVC5,VKdptu3JXkMM01vsLMZTcN" />
                         <Node Bounds="774,643,69,26" Id="OewdfvawUKIMP0q6VATXeW">
-                          <p:NodeReference LastCategoryFullName="VL.SCServer.Messages.Done.DoneResponse" LastDependency="VL.SCServer.vl">
+                          <p:NodeReference LastCategoryFullName="VL.SCSynth.Messages.Done.DoneResponse" LastDependency="VL.SCSynht.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <CategoryReference Kind="RecordType" Name="DoneResponse" />
                             <Choice Kind="OperationCallFlag" Name="Create" />
@@ -6235,11 +6235,6 @@
               </Node>
               <ControlPoint Id="FYeRIAlRU0cOpSuqzr7DCY" Bounds="634,755" />
             </Canvas>
-            <!--
-
-    ************************  ************************
-
--->
             <ProcessDefinition Id="GRezC3ygPLnO19wS7HnEdx">
               <Fragment Id="MTGCwOGeUmRPUceThnttp4" Patch="OVP41YggrzBNBN2YgqdFmj" Enabled="true" />
               <Fragment Id="UgY7hcGlz1wNVCkA49PxSk" Patch="KFT2K9exEpUNJiSC1QC27d" Enabled="true" />
@@ -6258,7 +6253,7 @@
             <Patch Id="KFT2K9exEpUNJiSC1QC27d" Name="Update">
               <Pin Id="TqkkNM8Kgr0O4DKMfwThWj" Name="SCSynth" Kind="InputPin" Bounds="553,266" />
               <Pin Id="QJSJleMxgOzNma80ARpHda" Name="Output" Kind="OutputPin" Bounds="631,731">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer.Messages.Done" LastDependency="VL.SCServer.vl">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCSynth.Messages.Done" LastDependency="VL.SCSynht.vl">
                   <Choice Kind="TypeFlag" Name="DoneResponse" />
                 </p:TypeAnnotation>
               </Pin>
@@ -6294,11 +6289,15 @@
                 <Pin Id="Glm0DkfBN1UPnchGb9H5VM" Name="Condition" Kind="InputPin" />
                 <ControlPoint Id="UOPuln7DRQrLgP2IY4ctim" Bounds="635,835" Alignment="Bottom" />
                 <ControlPoint Id="PA8mgpf0HYpMhXlj3rJYQp" Bounds="635,477" Alignment="Top" />
+                <ControlPoint Id="Cr5snyz0SYgO1x5ULLQ6DF" Bounds="714,835" Alignment="Bottom" />
+                <ControlPoint Id="C3cWuIXBgccL02Yk4weERj" Bounds="714,477" Alignment="Top" />
+                <ControlPoint Id="BG5WHJptwgFPaBarjv3bQZ" Bounds="773,835" Alignment="Bottom" />
+                <ControlPoint Id="EVBWena4WJ7PXWLJzHDpQZ" Bounds="773,477" Alignment="Top" />
                 <Patch Id="DI8SeqOLQd7L91u8DXauG3" ManuallySortedPins="true">
                   <Patch Id="Ef5WjPUhsGLLjWkOUodtvb" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="ECZYqCCGtvHNdJRjhsHN0e" Name="Then" ManuallySortedPins="true" />
                   <Node Bounds="544,494,94,26" Id="Bze5MeQ30B3NPErG8GovZQ">
-                    <p:NodeReference LastCategoryFullName="VL.SCServer.ISCSynth" LastDependency="VL.SCServer.vl">
+                    <p:NodeReference LastCategoryFullName="VL.SCSynth.ISCSynth" LastDependency="VL.SCSynht.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="InterfaceTypeFlag" Name="ISCSynth" NeedsToBeDirectParent="true" />
                       <Choice Kind="OperationCallFlag" Name="GetOSCResponse" />
@@ -6373,7 +6372,7 @@
                     </Patch>
                   </Node>
                   <Node Bounds="712,782,63,26" Id="AC4BDtBW9aFQYSUaXAAh7R">
-                    <p:NodeReference LastCategoryFullName="VL.SCServer.Messages.Fail.FailResponse" LastDependency="VL.SCServer.vl">
+                    <p:NodeReference LastCategoryFullName="VL.SCSynth.Messages.Fail.FailResponse" LastDependency="VL.SCSynht.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="RecordType" Name="FailResponse" />
                       <Choice Kind="OperationCallFlag" Name="Split" />
@@ -6384,10 +6383,6 @@
                     <Pin Id="SJJiyouSscCNID6WkOlKrT" Name="Error Message" Kind="OutputPin" />
                   </Node>
                 </Patch>
-                <ControlPoint Id="Cr5snyz0SYgO1x5ULLQ6DF" Bounds="714,835" Alignment="Bottom" />
-                <ControlPoint Id="C3cWuIXBgccL02Yk4weERj" Bounds="714,477" Alignment="Top" />
-                <ControlPoint Id="BG5WHJptwgFPaBarjv3bQZ" Bounds="773,835" Alignment="Bottom" />
-                <ControlPoint Id="EVBWena4WJ7PXWLJzHDpQZ" Bounds="773,477" Alignment="Top" />
               </Node>
               <ControlPoint Id="F7TesCrNuCFOpldtnPswvE" Bounds="549,258" />
               <!--
@@ -6454,7 +6449,7 @@
                         <Link Id="IK3h94NHu2hMLZ8NZGmVQR" Ids="MY8gHkDk9MhLm5LTOSzAEw,JmHvQrlzNJOLMyk6ZUpqDp" />
                         <Link Id="Ei0dbjmV9weMCkkSyx4eoE" Ids="GaML1Nqs4U2MamKDcYehf6,E9CIHO48v5WOH3nWjTEPaM" />
                         <Node Bounds="1053,630,63,26" Id="NgY4PGXzo5JOvtO660Y3yk">
-                          <p:NodeReference LastCategoryFullName="VL.SCServer.Messages.Fail.FailResponse" LastDependency="VL.SCServer.vl">
+                          <p:NodeReference LastCategoryFullName="VL.SCSynth.Messages.Fail.FailResponse" LastDependency="VL.SCSynht.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <CategoryReference Kind="RecordType" Name="FailResponse" />
                             <Choice Kind="OperationCallFlag" Name="Create" />
@@ -6586,18 +6581,6 @@
             <Link Id="Q7Z8M41Cj3rPlT2nmcU3Jf" Ids="KiEp9yozmBCODIBsh2dsyv,UOPuln7DRQrLgP2IY4ctim" />
             <Link Id="RWCoXYZRbdJL54HRTGQwI8" Ids="EE3Nz8WwDwDQZT1ztk5wkP,STEGRPwkMkjQEBtMJKltSQ" IsHidden="true" />
             <Link Id="MyVXKnC7gq6NeJKVdCncxw" Ids="UOPuln7DRQrLgP2IY4ctim,EE3Nz8WwDwDQZT1ztk5wkP" />
-            <Patch Id="NEjboL0W046NCKaj2egfSR" Name="Create" />
-            <Patch Id="QkI04AISo4vMLsOn8Scdg7" Name="Update">
-              <Pin Id="LAJX2iJAoR0NL2KFbS1i7S" Name="SCSynth" Kind="InputPin" Bounds="553,266" />
-              <Pin Id="STEGRPwkMkjQEBtMJKltSQ" Name="Fail" Kind="OutputPin" Bounds="633,716">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer.Messages.Fail" LastDependency="VL.SCServer.vl">
-                  <Choice Kind="TypeFlag" Name="FailResponse" />
-                </p:TypeAnnotation>
-              </Pin>
-              <Pin Id="RywfCrewePvQYiVt3Dg0tR" Name="Log" Kind="InputPin" Bounds="941,405" />
-              <Pin Id="OzlfYw26MxuPcalMYQi7vW" Name="Name" Kind="OutputPin" Bounds="713,897" />
-              <Pin Id="CVzFmYyx7f9QVMv1KiD748" Name="Error Message" Kind="OutputPin" Bounds="772,895" />
-            </Patch>
             <Link Id="TcIMBb4350qOujavknCTNK" Ids="VHilejMQ7SgMTmxDKdr1LX,SSlKQMNkuigLqN2buDk75d" />
             <Link Id="SS93FXFZdBwNWd5LyBxLgK" Ids="HwyH4Vh50aBQISOVxXtocB,PzDIcRGf5VDMqaJGzHSazG" />
             <Link Id="QbV47TeXATqO1YFRVcX8qc" Ids="EGLsdv5wn2tLxpAyVEtjvJ,TrWiWhSApp5QZkHS8yzvqx" />
@@ -6614,6 +6597,18 @@
             <Link Id="SX2mkucdyeoM1q9sZwSHNj" Ids="SJJiyouSscCNID6WkOlKrT,BG5WHJptwgFPaBarjv3bQZ" />
             <Link Id="Azj3S8oA7FpME2vnQ9BtGh" Ids="BG5WHJptwgFPaBarjv3bQZ,IgVnURBUxbmQChdzlvBp47" />
             <Link Id="UOzRFYqkLxCNrjrFygtMYk" Ids="IgVnURBUxbmQChdzlvBp47,CVzFmYyx7f9QVMv1KiD748" IsHidden="true" />
+            <Patch Id="NEjboL0W046NCKaj2egfSR" Name="Create" />
+            <Patch Id="QkI04AISo4vMLsOn8Scdg7" Name="Update">
+              <Pin Id="LAJX2iJAoR0NL2KFbS1i7S" Name="SCSynth" Kind="InputPin" Bounds="553,266" />
+              <Pin Id="RywfCrewePvQYiVt3Dg0tR" Name="Log" Kind="InputPin" Bounds="941,405" />
+              <Pin Id="STEGRPwkMkjQEBtMJKltSQ" Name="Fail" Kind="OutputPin" Bounds="633,716">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCSynth.Messages.Fail" LastDependency="VL.SCSynht.vl">
+                  <Choice Kind="TypeFlag" Name="FailResponse" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="OzlfYw26MxuPcalMYQi7vW" Name="Name" Kind="OutputPin" Bounds="713,897" />
+              <Pin Id="CVzFmYyx7f9QVMv1KiD748" Name="Error Message" Kind="OutputPin" Bounds="772,895" />
+            </Patch>
           </Patch>
         </Node>
         <!--
@@ -6643,11 +6638,13 @@
                   <Choice Kind="ApplicationStatefulRegion" Name="If" />
                 </p:NodeReference>
                 <Pin Id="CCs69NNRd5cOuAE93Kdadr" Name="Condition" Kind="InputPin" />
+                <ControlPoint Id="JPfjdiGRvdnPithElC7Hwz" Bounds="815,967" Alignment="Bottom" />
+                <ControlPoint Id="LyOJPfiBodmPcwtKJWTgvv" Bounds="815,607" Alignment="Top" />
                 <Patch Id="HvK1QLIM4yKOALyf2CISWa" ManuallySortedPins="true">
                   <Patch Id="FsgtsJie7kSOe96DGiWfhC" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="Ngnfcdh0CcoLPJx5ydIhno" Name="Then" ManuallySortedPins="true" />
                   <Node Bounds="724,624,94,26" Id="GB5xTfUrN5DLOZ2KyQM8mx">
-                    <p:NodeReference LastCategoryFullName="VL.SCServer.ISCSynth" LastDependency="VL.SCServer.vl">
+                    <p:NodeReference LastCategoryFullName="VL.SCSynth.ISCSynth" LastDependency="VL.SCSynht.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="InterfaceTypeFlag" Name="ISCSynth" NeedsToBeDirectParent="true" />
                       <Choice Kind="OperationCallFlag" Name="GetOSCResponse" />
@@ -6722,8 +6719,6 @@
                     </Patch>
                   </Node>
                 </Patch>
-                <ControlPoint Id="JPfjdiGRvdnPithElC7Hwz" Bounds="815,967" Alignment="Bottom" />
-                <ControlPoint Id="LyOJPfiBodmPcwtKJWTgvv" Bounds="815,607" Alignment="Top" />
               </Node>
               <ControlPoint Id="J3T3pcBLPEcLksATAzBQbg" Bounds="729,388" />
               <ControlPoint Id="NejoMrBlsQzOmJOvowD1WR" Bounds="815,1033" />
@@ -6838,7 +6833,7 @@
                         <Link Id="UcCzkedHDHqP4K8CRwN2XI" Ids="KZwW0ARm7e4MrXwPBSqIqF,U4GtkBQETwWOufQL0a0Hya" />
                         <Link Id="HFAV9778djvPyqFRByQBY9" Ids="Fn2GzL0MNsmOxZ7jiHVcNu,PB7tIyegO9uLcGrWVPBj6s" />
                         <Node Bounds="1958,825,105,26" Id="JnQLtVENZYbNLc0SJGFCrk">
-                          <p:NodeReference LastCategoryFullName="VL.SCServer.Messages.Notification.NotificationResponse" LastDependency="VL.SCServer.vl">
+                          <p:NodeReference LastCategoryFullName="VL.SCSynth.Messages.Notification.NotificationResponse" LastDependency="VL.SCSynht.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <CategoryReference Kind="RecordType" Name="NotificationResponse" />
                             <Choice Kind="OperationCallFlag" Name="Create" />
@@ -6932,11 +6927,17 @@
                             <Choice Kind="ApplicationStatefulRegion" Name="If" />
                           </p:NodeReference>
                           <Pin Id="J7NWdadj4jxLP9t7NB7WCl" Name="Condition" Kind="InputPin" />
+                          <ControlPoint Id="CgC1lDPJB61PQDlFNqtQps" Bounds="2062,952" Alignment="Top" />
+                          <ControlPoint Id="S2QP0NDqHF7Nq9GOfihvzX" Bounds="2068,1142" Alignment="Bottom" />
+                          <ControlPoint Id="QHNHIRbMxDhPD89dFEep8I" Bounds="2158,952" Name="TypeTag" Alignment="Top" />
+                          <ControlPoint Id="S4qLEwq0Kn1M5ZJPXTa22T" Bounds="2188,1142" Name="TypeTag" Alignment="Bottom" />
+                          <ControlPoint Id="AOXTKlTuKADOXFJqKSedo5" Bounds="2236,952" Name="ByteIndex" Alignment="Top" />
+                          <ControlPoint Id="PBWucWjyf5ZM0llVGBMQTy" Bounds="2248,1142" Name="ByteIndex" Alignment="Bottom" />
                           <Patch Id="Kz5WMCFno9FLZMu4WGFvv0" ManuallySortedPins="true">
                             <Patch Id="U1u2KU8FSm0PL8chqAUIwj" Name="Create" ManuallySortedPins="true" />
                             <Patch Id="Ot6UcaHl07rLCu67QBtNqy" Name="Then" ManuallySortedPins="true" />
                             <Node Bounds="2062,1045,92,26" Id="TP1uLRXmaMbMDEJ0ljfYeB">
-                              <p:NodeReference LastCategoryFullName="VL.SCServer.Messages.Notification.NotificationResponse" LastDependency="VL.SCServer.vl">
+                              <p:NodeReference LastCategoryFullName="VL.SCSynth.Messages.Notification.NotificationResponse" LastDependency="VL.SCSynht.vl">
                                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                                 <Choice Kind="OperationCallFlag" Name="SetHeadAndTail" />
                               </p:NodeReference>
@@ -6974,12 +6975,6 @@
                               <Pin Id="SVa9goPtlwKOQZZBdAfvpA" Name="Next Byte Index" Kind="OutputPin" />
                             </Node>
                           </Patch>
-                          <ControlPoint Id="CgC1lDPJB61PQDlFNqtQps" Bounds="2062,952" Alignment="Top" />
-                          <ControlPoint Id="S2QP0NDqHF7Nq9GOfihvzX" Bounds="2068,1142" Alignment="Bottom" />
-                          <ControlPoint Id="QHNHIRbMxDhPD89dFEep8I" Bounds="2158,952" Name="TypeTag" Alignment="Top" />
-                          <ControlPoint Id="S4qLEwq0Kn1M5ZJPXTa22T" Bounds="2188,1142" Name="TypeTag" Alignment="Bottom" />
-                          <ControlPoint Id="AOXTKlTuKADOXFJqKSedo5" Bounds="2236,952" Name="ByteIndex" Alignment="Top" />
-                          <ControlPoint Id="PBWucWjyf5ZM0llVGBMQTy" Bounds="2248,1142" Name="ByteIndex" Alignment="Bottom" />
                         </Node>
                         <Node Bounds="2067,895,25,19" Id="T8UQeAbxo5sPBOmHp4Qlww">
                           <p:NodeReference LastCategoryFullName="VL.SCServer.NodeType" LastDependency="VL.SCServer.Utils.csproj">
@@ -7261,11 +7256,6 @@
                     <Pin Id="BK6Q6hsdzmUP3Fae0Nd0Di" Name="Next Node" Kind="InputPin" />
                     <Pin Id="Kv3K1dWCY5pNB6GDnMZq6Y" Name="Node Type" Kind="InputPin" />
                   </Patch>
-                  <!--
-
-    ************************  ************************
-
--->
                   <ProcessDefinition Id="Ou28ohzagSmLaNz3MfcrUN" IsHidden="true">
                     <Fragment Id="FvEXWNkOkOlM5r8KborDAs" Patch="IfmY7iHuN4IOQ88uPVPfFe" Enabled="true" />
                     <Fragment Id="NgMvPuCPkCQQZ1iajeIfos" Patch="RFL74Ivmw25PyNm5IoP0AS" />
@@ -7402,11 +7392,6 @@
               </Node>
               <ControlPoint Id="Ej7uzKKSxxOMQhAEcpIOlE" Bounds="1047,516" />
             </Canvas>
-            <!--
-
-    ************************  ************************
-
--->
             <ProcessDefinition Id="DY0Jhs2A9jyN0NNzwXqOO1">
               <Fragment Id="PJsz8GQsJLSMRlTI1cMkeU" Patch="RM2WH9kvPIyN8ICDgPgmkD" Enabled="true" />
               <Fragment Id="DjoCkfoKz2VPvrujNJ2RGs" Patch="Q76NdPv0pSTNm02P8AsyzA" Enabled="true" />
@@ -7421,16 +7406,6 @@
             <Link Id="HVCwZT6JjW1L7YJG1Ab6JL" Ids="RBkXe65IcPeLGqxPfQFTE1,JPfjdiGRvdnPithElC7Hwz" />
             <Link Id="PXdmvTY67FTMBZ4KSX4n16" Ids="NejoMrBlsQzOmJOvowD1WR,FmHosfObEEeQGjqqhlf8sR" IsHidden="true" />
             <Link Id="GoUTLtGWlOBL7BhjdxPJbE" Ids="JPfjdiGRvdnPithElC7Hwz,NejoMrBlsQzOmJOvowD1WR" />
-            <Patch Id="RM2WH9kvPIyN8ICDgPgmkD" Name="Create" />
-            <Patch Id="Q76NdPv0pSTNm02P8AsyzA" Name="Update">
-              <Pin Id="M8yzLY0T7e1Mwu7sGoWIog" Name="SCSynth" Kind="InputPin" Bounds="553,266" />
-              <Pin Id="FmHosfObEEeQGjqqhlf8sR" Name="Notification" Kind="OutputPin" Bounds="633,716">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer.Messages.Notification" LastDependency="VL.SCServer.vl">
-                  <Choice Kind="TypeFlag" Name="NotificationResponse" />
-                </p:TypeAnnotation>
-              </Pin>
-              <Pin Id="I8V0YqVUhiZPEJiUjneHoz" Name="Log" Kind="InputPin" Bounds="1050,498" DefaultValue="True" />
-            </Patch>
             <Link Id="I2zudJtsRWiNM6dEnHdWjH" Ids="RBkXe65IcPeLGqxPfQFTE1,FT7Bsx7W3hVMaQI2nWLqps" />
             <Link Id="HAxNMOXKbEINRKo5VQ3hy7" Ids="I8V0YqVUhiZPEJiUjneHoz,Ej7uzKKSxxOMQhAEcpIOlE" IsHidden="true" />
             <Link Id="Mu0OElIJTrAMIZZOF9FwK6" Ids="A0WFiZtXg44PDhJFT56aCG,SXyPLXVNcngQQblp3B8tAS" />
@@ -7438,6 +7413,16 @@
             <Link Id="PdPQVOB1sTaNGU2je8xZYC" Ids="SSwny4NCIJ9LpPbLLLIA1R,M8scvRCAw88MIvzkMoc5s4" />
             <Link Id="Hjr46PGwYF3L7uBX9u0iqw" Ids="IEiRruJuDCkNNRx7AABnm3,BiNgGnFQwEfPZMTU3yKRfY" />
             <Link Id="FrueOxJtlh1NGFrRPtfYSM" Ids="K0fTjv3EzTtOry8wuZAwu9,KB5Np00tvi3LDVKuitrGap" />
+            <Patch Id="RM2WH9kvPIyN8ICDgPgmkD" Name="Create" />
+            <Patch Id="Q76NdPv0pSTNm02P8AsyzA" Name="Update">
+              <Pin Id="M8yzLY0T7e1Mwu7sGoWIog" Name="SCSynth" Kind="InputPin" Bounds="553,266" />
+              <Pin Id="I8V0YqVUhiZPEJiUjneHoz" Name="Log" Kind="InputPin" Bounds="1050,498" DefaultValue="True" />
+              <Pin Id="FmHosfObEEeQGjqqhlf8sR" Name="Notification" Kind="OutputPin" Bounds="633,716">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCSynth.Messages.Notification" LastDependency="VL.SCSynht.vl">
+                  <Choice Kind="TypeFlag" Name="NotificationResponse" />
+                </p:TypeAnnotation>
+              </Pin>
+            </Patch>
           </Patch>
         </Node>
       </Canvas>
@@ -7542,7 +7527,7 @@
                 <Patch Id="C3WZu0muUSpNRmMrkj0Iyn" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="UTQZh0NgbcFOBIjZKCVEWz" Name="Then" ManuallySortedPins="true" />
                 <Node Bounds="165,311,86,26" Id="BBW5fTkXK81OjwdlTND3Be">
-                  <p:NodeReference LastCategoryFullName="VL.SCServer.SCServer (Executor)" LastDependency="VL.SCServer.vl">
+                  <p:NodeReference LastCategoryFullName="VL.SCSynth.SCServer (Executor)" LastDependency="VL.SCSynht.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="ClassType" Name="SCServer (Executor)" />
                     <Choice Kind="OperationCallFlag" Name="GetSettings" />
@@ -7552,7 +7537,7 @@
                   <Pin Id="S6qr2BgWmOXPFRvDclgHfT" Name="Settings" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="228,372,105,26" Id="RnixFGgX6dZPfQFOWQzt7P">
-                  <p:NodeReference LastCategoryFullName="VL.SCServer.SCServerSettings" LastDependency="VL.SCServer.vl">
+                  <p:NodeReference LastCategoryFullName="VL.SCSynth.SCServerSettings" LastDependency="VL.SCSynht.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="ClassType" Name="SCServerSettings" />
                     <Choice Kind="OperationCallFlag" Name="Split" />
@@ -7735,7 +7720,7 @@
           </Patch>
           <Patch Id="TT8qqi3mjZrPylAmB1KQZt" Name="FromSCSynth">
             <Pin Id="QYqkmnTlHrWLraig8UF5qx" Name="SCSynth" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
+              <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynht.vl">
                 <Choice Kind="TypeFlag" Name="SCServer (Executor)" />
               </p:TypeAnnotation>
             </Pin>
@@ -7862,6 +7847,7 @@
               <ControlPoint Id="B2TfcFw5uKGMMZZyrfzHMu" Bounds="996,671" Alignment="Bottom" />
               <ControlPoint Id="OGAddheQQUzNwVfzNURZOq" Bounds="996,501" Alignment="Top" />
               <ControlPoint Id="N7pFyvxC0iZOIRIXs3eAgi" Bounds="1063,501" Alignment="Top" />
+              <ControlPoint Id="VHgvsdzViBbN2SyY2hfPbo" Bounds="1079,671" Alignment="Bottom" />
               <Patch Id="Ik9vgsZLZ8dM9OuRFl6LAM" ManuallySortedPins="true">
                 <Patch Id="DwbAd9gz5WJMBMw9vazszG" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="ORdnbbY2CXFMbzThC7BEXf" Name="Then" ManuallySortedPins="true" />
@@ -7880,7 +7866,7 @@
                     <Patch Id="BgFhpCaQUeWMkYkv6hLYKK" Name="Update" ManuallySortedPins="true" />
                     <Patch Id="BNOfC7LvKyxOPaYHt75dcp" Name="Dispose" ManuallySortedPins="true" />
                     <Node Bounds="994,564,72,26" Id="Rg0YhE85wgNLlfhyvZsLBQ">
-                      <p:NodeReference LastCategoryFullName="VL.SCServer.SynthParameter" LastDependency="VL.SCServer.vl">
+                      <p:NodeReference LastCategoryFullName="VL.SCSynth.SynthParameter" LastDependency="VL.SCSynht.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <CategoryReference Kind="RecordType" Name="SynthParameter" />
                         <Choice Kind="OperationCallFlag" Name="Create" />
@@ -7902,7 +7888,6 @@
                   <Pin Id="MXYAlTIzIR8M0xbkIzuTkZ" Name="Count" Kind="OutputPin" />
                 </Node>
               </Patch>
-              <ControlPoint Id="VHgvsdzViBbN2SyY2hfPbo" Bounds="1079,671" Alignment="Bottom" />
             </Node>
             <ControlPoint Id="LswLjl1ApTWN6HNI0mCQKl" Bounds="1157,735" />
             <ControlPoint Id="ERMu4m6hDBkOJENUfkcHv3" Bounds="1083,737" />
@@ -8087,7 +8072,7 @@
                 <ControlPoint Id="GqFtt1R4ELdMBNvxaEc6oX" Bounds="648,358" />
                 <Link Id="Vc9DGS2RCfqPX96Ud4jird" Ids="EkHjgWZaztYLd1gW1qGImb,GqFtt1R4ELdMBNvxaEc6oX" IsHidden="true" />
                 <Node Bounds="646,393,95,26" Id="SygbmnbsoA7LsdTnuJmTr4">
-                  <p:NodeReference LastCategoryFullName="VL.SCServer.SynthParameter" LastDependency="VL.SCServer.vl">
+                  <p:NodeReference LastCategoryFullName="VL.SCSynth.SynthParameter" LastDependency="VL.SCSynht.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="RecordType" Name="SynthParameter" NeedsToBeDirectParent="true" />
                     <Choice Kind="OperationCallFlag" Name="Split" />
@@ -8140,13 +8125,6 @@
                   <Pin Id="Im6bbGtuVx5L1KqIaRgkZA" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Link Id="LNZbI3u83HdMoyTH9gAtHv" Ids="Im6bbGtuVx5L1KqIaRgkZA,N5ZddTRSelBPdw4X68hOgJ" />
-                <Pin Id="ERkfCBhmi5rMwGtPVUBrk4" Name="Context" Kind="InputPin" />
-                <Pin Id="EkHjgWZaztYLd1gW1qGImb" Name="Args" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
-                    <Choice Kind="TypeFlag" Name="SynthParameter" />
-                  </p:TypeAnnotation>
-                </Pin>
-                <Pin Id="CEAWJChfCNFM0sEfwL1cMv" Name="Context" Kind="OutputPin" />
                 <Pad Id="D2ROtSftyD6M83VVtCVGn1" Comment="" Bounds="753,516,35,15" ShowValueBox="true" isIOBox="true" Value="0">
                   <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="TypeFlag" Name="Integer32" />
@@ -8154,6 +8132,13 @@
                 </Pad>
                 <Link Id="Vqrfwr9kwwXLLJMFZbs0HE" Ids="R9rWE67DxhwNTUxfj5IZ3F,FhNwlgBq926MMhq7WXrUXM" />
                 <Link Id="Pqep6dyziUDLarRCFTwYtX" Ids="E2wmObRIA3JOyrjpGOOoDt,PgHzxcYtsJPPImPW0ZqQ1R" />
+                <Pin Id="ERkfCBhmi5rMwGtPVUBrk4" Name="Context" Kind="InputPin" />
+                <Pin Id="EkHjgWZaztYLd1gW1qGImb" Name="Args" Kind="InputPin">
+                  <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynht.vl">
+                    <Choice Kind="TypeFlag" Name="SynthParameter" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Pin Id="CEAWJChfCNFM0sEfwL1cMv" Name="Context" Kind="OutputPin" />
               </Patch>
             </Node>
             <Node Bounds="865,231,224,511" Id="NoHi9WEgXRLN7FJRST4FS1">
