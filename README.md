@@ -1,12 +1,12 @@
 # VL.SCServer
-Super Collider Server Lib - foundation for vvvv and SC integration
+SuperCollider Server Lib - foundation for vvvv and SC integration
 
 
 ## What is this?
 
 VL.SCServer (SuperCollider Server)[^5] is a minimal implementation of a standalone server executor (scsynth)[^10] using the [VL.IO.OSC](https://github.com/vvvv/VL.IO.OSC) lib. 
 
-<cite>Read More about SuperCollider [here](https://supercollider.github.io/)</cite>
+<cite>Read more about SuperCollider [here](https://supercollider.github.io/)</cite>
 
 It supports all major OSC messages for manipulating the server itself and its nodes, such as SynthDefs, Synths, Groups and Busses (check [this list](#scserver-options) below).
 
@@ -14,13 +14,13 @@ Therefore it is bundled with all the appropriate functionalities to build your o
 
 SCServer comes with an integrated SCClient (for receiving scynth responses). However SCClient can be used to access an active SuperCollider server by any machine, locally or internally. 
 
-## Some usefull notes
+## Some useful notes
 
 SuperCollider Server replies on the same port it listens to, since TCP is not supported yet in this version, you can get the OSC responses (via UDP) by exposing the hidden "Data" output pin on the OSCClient.
 
 ![Expose Data Pin](/img/OSCClient-Data-pin_00.png)
 
-<cite>This functionality is already managed internaly in order to get Server's Stauts, Verions and other useful information.</cite>
+<cite>This functionality is already managed internally in order to get the status of the server, it's versions, and other useful information.</cite>
 
 Both SCServer and SCClient are inheriting their methods from ISCSynth. This name was picked in order to signify that both are implementing and sharing methods to communicate directly with any active scsynth.
 
@@ -30,7 +30,7 @@ In example, once you started scsynth (either via SCServer or directly or by usin
 
 ## SCServer Options
 
-So far only few options are being supported (the plan is to add all the available options). The idea was to keep it simple and minimal by adding olny essential things.
+So far only few options are being supported (the plan is to add all the available options). The idea was to keep it simple and minimal by adding only essential things.
 
 - So you can choose if Server will use either the UDP <s>or the TCP</s> Protocol.
 
