@@ -1050,7 +1050,7 @@
               <Pin Id="EShCOvNzk9hPKTv9UeLoMX" Name="Show Version" Kind="OutputPin" />
             </Node>
             <Node Bounds="1975,-161,25,19" Id="UllBE5mGbFOPqAWz8HbqBF">
-              <p:NodeReference LastCategoryFullName="VL.SCServer.Protocol" LastDependency="VL.SCServer.Utils.csproj">
+              <p:NodeReference LastCategoryFullName="VL.SCSynth.Protocol" LastDependency="VL.SCSynth.Utils.csproj">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="AssemblyCategory" Name="Protocol" />
                 <Choice Kind="OperationCallFlag" Name="=" />
@@ -2135,7 +2135,7 @@
               <Pin Id="G9BAl6rWo8hMg22c29OMRK" Name="Input 3" Kind="InputPin" />
             </Node>
             <Node Bounds="550,642,25,19" Id="ULuUweRoQ1gNC5dhu8iC0F">
-              <p:NodeReference LastCategoryFullName="VL.SCServer.Protocol" LastDependency="VL.SCServer.Utils.csproj">
+              <p:NodeReference LastCategoryFullName="VL.SCSynth.Protocol" LastDependency="VL.SCSynth.Utils.csproj">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="AssemblyCategory" Name="Protocol" />
                 <Choice Kind="OperationCallFlag" Name="=" />
@@ -2942,7 +2942,7 @@
                 </p:TypeAnnotation>
               </Pin>
               <Pin Id="KkSRFt3VIFNNbrGPqdVLWU" Name="Code" Kind="InputPin" DefaultValue="PrintParsedContent">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.Utils.csproj">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.Utils.csproj">
                   <Choice Kind="TypeFlag" Name="DumpOSCOptions" />
                 </p:TypeAnnotation>
               </Pin>
@@ -3304,7 +3304,7 @@
                 </p:TypeAnnotation>
               </Pin>
               <Pin Id="APzrnDHLKyLObxUfDaf8H8" Name="Code" Kind="InputPin" DefaultValue="Receive">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.Utils.csproj">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.Utils.csproj">
                   <Choice Kind="TypeFlag" Name="NotifyOptions" />
                 </p:TypeAnnotation>
               </Pin>
@@ -3493,7 +3493,7 @@
                 </p:TypeAnnotation>
               </Pin>
               <Pin Id="SXUP5BUMo6WNXdgiaSiha3" Name="Mode" Kind="InputPin" DefaultValue="On">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.Utils.csproj">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.Utils.csproj">
                   <Choice Kind="TypeFlag" Name="ErrorOptions" />
                 </p:TypeAnnotation>
               </Pin>
@@ -4597,7 +4597,7 @@
                 </p:TypeAnnotation>
               </Pin>
               <Pin Id="NhRfoNPtFwsOEudRw30MEo" Name="Flag" Kind="InputPin">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.Utils.csproj">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.Utils.csproj">
                   <Choice Kind="TypeFlag" Name="RunNodeFlags" />
                 </p:TypeAnnotation>
               </Pin>
@@ -5012,7 +5012,7 @@
               <ControlPoint Id="CUadsDsrPnYQMmytpoSdPE" Bounds="885,156" />
               <ControlPoint Id="MnDwd6MqTjKNXCopQSdwPB" Bounds="910,414" />
               <Node Bounds="851,511,25,19" Id="FwuelawtD4RLO8KBrUisnI">
-                <p:NodeReference LastCategoryFullName="VL.SCServer.AddActions" LastDependency="VL.SCServer.Utils.csproj">
+                <p:NodeReference LastCategoryFullName="VL.SCSynth.AddActions" LastDependency="VL.SCSynth.Utils.csproj">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="AssemblyCategory" Name="AddActions" />
                   <Choice Kind="OperationCallFlag" Name="=" />
@@ -5097,7 +5097,7 @@
                 </p:TypeAnnotation>
               </Pin>
               <Pin Id="CwKv8uroEtfOP4J2jv6JC0" Name="Add Action" Kind="InputPin" Bounds="810,408">
-                <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.Utils.csproj">
+                <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.Utils.csproj">
                   <Choice Kind="TypeFlag" Name="AddActions" />
                 </p:TypeAnnotation>
               </Pin>
@@ -7124,7 +7124,7 @@
                     </Node>
                     <Pad Id="Co8Dsrl8lNEObKvCi5WZjj" SlotId="NLpHLBKukOIM6zuRe5s08F" Bounds="876,1035" />
                     <Node Bounds="874,1058,25,19" Id="OJEiIbZkfLKPKXp4oqADWZ">
-                      <p:NodeReference LastCategoryFullName="VL.SCServer.NodeType" LastDependency="VL.SCServer.Utils.csproj">
+                      <p:NodeReference LastCategoryFullName="VL.SCSynth.NodeType" LastDependency="VL.SCSynth.Utils.csproj">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <CategoryReference Kind="AssemblyCategory" Name="NodeType" />
                         <Choice Kind="OperationCallFlag" Name="=" />
@@ -7243,7 +7243,7 @@
                       <Pin Id="BRcdEdu5nCyLz0V52kkSjr" Name="New Line" Kind="OutputPin" />
                     </Node>
                     <Pad Id="HLH3la9sLNEOGaBZKwVNR0" Comment="" Bounds="896,1035,56,15" ShowValueBox="true" isIOBox="true" Value="Group">
-                      <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.Utils.csproj">
+                      <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.Utils.csproj">
                         <Choice Kind="TypeFlag" Name="NodeType" />
                       </p:TypeAnnotation>
                     </Pad>
@@ -8303,6 +8303,6 @@
       </Patch>
     </Node>
   </Patch>
-  <ProjectDependency Id="OUk8ovQ8k3pQZnYZ1N6uEX" Location="./csharp/VL.SCServer.Utils/VL.SCServer.Utils.csproj" />
   <NugetDependency Id="MCfiGmWIYphLgHCTCD3l8z" Location="VL.IO.OSC" IsForward="true" Version="1.0.20" />
+  <ProjectDependency Id="MArp5C0eh1YOuGtVec4L2I" Location="./csharp/VL.SCSynth.Utils/VL.SCSynth.Utils.csproj" />
 </Document>
