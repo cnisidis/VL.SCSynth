@@ -16,7 +16,7 @@
       <Patch Id="NKQyML7zCjSN4TWIep7ZKZ">
         <Canvas Id="GnZ4AgdGDbPLv2jgwhom9h" CanvasType="Group">
           <Node Bounds="678,483,165,19" Id="OGPgjHaSd9jL6dHQubroYp">
-            <p:NodeReference LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
+            <p:NodeReference LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="SCServer (Executor)" />
             </p:NodeReference>
@@ -52,7 +52,7 @@
           </Pad>
           <Pad Id="CGVUeZMuIziLMVCGgbDJKt" Comment="Status" Bounds="720,530,112,100" ShowValueBox="true" isIOBox="true" />
           <Node Bounds="1002,406,125,19" Id="VY6C3jxBRTFPo7VJffPrGW">
-            <p:NodeReference LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
+            <p:NodeReference LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="SCClient" />
             </p:NodeReference>
@@ -99,7 +99,7 @@
             </p:ValueBoxSettings>
           </Pad>
           <Node Bounds="1004,838,65,19" Id="KErsJI4FBfpM8QbdCFkdD0">
-            <p:NodeReference LastCategoryFullName="VL.SCServer.Messages" LastDependency="VL.SCServer.vl">
+            <p:NodeReference LastCategoryFullName="VL.SCSynth.Messages" LastDependency="VL.SCSynth.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="Messages" NeedsToBeDirectParent="true" />
               <Choice Kind="ProcessAppFlag" Name="Notify" />
@@ -121,7 +121,7 @@
             </p:ValueBoxSettings>
           </Pad>
           <Node Bounds="1003,951,69,19" Id="Bz6DNLYreiPLv4CIUSBEEi">
-            <p:NodeReference LastCategoryFullName="VL.SCServer.Messages" LastDependency="VL.SCServer.vl">
+            <p:NodeReference LastCategoryFullName="VL.SCSynth.Messages" LastDependency="VL.SCSynth.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Notification" />
             </p:NodeReference>
@@ -131,7 +131,7 @@
             <Pin Id="I8VYE0Rb3bjN31vIA1MK25" Name="Notification" Kind="OutputPin" />
           </Node>
           <Node Bounds="1004,896,65,19" Id="P99ZAbnxLQ5Pw9PqaQ0vjy">
-            <p:NodeReference LastCategoryFullName="VL.SCServer.Messages" LastDependency="VL.SCServer.vl">
+            <p:NodeReference LastCategoryFullName="VL.SCSynth.Messages" LastDependency="VL.SCSynth.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="Messages" NeedsToBeDirectParent="true" />
               <Choice Kind="ProcessAppFlag" Name="Info" />
@@ -152,7 +152,7 @@
             </p:ValueBoxSettings>
           </Pad>
           <Node Bounds="1004,584,79,19" Id="RHnT60ad4E6OhGHIBXECCI">
-            <p:NodeReference LastCategoryFullName="VL.SCServer.Messages" LastDependency="VL.SCServer.vl">
+            <p:NodeReference LastCategoryFullName="VL.SCSynth.Messages" LastDependency="VL.SCSynth.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="LoadSynthDef (Path)" />
             </p:NodeReference>
@@ -165,7 +165,7 @@
             <Pin Id="Nk6y7UGJNsWPhou4idkfdY" Name="Server" Kind="OutputPin" />
           </Node>
           <Node Bounds="1004,656,145,19" Id="Nl3Y9SstnaBOGkD58UGwGc">
-            <p:NodeReference LastCategoryFullName="VL.SCServer.Messages" LastDependency="VL.SCServer.vl">
+            <p:NodeReference LastCategoryFullName="VL.SCSynth.Messages" LastDependency="VL.SCSynth.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="NewSynth (Name)" />
             </p:NodeReference>
@@ -180,7 +180,7 @@
             <Pin Id="VITmwHrvvFENW3yeoqErIp" Name="Send" Kind="InputPin" />
             <Pin Id="BhWL1ksyLXSN31SHTsb8VK" Name="Server" Kind="OutputPin" />
           </Node>
-          <Pad Id="DqwyS5yS5rCPasrEccQmoj" Comment="FilePath Expression" Bounds="1030,529,140,15" ShowValueBox="true" isIOBox="true" Value="D:\Projects\VL_Repos\VL.SCServer\Help\Assets\synthdefs\vvvvExample.scsyndef">
+          <Pad Id="DqwyS5yS5rCPasrEccQmoj" Comment="FilePath Expression" Bounds="1030,529,140,15" ShowValueBox="true" isIOBox="true" Value="..\..\VL.SCServer\Help\Assets\synthdefs\vvvvExample.scsyndef">
             <p:TypeAnnotation LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Path" />
             </p:TypeAnnotation>
@@ -217,7 +217,7 @@
             </p:TypeAnnotation>
           </Pad>
           <Node Bounds="1004,740,85,19" Id="LkrLlyTS5Z0NwRcON34P1G">
-            <p:NodeReference LastCategoryFullName="VL.SCServer.Messages" LastDependency="VL.SCServer.vl">
+            <p:NodeReference LastCategoryFullName="VL.SCSynth.Messages" LastDependency="VL.SCSynth.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="RunNode" />
             </p:NodeReference>
@@ -230,12 +230,12 @@
             <Pin Id="JWsck3zlr7nNOTQXTFZY8W" Name="Server" Kind="OutputPin" />
           </Node>
           <Pad Id="OZGTudty4kIPQjHBMa8kSa" Comment="Flag" Bounds="1046,711,93,15" ShowValueBox="true" isIOBox="true" Value="DoNotExecute">
-            <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
+            <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.vl">
               <Choice Kind="TypeFlag" Name="RunNodeFlags" />
             </p:TypeAnnotation>
           </Pad>
           <Node Bounds="1082,949,45,19" Id="Q9zAMFGzenxOYC8PeqvOZL">
-            <p:NodeReference LastCategoryFullName="VL.SCServer.Messages" LastDependency="VL.SCServer.vl">
+            <p:NodeReference LastCategoryFullName="VL.SCSynth.Messages" LastDependency="VL.SCSynth.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="Messages" NeedsToBeDirectParent="true" />
               <Choice Kind="ProcessAppFlag" Name="Fail" />
@@ -248,7 +248,7 @@
             <Pin Id="HWsjKWt3qytNaR18YxiuoY" Name="Error Message" Kind="OutputPin" />
           </Node>
           <Node Bounds="894,893,65,19" Id="TlMve8vQRZLLhigRac8Q6e">
-            <p:NodeReference LastCategoryFullName="VL.SCServer.Messages" LastDependency="VL.SCServer.vl">
+            <p:NodeReference LastCategoryFullName="VL.SCSynth.Messages" LastDependency="VL.SCSynth.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="Messages" NeedsToBeDirectParent="true" />
               <Choice Kind="ProcessAppFlag" Name="Error" />
@@ -261,7 +261,7 @@
             <Pin Id="PICDOSPdTRYLMMUivDsUy3" Name="Server" Kind="OutputPin" />
           </Node>
           <Pad Id="JHB9kk5djQ0MIRpbJaYivz" Comment="Mode" Bounds="833,837,112,15" ShowValueBox="true" isIOBox="true" Value="On">
-            <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
+            <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.vl">
               <Choice Kind="TypeFlag" Name="ErrorOptions" />
             </p:TypeAnnotation>
           </Pad>
@@ -300,5 +300,5 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="HJsVDR9Nb3ELo0iClbOPjd" Location="VL.SCServer" Version="0.0.0" />
+  <NugetDependency Id="Jms7xKk6q8sOmfQvBclmae" Location="VL.SCSynth" Version="0.0.0" />
 </Document>

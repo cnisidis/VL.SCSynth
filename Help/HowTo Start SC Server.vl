@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="TLbGVkcV6SqOcupCfuxIsr" LanguageVersion="2023.5.3-0189-g3b1140fa91" Version="0.128">
-  <NugetDependency Id="QuPoRon99bHOkjnNGlWU3M" Location="VL.CoreLib" Version="2023.5.3-0189-g3b1140fa91" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="TLbGVkcV6SqOcupCfuxIsr" LanguageVersion="2023.5.3-0203-g579cc42b10" Version="0.128">
+  <NugetDependency Id="QuPoRon99bHOkjnNGlWU3M" Location="VL.CoreLib" Version="2023.5.3-0203-g579cc42b10" />
   <Patch Id="IhGo5366sagOYcmFal8hBo">
     <Canvas Id="DDWy8geaakWLqIHQZJcSCR" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -16,10 +16,9 @@
       <Patch Id="IPEKirmRpXfNoGZ8DAlcoL">
         <Canvas Id="SHeECsQZnSeLaU7TUtob0N" CanvasType="Group">
           <Node Bounds="633,1113,165,19" Id="Pe8yx4x4kt7OlZNUxGtBAa">
-            <p:NodeReference LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
+            <p:NodeReference LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <CategoryReference Kind="Category" Name="SCServer" />
-              <Choice Kind="ProcessAppFlag" Name="Server" />
+              <Choice Kind="ProcessAppFlag" Name="SCServer (Executor)" />
             </p:NodeReference>
             <Pin Id="L3YYVTScDEhLOsQocy4qLY" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="OAQuB7Ao7TpP3do1f5dwnc" Name="SC Folder Path" Kind="InputPin" />
@@ -37,13 +36,13 @@
             <Pin Id="FSzwSpkppNeMwvdwwN2waL" Name="isRunning" Kind="OutputPin" />
             <Pin Id="ViMTpC1SNgZNsQxFqsJdKT" Name="isListening" Kind="OutputPin" />
           </Node>
-          <Pad Id="IipCYrFpIe0Lf6OGZwosY0" Comment="SC Folder Path" Bounds="634,255,201,15" ShowValueBox="true" isIOBox="true" Value="..\..\..\..\..\..\Program Files\SuperCollider-3.13.0\\">
+          <Pad Id="IipCYrFpIe0Lf6OGZwosY0" Comment="SC Folder Path" Bounds="634,255,201,15" ShowValueBox="true" isIOBox="true" Value="..\..\..\..\Program Files\SuperCollider-3.13.0\">
             <p:TypeAnnotation LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Path" />
             </p:TypeAnnotation>
           </Pad>
           <Pad Id="UmpYMkwtpOhPXCqp9F3IPa" Comment="Protocol" Bounds="655,310,47,15" ShowValueBox="true" isIOBox="true" Value="UDP">
-            <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
+            <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.vl">
               <Choice Kind="TypeFlag" Name="Protocol" />
             </p:TypeAnnotation>
           </Pad>
@@ -58,7 +57,7 @@
             </p:TypeAnnotation>
           </Pad>
           <Pad Id="OlDvn2Puk4kMqy2vyqLJR4" Comment="Verbosity" Bounds="715,560,113,15" ShowValueBox="true" isIOBox="true" Value="Normal">
-            <p:TypeAnnotation LastCategoryFullName="VL.SCServer" LastDependency="VL.SCServer.vl">
+            <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.vl">
               <Choice Kind="TypeFlag" Name="Verbosity" />
             </p:TypeAnnotation>
           </Pad>
@@ -186,11 +185,6 @@
         </Canvas>
         <Patch Id="NXvFLQ5qRjLODiVVx83pst" Name="Create" />
         <Patch Id="KbcahGRb9fVQdDnciyJ6Gx" Name="Update" />
-        <!--
-
-    ************************  ************************
-
--->
         <ProcessDefinition Id="THhIdeiABnuNUIisGCvWin">
           <Fragment Id="VbRt39V32JPQXLf88o0zRi" Patch="NXvFLQ5qRjLODiVVx83pst" Enabled="true" />
           <Fragment Id="BG0bcsejQqYMJ7Z9E1YiLm" Patch="KbcahGRb9fVQdDnciyJ6Gx" Enabled="true" />
@@ -210,4 +204,5 @@
     </Node>
   </Patch>
   <NugetDependency Id="DodpCGn9SyZPbELmF3fNQ9" Location="VL.SCServer" Version="0.0.0" />
+  <NugetDependency Id="EUL6APPCCueOVgXVjsKj0X" Location="VL.SCSynth" Version="0.0.0" />
 </Document>
