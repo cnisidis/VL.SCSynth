@@ -88,6 +88,34 @@ A <i>Record<U,T></i> type object holding two fields:
 - Name or Index can be either type of String or Integer32
 - Value can be an Integer32, Float32 or String
 
+## Layer
+
+A Layer is representing the 0 Group (the base with additional functionalites) which is usually assigned to the Server by default in superCollider. 
+
+Therefore, all the synths and the groups you may create should have a unique ID and always greater than 0.
+
+In example:
+
+![Assign Unique ID's to groups and synths](img/setup_groups.png)
+
+It is not mandatory to keep order of IDs, although a good practice would be to assign bigger values especially to groups.
+
+(this is an idea on how to face automatic ID assignement)
+
+Imagine a Group with ID: 1000 and all of each children to add 100.
+
+Group A (1000) <- Group B (1100)
+
+And a Synth adds 1
+
+Group A (1000) <- Synth 1 (1001)
+
+and so on... 
+
+
+
+
+
 ## Before You Go
 SCServer is still in progress, so changes will be often and may cause breaking changes. 
 
