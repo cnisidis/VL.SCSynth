@@ -15,7 +15,7 @@
       </p:NodeReference>
       <Patch Id="VZ0s0wCW4MQM7gZ4VshFn8">
         <Canvas Id="BQ9h6KHS6gAPa8J16IaM7W" CanvasType="Group">
-          <Node Bounds="498,334,165,19" Id="EZUXAoqc0RTMxwGmXDG3uC">
+          <Node Bounds="498,334,205,19" Id="EZUXAoqc0RTMxwGmXDG3uC">
             <p:NodeReference LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="SCSynth" />
@@ -28,9 +28,12 @@
             <Pin Id="F7Q8nPdG3o4OIjusa5lqXh" Name="Port" Kind="InputPin" />
             <Pin Id="CkcfBUp2NH6NhaD4XLg4Dr" Name="Verbosity" Kind="InputPin" />
             <Pin Id="DAckoSyIrIENoLErz1uwGO" Name="Request Status" Kind="InputPin" />
-            <Pin Id="E69Zhrfol4QOUxD02ROhot" Name="Boot" Kind="InputPin" />
-            <Pin Id="Pu1dqhLSgPmPKvXxYU3c9T" Name="Kill" Kind="InputPin" />
+            <Pin Id="P6AdcjcHF3yLav6tlsipan" Name="Boot" Kind="InputPin" />
+            <Pin Id="Q2PBGZ8nTfULXPFfKGIbjS" Name="Quit" Kind="InputPin" />
+            <Pin Id="Pu1dqhLSgPmPKvXxYU3c9T" Name="Kill" Kind="InputPin" IsHidden="true" />
             <Pin Id="PUZAjGBNHrXOv5TRTBcZpj" Name="Id" Kind="InputPin" />
+            <Pin Id="G1xHIPOOLlSPnkdoMfBwEa" Name="DumpOSC" Kind="InputPin" IsHidden="true" />
+            <Pin Id="EG7xRTOh7t3PwRpIXO4xtD" Name="Apply DumpOSC" Kind="InputPin" IsHidden="true" />
             <Pin Id="Ao2h174ouDyNg7At9hVh9u" Name="Output" Kind="StateOutputPin" />
             <Pin Id="K5JOoWfS7j8NhEg2i9Pzw8" Name="Status" Kind="OutputPin" />
             <Pin Id="C0rRquiFpBnMDgahDsh9xY" Name="Version" Kind="OutputPin" />
@@ -45,7 +48,7 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="GIzpjJJUMpgMFgJXU6Ctgf" Comment="isRunning" Bounds="622,392,35,35" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="GIzpjJJUMpgMFgJXU6Ctgf" Comment="isRunning" Bounds="651,404,35,35" ShowValueBox="true" isIOBox="true" />
           <Node Bounds="855,347,125,19" Id="Nvk1jR5HMCfP8dU4ClAIfR">
             <p:NodeReference LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -273,6 +276,11 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
+          <Pad Id="EarPGxgRbjPPKrnp6hghiR" Comment="DumpOSC" Bounds="681,171,115,15" ShowValueBox="true" isIOBox="true" Value="Off">
+            <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.vl">
+              <Choice Kind="TypeFlag" Name="DumpOSCOptions" />
+            </p:TypeAnnotation>
+          </Pad>
         </Canvas>
         <Patch Id="LTWdG22dzPgLzNGjeFkUMU" Name="Create" />
         <Patch Id="CypQcAkHjXfNsB9aFRGQMx" Name="Update" />
@@ -280,7 +288,6 @@
           <Fragment Id="OqS5gS2ZahMMNvCZLckuA6" Patch="LTWdG22dzPgLzNGjeFkUMU" Enabled="true" />
           <Fragment Id="P05UNDDR3w8PRVg0KVVsbQ" Patch="CypQcAkHjXfNsB9aFRGQMx" Enabled="true" />
         </ProcessDefinition>
-        <Link Id="M1aRSBkMbQ9PfO8zih2Qj0" Ids="UOnfA6E0rf3MXySVXY5u6K,E69Zhrfol4QOUxD02ROhot" />
         <Link Id="MngQjelfJDMMrAS6XDe165" Ids="CXD89pAsKqsMpNZBGKT1ap,GIzpjJJUMpgMFgJXU6Ctgf" />
         <Link Id="B4nmSQYi5SeLbWctpFQGOH" Ids="VrEB0hJ1lOPMzjpUbafaI7,Dg4jntMcOGfPeecjswGKuu" />
         <Link Id="FMPIyoTbKiTPqNTaDiFPuU" Ids="JszAUKUUoeFM5OSO5FVTSE,UsxYZUUYAMePIRIUMEsTPH" />
