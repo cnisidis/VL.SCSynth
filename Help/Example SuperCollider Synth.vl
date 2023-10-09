@@ -15,7 +15,7 @@
       </p:NodeReference>
       <Patch Id="RR1sLK9HUYROoCBqprj1Di">
         <Canvas Id="VEgO4ONubNUPQc5CVaYUZx" CanvasType="Group">
-          <Node Bounds="442,290,125,19" Id="SXWZKlulujBLIol5jbqhnQ">
+          <Node Bounds="480,144,125,19" Id="SXWZKlulujBLIol5jbqhnQ">
             <p:NodeReference LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="SCClient" />
@@ -32,7 +32,7 @@
             <Pin Id="Qg0Ryg8nzk1ONHnxm1vW3W" Name="OSCClient" Kind="OutputPin" />
             <Pin Id="TdNp6WZv5QrLQvJJKplZtG" Name="Is Open" Kind="OutputPin" />
           </Node>
-          <Pad Id="CsbkxXb87ZgPTt3xm6Ig4o" Comment="Console Log" Bounds="504,194,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+          <Pad Id="CsbkxXb87ZgPTt3xm6Ig4o" Comment="Console Log" Bounds="542,48,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
@@ -40,7 +40,7 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="KS1jxVby9pnLvCN2BvRgiZ" Comment="Id" Bounds="524,256,35,15" ShowValueBox="true" isIOBox="true" Value="3">
+          <Pad Id="KS1jxVby9pnLvCN2BvRgiZ" Comment="Id" Bounds="562,110,35,15" ShowValueBox="true" isIOBox="true" Value="3">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Integer32" />
             </p:TypeAnnotation>
