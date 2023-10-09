@@ -19,11 +19,14 @@ namespace VL.SCSynth.Utils
         public int scId { get; set; }
         
         //Add synth parameters Enumerable* TODO 
-        public CallerInfo callerInfo { get; set; }
+        public CallerInfo? callerInfo { get; set; }
 
         public Synth()
         { 
             callerInfo = new CallerInfo(0, typeof(Synth));
+            callerInfo.parent = this.callerInfo;
+            callerInfo.prev = null;
+            callerInfo.next = null;
         }
 
         public void Update(IEnumerable<ISCNode>? Parameters, int Id)
@@ -53,6 +56,10 @@ namespace VL.SCSynth.Utils
                 {
 
                     callerInfo.parent = caller;
+                    if(caller.hasChildren)
+                    {
+                        //if caller has children get last input and set this.CallerInfo.prev
+                    }
                 }
                 //If Synth is part of a group (which is the most common case, then prev node should be assigned by retreiving the callers.inputs[prev].scid, that's why it is essential of keeping track of the input order (index)) 
             }

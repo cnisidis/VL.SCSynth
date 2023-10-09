@@ -283,32 +283,31 @@ namespace VL.SCSynth.Utils
                     //Allocation free iteration
                     foreach (var i in Inputs)
                     {
-                        if(i != null)
+                        if(i != null )
                         {
                             i.callerInfo.parent = callerInfo;
                             if (index > 0)
                             {
-                                if(i.callerInfo.hasChildren)
+                                    
                                     i.callerInfo.prev = Inputs.ToArray()[index - 1].callerInfo;
+                                    
                             }
                             if (index < Inputs.Count() - 1)
                             {
-                                if(i.callerInfo.hasChildren)
-                                {
-                                    var next = Inputs.ToArray()[index + 1].callerInfo;
+                              
+                                    CallerInfo? next = Inputs.ToArray()[index + 1].callerInfo;
                                     if (next != null)
                                         i.callerInfo.next = next;
                                     else
-                                        i.callerInfo.prev = null;
-                                }
-                                
+                                        i.callerInfo.next = new CallerInfo(-1, typeof(SpectralGroup));
+                               
                             }
 
                             i?.Identify(callerInfo);
 
-                            index++;
+                            
                         }
-                        
+                        index++;
                     }
 
                 }

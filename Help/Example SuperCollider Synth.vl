@@ -78,9 +78,9 @@
             <Pin Id="Q84wivSsU8SLZKYWQ2SfxI" Name="Enabled" Kind="InputPin" IsHidden="true" />
             <Pin Id="FHEpKVArGqCOTtCXhO3G8u" Name="ID" Kind="InputPin" DefaultValue="2" />
             <Pin Id="UC74juL5RppN18nsL1Ppn7" Name="SCNode" Kind="InputPin" />
-            <Pin Id="OHPU3HIGeS8PdhGkNVpA1W" Name="SCNode 2" Kind="InputPin" />
             <Pin Id="OPzHSIeMg22OVJhasDjplp" Name="SCNode" Kind="OutputPin" />
             <Pin Id="BwPdj6eysBRLbTL5zQUJFe" Name="Id" Kind="OutputPin" IsHidden="true" />
+            <Pin Id="Ttw2Dda7XEIPdsdz1dDq3G" Name="SCNode 2" Kind="InputPin" />
           </Node>
           <Node Bounds="960,57,45,19" Id="CYhRhVh245hObL4iB3HOiG">
             <p:NodeReference LastCategoryFullName="VL.SCSynth.SCNodes" LastDependency="VL.SCSynth.vl">
@@ -91,9 +91,9 @@
             <Pin Id="Ewd7HppRoSrP622omVTqGQ" Name="Enabled" Kind="InputPin" IsHidden="true" />
             <Pin Id="NUvEiMNwzI0Pq7pCDommHt" Name="ID" Kind="InputPin" DefaultValue="3" />
             <Pin Id="Dhi1kQGTExYNuKZOrMIv8R" Name="SCNode" Kind="InputPin" />
-            <Pin Id="LueEKduoPCUObn4nMRw3XP" Name="SCNode 2" Kind="InputPin" />
             <Pin Id="Jt0bIBQhGDaP085TFEFjVN" Name="SCNode" Kind="OutputPin" />
             <Pin Id="LOKC9BNfigEO6hULyguFmq" Name="Id" Kind="OutputPin" IsHidden="true" />
+            <Pin Id="KPn6zxrW0HgM6bwMnG0sjA" Name="SCNode 2" Kind="InputPin" />
           </Node>
           <Pad Id="VbPABsIvGFwMxxzmkLGNMV" Bounds="892,176,346,19" ShowValueBox="true" isIOBox="true" Value="---&gt; Default Layer ID is 0 (Same as super collider server)">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
@@ -164,7 +164,7 @@
             <Pin Id="UvKpsGZ7YzdQBpAhWyGTIN" Name="Id" Kind="InputPin" DefaultValue="5" />
             <Pin Id="BQikIragClGQEcMWKnCrkd" Name="Synth" Kind="OutputPin" />
           </Node>
-          <Node Bounds="977,-66,41,19" Id="LGW7k1oeK4fMBf9gRDHqyf">
+          <Node Bounds="965,-81,41,19" Id="LGW7k1oeK4fMBf9gRDHqyf">
             <p:NodeReference LastCategoryFullName="VL.SCSynth.SCNodes" LastDependency="VL.SCSynth.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Synth" />
@@ -174,7 +174,7 @@
             <Pin Id="VpmKboLY9PAOjI2LgY3XuH" Name="Id" Kind="InputPin" DefaultValue="7" />
             <Pin Id="VEmCqx5vAsvOu5KGRmktqg" Name="Synth" Kind="OutputPin" />
           </Node>
-          <Pad Id="SWqjYUD0sEROEMQYigOYZf" Comment="Id" Bounds="1014,-86,35,15" ShowValueBox="true" isIOBox="true" Value="6">
+          <Pad Id="SWqjYUD0sEROEMQYigOYZf" Comment="Id" Bounds="1002,-101,35,15" ShowValueBox="true" isIOBox="true" Value="6">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Integer32" />
             </p:TypeAnnotation>
@@ -185,6 +185,21 @@
             </p:TypeAnnotation>
           </Pad>
           <Pad Id="SXlKZwRYj6ePEDzuj2DJc7" Comment="Id" Bounds="1104,-19,35,15" ShowValueBox="true" isIOBox="true" Value="5">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="1080,-74,41,19" Id="PBAk4M2EtokNT2Pkn6aO3E">
+            <p:NodeReference LastCategoryFullName="VL.SCSynth.SCNodes" LastDependency="VL.SCSynth.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Synth" />
+            </p:NodeReference>
+            <Pin Id="MNcAENhPFNcNIJMgEYYqQd" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="G6kz6AjchKANhbppEAiqU2" Name="Enable" Kind="InputPin" DefaultValue="True" />
+            <Pin Id="PDAkfNJjHGcM2GD2WdK95A" Name="Id" Kind="InputPin" DefaultValue="7" />
+            <Pin Id="DT9VswVWxSFO4XhSNopbz0" Name="Synth" Kind="OutputPin" />
+          </Node>
+          <Pad Id="MTIVJ8Z663NPnuQhZFxrE1" Comment="Id" Bounds="1117,-94,35,15" ShowValueBox="true" isIOBox="true" Value="7">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Integer32" />
             </p:TypeAnnotation>
@@ -209,12 +224,14 @@
         <Link Id="J3SiVmK8YbaNyRpdAkjLJf" Ids="DCxwM5QViznMX7PQengBbn,OOqBkiFRIhbPguD4xdfZ5Z" />
         <Link Id="Va226vVHNeaQJtFQi6pNxu" Ids="DbbgCTGIF5tPti0X5D24H4,OCXVhxUuFDEPmAg8hNMERl" />
         <Link Id="BVHm3sEe8LZPHa2bW8nsu1" Ids="H810BnBkR4dNEesDqcyE0H,U5J8EkJZR4lNta7tlpiMid" />
-        <Link Id="AhGbMyIYkPQO29pbEkfVID" Ids="MskzfBzTOFkN31L7Gs4VLG,Dhi1kQGTExYNuKZOrMIv8R" />
-        <Link Id="UtAse2PdRNWL4f14KG5oXk" Ids="BQikIragClGQEcMWKnCrkd,LueEKduoPCUObn4nMRw3XP" />
-        <Link Id="AT1omRhRmcDNmeZrRpmATb" Ids="VEmCqx5vAsvOu5KGRmktqg,UC74juL5RppN18nsL1Ppn7" />
         <Link Id="DlIXKAAbN5iMARpgudMHXl" Ids="SWqjYUD0sEROEMQYigOYZf,VpmKboLY9PAOjI2LgY3XuH" />
         <Link Id="LArhYFK7jMvOyzUwpiNAYe" Ids="FocJB3lViJKOgVQxe2wcWL,GF6LUriux8sL2njOOvbpqm" />
         <Link Id="OuNRaLRU4BhNtftzqGR8pl" Ids="SXlKZwRYj6ePEDzuj2DJc7,UvKpsGZ7YzdQBpAhWyGTIN" />
+        <Link Id="PkYiyPC69FvMR4WIISCtxs" Ids="MskzfBzTOFkN31L7Gs4VLG,Dhi1kQGTExYNuKZOrMIv8R" />
+        <Link Id="DVUAizbBQVsO3dNuNtrIwV" Ids="BQikIragClGQEcMWKnCrkd,KPn6zxrW0HgM6bwMnG0sjA" />
+        <Link Id="DMAwavxwOoqNHIK5DCLwoh" Ids="VEmCqx5vAsvOu5KGRmktqg,UC74juL5RppN18nsL1Ppn7" />
+        <Link Id="CWUKDGwepncPglzpECmXy6" Ids="MTIVJ8Z663NPnuQhZFxrE1,PDAkfNJjHGcM2GD2WdK95A" />
+        <Link Id="OgqSMblrVN3PiVBafQXMkQ" Ids="DT9VswVWxSFO4XhSNopbz0,Ttw2Dda7XEIPdsdz1dDq3G" />
       </Patch>
     </Node>
   </Patch>
