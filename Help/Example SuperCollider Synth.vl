@@ -131,11 +131,11 @@
             <Pin Id="DbbgCTGIF5tPti0X5D24H4" Name="Prev Id" Kind="OutputPin" />
             <Pin Id="H810BnBkR4dNEesDqcyE0H" Name="Next Id" Kind="OutputPin" />
           </Node>
-          <Pad Id="Rbkj36VZDsGNzwcvHhh3kL" Comment="ID" Bounds="874,318,35,65" ShowValueBox="true" isIOBox="true" Value="0" />
-          <Pad Id="OOqBkiFRIhbPguD4xdfZ5Z" Comment="Parent Id" Bounds="948,319,35,65" ShowValueBox="true" isIOBox="true" Value="0" />
-          <Pad Id="OCXVhxUuFDEPmAg8hNMERl" Comment="Prev Id" Bounds="1056,320,35,65" ShowValueBox="true" isIOBox="true" Value="0" />
-          <Pad Id="U5J8EkJZR4lNta7tlpiMid" Comment="Next Id" Bounds="1156,322,35,65" ShowValueBox="true" isIOBox="true" Value="0" />
-          <Pad Id="JIFhEk25BwJNWUH05QHlV6" Bounds="823,-101,271,19" ShowValueBox="true" isIOBox="true" Value="---- SET ID's manually to match your SC file">
+          <Pad Id="Rbkj36VZDsGNzwcvHhh3kL" Comment="ID" Bounds="874,318,35,95" ShowValueBox="true" isIOBox="true" Value="0" />
+          <Pad Id="OOqBkiFRIhbPguD4xdfZ5Z" Comment="Parent Id" Bounds="948,319,35,95" ShowValueBox="true" isIOBox="true" Value="0" />
+          <Pad Id="OCXVhxUuFDEPmAg8hNMERl" Comment="Prev Id" Bounds="1056,320,35,95" ShowValueBox="true" isIOBox="true" Value="0" />
+          <Pad Id="U5J8EkJZR4lNta7tlpiMid" Comment="Next Id" Bounds="1156,322,35,95" ShowValueBox="true" isIOBox="true" Value="0" />
+          <Pad Id="JIFhEk25BwJNWUH05QHlV6" Bounds="827,-143,271,19" ShowValueBox="true" isIOBox="true" Value="---- SET ID's manually to match your SC file">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -143,6 +143,51 @@
               <p:fontsize p:Type="Int32">9</p:fontsize>
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="1032,9,41,19" Id="SGRT3IROSZMNRhYLKUVF0P">
+            <p:NodeReference LastCategoryFullName="VL.SCSynth.SCNodes" LastDependency="VL.SCSynth.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Synth" />
+            </p:NodeReference>
+            <Pin Id="HrMKE5bNNo1LSz9q2ZnUg5" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="EIj9EhsAi8fPuNwmD684ut" Name="Enable" Kind="InputPin" DefaultValue="True" />
+            <Pin Id="GF6LUriux8sL2njOOvbpqm" Name="Id" Kind="InputPin" DefaultValue="4" />
+            <Pin Id="MskzfBzTOFkN31L7Gs4VLG" Name="Synth" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="1091,10,41,19" Id="FiqV7YDo7dsOo3v8tVUG2z">
+            <p:NodeReference LastCategoryFullName="VL.SCSynth.SCNodes" LastDependency="VL.SCSynth.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Synth" />
+            </p:NodeReference>
+            <Pin Id="FwQD49QUOcLM7BNH0zHtoM" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="UiOLe7TTQsiPamDh1ba6Cu" Name="Enable" Kind="InputPin" DefaultValue="True" />
+            <Pin Id="UvKpsGZ7YzdQBpAhWyGTIN" Name="Id" Kind="InputPin" DefaultValue="5" />
+            <Pin Id="BQikIragClGQEcMWKnCrkd" Name="Synth" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="977,-66,41,19" Id="LGW7k1oeK4fMBf9gRDHqyf">
+            <p:NodeReference LastCategoryFullName="VL.SCSynth.SCNodes" LastDependency="VL.SCSynth.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Synth" />
+            </p:NodeReference>
+            <Pin Id="O6cENHFsxJEPe9n8jibVAf" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="KHvaFCkTRSBMwubzOAyUOz" Name="Enable" Kind="InputPin" DefaultValue="True" />
+            <Pin Id="VpmKboLY9PAOjI2LgY3XuH" Name="Id" Kind="InputPin" DefaultValue="7" />
+            <Pin Id="VEmCqx5vAsvOu5KGRmktqg" Name="Synth" Kind="OutputPin" />
+          </Node>
+          <Pad Id="SWqjYUD0sEROEMQYigOYZf" Comment="Id" Bounds="1014,-86,35,15" ShowValueBox="true" isIOBox="true" Value="6">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="FocJB3lViJKOgVQxe2wcWL" Comment="Id" Bounds="1032,-17,35,15" ShowValueBox="true" isIOBox="true" Value="4">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="SXlKZwRYj6ePEDzuj2DJc7" Comment="Id" Bounds="1104,-19,35,15" ShowValueBox="true" isIOBox="true" Value="5">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
           </Pad>
         </Canvas>
         <Patch Id="L4C8F8otNA3N5oybyJN2Yk" Name="Create" />
@@ -164,6 +209,12 @@
         <Link Id="J3SiVmK8YbaNyRpdAkjLJf" Ids="DCxwM5QViznMX7PQengBbn,OOqBkiFRIhbPguD4xdfZ5Z" />
         <Link Id="Va226vVHNeaQJtFQi6pNxu" Ids="DbbgCTGIF5tPti0X5D24H4,OCXVhxUuFDEPmAg8hNMERl" />
         <Link Id="BVHm3sEe8LZPHa2bW8nsu1" Ids="H810BnBkR4dNEesDqcyE0H,U5J8EkJZR4lNta7tlpiMid" />
+        <Link Id="AhGbMyIYkPQO29pbEkfVID" Ids="MskzfBzTOFkN31L7Gs4VLG,Dhi1kQGTExYNuKZOrMIv8R" />
+        <Link Id="UtAse2PdRNWL4f14KG5oXk" Ids="BQikIragClGQEcMWKnCrkd,LueEKduoPCUObn4nMRw3XP" />
+        <Link Id="AT1omRhRmcDNmeZrRpmATb" Ids="VEmCqx5vAsvOu5KGRmktqg,UC74juL5RppN18nsL1Ppn7" />
+        <Link Id="DlIXKAAbN5iMARpgudMHXl" Ids="SWqjYUD0sEROEMQYigOYZf,VpmKboLY9PAOjI2LgY3XuH" />
+        <Link Id="LArhYFK7jMvOyzUwpiNAYe" Ids="FocJB3lViJKOgVQxe2wcWL,GF6LUriux8sL2njOOvbpqm" />
+        <Link Id="OuNRaLRU4BhNtftzqGR8pl" Ids="SXlKZwRYj6ePEDzuj2DJc7,UvKpsGZ7YzdQBpAhWyGTIN" />
       </Patch>
     </Node>
   </Patch>

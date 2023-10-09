@@ -133,6 +133,10 @@ namespace VL.SCSynth.Utils
             Inputs = input;
             output = this;
             Id = scId;
+            if(Inputs.Count() > 0)
+            {
+                callerInfo.hasChildren = true;
+            }
         }
 
         
@@ -284,15 +288,20 @@ namespace VL.SCSynth.Utils
                             i.callerInfo.parent = callerInfo;
                             if (index > 0)
                             {
-                                i.callerInfo.prev = Inputs.ToArray()[index - 1].callerInfo;
+                                if(i.callerInfo.hasChildren)
+                                    i.callerInfo.prev = Inputs.ToArray()[index - 1].callerInfo;
                             }
                             if (index < Inputs.Count() - 1)
                             {
-                                var next = Inputs.ToArray()[index + 1].callerInfo;
-                                if (next != null)
-                                    i.callerInfo.next = next;
-                                else
-                                    i.callerInfo.prev = null;
+                                if(i.callerInfo.hasChildren)
+                                {
+                                    var next = Inputs.ToArray()[index + 1].callerInfo;
+                                    if (next != null)
+                                        i.callerInfo.next = next;
+                                    else
+                                        i.callerInfo.prev = null;
+                                }
+                                
                             }
 
                             i?.Identify(callerInfo);

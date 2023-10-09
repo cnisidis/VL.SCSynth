@@ -1761,6 +1761,13 @@
             </Node>
             <Pad Id="Rao3X9R0r3yLLQpVCsUN3k" SlotId="JanCiH6Dr3ePXzR9TF3H07" Bounds="2864,-243" />
             <ControlPoint Id="M0dgRatCqL3MwTHXtFg766" Bounds="2941,-249" />
+            <Pad Id="DbKq2DTLxzuLPJG7sUjsN7" Comment="" Bounds="811,616,140,15" ShowValueBox="true" isIOBox="true" Value="s.version">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="U5dpO8cwsgTQZ23dV8Gs2c" SlotId="DYhH6GL9wGOLC7x2GhYepv" Bounds="722,690" />
+            <ControlPoint Id="EckouCJ2hCoMGBcKdAWrMm" Bounds="723,801" />
           </Canvas>
           <ProcessDefinition Id="LwI7ogmv3YxPBtCuLS2mqp" HasStateOut="true">
             <Fragment Id="AWMazLu0cZtQFt7kDZLYgx" Patch="AmvxBQW0zpJM0JXdujMomX" Enabled="true" />
@@ -1782,6 +1789,7 @@
             <Fragment Id="EcPdnvjEBomQUC91cC0YDH" Patch="Aj7GvBhkYy4NrCAqQmCsb7" />
             <Fragment Id="R20rnIUETfYLjzzsGuGyc6" Patch="SGtcjE6r9wqPKcbjwZxx9R" />
             <Fragment Id="MReGtfljEv6NoWOhnDtANG" Patch="Jhq9Ht6P68NL0roXnAMJzB" Enabled="true" />
+            <Fragment Id="Sy10eJa9nbCOFPvUj11K1B" Patch="UNfKISfIc3VMOe7qXiHy7T" />
           </ProcessDefinition>
           <Slot Id="NULJ2bd0mDpQIcekACktYO" Name="isRunning">
             <p:TypeAnnotation p:Type="TypeReference">
@@ -1970,6 +1978,20 @@
           <Link Id="Q6IZ2hTAastP4U0qZzlrZ5" Ids="KhCYHIIhZPMLmWLR1P5dBc,MurWK1fP5U1NeXPUJfp73N" />
           <Link Id="RdrdvPnmbZrMW81G93Wrk5" Ids="QmbW2SffOcJOO2d75rIn1B,KQeX3Z5illgMmuDaa3jhp3" />
           <Link Id="AAezWsxars3LtXA17dG9Qd" Ids="C9Ao1dBlduoPOCf5TjtH8k,QmbW2SffOcJOO2d75rIn1B" IsHidden="true" />
+          <Slot Id="JanCiH6Dr3ePXzR9TF3H07" Name="OSCClient" />
+          <Link Id="IGi9eu4ay38NEWYJjtWdh0" Ids="KEq9eX5KLsbLcOQ8DO1z9U,DewXHGEnMGfLpvDFNHJeZt" />
+          <Link Id="GUOWxDa2QiAPOpuS6Ml26x" Ids="DewXHGEnMGfLpvDFNHJeZt,OTkK8UD6tLENcBDA3RDzsE" />
+          <Link Id="FkEHqFjJXbXQXslyYdsUIP" Ids="OTkK8UD6tLENcBDA3RDzsE,Fl349v9KzS5NTXcPIHnnni" IsHidden="true" />
+          <Link Id="PslTj1u4EjFLGLFkXw65t5" Ids="AjHb4CwnYYMK9n3PHF0tpV,MKR7hvat3eNP9EH59nKEHK" />
+          <Link Id="I26oyai3qD5NE5NiRT6wuk" Ids="Rao3X9R0r3yLLQpVCsUN3k,HAX45R9fqwPQFxd8kqQosz" />
+          <Link Id="DkbTorcpVinQPK7akSc2TA" Ids="C1gxEDMeRY9LZ2ycrDHcar,GRiItzkmn0mOPSUXWsnHhM" />
+          <Link Id="HDylOKg2MY1Ly1RlQX2h4L" Ids="M0dgRatCqL3MwTHXtFg766,RRCe4d6UT4SMf6tnakejRM" />
+          <Link Id="L3Bgq7flzz5LbZ05TjPQWy" Ids="Chx06R2PMYDLmYuxr6EL2e,M0dgRatCqL3MwTHXtFg766" IsHidden="true" />
+          <Link Id="CjsKKD6NrJYObhEd19JpFE" Ids="DbKq2DTLxzuLPJG7sUjsN7,GAmYUEewnkaMW9Z6H6K3Qj" />
+          <Slot Id="DYhH6GL9wGOLC7x2GhYepv" Name="scsynth" />
+          <Link Id="K7WJrXgZC8aP2LueiXO5bt" Ids="C1UDSY6TOhCPSMlrKLPPNu,U5dpO8cwsgTQZ23dV8Gs2c" />
+          <Link Id="KUCUImJsK4nN4Z0UWKtjwG" Ids="U5dpO8cwsgTQZ23dV8Gs2c,EckouCJ2hCoMGBcKdAWrMm" />
+          <Link Id="Nmcp5AfvviQOizVQE8piw4" Ids="EckouCJ2hCoMGBcKdAWrMm,Nlk6kKuc9S0L9KCX7TQAqh" IsHidden="true" />
           <Patch Id="AmvxBQW0zpJM0JXdujMomX" Name="Create" ParticipatingElements="JWR0xd5IrC2OAAQMPXiEn3" />
           <Patch Id="UGMf3fV78CFNsaS1MrJhrb" Name="Update">
             <Pin Id="IH4JwW2FQZFLyNawjBMhba" Name="SC Folder Path" Kind="InputPin" Bounds="520,50">
@@ -2056,15 +2078,9 @@
             </Pin>
             <Pin Id="C9Ao1dBlduoPOCf5TjtH8k" Name="Apply DumpOSC" Kind="InputPin" Visibility="Hidden" />
           </Patch>
-          <Slot Id="JanCiH6Dr3ePXzR9TF3H07" Name="OSCClient" />
-          <Link Id="IGi9eu4ay38NEWYJjtWdh0" Ids="KEq9eX5KLsbLcOQ8DO1z9U,DewXHGEnMGfLpvDFNHJeZt" />
-          <Link Id="GUOWxDa2QiAPOpuS6Ml26x" Ids="DewXHGEnMGfLpvDFNHJeZt,OTkK8UD6tLENcBDA3RDzsE" />
-          <Link Id="FkEHqFjJXbXQXslyYdsUIP" Ids="OTkK8UD6tLENcBDA3RDzsE,Fl349v9KzS5NTXcPIHnnni" IsHidden="true" />
-          <Link Id="PslTj1u4EjFLGLFkXw65t5" Ids="AjHb4CwnYYMK9n3PHF0tpV,MKR7hvat3eNP9EH59nKEHK" />
-          <Link Id="I26oyai3qD5NE5NiRT6wuk" Ids="Rao3X9R0r3yLLQpVCsUN3k,HAX45R9fqwPQFxd8kqQosz" />
-          <Link Id="DkbTorcpVinQPK7akSc2TA" Ids="C1gxEDMeRY9LZ2ycrDHcar,GRiItzkmn0mOPSUXWsnHhM" />
-          <Link Id="HDylOKg2MY1Ly1RlQX2h4L" Ids="M0dgRatCqL3MwTHXtFg766,RRCe4d6UT4SMf6tnakejRM" />
-          <Link Id="L3Bgq7flzz5LbZ05TjPQWy" Ids="Chx06R2PMYDLmYuxr6EL2e,M0dgRatCqL3MwTHXtFg766" IsHidden="true" />
+          <Patch Id="UNfKISfIc3VMOe7qXiHy7T" Name="GetSCSynthProcess">
+            <Pin Id="Nlk6kKuc9S0L9KCX7TQAqh" Name="scsynth" Kind="OutputPin" />
+          </Patch>
         </Patch>
       </Node>
       <!--
@@ -9130,11 +9146,6 @@
               </Node>
               <ControlPoint Id="B0SuNjZ5UaDNTHAbCzFSS7" Bounds="545,309" />
             </Canvas>
-            <!--
-
-    ************************  ************************
-
--->
             <ProcessDefinition Id="LusINxFMw3gOXOae7ySzA7">
               <Fragment Id="JhcwKMCmxbGMrPXjyfrWgS" Patch="O0auhhT6p6RPNnlmqD4uFw" Enabled="true" />
               <Fragment Id="A5qr47b9n9DNmvw2mSekiq" Patch="V4I178oKUxwOJyR6UQVW7y" Enabled="true" />
@@ -9222,11 +9233,6 @@
               <ControlPoint Id="JXujaOKK89AP9x4BM0RnwL" Bounds="582,629" />
               <ControlPoint Id="BCCnGctXnpqNUhB6JBScnJ" Bounds="504,280" />
             </Canvas>
-            <!--
-
-    ************************  ************************
-
--->
             <ProcessDefinition Id="M07UpkCHYdzMbmt7cyau1D">
               <Fragment Id="HgySsghoecxMT3FBTHjIv3" Patch="LTxkSrtI5waLJ1Rri6jK3D" Enabled="true" />
               <Fragment Id="TWbmJx3SSY1NVrL7VZsg4Z" Patch="LqLf0ryqtr2Lulwu1Ma0zb" Enabled="true" />
@@ -9512,11 +9518,6 @@
                 </Patch>
               </Node>
             </Canvas>
-            <!--
-
-    ************************  ************************
-
--->
             <ProcessDefinition Id="AduDCOqYSHxO66zP9tlvWL">
               <Fragment Id="GzMXAJKB57mL8fnFWjJdUh" Patch="LjWXcXstuXGP4QvvhesqkT" Enabled="true" />
               <Fragment Id="Vf7wDdEYo1xPgtSGi7wEDn" Patch="BR5PHMM77PMNOO3XbXVKbF" Enabled="true" />
@@ -9905,6 +9906,82 @@
             <Link Id="H1EIMlGiRWBPBQjZ33xSr9" Ids="OwFPhAAUK1oPnuiDy2g7bA,CRiaFuNq4F2N1Kov1lTwlg" />
             <Link Id="N8on7uopgIdOoxycNHye2Q" Ids="P0LEqfHPz5QPNEWKcrCuqu,R0GLZZD63SKMyhpAdzQh39" />
             <Link Id="Pyfmn4fglAHMvoOr73OF7L" Ids="SQDTM9oYbylLVWgliOA6z4,TTkCwIEu6fONv6ITre4Nh7" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ Synth ************************
+
+-->
+        <Node Name="Synth" Bounds="441,510" Id="E0HOdrRsHz6N8dylBvlUMD">
+          <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+            <Choice Kind="ContainerDefinition" Name="Process" />
+          </p:NodeReference>
+          <Patch Id="NDkV4PZ1NvlODkHslANpBB">
+            <Canvas Id="OI8sWS3khE5Ln2SdeDnq4h" CanvasType="Group">
+              <Node Bounds="367,307,46,26" Id="VOjEcqdvGpmNmqmUxfniPt">
+                <p:NodeReference LastCategoryFullName="VL.SCSynth.Utils.Synth" LastDependency="VL.SCSynth.Utils.csproj">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="Synth" />
+                  <Choice Kind="OperationCallFlag" Name="Create" />
+                </p:NodeReference>
+                <Pin Id="VO4hblQvw3RLxKaVnRyzEb" Name="Output" Kind="StateOutputPin" />
+              </Node>
+              <Pad Id="Q4NvxDoThapMLowmo9lA2v" SlotId="OByTG5CgyzhMZc9wJR9KIJ" Bounds="369,457" />
+              <ControlPoint Id="VxvToMht8n8NMblH0rfttq" Bounds="520,741" />
+              <Node Bounds="482,518,152,126" Id="FuQXuxMxLMfOfRYQkWLP9J">
+                <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                  <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                  <Choice Kind="ApplicationStatefulRegion" Name="If" />
+                </p:NodeReference>
+                <Pin Id="KsbDASpszEWOAKBWUr7MFk" Name="Condition" Kind="InputPin" DefaultValue="True" />
+                <ControlPoint Id="EybkPrScAwHON60jGbDwxB" Bounds="520,638" Alignment="Bottom" />
+                <ControlPoint Id="QUMmlp53xa5NzEGEojWFTY" Bounds="520,524" Alignment="Top" />
+                <Patch Id="Ex72K0qQ62yPKqXqh0g3Bi" ManuallySortedPins="true">
+                  <Patch Id="EkCR7QSWkABO8MT1oQqoaH" Name="Create" ManuallySortedPins="true" />
+                  <Patch Id="AVROQj0bjC0LlZG5mAZ59d" Name="Then" ManuallySortedPins="true" />
+                  <Node Bounds="519,565,49,26" Id="EZSBVG1f554L0Zy8gSYffo">
+                    <p:NodeReference LastCategoryFullName="VL.SCSynth.Utils.Synth" LastDependency="VL.SCSynth.Utils.csproj">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <CategoryReference Kind="AssemblyCategory" Name="Synth" NeedsToBeDirectParent="true" />
+                      <Choice Kind="OperationCallFlag" Name="Update" />
+                    </p:NodeReference>
+                    <Pin Id="Ku14gx0Az3PQWwrJpIbsbF" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="FvVoGaBr6m2PhbA3eW5kv9" Name="Parameters" Kind="InputPin" />
+                    <Pin Id="O9hQYiMmLX2PQG4rU46yRP" Name="Id" Kind="InputPin" />
+                    <Pin Id="CsNuCzKjuQKPj4H7xFRSGm" Name="Output" Kind="StateOutputPin" />
+                  </Node>
+                </Patch>
+                <ControlPoint Id="Ha1jIul231wMHr4j3DYYl0" Bounds="566,524" Alignment="Top" />
+                <ControlPoint Id="RaJrroBDLgoMZK0StuHiRY" Bounds="566,638" Alignment="Bottom" />
+              </Node>
+              <ControlPoint Id="FCmkx0EjThYLTNnrCqrmtQ" Bounds="484,305" />
+              <ControlPoint Id="Kp4ylT0vdl0N0EUZxRxJkt" Bounds="566,299" />
+            </Canvas>
+            <Patch Id="QjlaBxcMXeqLQBHoKgTFlo" Name="Create" ParticipatingElements="Tp3loYqqa6DNA1FXtOTnc1" />
+            <Patch Id="EJLxGBoNufWLo2Cv5Zd1HY" Name="Update">
+              <Pin Id="N3bDiondkJJNpGkNOmKPSb" Name="Synth" Kind="OutputPin" />
+              <Pin Id="J2LYCbwBbscP8cwXtVUzHH" Name="Enable" Kind="InputPin" Bounds="484,305" />
+              <Pin Id="RmgrlU80EcJPNluzWQXYVE" Name="Id" Kind="InputPin" Bounds="566,299" />
+            </Patch>
+            <ProcessDefinition Id="MERHmhhJKSXOHFzWQNECNj">
+              <Fragment Id="Oe9WUanWkJKOO3gDGgYbw8" Patch="QjlaBxcMXeqLQBHoKgTFlo" Enabled="true" />
+              <Fragment Id="I0L4GBZawzRNRJBNGtoYeq" Patch="EJLxGBoNufWLo2Cv5Zd1HY" Enabled="true" />
+            </ProcessDefinition>
+            <Slot Id="OByTG5CgyzhMZc9wJR9KIJ" Name="Synth" />
+            <Link Id="Tp3loYqqa6DNA1FXtOTnc1" Ids="VO4hblQvw3RLxKaVnRyzEb,Q4NvxDoThapMLowmo9lA2v" />
+            <Link Id="LJdLOx8OA6QOU6v5r0c52u" Ids="VxvToMht8n8NMblH0rfttq,N3bDiondkJJNpGkNOmKPSb" IsHidden="true" />
+            <Link Id="NtBEHrhCYjNOZReTUISl96" Ids="Q4NvxDoThapMLowmo9lA2v,Ku14gx0Az3PQWwrJpIbsbF" />
+            <Link Id="OoWbKTP9aqEOAmx2LVS7im" Ids="QUMmlp53xa5NzEGEojWFTY,EybkPrScAwHON60jGbDwxB" IsFeedback="true" />
+            <Link Id="OsitURlEi6oN2DA3lfbEmc" Ids="CsNuCzKjuQKPj4H7xFRSGm,EybkPrScAwHON60jGbDwxB" />
+            <Link Id="MQ5hiDHAMMnNXGiHbVGVfr" Ids="EybkPrScAwHON60jGbDwxB,VxvToMht8n8NMblH0rfttq" />
+            <Link Id="ImhqZLhycGBM3THgfx9xe7" Ids="FCmkx0EjThYLTNnrCqrmtQ,KsbDASpszEWOAKBWUr7MFk" />
+            <Link Id="Re9qygKAJQlNoFD9PkCdLz" Ids="J2LYCbwBbscP8cwXtVUzHH,FCmkx0EjThYLTNnrCqrmtQ" IsHidden="true" />
+            <Link Id="VXVVL61YoZCPw47ze9Q4ze" Ids="Ha1jIul231wMHr4j3DYYl0,RaJrroBDLgoMZK0StuHiRY" IsFeedback="true" />
+            <Link Id="MMe9y4AYenbOyhvxVZD12D" Ids="Ha1jIul231wMHr4j3DYYl0,O9hQYiMmLX2PQG4rU46yRP" />
+            <Link Id="MYtSGhmXcDTMRUj6yQxERe" Ids="Kp4ylT0vdl0N0EUZxRxJkt,Ha1jIul231wMHr4j3DYYl0" />
+            <Link Id="P5BPmPmHUn9N1DdzxtGR5G" Ids="RmgrlU80EcJPNluzWQXYVE,Kp4ylT0vdl0N0EUZxRxJkt" IsHidden="true" />
           </Patch>
         </Node>
       </Canvas>

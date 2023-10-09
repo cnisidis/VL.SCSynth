@@ -18,6 +18,17 @@ namespace VL.SCSynth.Utils
 
         public CallerInfo? parent { get; set; }
 
+
+ 
+        /// <summary>
+        /// Keep track of the input pin, this is essential for groups to assign prev - next callers for ascendent nodes (usually synths)
+        /// </summary>
+        public int index { get; set; }
+
+        //if caller is a Group then it may have children
+        public bool hasChildren { get; set; }
+
+
         public Type type { get; set; }
 
         public static readonly CallerInfo Default = new CallerInfo(1, typeof(SpectralGroup));
