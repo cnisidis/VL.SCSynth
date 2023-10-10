@@ -83,5 +83,13 @@ namespace VL.SCSynth.Utils
         }
         
 
+        public void ConstructNodeTree()
+        {
+            foreach (var node in Nodes)
+            {
+
+            }
+        }
+
     }
 }

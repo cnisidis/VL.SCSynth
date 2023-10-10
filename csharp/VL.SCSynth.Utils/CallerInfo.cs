@@ -18,6 +18,10 @@ namespace VL.SCSynth.Utils
 
         public CallerInfo? parent { get; set; }
 
+        public CallerInfo? target { get; set; }
+
+        public bool isInitialized { get; set; }
+
 
  
         /// <summary>

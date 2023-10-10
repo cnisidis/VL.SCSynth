@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,12 +22,25 @@ namespace VL.SCSynth.Utils
         //Add synth parameters Enumerable* TODO 
         public CallerInfo? callerInfo { get; set; }
 
+        public AddActions AddAction { get; set; }
+
+        
+
         public Synth()
         { 
             callerInfo = new CallerInfo(0, typeof(Synth));
             callerInfo.parent = this.callerInfo;
             callerInfo.prev = null;
             callerInfo.next = null;
+        }
+
+
+        public void  Register()
+        {
+            var args = Tuple.Create(callerInfo.scId, (int)AddAction);
+            var OSCmsg = new InternalOSCCommand<Tuple<int, int>>(args);
+
+           
         }
 
         public void Update(IEnumerable<ISCNode>? Parameters, int Id)

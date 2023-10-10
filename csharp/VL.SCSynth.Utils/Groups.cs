@@ -17,76 +17,8 @@ namespace VL.SCSynth.Utils
     {
         public const int maxStackCount = 10;
     }
-    public class Group : LinkedSCNodeBase, ISCNode
-    {
-        ISCNode Input2;
-        int stackCount;
 
-        public int scId { get; set; }
-
-        public CallerInfo callerInfo { get; set; }
-
-        public void Update(ISCNode input, ISCNode input2, out ISCNode output )
-        {
-            Input = input;
-            Input2 = input2;
-            output = this;
-        }
-
-       
-        //TO REMOVE ???
-        public override void AutoID(CallerInfo caller)
-        {
-            if (caller == null)
-            {
-                scId = 1;
-            }
-            else
-            {
-                if (caller.prev == null)
-                {
-                    this.scId = caller.scId + 1;
-                }
-                else
-                {
-                    this.scId = caller.prev.scId + 1;
-                }
-            }
-            if (stackCount >= StackHelpers.maxStackCount)
-            {
-                return;
-            }
-            stackCount++;
-            try
-            {
-                base.AutoID(caller);
-                Input2?.AutoID(caller);
-            }
-            finally
-            {
-                stackCount--;
-            }
-        }
-
-        public override bool Notify(INotification notification, CallerInfo caller)
-        {
-            if (stackCount >= StackHelpers.maxStackCount)
-                return true;
-            stackCount++;
-
-            try
-            {
-                if (Input2 != null && Input2.Notify(notification, caller))
-                    return true;
-                return base.Notify(notification, caller);
-            }
-            finally 
-            { 
-                stackCount--; 
-            }
-        }
-    }
-
+    
     public class SpectralGroup:ISCNode
     {
         IEnumerable<ISCNode> Inputs;
@@ -96,7 +28,7 @@ namespace VL.SCSynth.Utils
         public CallerInfo callerInfo { get; set; }
         
         
-
+        public AddActions AddAction { get; set; }
 
         public SpectralGroup()
         {

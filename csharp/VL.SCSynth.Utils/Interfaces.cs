@@ -19,6 +19,8 @@ namespace VL.SCSynth.Utils
         public CallerInfo callerInfo { get; set; }
 
         new void Identify(CallerInfo caller);
+
+        public AddActions AddAction {  get; set; }
     }
 
     public interface IBehavior
