@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="OneOf" Version="3.0.263" />
-    <PackageReference Include="VL.Core" Version="2023.5.3-0189-g3b1140fa91" />
+    <PackageReference Include="VL.Core" Version="2023.5.3-0210-g711a1c31d4" />
+    <PackageReference Include="VL.IO.OSC" Version="1.0.20" />
   </ItemGroup>
 
 </Project>
