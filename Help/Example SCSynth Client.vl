@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="G22AeXr6UOMNKRnfmiRPnu" LanguageVersion="2023.5.3-0203-g579cc42b10" Version="0.128">
-  <NugetDependency Id="DDN2EFK1P8nNgOSeCFkvYf" Location="VL.CoreLib" Version="2023.5.3-0203-g579cc42b10" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="G22AeXr6UOMNKRnfmiRPnu" LanguageVersion="2023.5.3-0210-g711a1c31d4" Version="0.128">
+  <NugetDependency Id="DDN2EFK1P8nNgOSeCFkvYf" Location="VL.CoreLib" Version="2023.5.3-0210-g711a1c31d4" />
   <Patch Id="Sw37PpmprvCM47jxFlxB3w">
     <Canvas Id="GomEF4vwM3PO8o9GjEVJow" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
@@ -15,7 +15,7 @@
       </p:NodeReference>
       <Patch Id="CfaGPBS5DRqPTB6GwzDFsL">
         <Canvas Id="KSnwacw8oriNTkbOpB6MIl" CanvasType="Group">
-          <Node Bounds="748,566,125,19" Id="Id8OjWwA3rAL18I4ZvFslW">
+          <Node Bounds="748,566,145,19" Id="Id8OjWwA3rAL18I4ZvFslW">
             <p:NodeReference LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="SCClient" />
@@ -24,6 +24,7 @@
             <Pin Id="GmfI0BopawvMVF4UTPs6nX" Name="SCSynth" Kind="InputPin" />
             <Pin Id="R3NtzUjr55DMNRboVyxllV" Name="Enabled" Kind="InputPin" DefaultValue="True" />
             <Pin Id="QuuFuOXiQmwQPFzEHCN3Gz" Name="Update" Kind="ApplyPin" />
+            <Pin Id="J3sK53M0wpcMbj8GKIVkbt" Name="Console Log" Kind="InputPin" />
             <Pin Id="GlyZuRTEVxmNnQnh5D5gFU" Name="Log" Kind="ApplyPin" />
             <Pin Id="JmUS9xQeZ8nQGaSWoJGwvL" Name="Id" Kind="InputPin" />
             <Pin Id="VrGIyhuKbYaMZP29aaQOlC" Name="Server IP" Kind="InputPin" />
@@ -31,9 +32,10 @@
             <Pin Id="AHfg0EdFFtmMH5koLeKI29" Name="Output" Kind="StateOutputPin" />
             <Pin Id="K19Szo7CeF0N4LsxC8tj2f" Name="OSCClient" Kind="OutputPin" />
             <Pin Id="AvFrsax2OamOyYcEfa42dU" Name="Is Open" Kind="OutputPin" />
+            <Pin Id="DUpgORE1LhiN3KUm60eXUH" Name="Response" Kind="OutputPin" />
           </Node>
           <Pad Id="E84cVyf7eHAMb1Cisd1sER" Comment="Is Open" Bounds="870,619,35,35" ShowValueBox="true" isIOBox="true" />
-          <Node Bounds="741,250,165,19" Id="FsVyznAqmlmMuTL0mUYxWA">
+          <Node Bounds="741,250,185,19" Id="FsVyznAqmlmMuTL0mUYxWA">
             <p:NodeReference LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="SCServer (Executor)" />
@@ -46,8 +48,11 @@
             <Pin Id="QiQ1LALGsgdPPSVUolIJo6" Name="Verbosity" Kind="InputPin" />
             <Pin Id="DjDmQAe6HlhNrVphP0Fwzn" Name="Request Status" Kind="InputPin" />
             <Pin Id="AAFRVzvvPRVMfPtaStVwqM" Name="Boot" Kind="InputPin" />
-            <Pin Id="QAqJxL2aVQjLps1QMhrw7G" Name="Kill" Kind="InputPin" />
+            <Pin Id="IvZNbeempSTOYSLVcG19N1" Name="Quit" Kind="InputPin" />
+            <Pin Id="QAqJxL2aVQjLps1QMhrw7G" Name="Kill" Kind="InputPin" IsHidden="true" />
             <Pin Id="FdF8q0PjwbpO47qEE0KNyH" Name="Id" Kind="InputPin" />
+            <Pin Id="CsV4i0Hh1hHMcILuOLJtM8" Name="DumpOSC" Kind="InputPin" IsHidden="true" />
+            <Pin Id="GlV2YqLsU1MNEYBmhmdq0N" Name="Apply DumpOSC" Kind="InputPin" IsHidden="true" />
             <Pin Id="TvFlfUUtI8GQVHvO5OX1TP" Name="Output" Kind="StateOutputPin" />
             <Pin Id="NUHwP1M1cXLO2HgmSyzegG" Name="Status" Kind="OutputPin" />
             <Pin Id="UJrMSkmQQAvLA6Qecje7AD" Name="Version" Kind="OutputPin" />
@@ -77,7 +82,7 @@
               <Choice Kind="TypeFlag" Name="Integer32" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="EbKTaOc4abQQL6SYemDNiA" Comment="Id" Bounds="904,238,35,15" ShowValueBox="true" isIOBox="true" Value="1">
+          <Pad Id="EbKTaOc4abQQL6SYemDNiA" Comment="Id" Bounds="950,230,35,15" ShowValueBox="true" isIOBox="true" Value="1">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Integer32" />
             </p:TypeAnnotation>
@@ -275,7 +280,6 @@
         <Link Id="TojbRRVRqRfPs7xJKyBxbO" Ids="HbQ9nkwjU26QZ5DM6OVT2e,TzR9pCODH1ONqnsxOVO543" />
         <Link Id="T5FdjMn0EXOPhLddL4fjWa" Ids="KaXN753rorKMeZWJ6dHxfV,JouXeZXcpVbOFjOv9B8Pq3" />
         <Link Id="UGBujBeFLDJQG9htqj81Fn" Ids="MpzjMaZSKs9LTaJ9Zqfade,LZahJaUBl5oNnDJ8c4cpSk" />
-        <Link Id="P3okatjONrFMJVDgvNxv1o" Ids="B9mMClNXB7DLvkKkjFGY23,QAqJxL2aVQjLps1QMhrw7G" />
       </Patch>
     </Node>
   </Patch>
