@@ -4411,7 +4411,7 @@
     ************************ RunNode ************************
 
 -->
-        <Node Name="RunNode" Bounds="972,1030" Id="DOh0vygIQcBMX8xojJsWkr" Summary="Turn node on or off." Remarks="If the run flag set to zero then the node will not be executed.&#xD;&#xA;    If the run flag is set back to one, then it will be executed.&#xD;&#xA;&#xD;&#xA;Using this method to start and stop nodes can cause a click if the node is not silent at the time run flag is toggled." Tags="run,node,synth,group,execute">
+        <Node Name="RunNode" Bounds="975,1036" Id="DOh0vygIQcBMX8xojJsWkr" Summary="Turn node on or off." Remarks="If the run flag set to zero then the node will not be executed.&#xD;&#xA;    If the run flag is set back to one, then it will be executed.&#xD;&#xA;&#xD;&#xA;Using this method to start and stop nodes can cause a click if the node is not silent at the time run flag is toggled." Tags="run,node,synth,group,execute">
           <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
             <Choice Kind="ContainerDefinition" Name="Process" />
           </p:NodeReference>
@@ -9546,11 +9546,6 @@
               <Pin Id="L21oBjUAMQeLOjoAlj5tjs" Name="Name" Kind="OutputPin" Bounds="713,897" />
               <Pin Id="MviPypxPyAMOmQLKHKRiF8" Name="Error Message" Kind="OutputPin" Bounds="772,895" />
             </Patch>
-            <!--
-
-    ************************  ************************
-
--->
             <ProcessDefinition Id="D9TS0BFO6fhNcseepaczF0">
               <Fragment Id="BBkt3kO9F3xMkb5KCjtLXu" Patch="B30md9hLxhsMHM7ovWK9Pr" Enabled="true" />
               <Fragment Id="JffN9tFNowHMpdrKg6BEVx" Patch="O0nwLCUyVcCMMd1F3cWW0Z" Enabled="true" />
@@ -9594,11 +9589,6 @@
           </p:NodeReference>
           <Patch Id="CYvBZuaDZNyMCWLmh5lLSI">
             <Canvas Id="BdAT09syLhMLqRBON5dUeX" BordersChecked="false" CanvasType="Group" />
-            <!--
-
-    ************************  ************************
-
--->
             <ProcessDefinition Id="KeiWI4j92NBM4PHzTkHChD" IsHidden="true" />
           </Patch>
         </Node>
