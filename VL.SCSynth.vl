@@ -393,7 +393,7 @@
               <Pin Id="UcHWCQbmN2BOk1rLf03Lli" Name="Process Id" Kind="InputPin" />
               <Pin Id="KiJWUP8jtgSPo1cCMLNRoA" Name="Execute" Kind="InputPin" DefaultValue="False" />
             </Node>
-            <ControlPoint Id="LB6vtrroSI5QB2JBpptgVL" Bounds="1609,619" />
+            <ControlPoint Id="LB6vtrroSI5QB2JBpptgVL" Bounds="1609,624" />
             <Pad Id="MFOVPvCj5UdP4TyyUiU3X3" SlotId="TD8M9zy9ZDXNZ5Ajfmuu5N" Bounds="1583,624" />
             <ControlPoint Id="BGgwfIq5v5mQKDT4xZWZ4d" Bounds="554,-158" />
             <Node Bounds="986,375,65,19" Id="OaQaz7uBvBUM6gQPDUmA9m">
@@ -2030,7 +2030,7 @@
             <Pin Id="UMtWWz5SWsrPxdHkaNAPpS" Name="Settings" Kind="OutputPin" />
           </Patch>
           <Patch Id="Cud9ksBC4m1ODviWK4ORcD" Name="Kill" ParticipatingElements="JRMGM0o2gWrPc7dR0StzvM">
-            <Pin Id="FSbcUvXGiedNhVuMNymiHD" Name="Kill" Kind="InputPin" Visibility="Hidden" />
+            <Pin Id="FSbcUvXGiedNhVuMNymiHD" Name="Kill" Kind="InputPin" Visibility="Optional" />
           </Patch>
           <Patch Id="KpsnVhStsZwPQviXJqxPz8" Name="GetStatus">
             <Pin Id="CuUKwyJw8fFMc9r74pT5Ii" Name="Status" Kind="OutputPin" />
@@ -5109,7 +5109,7 @@
               </Pin>
               <Pin Id="J4USjcT77TtMbn0t2gUZkN" Name="Control Index" Kind="InputPin" Bounds="883,578">
                 <p:TypeAnnotation LastCategoryFullName="Collections" LastDependency="VL.CoreLib.vl">
-                  <Choice Kind="TypeFlag" Name="Spread" />
+                  <Choice Kind="TypeFlag" Name="Sequence" />
                   <p:TypeArguments>
                     <TypeReference>
                       <Choice Kind="TypeFlag" Name="String" />
@@ -5119,7 +5119,7 @@
               </Pin>
               <Pin Id="JVZi2rTNQAhMfAMGkN5X45" Name="Value" Kind="InputPin">
                 <p:TypeAnnotation LastCategoryFullName="Collections" LastDependency="VL.CoreLib.vl">
-                  <Choice Kind="TypeFlag" Name="Spread" />
+                  <Choice Kind="TypeFlag" Name="Sequence" />
                   <p:TypeArguments>
                     <TypeReference>
                       <Choice Kind="TypeFlag" Name="Float32" />
