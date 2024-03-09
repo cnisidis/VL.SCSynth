@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="TLbGVkcV6SqOcupCfuxIsr" LanguageVersion="2023.5.3-0203-g579cc42b10" Version="0.128">
-  <NugetDependency Id="QuPoRon99bHOkjnNGlWU3M" Location="VL.CoreLib" Version="2023.5.3-0203-g579cc42b10" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="TLbGVkcV6SqOcupCfuxIsr" LanguageVersion="2024.6.0-0254-g5387c3cd24" Version="0.128">
+  <NugetDependency Id="QuPoRon99bHOkjnNGlWU3M" Location="VL.CoreLib" Version="2024.6.0-0254-g5387c3cd24" />
   <Patch Id="IhGo5366sagOYcmFal8hBo">
     <Canvas Id="DDWy8geaakWLqIHQZJcSCR" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -15,7 +15,7 @@
       </p:NodeReference>
       <Patch Id="IPEKirmRpXfNoGZ8DAlcoL">
         <Canvas Id="SHeECsQZnSeLaU7TUtob0N" CanvasType="Group">
-          <Node Bounds="633,1113,165,19" Id="Pe8yx4x4kt7OlZNUxGtBAa">
+          <Node Bounds="173,979,185,19" Id="Pe8yx4x4kt7OlZNUxGtBAa">
             <p:NodeReference LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="SCServer (Executor)" />
@@ -28,40 +28,43 @@
             <Pin Id="LguT2LqzIGFM9g7j63z4Jt" Name="Verbosity" Kind="InputPin" />
             <Pin Id="Eto43zfxZREPS5EhITwg50" Name="Request Status" Kind="InputPin" />
             <Pin Id="IHEvLaLzEAbQLqZoibl9nZ" Name="Boot" Kind="InputPin" />
+            <Pin Id="GtD1qgIWk9hNHOc59mxfx1" Name="Quit" Kind="InputPin" />
             <Pin Id="UY7c5kVg7RsL7K79ydXQBu" Name="Kill" Kind="InputPin" />
             <Pin Id="CKbnBLq9HppMud6ioTOukX" Name="Id" Kind="InputPin" />
+            <Pin Id="Dq2hPPoPbGHLPJkAKn89fP" Name="DumpOSC" Kind="InputPin" IsHidden="true" />
+            <Pin Id="LB2KwFx0ZMwOI9IfPWgSxV" Name="Apply DumpOSC" Kind="InputPin" IsHidden="true" />
             <Pin Id="ODAR24GKYHhOM9T3wa4XbW" Name="Output" Kind="StateOutputPin" />
             <Pin Id="S0itG7tLLACNMbN9F14qvc" Name="Status" Kind="OutputPin" />
             <Pin Id="NajfSuobXdFN6covXetGr7" Name="Version" Kind="OutputPin" />
             <Pin Id="FSzwSpkppNeMwvdwwN2waL" Name="isRunning" Kind="OutputPin" />
             <Pin Id="ViMTpC1SNgZNsQxFqsJdKT" Name="isListening" Kind="OutputPin" />
           </Node>
-          <Pad Id="IipCYrFpIe0Lf6OGZwosY0" Comment="SC Folder Path" Bounds="634,255,201,15" ShowValueBox="true" isIOBox="true" Value="..\..\..\..\Program Files\SuperCollider-3.13.0\">
+          <Pad Id="IipCYrFpIe0Lf6OGZwosY0" Comment="SC Folder Path" Bounds="174,121,201,15" ShowValueBox="true" isIOBox="true" Value="..\..\..\..\Program Files\SuperCollider-3.13.0\">
             <p:TypeAnnotation LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Path" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="UmpYMkwtpOhPXCqp9F3IPa" Comment="Protocol" Bounds="655,310,47,15" ShowValueBox="true" isIOBox="true" Value="UDP">
+          <Pad Id="UmpYMkwtpOhPXCqp9F3IPa" Comment="Protocol" Bounds="195,176,47,15" ShowValueBox="true" isIOBox="true" Value="UDP">
             <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.vl">
               <Choice Kind="TypeFlag" Name="Protocol" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="RLTAlsFi9NoO6DwIo1IYez" Comment="Address" Bounds="675,408,53,15" ShowValueBox="true" isIOBox="true" Value="127.0.0.1">
+          <Pad Id="RLTAlsFi9NoO6DwIo1IYez" Comment="Address" Bounds="215,274,53,15" ShowValueBox="true" isIOBox="true" Value="127.0.0.1">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="SusliLH1qZuORRF1IhOfes" Comment="Port" Bounds="695,475,38,15" ShowValueBox="true" isIOBox="true" Value="57110">
+          <Pad Id="SusliLH1qZuORRF1IhOfes" Comment="Port" Bounds="235,341,38,15" ShowValueBox="true" isIOBox="true" Value="57110">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Integer32" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="OlDvn2Puk4kMqy2vyqLJR4" Comment="Verbosity" Bounds="715,560,113,15" ShowValueBox="true" isIOBox="true" Value="Normal">
+          <Pad Id="OlDvn2Puk4kMqy2vyqLJR4" Comment="Verbosity" Bounds="255,426,113,15" ShowValueBox="true" isIOBox="true" Value="Normal">
             <p:TypeAnnotation LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.vl">
               <Choice Kind="TypeFlag" Name="Verbosity" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="SRJv7TLTPZHNc90ICk6vC9" Comment="Request Status" Bounds="735,810,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+          <Pad Id="SRJv7TLTPZHNc90ICk6vC9" Comment="Request Status" Bounds="275,676,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
@@ -69,7 +72,7 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="A3qAdocRxxsPO7KpkLoxNB" Comment="Boot" Bounds="756,701,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+          <Pad Id="A3qAdocRxxsPO7KpkLoxNB" Comment="Boot" Bounds="296,567,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
@@ -77,7 +80,7 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="VjwJrtm3Ck9L8nOeXLsUvn" Comment="Kill" Bounds="775,926,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+          <Pad Id="VjwJrtm3Ck9L8nOeXLsUvn" Comment="Kill" Bounds="315,792,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
@@ -85,12 +88,12 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="SB6iDLmMJ40LSiycr5OFOm" Comment="Id" Bounds="795,1040,35,15" ShowValueBox="true" isIOBox="true" Value="1">
+          <Pad Id="SB6iDLmMJ40LSiycr5OFOm" Comment="Id" Bounds="335,906,35,15" ShowValueBox="true" isIOBox="true" Value="1">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Integer32" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="LZR1Vx4OY2gM3fIgXlR85U" Bounds="636,274,234,19" ShowValueBox="true" isIOBox="true" Value="1. Set SuperCollider Installation folder">
+          <Pad Id="LZR1Vx4OY2gM3fIgXlR85U" Bounds="176,140,234,19" ShowValueBox="true" isIOBox="true" Value="1. Set SuperCollider Installation folder">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -99,7 +102,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="Q3yQsmMH2ClO7e04mpNLr6" Bounds="658,334,225,41" ShowValueBox="true" isIOBox="true" Value="2. Choose protocol (only UDP is supported in current version)">
+          <Pad Id="Q3yQsmMH2ClO7e04mpNLr6" Bounds="198,200,225,41" ShowValueBox="true" isIOBox="true" Value="2. Choose protocol (only UDP is supported in current version)">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -108,7 +111,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="ThBKymEGZhUMcN86VrcXxm" Bounds="676,426,273,37" ShowValueBox="true" isIOBox="true" Value="3. IP Address (Bind To) leave it default if you want to access server on the same machine">
+          <Pad Id="ThBKymEGZhUMcN86VrcXxm" Bounds="216,292,273,37" ShowValueBox="true" isIOBox="true" Value="3. IP Address (Bind To) leave it default if you want to access server on the same machine">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -117,7 +120,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="TgjkJJP2a73PsPCokooRi0" Bounds="695,495,273,37" ShowValueBox="true" isIOBox="true" Value="4. Pick any valid port (by default SC uses 57120 for sclang)">
+          <Pad Id="TgjkJJP2a73PsPCokooRi0" Bounds="235,361,273,37" ShowValueBox="true" isIOBox="true" Value="4. Pick any valid port (by default SC uses 57120 for sclang)">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -126,7 +129,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="Pw0eDAOnrqDMJ2uy0sRqC0" Bounds="717,586,273,37" ShowValueBox="true" isIOBox="true" Value="5. Normal is fine, otherwise you may choose level of suppression">
+          <Pad Id="Pw0eDAOnrqDMJ2uy0sRqC0" Bounds="257,452,273,37" ShowValueBox="true" isIOBox="true" Value="5. Normal is fine, otherwise you may choose level of suppression">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -135,7 +138,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="JwAli6u21vcO37KZZUFIdI" Bounds="723,640,273,37" ShowValueBox="true" isIOBox="true" Value="--&gt;Important: before you go further and boot the server, is good moment to press Ctrl+F1 and turn on the Console Log.">
+          <Pad Id="JwAli6u21vcO37KZZUFIdI" Bounds="263,506,273,37" ShowValueBox="true" isIOBox="true" Value="--&gt;Important: before you go further and boot the server, is good moment to press Ctrl+F1 and turn on the Console Log.">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -144,7 +147,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="GANQRZOOxQSPdHcHVVEVm7" Bounds="759,744,273,37" ShowValueBox="true" isIOBox="true" Value="6. Boot the Server, inspect the Console for potential errors or implications.">
+          <Pad Id="GANQRZOOxQSPdHcHVVEVm7" Bounds="299,610,273,37" ShowValueBox="true" isIOBox="true" Value="6. Boot the Server, inspect the Console for potential errors or implications.">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -153,7 +156,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="UYogNCyqt0pOyb7k6JSadC" Bounds="759,854,292,56" ShowValueBox="true" isIOBox="true" Value="7. Optional but essential, press the &quot;Request Status&quot; to get Server Status (CPU usage, Sample Rate and Nodes info)">
+          <Pad Id="UYogNCyqt0pOyb7k6JSadC" Bounds="299,720,292,56" ShowValueBox="true" isIOBox="true" Value="7. Optional but essential, press the &quot;Request Status&quot; to get Server Status (CPU usage, Sample Rate and Nodes info)">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -162,7 +165,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="ICDR9qWHxP1MatXzJY5LnV" Bounds="779,968,292,56" ShowValueBox="true" isIOBox="true" Value="8. When you are done or just had enough, you can kill the process. Fire at will.">
+          <Pad Id="ICDR9qWHxP1MatXzJY5LnV" Bounds="319,834,292,56" ShowValueBox="true" isIOBox="true" Value="8. When you are done or just had enough, you can kill the process. Fire at will.">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -171,7 +174,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="BOItBrPbIoFOchfClDeE3b" Bounds="800,1063,300,77" ShowValueBox="true" isIOBox="true" Value="Id is an optional thing, not tested yet, but probably usefull if you plan to execute more than one scsynth (servers) on the same machine, or if you want to have multiple clients.">
+          <Pad Id="BOItBrPbIoFOchfClDeE3b" Bounds="340,929,300,77" ShowValueBox="true" isIOBox="true" Value="Id is an optional thing, not tested yet, but probably usefull if you plan to execute more than one scsynth (servers) on the same machine, or if you want to have multiple clients.">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -180,8 +183,8 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="SLEgARmu3O8QE6Gobee3Vq" Comment="Status" Bounds="715,1213,198,100" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="CdNIUkm9n4iOJwmUlbHPKZ" Comment="Version" Bounds="715,1164,198,40" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="SLEgARmu3O8QE6Gobee3Vq" Comment="Status" Bounds="255,1079,198,100" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="CdNIUkm9n4iOJwmUlbHPKZ" Comment="Version" Bounds="255,1030,198,40" ShowValueBox="true" isIOBox="true" />
         </Canvas>
         <Patch Id="NXvFLQ5qRjLODiVVx83pst" Name="Create" />
         <Patch Id="KbcahGRb9fVQdDnciyJ6Gx" Name="Update" />
@@ -203,6 +206,5 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="DodpCGn9SyZPbELmF3fNQ9" Location="VL.SCServer" Version="0.0.0" />
   <NugetDependency Id="EUL6APPCCueOVgXVjsKj0X" Location="VL.SCSynth" Version="0.0.0" />
 </Document>
