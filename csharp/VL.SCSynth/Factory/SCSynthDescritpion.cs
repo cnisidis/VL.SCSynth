@@ -12,20 +12,15 @@ namespace VL.SCSynth.Factory
         // Fields
         bool FInitialized;
         bool FError;
-
-        string FSummary;
+        
+        string FFullName;
+        string? FSummary;
         string FCategory;
 
         public Synth synth { get; }
         public string id { get; set; }
 
         public string synthDefName { get; set; }
-
-        
-
-        
-
-
 
         // Inputs and outputs
         List<PinDescription> inputs = new List<PinDescription>();
@@ -35,6 +30,7 @@ namespace VL.SCSynth.Factory
         {
             
             Factory = factory;
+            FFullName = synthdefname;
             Name = synthdefname;
             synthDefName = synthdefname;
             FCategory = "SYNTHDEFS.";
@@ -142,5 +138,7 @@ namespace VL.SCSynth.Factory
         {
             return true;
         }
+        IReadOnlyList<IVLPinDescription> IVLNodeDescription.Inputs => Inputs;
+        IReadOnlyList<IVLPinDescription> IVLNodeDescription.Outputs => Outputs;
     }
 }

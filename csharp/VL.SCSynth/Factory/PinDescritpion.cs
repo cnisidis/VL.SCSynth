@@ -7,12 +7,29 @@ using VL.Core;
 
 namespace VL.SCSynth.Factory
 {
-    internal class PinDescription : IVLPinDescription, IInfo
+    sealed class PinDescription : IVLPinDescription, IInfo
     {
 
+        static string BeautifyPin(string s)
+        {
+            if (string.IsNullOrEmpty(s))
+            {
+                return string.Empty;
+            }
+
+            var parts = s.Split('_');
+            var result = "";
+            foreach (var part in parts)
+            {
+                char[] a = part.ToCharArray();
+                a[0] = char.ToUpper(a[0]);
+                result += new string(a) + " ";
+            }
+            return result.Trim();
+        }
         public string Name { get; }
         public string OriginalName { get; }
-        public Type Type { get; set; }
+        public Type Type { get; }
         public object DefaultValue { get; }
 
         public string Summary { get; }
@@ -21,19 +38,15 @@ namespace VL.SCSynth.Factory
 
         public PinDescription(string name, Type type, object defaultValue, string description)
         {
-            Name = name;
+            Name = BeautifyPin(name);
             OriginalName = name;
             Type = type;
             DefaultValue = defaultValue;
             Summary = description;
         }
+
+       
     }
 
-    internal class Pin : IVLPin
-    {
-        public object Value { get; set; }
-        public Type Type { get; set; }
-        public string Name { get; set; }
-        public string OriginalName { get; set; }
-    }
+    
 }
