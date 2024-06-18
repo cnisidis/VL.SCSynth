@@ -25,7 +25,7 @@
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="CuIqRvRrwekP2q5QURxcIK" Comment="lofreq" Bounds="340,344,35,15" ShowValueBox="true" isIOBox="true" Value="1.2">
+          <Pad Id="CuIqRvRrwekP2q5QURxcIK" Comment="lofreq" Bounds="374,335,35,15" ShowValueBox="true" isIOBox="true" Value="1.2">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
@@ -38,14 +38,14 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Node Bounds="291,446,74,19" Id="NqN4PX8BrMcLbTjgtTOPlw">
+          <Node Bounds="291,446,125,19" Id="NqN4PX8BrMcLbTjgtTOPlw">
             <p:NodeReference LastCategoryFullName="SYNTHDEFS" LastDependency="VL.SCSynth-Factory (D:\Projects\VL_Repos\VL.SCSynth\help)">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="vvvvExample" />
             </p:NodeReference>
-            <Pin Id="McbRdvZQN2NOyew4OulAOx" Name="freq" Kind="InputPin" />
-            <Pin Id="GcTgLQDj2S1MSdwTYhBJqO" Name="amp" Kind="InputPin" />
-            <Pin Id="D2blJ2UFBVRN3mb55z6njI" Name="lofreq" Kind="InputPin" />
+            <Pin Id="GOTELvMm2hDMZlePriea1U" Name="Freq" Kind="InputPin" />
+            <Pin Id="Av6Ak1k5adHPQsBtVIZcxB" Name="Amp" Kind="InputPin" />
+            <Pin Id="G22x4B3IM3xN96mVQFmNZh" Name="Lofreq" Kind="InputPin" />
             <Pin Id="LMMIVDZIFUuLkXoGK7SYJd" Name="Play" Kind="InputPin" />
             <Pin Id="UjBdHZ5Y7F7LQ2HScSmNmD" Name="Synth" Kind="OutputPin" />
           </Node>
@@ -76,14 +76,14 @@
           <Fragment Id="Gwp5Y34xD0JMZQrQC6gBys" Patch="U5TjPXEqR4jQcdPyARGw7X" Enabled="true" />
           <Fragment Id="NwIVSkzlAXuLZc80JmTl7W" Patch="E1grQlKf8ssMatSpnHgFOH" Enabled="true" />
         </ProcessDefinition>
-        <Link Id="KH7AjXWr7SULWgGRCDxgLm" Ids="QDyrCvkKUclME98HxpfvkB,McbRdvZQN2NOyew4OulAOx" />
-        <Link Id="C9yY89xpMcvOCEIBBnZq8a" Ids="AIAjlaNNVhONZP2QY3bqZL,GcTgLQDj2S1MSdwTYhBJqO" />
-        <Link Id="DLMZDJXJu2uQcOKrNvnoM2" Ids="CuIqRvRrwekP2q5QURxcIK,D2blJ2UFBVRN3mb55z6njI" />
         <Link Id="QLsrbPH8rCsNrVLrHecxvO" Ids="NOjXYdhTtZ0LYxl7L2yHvC,LMMIVDZIFUuLkXoGK7SYJd" />
         <Link Id="KoSBrkflUagP1hQNPqShvX" Ids="UjBdHZ5Y7F7LQ2HScSmNmD,R6vSYFt8FP7Ourfw4iVqcE" />
         <Link Id="Of6Z072YxDLNTJFKs3YIO2" Ids="R1NL4rWUKA8M8nP0aAAXVh,V0kLvt3169zPB4nMFEfdn1" />
         <Link Id="O5HgoJSdsCDNsI9Pb2fADw" Ids="UQMU7lSyQWLPxXdYyDAQgj,NXNzdvfIrIWNzLwAsOfJ4T" />
         <Link Id="NtXmcYOdaQFMLeoQbvqFE6" Ids="P104Vi8jwxEOqkcM6OuEUJ,RD0fuR46kl5Lpns2K8wrPt" />
+        <Link Id="RuRMaolcMyIOvwUzFItf7O" Ids="QDyrCvkKUclME98HxpfvkB,GOTELvMm2hDMZlePriea1U" />
+        <Link Id="PKqU7jTAYidPbJxtthbn7Z" Ids="AIAjlaNNVhONZP2QY3bqZL,Av6Ak1k5adHPQsBtVIZcxB" />
+        <Link Id="VmxnCCi5KlSPibk51YCeti" Ids="CuIqRvRrwekP2q5QURxcIK,G22x4B3IM3xN96mVQFmNZh" />
       </Patch>
     </Node>
   </Patch>
