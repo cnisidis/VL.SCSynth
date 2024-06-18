@@ -92,12 +92,14 @@ Implemented according to [Server Command Reference](https://doc.sccode.org/Refer
 
 
 
-## SynthParameter
+## Parameters
 
-A <i>Record<U,T></i> type object holding two fields:
+A <i>class</i> type object holding four fields and one method:
 
-- Name or Index can be either type of String or Integer32
-- Value can be an Integer32, Float32 or String
+- Name (type of String) derives from sytnthdef
+- Value (type of Float32)
+- InitValue (type of Float32) derives from sytnthdef
+- Index (type of Integer32)
 
 ## Layer
 
