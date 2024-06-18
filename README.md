@@ -26,6 +26,17 @@ Both SCServer and SCClient are inheriting their methods from ISCSynth. This name
 
 In example, once you started scsynth (either via SCServer or directly or by using the SC IDE), you can access it by introducing a SCClient on the VL side, respecting the IP Address and the binded port.
 
+## SCSynth Node Factory
+
+![Expose Data Pin](/img/SCSynth-Factory.png)
+
+<ol>
+<li>Create a folder named "synthdefs" next to your project file (root)</li>
+<li>Populate the "synthdefs" folder with scsyndef files (compiled synthdefs)</li>
+<li>Add VL.SCSynth to your patch project</li>
+<li>Call SYNTHDEFS category from your nodebrowser</li>
+<li>Pick and introdduce a Synth (instance) based on the provided synthdef files</li>
+</ol>
 
 
 ## SCServer Options
