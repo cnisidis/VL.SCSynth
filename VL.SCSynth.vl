@@ -12196,6 +12196,6 @@
   </Patch>
   <NugetDependency Id="MCfiGmWIYphLgHCTCD3l8z" Location="VL.IO.OSC" IsForward="true" Version="1.1.3" />
   <NugetDependency Id="VGLp0iLZSDfPyksikp21Iw" Location="VL.SCSynth" Version="0.0.0" />
-  <NodeFactoryDependency Id="FMw69YeEa1PMN8391xkz9D" Location="VL.SCSynth-Factory" />
+  <NodeFactoryDependency Id="FMw69YeEa1PMN8391xkz9D" Location="VL.SCSynth-Factory" IsForward="true" />
   <ProjectDependency Id="VCDknd0LWtBPbC3iaQhtAy" Location="./csharp/VL.SCSynth/VL.SCSynth.csproj" />
 </Document>

@@ -11,16 +11,16 @@ using VL.Lib.Basics.Resources;
 namespace VL.SCSynth
 {
 
-    public sealed class Initialization : AssemblyInitializer<Initialization>
+    public class Initialization : AssemblyInitializer<Initialization>
     {
 
         const string synthDefsSubdir = "synthdefs";
 
 
-        [Obsolete]
-        protected override void RegisterServices(IVLFactory factory)
+        public override void Configure(AppHost appHost)
         {
-            factory.RegisterNodeFactory("VL.SCSynth-Factory", (directory, nodeFactory) =>
+            
+            appHost.RegisterNodeFactory("VL.SCSynth-Factory", (directory, nodeFactory) =>
             {
                 var invalidated = NodeBuilding.WatchDir(directory)
                     .Where(e => (e.ChangeType == WatcherChangeTypes.Created || e.ChangeType == WatcherChangeTypes.Deleted || e.ChangeType == WatcherChangeTypes.Renamed) && e.Name == synthDefsSubdir);
@@ -29,7 +29,7 @@ namespace VL.SCSynth
                 var synthDefsDir = Path.Combine(directory, synthDefsSubdir);
 
                 Console.WriteLine("Factory initialized");
-                
+
 
 
                 if (Directory.Exists(synthDefsDir))
@@ -66,7 +66,7 @@ namespace VL.SCSynth
                     {
                         Console.WriteLine("No synthdefs found in {0}", synthDefsDir);
                     }
-                       
+
                 }
                 else
                 {
@@ -75,6 +75,8 @@ namespace VL.SCSynth
                 return new(builder.ToImmutable(), invalidated);
             });
         }
+    
+        
     }
  
 }

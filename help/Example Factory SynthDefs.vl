@@ -15,18 +15,6 @@
       </p:NodeReference>
       <Patch Id="MyBuEAR1nygP7HJRY0UPqY">
         <Canvas Id="M0vPbHaUcazLjdVhIxyJNd" CanvasType="Group">
-          <Node Bounds="265,369,74,19" Id="VHj0aghC5YWORqBcevsH6j">
-            <p:NodeReference LastCategoryFullName="SYNTHDEFS" LastDependency="VL.SCSynth.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <CategoryReference Kind="Category" Name="SYNTHDEFS" />
-              <Choice Kind="ProcessNode" Name="vvvvExample" />
-            </p:NodeReference>
-            <Pin Id="LyvKUVgcYm3QEWUl1RTyQy" Name="freq" Kind="InputPin" />
-            <Pin Id="ISZJPIAf4hbMANmWGh3dl9" Name="amp" Kind="InputPin" />
-            <Pin Id="E0WmN5F9aSANVzu7tBoF4N" Name="lofreq" Kind="InputPin" />
-            <Pin Id="HPrRURFfaAgOr5hPNnVspY" Name="Play" Kind="InputPin" />
-            <Pin Id="MUFHUidcbC2LpwS4GyG6zK" Name="Synth" Kind="OutputPin" />
-          </Node>
           <Pad Id="QDyrCvkKUclME98HxpfvkB" Comment="freq" Bounds="196,239,41,15" ShowValueBox="true" isIOBox="true" Value="440">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Float32" />
@@ -50,6 +38,18 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
+          <Node Bounds="286,422,74,19" Id="N5QYutofCcSPm4tuxyo9AL">
+            <p:NodeReference LastCategoryFullName="SYNTHDEFS" LastDependency="VL.SCSynth-Factory (D:\Projects\VL_Repos\VL.SCSynth\help)">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="SYNTHDEFS" />
+              <Choice Kind="ProcessNode" Name="vvvvExample" />
+            </p:NodeReference>
+            <Pin Id="H9vDnGFa87OOWrVXL8F2Z4" Name="freq" Kind="InputPin" />
+            <Pin Id="S6x66wMlVYQLmOGW4jaiCX" Name="amp" Kind="InputPin" />
+            <Pin Id="EtLs4Emx9pHMBau2nuHwBg" Name="lofreq" Kind="InputPin" />
+            <Pin Id="QU9D9rnnS7ZPRw7IIpEFBM" Name="Play" Kind="InputPin" />
+            <Pin Id="LzotEJmaZo8Ln8kGaBLH7w" Name="Synth" Kind="OutputPin" />
+          </Node>
         </Canvas>
         <Patch Id="U5TjPXEqR4jQcdPyARGw7X" Name="Create" />
         <Patch Id="E1grQlKf8ssMatSpnHgFOH" Name="Update" />
@@ -57,10 +57,10 @@
           <Fragment Id="Gwp5Y34xD0JMZQrQC6gBys" Patch="U5TjPXEqR4jQcdPyARGw7X" Enabled="true" />
           <Fragment Id="NwIVSkzlAXuLZc80JmTl7W" Patch="E1grQlKf8ssMatSpnHgFOH" Enabled="true" />
         </ProcessDefinition>
-        <Link Id="Frl9Auhy0ZrOZkTwKHX4xF" Ids="QDyrCvkKUclME98HxpfvkB,LyvKUVgcYm3QEWUl1RTyQy" />
-        <Link Id="JAnP3kWN70OOidym2I7GLW" Ids="AIAjlaNNVhONZP2QY3bqZL,ISZJPIAf4hbMANmWGh3dl9" />
-        <Link Id="MZw9mFVvSLWLl6FK562fvX" Ids="CuIqRvRrwekP2q5QURxcIK,E0WmN5F9aSANVzu7tBoF4N" />
-        <Link Id="Cl9YAbwyF6TNuw5p9Zemmb" Ids="NOjXYdhTtZ0LYxl7L2yHvC,HPrRURFfaAgOr5hPNnVspY" />
+        <Link Id="BzfczoZAkeeOon2ROKDe9P" Ids="QDyrCvkKUclME98HxpfvkB,H9vDnGFa87OOWrVXL8F2Z4" />
+        <Link Id="EYSDAU08BxFLHX9nBCzj4b" Ids="AIAjlaNNVhONZP2QY3bqZL,S6x66wMlVYQLmOGW4jaiCX" />
+        <Link Id="FmuX21zRsrsQIIYpJHLmBe" Ids="CuIqRvRrwekP2q5QURxcIK,EtLs4Emx9pHMBau2nuHwBg" />
+        <Link Id="JmIoFjY78LpNNxrS5TFGIm" Ids="NOjXYdhTtZ0LYxl7L2yHvC,QU9D9rnnS7ZPRw7IIpEFBM" />
       </Patch>
     </Node>
   </Patch>
