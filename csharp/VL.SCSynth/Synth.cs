@@ -32,7 +32,7 @@ namespace VL.SCSynth
 
         
     }
-    public class Synth 
+    public class Synth : ISCNode
     {
         /// <summary>
         /// Synth Def origins from
@@ -48,15 +48,32 @@ namespace VL.SCSynth
         public Dictionary<string, Parameter> Parameters { get; set; }
 
         public AddActions AddAction { get; set; }
-
-        
+        public CallerInfo callerInfo { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public Synth(string SynthDefName)
         { 
             this.Parameters = new Dictionary<string, Parameter>();  
+            this.SynthDefName = SynthDefName;
         }
 
+        public void AutoID(CallerInfo caller)
+        {
+            throw new NotImplementedException();
+        }
 
-        
+        public bool Notify(INotification notification, CallerInfo caller)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<ISCNode> GetInputs()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Identify(CallerInfo caller)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
