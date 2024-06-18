@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VL.SCSynth.Utils
+namespace VL.SCSynth
 {
     public enum BufferFileTypes
     {

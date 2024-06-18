@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="Q0QEHknMHL4NR1ofNzXWsA" LanguageVersion="2024.6.6-0008-g2714e88e2e" Version="0.128">
+  <NugetDependency Id="GGxN2yiBdITM6CRoBZGJMF" Location="VL.CoreLib" Version="2024.6.6-0008-g2714e88e2e" />
+  <Patch Id="ScdLqbdqfboMngJ8j4NrX1">
+    <Canvas Id="DwrWsGYDR3JQNlSZ1mQF0Y" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="AnlmGBDeQJ0Ogokt7LoyQ5">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="MyBuEAR1nygP7HJRY0UPqY">
+        <Canvas Id="M0vPbHaUcazLjdVhIxyJNd" CanvasType="Group">
+          <Node Bounds="265,369,74,19" Id="VHj0aghC5YWORqBcevsH6j">
+            <p:NodeReference LastCategoryFullName="SYNTHDEFS" LastDependency="VL.SCSynth.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="SYNTHDEFS" />
+              <Choice Kind="ProcessNode" Name="vvvvExample" />
+            </p:NodeReference>
+            <Pin Id="LyvKUVgcYm3QEWUl1RTyQy" Name="freq" Kind="InputPin" />
+            <Pin Id="ISZJPIAf4hbMANmWGh3dl9" Name="amp" Kind="InputPin" />
+            <Pin Id="E0WmN5F9aSANVzu7tBoF4N" Name="lofreq" Kind="InputPin" />
+            <Pin Id="HPrRURFfaAgOr5hPNnVspY" Name="Play" Kind="InputPin" />
+            <Pin Id="MUFHUidcbC2LpwS4GyG6zK" Name="Synth" Kind="OutputPin" />
+          </Node>
+          <Pad Id="QDyrCvkKUclME98HxpfvkB" Comment="freq" Bounds="196,239,41,15" ShowValueBox="true" isIOBox="true" Value="440">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Float32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="AIAjlaNNVhONZP2QY3bqZL" Comment="amp" Bounds="292,236,35,15" ShowValueBox="true" isIOBox="true" Value="0.1">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Float32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="CuIqRvRrwekP2q5QURxcIK" Comment="lofreq" Bounds="391,239,35,15" ShowValueBox="true" isIOBox="true" Value="1.2">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Float32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="NOjXYdhTtZ0LYxl7L2yHvC" Comment="Play" Bounds="415,335,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+        </Canvas>
+        <Patch Id="U5TjPXEqR4jQcdPyARGw7X" Name="Create" />
+        <Patch Id="E1grQlKf8ssMatSpnHgFOH" Name="Update" />
+        <ProcessDefinition Id="KS8i5ojKIMlMZaOo0WcUFq">
+          <Fragment Id="Gwp5Y34xD0JMZQrQC6gBys" Patch="U5TjPXEqR4jQcdPyARGw7X" Enabled="true" />
+          <Fragment Id="NwIVSkzlAXuLZc80JmTl7W" Patch="E1grQlKf8ssMatSpnHgFOH" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="Frl9Auhy0ZrOZkTwKHX4xF" Ids="QDyrCvkKUclME98HxpfvkB,LyvKUVgcYm3QEWUl1RTyQy" />
+        <Link Id="JAnP3kWN70OOidym2I7GLW" Ids="AIAjlaNNVhONZP2QY3bqZL,ISZJPIAf4hbMANmWGh3dl9" />
+        <Link Id="MZw9mFVvSLWLl6FK562fvX" Ids="CuIqRvRrwekP2q5QURxcIK,E0WmN5F9aSANVzu7tBoF4N" />
+        <Link Id="Cl9YAbwyF6TNuw5p9Zemmb" Ids="NOjXYdhTtZ0LYxl7L2yHvC,HPrRURFfaAgOr5hPNnVspY" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="M05V1aGya35OsB00L3HK0r" Location="VL.SCSynth" Version="0.0.0" />
+</Document>

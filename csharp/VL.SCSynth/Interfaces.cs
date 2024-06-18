@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using VL.Lib.IO.Notifications;
 
-namespace VL.SCSynth.Utils
+namespace VL.SCSynth
 {
     public interface ISCNode : IBehavior, IAutoID, INodeTreeMember
     {

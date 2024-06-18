@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VL.SCSynth.Utils", "VL.SCSynth.Utils.csproj", "{A32DCE25-D10B-4360-8F4E-CE04FDF04497}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VL.SCSynth", "VL.SCSynth.csproj", "{A32DCE25-D10B-4360-8F4E-CE04FDF04497}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

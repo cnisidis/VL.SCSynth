@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using VL.Lib.IO.Notifications;
 
 
-namespace VL.SCSynth.Utils
+namespace VL.SCSynth
 {
 
     static class StackHelpers

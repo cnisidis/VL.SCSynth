@@ -7,7 +7,7 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VL.SCSynth.Utils
+namespace VL.SCSynth
 {
     public record InternalOSCCommand<T>
     {

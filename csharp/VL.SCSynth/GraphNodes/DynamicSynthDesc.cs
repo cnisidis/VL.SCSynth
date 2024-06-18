@@ -8,7 +8,7 @@ using VL.Core;
 using VL.Core.CompilerServices;
 using VL.Lib.Collections;
 
-namespace VL.SCSynth.Utils.GraphNodes
+namespace VL.SCSynth.GraphNodes
 {
     public class DynamicSynthDefDesc
     {

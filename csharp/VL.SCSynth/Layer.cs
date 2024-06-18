@@ -4,9 +4,9 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using VL.IO.OSC;
 
-namespace VL.SCSynth.Utils
+
+namespace VL.SCSynth
 {
     public class Layer
     {
