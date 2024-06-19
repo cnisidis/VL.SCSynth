@@ -22,13 +22,16 @@ namespace VL.SCSynth.Factory
 
         public string synthDefName { get; set; }
 
+
+        public string filepath { get; set; }
+
         // Inputs and outputs
         List<PinDescription> inputs = new List<PinDescription>();
         List<PinDescription> outputs = new List<PinDescription>();
 
-        public SCSynthDescritpion(IVLNodeDescriptionFactory factory, string synthdefname, List<Parameter> parameters)
+        public SCSynthDescritpion(IVLNodeDescriptionFactory factory, string synthdefname, List<Parameter> parameters, string filepath)
         {
-            
+
             Factory = factory;
             FFullName = synthdefname;
             Name = synthdefname;
@@ -37,10 +40,11 @@ namespace VL.SCSynth.Factory
             FSummary = synthdefname;
             this.synth = new Synth(synthDefName);
             this.synth.Parameters = parameters.ToDictionary(x => x.Name);
+            this.synth.synthDefFilePath = filepath;
             
             //FOperation = operation;
-            
-        }
+
+         }
 
         void Init()
         {

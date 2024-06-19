@@ -43,6 +43,9 @@ namespace VL.SCSynth
         /// </summary>
         public int scId { get; set; }
 
+
+        public string synthDefFilePath { get; set; }
+
         //Add synth parameters Enumerable* TODO 
 
         public Dictionary<string, Parameter> Parameters { get; set; }

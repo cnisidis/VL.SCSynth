@@ -2,7 +2,7 @@
 <Document xmlns:p="property" xmlns:r="reflection" Id="Q0QEHknMHL4NR1ofNzXWsA" LanguageVersion="2024.6.6-0008-g2714e88e2e" Version="0.128">
   <NugetDependency Id="GGxN2yiBdITM6CRoBZGJMF" Location="VL.CoreLib" Version="2024.6.6-0008-g2714e88e2e" />
   <Patch Id="ScdLqbdqfboMngJ8j4NrX1">
-    <Canvas Id="DwrWsGYDR3JQNlSZ1mQF0Y" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <Canvas Id="DwrWsGYDR3JQNlSZ1mQF0Y" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
 
     ************************ Application ************************
@@ -30,7 +30,7 @@
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="NOjXYdhTtZ0LYxl7L2yHvC" Comment="Play" Bounds="362,384,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+          <Pad Id="NOjXYdhTtZ0LYxl7L2yHvC" Comment="Play" Bounds="408,223,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
@@ -58,7 +58,7 @@
             <Pin Id="UQMU7lSyQWLPxXdYyDAQgj" Name="Synth" Kind="OutputPin" />
             <Pin Id="R1NL4rWUKA8M8nP0aAAXVh" Name="Synth Def Name" Kind="OutputPin" />
           </Node>
-          <Pad Id="V0kLvt3169zPB4nMFEfdn1" Comment="Synth Def Name" Bounds="426,552,151,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="V0kLvt3169zPB4nMFEfdn1" Comment="Synth Def Name" Bounds="395,639,151,15" ShowValueBox="true" isIOBox="true" />
           <Node Bounds="292,533,67,26" Id="M7KddefUafSNI0nuNZ4tkj">
             <p:NodeReference LastCategoryFullName="VL.SCSynth.Synth" LastDependency="VL.SCSynth.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -68,7 +68,32 @@
             <Pin Id="UMDFtGDit7jObfUPuPAFDw" Name="Synth" Kind="OutputPin" />
             <Pin Id="P104Vi8jwxEOqkcM6OuEUJ" Name="Parameters" Kind="OutputPin" />
           </Node>
-          <Pad Id="RD0fuR46kl5Lpns2K8wrPt" Comment="Parameters" Bounds="408,579,190,132" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="RD0fuR46kl5Lpns2K8wrPt" Comment="Parameters" Bounds="377,666,190,132" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="557,485,45,19" Id="OUlTfWDliA5OqiywirAzSY">
+            <p:NodeReference LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="SCSynth" NeedsToBeDirectParent="true" />
+              <Choice Kind="ProcessAppFlag" Name="Root" />
+            </p:NodeReference>
+            <Pin Id="NdGj3k42LnfN07mhWdFC1e" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="BMcnfwory6SLP9bZ6JYqVR" Name="Synths" Kind="InputPin" />
+            <Pin Id="VrfDxk5qXrBOv16uhw2lU9" Name="SynthDefFilePaths" Kind="OutputPin" />
+            <Pin Id="HubBTN8qyq9L16vKzXO2gg" Name="Synth Def Name" Kind="OutputPin" />
+            <Pin Id="C2bb3v3BsoZNhXRi8UD7Fp" Name="Synths 2" Kind="InputPin" />
+            <Pin Id="LjftBYCXWLdPHEtGcXaUNj" Name="Synths 3" Kind="InputPin" />
+          </Node>
+          <Pad Id="Ga2G33714OUP0CguEMvNth" Comment="Synth Def Name" Bounds="699,605,407,49" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="575,396,125,19" Id="ND73JmBM7TTO3ZVhqjcPJX">
+            <p:NodeReference LastCategoryFullName="SYNTHDEFS" LastDependency="VL.SCSynth-Factory (D:\Projects\VL_Repos\VL.SCSynth\help)">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessNode" Name="vvvvExample" />
+            </p:NodeReference>
+            <Pin Id="R4ni1oQImHBPCdmnWh3NMX" Name="Freq" Kind="InputPin" />
+            <Pin Id="Dna7ufPeuB1NjhWTQOt7J2" Name="Amp" Kind="InputPin" />
+            <Pin Id="F0L8Lp6PrcSLnOj5eOCuNI" Name="Lofreq" Kind="InputPin" />
+            <Pin Id="ScVf9HpQk0vQDdWmGS95LG" Name="Play" Kind="InputPin" />
+            <Pin Id="FKD98m4t9SaLHzxgMpQJx0" Name="Synth" Kind="OutputPin" />
+          </Node>
         </Canvas>
         <Patch Id="U5TjPXEqR4jQcdPyARGw7X" Name="Create" />
         <Patch Id="E1grQlKf8ssMatSpnHgFOH" Name="Update" />
@@ -84,6 +109,9 @@
         <Link Id="RuRMaolcMyIOvwUzFItf7O" Ids="QDyrCvkKUclME98HxpfvkB,GOTELvMm2hDMZlePriea1U" />
         <Link Id="PKqU7jTAYidPbJxtthbn7Z" Ids="AIAjlaNNVhONZP2QY3bqZL,Av6Ak1k5adHPQsBtVIZcxB" />
         <Link Id="VmxnCCi5KlSPibk51YCeti" Ids="CuIqRvRrwekP2q5QURxcIK,G22x4B3IM3xN96mVQFmNZh" />
+        <Link Id="EnT9EVabTR2Lpd2ybPLFqn" Ids="HubBTN8qyq9L16vKzXO2gg,Ga2G33714OUP0CguEMvNth" />
+        <Link Id="DE0tYW9WzruNBHYRdzdYfb" Ids="UjBdHZ5Y7F7LQ2HScSmNmD,BMcnfwory6SLP9bZ6JYqVR" />
+        <Link Id="F4l6hYDdCPaM4w1Iubcg6D" Ids="FKD98m4t9SaLHzxgMpQJx0,C2bb3v3BsoZNhXRi8UD7Fp" />
       </Patch>
     </Node>
   </Patch>
