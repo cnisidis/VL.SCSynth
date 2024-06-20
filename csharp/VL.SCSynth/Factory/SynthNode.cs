@@ -48,7 +48,7 @@ namespace VL.SCSynth.Factory
 
         public void Dispose()
         {
-            Console.WriteLine("Byyyye");
+            Console.WriteLine("Dsiposed");
         }
 
 

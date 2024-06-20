@@ -70,12 +70,14 @@ namespace VL.SCSynth.Factory
                 {
                     Console.WriteLine("This Synth has no Parameters exposed");
                 }
-               
+
                 // Adds the trigger pin
+                inputs.Add(new PinDescription("Reset All", typeof(bool), false, "Reset All Parameters to their default values"));
                 inputs.Add(new PinDescription("Play", typeof(bool), false, "Play the Synth"));
                 //inputs.Add(new PinDescription("ResetAll", typeof(bool), false, "Reset All Parameters to their intial values"));
 
                 // For now let's just get the raw JSON response from Directus. Create a single string output pin
+                
                 outputs.Add(new PinDescription("Synth", typeof(SCSynth), this.synth, "Synth"));
                 //outputs.Add(new PinDescription("Controls", typeof(Dictionary<String, FixtureNodeAttribute>), Controls, "Controls"));
 
