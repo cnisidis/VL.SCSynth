@@ -38,6 +38,15 @@ In example, once you started scsynth (either via SCServer or directly or by usin
 <li>Pick and introdduce a Synth (instance) based on the provided synthdef files</li>
 </ol>
 
+## Variants 
+
+Variants in SC context are SynthDefs providing Synth instances presets.
+For further reading you may check this [link](http://doc.sccode.org/Classes/SynthDef.html#Variants) from the official documentation.
+
+Since it is yet matter of design, variants will come as separrate nodes with the form of "variant.alpha", "variant.gamma" and so on.
+
+Another approach would be to have an input pin of a dynamic enum, and switch the presets on the fly.
+
 
 ## SCServer Options
 
@@ -101,32 +110,16 @@ A <i>class</i> type object holding four fields and one method:
 - InitValue (type of Float32) derives from sytnthdef
 - Index (type of Integer32)
 
-## Layer
+## Root
 
-A Layer is representing the 0 Group (the base with additional functionalites) which is usually assigned to the Server by default in superCollider. 
+A Root is representing the 0 Group (the base with additional functionalites) which is usually assigned to the Server by default in superCollider. 
 
 Therefore, all the synths and the groups you may create should have a unique ID and always greater than 0.
 
 In example:
+//MISSING IMAGE!
 
-![Assign Unique ID's to groups and synths](img/setup_groups.png)
-
-It is not mandatory to keep order of IDs, although a good practice would be to assign bigger values especially to groups.
-
-(this is an idea on how to face automatic ID assignement)
-
-Imagine a Group with ID: 1000 and all of each children to add 100.
-
-Group A (1000) <- Group B (1100)
-
-And a Synth adds 1
-
-Group A (1000) <- Synth 1 (1001)
-
-and so on... 
-
-
-
+Ordered of groups and synths will be reassigned every time you rebuild the NodeTree.
 
 
 ## Before You Go
