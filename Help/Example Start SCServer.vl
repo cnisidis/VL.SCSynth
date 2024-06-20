@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="TLbGVkcV6SqOcupCfuxIsr" LanguageVersion="2024.6.0-0254-g5387c3cd24" Version="0.128">
-  <NugetDependency Id="QuPoRon99bHOkjnNGlWU3M" Location="VL.CoreLib" Version="2024.6.0-0254-g5387c3cd24" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="TLbGVkcV6SqOcupCfuxIsr" LanguageVersion="2024.6.6-0008-g2714e88e2e" Version="0.128">
+  <NugetDependency Id="QuPoRon99bHOkjnNGlWU3M" Location="VL.CoreLib" Version="2024.6.6-0008-g2714e88e2e" />
   <Patch Id="IhGo5366sagOYcmFal8hBo">
     <Canvas Id="DDWy8geaakWLqIHQZJcSCR" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -15,13 +15,14 @@
       </p:NodeReference>
       <Patch Id="IPEKirmRpXfNoGZ8DAlcoL">
         <Canvas Id="SHeECsQZnSeLaU7TUtob0N" CanvasType="Group">
-          <Node Bounds="173,979,185,19" Id="Pe8yx4x4kt7OlZNUxGtBAa">
+          <Node Bounds="173,979,225,19" Id="Pe8yx4x4kt7OlZNUxGtBAa">
             <p:NodeReference LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="SCServer (Executor)" />
             </p:NodeReference>
             <Pin Id="L3YYVTScDEhLOsQocy4qLY" Name="Node Context" Kind="InputPin" IsHidden="true" />
-            <Pin Id="OAQuB7Ao7TpP3do1f5dwnc" Name="SC Folder Path" Kind="InputPin" />
+            <Pin Id="TtnDxgvXtv8MApNxlYHrIr" Name="SC Custom Folder Path" Kind="InputPin" />
+            <Pin Id="DsDXOAQ9nvzQWVmG9HA6KW" Name="Reload" Kind="InputPin" />
             <Pin Id="QKvyFoiqwm9Qdcg1aGPWZ3" Name="Protocol" Kind="InputPin" />
             <Pin Id="KuUw9OusbL0LnvJDKqCq5g" Name="Address" Kind="InputPin" />
             <Pin Id="LdPGi6NoC3hLgNndvu3U59" Name="Port" Kind="InputPin" />
@@ -39,7 +40,7 @@
             <Pin Id="FSzwSpkppNeMwvdwwN2waL" Name="isRunning" Kind="OutputPin" />
             <Pin Id="ViMTpC1SNgZNsQxFqsJdKT" Name="isListening" Kind="OutputPin" />
           </Node>
-          <Pad Id="IipCYrFpIe0Lf6OGZwosY0" Comment="SC Folder Path" Bounds="174,121,201,15" ShowValueBox="true" isIOBox="true" Value="..\..\..\..\Program Files\SuperCollider-3.13.0\">
+          <Pad Id="IipCYrFpIe0Lf6OGZwosY0" Comment="SC Folder Path" Bounds="174,120,208,15" ShowValueBox="true" isIOBox="true" Value="..\..\..\..\Program Files\SuperCollider-3.13.0\">
             <p:TypeAnnotation LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Path" />
             </p:TypeAnnotation>
@@ -93,7 +94,7 @@
               <Choice Kind="TypeFlag" Name="Integer32" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="LZR1Vx4OY2gM3fIgXlR85U" Bounds="176,140,234,19" ShowValueBox="true" isIOBox="true" Value="1. Set SuperCollider Installation folder">
+          <Pad Id="LZR1Vx4OY2gM3fIgXlR85U" Bounds="176,140,629,20" ShowValueBox="true" isIOBox="true" Value="1. Set SuperCollider Installation folder (or leave it blank if Server lives under its default location)">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -192,7 +193,6 @@
           <Fragment Id="VbRt39V32JPQXLf88o0zRi" Patch="NXvFLQ5qRjLODiVVx83pst" Enabled="true" />
           <Fragment Id="BG0bcsejQqYMJ7Z9E1YiLm" Patch="KbcahGRb9fVQdDnciyJ6Gx" Enabled="true" />
         </ProcessDefinition>
-        <Link Id="TomY5yKo3Y7Ph7qJ3N8GII" Ids="IipCYrFpIe0Lf6OGZwosY0,OAQuB7Ao7TpP3do1f5dwnc" />
         <Link Id="N6W2Lvq9t1lQJQY4UcMZat" Ids="UmpYMkwtpOhPXCqp9F3IPa,QKvyFoiqwm9Qdcg1aGPWZ3" />
         <Link Id="NTx5QYwVTlwL5buceCVLcz" Ids="RLTAlsFi9NoO6DwIo1IYez,KuUw9OusbL0LnvJDKqCq5g" />
         <Link Id="NU2FqM65AcrMjmqR334xNq" Ids="SusliLH1qZuORRF1IhOfes,LdPGi6NoC3hLgNndvu3U59" />
@@ -203,6 +203,7 @@
         <Link Id="NVSRfAFpdnZL57W6VYBrRe" Ids="SB6iDLmMJ40LSiycr5OFOm,CKbnBLq9HppMud6ioTOukX" />
         <Link Id="Nj7rYmAVDZZMmVNbYvrIsD" Ids="S0itG7tLLACNMbN9F14qvc,SLEgARmu3O8QE6Gobee3Vq" />
         <Link Id="GYpHzd7TqtEMigY8PSVyuL" Ids="NajfSuobXdFN6covXetGr7,CdNIUkm9n4iOJwmUlbHPKZ" />
+        <Link Id="CjFRKlkwvWYNDUggixryMw" Ids="IipCYrFpIe0Lf6OGZwosY0,TtnDxgvXtv8MApNxlYHrIr" />
       </Patch>
     </Node>
   </Patch>

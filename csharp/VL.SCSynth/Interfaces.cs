@@ -7,6 +7,8 @@ public interface ISCNode
 
     public AddActions AddAction { get; set; }
 
+    public List<ISCNode> GetInputs();
+
 }
 
  

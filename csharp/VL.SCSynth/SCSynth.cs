@@ -38,8 +38,9 @@ namespace VL.SCSynth
             }
         }
 
-
-        
-       
+        public List<ISCNode> GetInputs()
+        {
+            return new List<ISCNode>();
+        }
     }
 }
