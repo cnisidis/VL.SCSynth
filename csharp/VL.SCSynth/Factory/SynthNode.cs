@@ -1,6 +1,6 @@
 ﻿
 using VL.Core;
-using VL.Core.Diagnostics;
+
 
 namespace VL.SCSynth.Factory
 {

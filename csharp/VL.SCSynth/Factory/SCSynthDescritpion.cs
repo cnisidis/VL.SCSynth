@@ -17,11 +17,10 @@ namespace VL.SCSynth.Factory
         string? FSummary;
         string FCategory;
 
-        public Synth synth { get; }
+        public SCSynth synth { get; }
         public string id { get; set; }
 
         public string synthDefName { get; set; }
-
 
         public string filepath { get; set; }
 
@@ -38,7 +37,7 @@ namespace VL.SCSynth.Factory
             synthDefName = synthdefname;
             FCategory = "SYNTHDEFS.";
             FSummary = synthdefname;
-            this.synth = new Synth(synthDefName);
+            this.synth = new SCSynth(synthDefName);
             this.synth.Parameters = parameters.ToDictionary(x => x.Name);
             this.synth.synthDefFilePath = filepath;
             
@@ -77,7 +76,7 @@ namespace VL.SCSynth.Factory
                 //inputs.Add(new PinDescription("ResetAll", typeof(bool), false, "Reset All Parameters to their intial values"));
 
                 // For now let's just get the raw JSON response from Directus. Create a single string output pin
-                outputs.Add(new PinDescription("Synth", typeof(Synth), this.synth, "Synth"));
+                outputs.Add(new PinDescription("Synth", typeof(SCSynth), this.synth, "Synth"));
                 //outputs.Add(new PinDescription("Controls", typeof(Dictionary<String, FixtureNodeAttribute>), Controls, "Controls"));
 
                 FInitialized = true;

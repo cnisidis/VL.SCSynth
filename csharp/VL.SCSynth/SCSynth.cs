@@ -32,51 +32,35 @@ namespace VL.SCSynth
 
         
     }
-    public class Synth : ISCNode
+    public class SCSynth : ISCNode
     {
-        /// <summary>
-        /// Synth Def origins from
-        /// </summary>
+        
         public string SynthDefName { get; set; }    
-        /// <summary>
-        /// SuperCollider Node Id: this should always match the id on the SC node graph
-        /// </summary>
         public int scId { get; set; }
-
-
         public string synthDefFilePath { get; set; }
 
         //Add synth parameters Enumerable* TODO 
-
         public Dictionary<string, Parameter> Parameters { get; set; }
 
         public AddActions AddAction { get; set; }
-        public CallerInfo callerInfo { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
-        public Synth(string SynthDefName)
+        
+        public SCSynth(string SynthDefName)
         { 
             this.Parameters = new Dictionary<string, Parameter>();  
             this.SynthDefName = SynthDefName;
         }
 
-        public void AutoID(CallerInfo caller)
+
+        public void ResetAll()
         {
-            throw new NotImplementedException();
+            foreach(var param in  Parameters.Values) 
+            { 
+                param.Reset();
+            }
         }
 
-        public bool Notify(INotification notification, CallerInfo caller)
-        {
-            throw new NotImplementedException();
-        }
 
-        public IEnumerable<ISCNode> GetInputs()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Identify(CallerInfo caller)
-        {
-            throw new NotImplementedException();
-        }
+        
+       
     }
 }
