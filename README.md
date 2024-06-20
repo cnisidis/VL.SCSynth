@@ -26,6 +26,17 @@ Both SCServer and SCClient are inheriting their methods from ISCSynth. This name
 
 In example, once you started scsynth (either via SCServer or directly or by using the SC IDE), you can access it by introducing a SCClient on the VL side, respecting the IP Address and the binded port.
 
+## SCSynth Node Factory
+
+![Expose Data Pin](/img/SCSynth-Factory.png)
+
+<ol>
+<li>Create a folder named "synthdefs" next to your project file (root)</li>
+<li>Populate the "synthdefs" folder with scsyndef files (compiled synthdefs)</li>
+<li>Add VL.SCSynth to your patch project</li>
+<li>Call SYNTHDEFS category from your nodebrowser</li>
+<li>Pick and introdduce a Synth (instance) based on the provided synthdef files</li>
+</ol>
 
 
 ## SCServer Options
@@ -81,12 +92,42 @@ Implemented according to [Server Command Reference](https://doc.sccode.org/Refer
 
 
 
-## SynthParameter
+## Parameters
 
-A <i>Record<U,T></i> type object holding two fields:
+A <i>class</i> type object holding four fields and one method:
 
-- Name or Index can be either type of String or Integer32
-- Value can be an Integer32, Float32 or String
+- Name (type of String) derives from sytnthdef
+- Value (type of Float32)
+- InitValue (type of Float32) derives from sytnthdef
+- Index (type of Integer32)
+
+## Layer
+
+A Layer is representing the 0 Group (the base with additional functionalites) which is usually assigned to the Server by default in superCollider. 
+
+Therefore, all the synths and the groups you may create should have a unique ID and always greater than 0.
+
+In example:
+
+![Assign Unique ID's to groups and synths](img/setup_groups.png)
+
+It is not mandatory to keep order of IDs, although a good practice would be to assign bigger values especially to groups.
+
+(this is an idea on how to face automatic ID assignement)
+
+Imagine a Group with ID: 1000 and all of each children to add 100.
+
+Group A (1000) <- Group B (1100)
+
+And a Synth adds 1
+
+Group A (1000) <- Synth 1 (1001)
+
+and so on... 
+
+
+
+
 
 ## Before You Go
 SCServer is still in progress, so changes will be often and may cause breaking changes. 

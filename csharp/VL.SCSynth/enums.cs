@@ -211,8 +211,19 @@ public enum AddActions
     Replace =4
 }
 
+
+
 public enum NodeType
 {
     Synth =0,
     Group =1
+}
+
+public enum NodePositionEnum
+{
+    NONE=0,
+    HEAD,
+    TAIL,
+    AFTER,
+    BEFORE
 }
