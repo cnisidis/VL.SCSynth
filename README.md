@@ -130,3 +130,12 @@ One important thing (which still needs some polishing) is that you have to set t
 [^5]: See [Client vs Server Documentation](https://doc.sccode.org/Guides/ClientVsServer.html)
 
 [^10]: [scsynth](https://github.com/supercollider/supercollider/wiki/scsynth-development) – A real-time audio server
+
+
+
+# Spnsoring
+
+Development of this library was mainly sponsored by:
+
+ - [<b>3e8.studio</b>](https://www.3e8.studio) 
+<!-- ![](/img/3e8_logo_dark.png) -->
