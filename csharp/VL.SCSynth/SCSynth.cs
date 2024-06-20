@@ -18,6 +18,8 @@ namespace VL.SCSynth
         public int scId { get; set; }
         public string synthDefFilePath { get; set; }
 
+        public Guid Id { get; set; }
+
         //Add synth parameters Enumerable* TODO 
         public Dictionary<string, Parameter> Parameters { get; set; }
 
@@ -27,6 +29,7 @@ namespace VL.SCSynth
         { 
             this.Parameters = new Dictionary<string, Parameter>();  
             this.SynthDefName = SynthDefName;
+            
         }
 
 

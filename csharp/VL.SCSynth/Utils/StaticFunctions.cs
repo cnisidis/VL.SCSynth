@@ -8,19 +8,20 @@ namespace VL.SCSynth.Utils
 {
     public static class SCSynthDFS
     {
-        public static Tuple<List<ISCNode>, List<ISCNode>, List<ISCNode>> DFS(ISCNode GroupNode)
+        public static Tuple<List<ISCNode>, List<SCGroup>, List<SCSynth>> DFS(ISCNode SCNode)
         {
             Stack<ISCNode> stack = new Stack<ISCNode>();
             List<ISCNode> order = new List<ISCNode>();
-            List<ISCNode> Groups = new List<ISCNode>();
-            List<ISCNode> Synths = new List<ISCNode>();
-            stack.Push(GroupNode);
+            List<SCGroup> Groups = new List<SCGroup>();
+            List<SCSynth> Synths = new List<SCSynth>();
+            stack.Push(SCNode);
+
             while (stack.Count > 0)
             {
                 ISCNode v = stack.Pop();
                 if (v != null && !order.Contains(v))
                 {
-
+                    
                     order.Add(v);
                     if (v.GetType() == typeof(SCGroup))
                     {
@@ -39,12 +40,13 @@ namespace VL.SCSynth.Utils
                     }
                     else if (v.GetType() == typeof(SCSynth))
                     {
-                        Synths.Add(v);
+                        
+                        Synths.Add((SCSynth)v);
                     }
                     else if (v.GetType() == typeof(SCGroup))
                     {
-                        var group = (SCGroup)v;
-                        Groups.Add(group);
+                        
+                        Groups.Add((SCGroup)v);
                     }
                 }
             }

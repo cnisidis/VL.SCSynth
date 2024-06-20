@@ -47,6 +47,7 @@ namespace VL.SCSynth.Factory
 
         void Init()
         {
+            this.synth.Id = Guid.NewGuid();
             if (FInitialized)
                 return;
 
