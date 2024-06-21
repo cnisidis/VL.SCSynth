@@ -28,7 +28,7 @@ namespace VL.SCSynth.Factory
             return result.Trim();
         }
         public string Name { get; }
-        public string OriginalName { get; }
+        public string OriginalName { get; set; }
         public Type Type { get; }
         public object DefaultValue { get; }
 
@@ -38,11 +38,11 @@ namespace VL.SCSynth.Factory
 
         public PinDescription(string name, Type type, object defaultValue, string description)
         {
-            Name = BeautifyPin(name);
-            OriginalName = name;
-            Type = type;
-            DefaultValue = defaultValue;
-            Summary = description;
+            this.OriginalName = name;
+            this.Name = name; //BeautifyPin(name);
+            this.Type = type;
+            this.DefaultValue = defaultValue;
+            this.Summary = description;
         }
 
        

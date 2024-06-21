@@ -17,8 +17,8 @@ namespace VL.SCSynth.Factory
         string? FSummary;
         string FCategory;
 
-        public SCSynth synth { get; }
-        public string id { get; set; }
+        public SCSynth synth { get; set; }
+        public Guid id { get; set; }
 
         public string synthDefName { get; set; }
 
@@ -27,6 +27,9 @@ namespace VL.SCSynth.Factory
         // Inputs and outputs
         List<PinDescription> inputs = new List<PinDescription>();
         List<PinDescription> outputs = new List<PinDescription>();
+
+        
+        public Dictionary<string, Parameter> parameters = new Dictionary<string, Parameter>();
 
         public SCSynthDescritpion(IVLNodeDescriptionFactory factory, string synthdefname, List<Parameter> parameters, string filepath)
         {
@@ -37,17 +40,15 @@ namespace VL.SCSynth.Factory
             synthDefName = synthdefname;
             FCategory = "SYNTHDEFS.";
             FSummary = synthdefname;
-            this.synth = new SCSynth(synthDefName);
-            this.synth.Parameters = parameters.ToDictionary(x => x.Name);
-            this.synth.synthDefFilePath = filepath;
+            this.parameters = parameters.ToDictionary(x=>x.Name);
             
-            //FOperation = operation;
+            
 
-         }
+        }
 
         void Init()
         {
-            this.synth.Id = Guid.NewGuid();
+             
             if (FInitialized)
                 return;
 
@@ -58,13 +59,15 @@ namespace VL.SCSynth.Factory
                 string name = "";
                 string desc = "";
 
-               if(this.synth.Parameters.Count > 0)
+                
+                if (parameters.Count > 0)
                 {
-                    foreach (var param in this.synth.Parameters.ToList())
+                    foreach (var param in parameters)
                     {
                         GetTypeDefaultAndDescription(param.Value, ref type, ref dflt, ref desc);
                         inputs.Add(new PinDescription(param.Key, type, dflt, desc));
-                        //For each LogicalChannel
+                        Console.WriteLine(param.Key);
+                        
                     }
                 }
                 else
@@ -79,8 +82,8 @@ namespace VL.SCSynth.Factory
 
                 // For now let's just get the raw JSON response from Directus. Create a single string output pin
                 
-                outputs.Add(new PinDescription("Synth", typeof(SCSynth), this.synth, "Synth"));
-                //outputs.Add(new PinDescription("Controls", typeof(Dictionary<String, FixtureNodeAttribute>), Controls, "Controls"));
+                outputs.Add(new PinDescription("Synth", typeof(SCSynth), null , "Synth"));
+                
 
                 FInitialized = true;
             }

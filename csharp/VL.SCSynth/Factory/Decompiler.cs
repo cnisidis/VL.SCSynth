@@ -209,7 +209,7 @@ namespace VL.SCSynth.Factory
             stringLength = bytes.ToArray()[0];
             stringValue = Encoding.ASCII.GetString(bytes.Skip(1).Take(stringLength).ToArray());
             stringLength += 1;
-            return stringValue;
+            return stringValue.Trim();
         }
     }
 

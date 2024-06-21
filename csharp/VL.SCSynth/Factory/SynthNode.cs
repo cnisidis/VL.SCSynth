@@ -1,6 +1,7 @@
 ﻿
 using VL.Core;
-
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 
 namespace VL.SCSynth.Factory
 {
@@ -27,13 +28,24 @@ namespace VL.SCSynth.Factory
 
 
 
-        // This is where we'll run the queries to the Directus instance
+        
         public SynthNode(SCSynthDescritpion description, NodeContext nodeContext) : base(nodeContext)
         {
+            
+            
             this.description = description;
-            Inputs = description.Inputs.Select(p => new Pin(p.Name, p.Type) { Value = p.DefaultValue }).ToArray();
-            Outputs = description.Outputs.Select(p => new Pin(p.Name, p.Type) { Value = p.DefaultValue }).ToArray();
+            
+            //this.description = description;
+
+            this.synth = new SCSynth(description.synthDefName, description.parameters);
+            
+            Inputs = description.Inputs.Select(p => new Pin(p.Name, p.Type) { Value = p.DefaultValue}).ToArray();
+            Outputs = description.Outputs.Select(p => new Pin("Synth", typeof(SCSynth)) { Value = this.synth }).ToArray();
+            
+            
         }
+
+        public SCSynth synth;
         public IVLNodeDescription NodeDescription => description;
 
         public IVLPin[] Inputs { get; }
@@ -43,7 +55,25 @@ namespace VL.SCSynth.Factory
 
         public void Update()
         {
+
+            if (!Inputs.Any())
+                return;
             //Console.Write("Update");  
+            foreach (var input in Inputs.Cast<Pin>())
+            {
+                //Console.WriteLine("Name: {0} \n Originan: {1}", input.Name, input.OriginalName);
+                if (input.Type == typeof(float))
+                {
+                    this.synth.Parameters[input.OriginalName].Value = (float)input.Value;
+                }
+                if(input.Type == typeof(bool) && input.OriginalName == "Play")
+                {
+                    this.synth.isPlaying = (bool)input.Value;
+
+                }
+                
+            }
+            
         }
 
         public void Dispose()

@@ -18,18 +18,33 @@ namespace VL.SCSynth
         public int scId { get; set; }
         public string synthDefFilePath { get; set; }
 
+        public bool isPlaying { get; set; }
+
         public Guid Id { get; set; }
 
         //Add synth parameters Enumerable* TODO 
         public Dictionary<string, Parameter> Parameters { get; set; }
 
         public AddActions AddAction { get; set; }
+
         
+
         public SCSynth(string SynthDefName)
         { 
             this.Parameters = new Dictionary<string, Parameter>();  
             this.SynthDefName = SynthDefName;
+            this.Id = Guid.NewGuid();
+            this.isPlaying = false;
             
+        }
+
+        public SCSynth(string SynthDefName, Dictionary<string, Parameter> parameters)
+        {
+            this.Parameters = parameters;
+            this.SynthDefName = SynthDefName;
+            this.Id = Guid.NewGuid();
+            this.isPlaying = false;
+
         }
 
 
@@ -41,9 +56,16 @@ namespace VL.SCSynth
             }
         }
 
+        public void Play()
+        {
+            isPlaying = true;
+        }
+
         public List<ISCNode> GetInputs()
         {
             return new List<ISCNode>();
         }
+
+        
     }
 }
