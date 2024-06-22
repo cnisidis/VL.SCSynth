@@ -9,7 +9,7 @@ namespace VL.SCSynth
     public class Parameter
     {
         public string Name { get; set; }
-        readonly float initValue;
+        public float initValue { get; set; }
         public float Value { get; set; }
 
         public int index { get; set; }
@@ -26,6 +26,12 @@ namespace VL.SCSynth
             this.Value = initValue;
         }
 
+        public void Split(out string Name, out float InitValue, out float Value)
+        {
+            Name = this.Name;
+            InitValue = this.initValue;
+            Value = this.Value;
+        }
 
     }
 }

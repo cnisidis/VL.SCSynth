@@ -1,56 +1,69 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using VL.Lib.Collections;
 
 namespace VL.SCSynth.Utils
 {
     public static class SCSynthDFS
     {
-        public static Tuple<List<ISCNode>, List<SCGroup>, List<SCSynth>> DFS(ISCNode SCNode)
+        public static Spread<ISCNode> DFS(ISCNode SCNode)
         {
+            var layer = new RootLayer();
             Stack<ISCNode> stack = new Stack<ISCNode>();
-            List<ISCNode> order = new List<ISCNode>();
-            List<SCGroup> Groups = new List<SCGroup>();
+            List<ISCNode> Order = new List<ISCNode>(); // { SCNode }
             List<SCSynth> Synths = new List<SCSynth>();
+            List<SCGroup>  Groups = new List<SCGroup>();
+            
             stack.Push(SCNode);
-
+            var index = 0;
             while (stack.Count > 0)
             {
                 ISCNode v = stack.Pop();
-                if (v != null && !order.Contains(v))
+                if (v != null && !Order.Contains(v))
                 {
                     
-                    order.Add(v);
-                    if (v.GetType() == typeof(SCGroup))
+                    Order.Add(v);
+                    
+                    var nei = (ISCNode)v;//.GetNeighbours();
+                        
+                    if (nei.GetInputs() != null || nei.GetInputs().Count != 0) 
                     {
-                        var nei = (ISCNode)v;//.GetNeighbours();
-                        if (nei.GetInputs() != null || nei.GetInputs().Count != 0) 
+                        foreach (ISCNode ne in nei.GetInputs())
                         {
-                            foreach (ISCNode ne in nei.GetInputs())
+                            if (ne != null && !Order.Contains(ne))
                             {
-                                if (ne != null && !order.Contains(ne))
-                                {
-                                    stack.Push(ne);
-                                }
+                                stack.Push(ne);
                             }
                         }
-
                     }
-                    else if (v.GetType() == typeof(SCSynth))
-                    {
                         
+                    
+                    if (v.GetType() == typeof(SCSynth))
+                    {
+                        index += 1;
+                        v.scId = index;
                         Synths.Add((SCSynth)v);
+                        
+                        
                     }
                     else if (v.GetType() == typeof(SCGroup))
                     {
-                        
+                        index += 1000;
+                        v.scId = index;
                         Groups.Add((SCGroup)v);
+                        
+
                     }
+
+
                 }
             }
-            return Tuple.Create(order, Groups, Synths);
+            return Order.ToSpread();
         }
     }
 }

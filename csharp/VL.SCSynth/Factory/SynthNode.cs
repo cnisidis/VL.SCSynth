@@ -37,8 +37,16 @@ namespace VL.SCSynth.Factory
             
             //this.description = description;
 
-            this.synth = new SCSynth(description.synthDefName, description.parameters);
-            
+            var SynthParameters = new Dictionary<string, Parameter>();
+
+            foreach(var param in description.parameters)
+            {
+                var synthParam = new Parameter(param.Key, param.Value.initValue);
+                SynthParameters.Add(param.Key, synthParam);
+            }
+
+            this.synth = new SCSynth(description.synthDefName, SynthParameters);
+            this.synth.synthDefFilePath = description.filepath;
             Inputs = description.Inputs.Select(p => new Pin(p.Name, p.Type) { Value = p.DefaultValue}).ToArray();
             Outputs = description.Outputs.Select(p => new Pin("Synth", typeof(SCSynth)) { Value = this.synth }).ToArray();
             
@@ -62,7 +70,7 @@ namespace VL.SCSynth.Factory
             foreach (var input in Inputs.Cast<Pin>())
             {
                 //Console.WriteLine("Name: {0} \n Originan: {1}", input.Name, input.OriginalName);
-                if (input.Type == typeof(float))
+                if (input.Type == typeof(float) || input.Value.GetType() == typeof(Single) || input.Value.GetType() == typeof(float))
                 {
                     this.synth.Parameters[input.OriginalName].Value = (float)input.Value;
                 }

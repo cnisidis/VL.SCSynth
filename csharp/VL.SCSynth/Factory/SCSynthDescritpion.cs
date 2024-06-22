@@ -41,6 +41,7 @@ namespace VL.SCSynth.Factory
             FCategory = "SYNTHDEFS.";
             FSummary = synthdefname;
             this.parameters = parameters.ToDictionary(x=>x.Name);
+            this.filepath = filepath;
             
             
 
