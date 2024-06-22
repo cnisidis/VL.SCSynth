@@ -14,11 +14,11 @@ Therefore it is bundled with all the appropriate functionalities to build your o
 
 SCServer comes with an integrated SCClient (for receiving scynth responses). However SCClient can be used to access an active SuperCollider server by any machine, locally or internally. 
 
-
+[^10]: [scsynth](https://github.com/supercollider/supercollider/wiki/scsynth-development) – A real-time audio server
 
 ## Use SynthDefs to Instanciate Synths
 
-![Expose Data Pin](/img/SCSynth-Factory.png)
+<b>Check the Example in you Help Browser (F1) "Custom SynthDefs"</b>
 
 <ol>
 <li>Create a folder named "synthdefs" next to your project file (root)</li>
@@ -28,22 +28,16 @@ SCServer comes with an integrated SCClient (for receiving scynth responses). How
 <li>Pick and introduce a Synth (instance) based on the provided synthdef files</li>
 </ol>
 
-
-
-## Before You Go
-SCServer is still in progress, so changes will be often and may cause breaking changes. 
-
-One important thing (which still needs some polishing) is that you have to set the SuperCollider installation folder manually every time you introduce the SCServer node. 
-
-[^5]: See [Client vs Server Documentation](https://doc.sccode.org/Guides/ClientVsServer.html)
-
-[^10]: [scsynth](https://github.com/supercollider/supercollider/wiki/scsynth-development) – A real-time audio server
-
-
-
 # Spnsoring
 
 Development of this library was mainly sponsored by:
 
  - [<b>3e8.studio</b>](https://www.3e8.studio) 
 <!-- ![](/img/3e8_logo_dark.png) -->
+
+
+
+
+
+
+

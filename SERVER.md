@@ -59,3 +59,5 @@ SuperCollider Server replies on the same port it listens to, since TCP is not su
 Both SCServer and SCClient are inheriting their methods from ISCSynth. This name was picked in order to signify that both are implementing and sharing methods to communicate directly with any active scsynth.
 
 In example, once you started scsynth (either via SCServer or directly or by using the SC IDE), you can access it by introducing a SCClient on the VL side, respecting the IP Address and the binded port.
+
+[^5]: See [Client vs Server Documentation](https://doc.sccode.org/Guides/ClientVsServer.html)
