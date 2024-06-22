@@ -1,9 +1,8 @@
 ﻿
 using VL.Core;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 
-namespace VL.SCSynth.Factory
+
+namespace SCSynth.Factory
 {
     sealed class SynthNode: FactoryBasedVLNode, IVLNode
     {

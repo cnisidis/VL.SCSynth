@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="G22AeXr6UOMNKRnfmiRPnu" LanguageVersion="2024.6.0-0254-g5387c3cd24" Version="0.128">
-  <NugetDependency Id="DDN2EFK1P8nNgOSeCFkvYf" Location="VL.CoreLib" Version="2024.6.0-0254-g5387c3cd24" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="G22AeXr6UOMNKRnfmiRPnu" LanguageVersion="2024.6.6-0011-g14ec0ca950" Version="0.128">
+  <NugetDependency Id="DDN2EFK1P8nNgOSeCFkvYf" Location="VL.CoreLib" Version="2024.6.6-0011-g14ec0ca950" />
   <Patch Id="Sw37PpmprvCM47jxFlxB3w">
     <Canvas Id="GomEF4vwM3PO8o9GjEVJow" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
@@ -41,7 +41,8 @@
               <Choice Kind="ProcessAppFlag" Name="SCServer (Executor)" />
             </p:NodeReference>
             <Pin Id="SlP1xnu94jQOjBjbPqUUev" Name="Node Context" Kind="InputPin" IsHidden="true" />
-            <Pin Id="ElOgoIdCz8yQNrdlnSaPkX" Name="SC Folder Path" Kind="InputPin" />
+            <Pin Id="IGErH8jq685OuDl3BOzxLc" Name="SC Custom Folder Path" Kind="InputPin" />
+            <Pin Id="HJ3FINiobVMQNSx25IhCVL" Name="Reload" Kind="InputPin" IsHidden="true" />
             <Pin Id="Vy0JJ1OrDz8Ll4A4lwrx6c" Name="Protocol" Kind="InputPin" />
             <Pin Id="VprNGy8cWqgNlZ20UkIh0F" Name="Address" Kind="InputPin" />
             <Pin Id="Ijrj8cHlRf4LJJxe0NqCEl" Name="Port" Kind="InputPin" />
@@ -59,7 +60,7 @@
             <Pin Id="JOCml2DahcYNQCSmEimvHQ" Name="isRunning" Kind="OutputPin" />
             <Pin Id="S0Rfih9CJ8ANsUFHgpIFnE" Name="isListening" Kind="OutputPin" />
           </Node>
-          <Pad Id="Eu8Wpu5Hq9GMA2RLRabFsd" Comment="Boot" Bounds="257,-40,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+          <Pad Id="Eu8Wpu5Hq9GMA2RLRabFsd" Comment="Boot" Bounds="269,-208,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
@@ -67,17 +68,17 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="IQYLht4Lj7jMF95ZMhaIr2" Comment="Id" Bounds="223,240,35,15" ShowValueBox="true" isIOBox="true" Value="2">
+          <Pad Id="IQYLht4Lj7jMF95ZMhaIr2" Comment="Id" Bounds="239,239,35,15" ShowValueBox="true" isIOBox="true" Value="2">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Integer32" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="I6B10OB3aoZQGokDQC8F6R" Comment="Server IP" Bounds="242,270,35,15" ShowValueBox="true" isIOBox="true" Value="127.0.0.1">
+          <Pad Id="I6B10OB3aoZQGokDQC8F6R" Comment="Server IP" Bounds="265,265,35,15" ShowValueBox="true" isIOBox="true" Value="127.0.0.1">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="NB5UyuBT4JIPDWfoKD7C4N" Comment="Port" Bounds="264,297,35,15" ShowValueBox="true" isIOBox="true" Value="57110">
+          <Pad Id="NB5UyuBT4JIPDWfoKD7C4N" Comment="Port" Bounds="282,297,35,15" ShowValueBox="true" isIOBox="true" Value="57110">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Integer32" />
             </p:TypeAnnotation>
@@ -87,7 +88,7 @@
               <Choice Kind="TypeFlag" Name="Integer32" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="DVugAN2lGS1NlZDIuZzLIB" Comment="Request Status" Bounds="235,-136,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+          <Pad Id="DVugAN2lGS1NlZDIuZzLIB" Comment="Request Status" Bounds="248,-95,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
@@ -200,20 +201,6 @@
               <Item>amp</Item>
             </p:Value>
           </Pad>
-          <Node Bounds="135,-178,48,19" Id="GEJ1Cmc62d5MkTwdLvwUcK">
-            <p:NodeReference LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="OperationCallFlag" Name="ToPath (Explicit)" />
-            </p:NodeReference>
-            <Pin Id="B3KubdRGlbrPCIIu9MGdqG" Name="Input" Kind="InputPin" />
-            <Pin Id="KxlAULDJsMiPv4veiP3wgw" Name="Is Directory" Kind="InputPin" />
-            <Pin Id="Bf3NGwyqqkfMwyEmbuqnV6" Name="Result" Kind="OutputPin" />
-          </Node>
-          <Pad Id="V7bhL65sljJLq4GhaU2fdj" Comment="" Bounds="136,-200,221,15" ShowValueBox="true" isIOBox="true" Value="C:\Program Files\SuperCollider-3.13.0\">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
-              <Choice Kind="TypeFlag" Name="String" />
-            </p:TypeAnnotation>
-          </Pad>
           <Node Bounds="529,495,92,19" Id="JwYcTACzGQILkaJW48PnjR">
             <p:NodeReference LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -240,14 +227,6 @@
             <Pin Id="PFUzu1T8p5eN4xKcagiYJf" Name="SendOnChange" Kind="InputPin" />
             <Pin Id="Abzvsd8oBkwMshQ3DUJQea" Name="Server" Kind="OutputPin" />
           </Node>
-          <Pad Id="B9mMClNXB7DLvkKkjFGY23" Comment="Kill" Bounds="342,-52,35,35" ShowValueBox="true" isIOBox="true" Value="False">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
-              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
-            </p:ValueBoxSettings>
-          </Pad>
         </Canvas>
         <Patch Id="HUVksEUNLb7NuqMBACgbV0" Name="Create" />
         <Patch Id="SXWp93hGpQGMhhzRURRcJL" Name="Update" />
@@ -274,8 +253,6 @@
         <Link Id="Clznl7uAiKbO4Xv4MKT5ND" Ids="UWQCVKo5UNbLZ4FVNLUHHn,DOmF0UOx6lRNc6QhGDZNt8" />
         <Link Id="PMWNNkazs22P6MYmmYGpXS" Ids="UmCnNIEokk4LUgQrGf6uRJ,RByroSIVKpaP0vQCdweqYx" />
         <Link Id="HwFoA9BK9h1MjewRNdK9ZD" Ids="MJH5zPg5eVgLYqgsEyCa9O,ANgAGK8K286NNNVNo1oJ7s" />
-        <Link Id="Sby6U9H2mGXLN0y11Ww0DC" Ids="V7bhL65sljJLq4GhaU2fdj,B3KubdRGlbrPCIIu9MGdqG" />
-        <Link Id="H6okGEhplHyNWi9vILqA0z" Ids="Bf3NGwyqqkfMwyEmbuqnV6,ElOgoIdCz8yQNrdlnSaPkX" />
         <Link Id="K8rN8Q3F5nqMRUxPa3HIxW" Ids="VTxRKExDeiYPlkIJCW3doA,O5auv6M4x5vPJIbVYtfMcV" />
         <Link Id="TojbRRVRqRfPs7xJKyBxbO" Ids="HbQ9nkwjU26QZ5DM6OVT2e,TzR9pCODH1ONqnsxOVO543" />
         <Link Id="T5FdjMn0EXOPhLddL4fjWa" Ids="KaXN753rorKMeZWJ6dHxfV,JouXeZXcpVbOFjOv9B8Pq3" />

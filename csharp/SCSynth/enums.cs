@@ -1,26 +1,44 @@
 
 using System.ComponentModel;
 
-using System;
-///For examples, see:
-///https://thegraybook.vvvv.org/reference/extending/writing-nodes.html#examples
 
-namespace VL.SCSynth;
-
+namespace SCSynth;
+/// <summary>
+/// 
+/// </summary>
 public enum Protocol
 {
+    /// <summary>
+    /// UDP 
+    /// </summary>
     UDP =0,
+    /// <summary>
+    /// TCP
+    /// </summary>
     TCP =1
 }
-
+/// <summary>
+/// Verbosity Level
+/// </summary>
 public enum Verbosity
 {
+    /// <summary>
+    /// Normal Verbosity
+    /// </summary>
     Normal =0,
+    /// <summary>
+    /// Suppress Messages
+    /// </summary>
     SuppressMessages =-1,
+    /// <summary>
+    /// Suppress All
+    /// </summary>
     SuppressAll = -2
 }
 
-
+/// <summary>
+/// Server OSC Commands
+/// </summary>
 public static class Commands
 {
     public enum ServerCommand

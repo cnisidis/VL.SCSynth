@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using VL.Core;
 using VL.Core.CompilerServices;
 using VL.Lib.Collections;
 
-namespace VL.SCSynth.GraphNodes
+namespace SCSynth.GraphNodes
 {
     public class DynamicSynthDefDesc
     {

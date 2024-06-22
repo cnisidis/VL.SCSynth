@@ -1,13 +1,5 @@
-﻿using Microsoft.VisualBasic;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using VL.Core;
-using VL.Lib.IO.Notifications;
-
-namespace VL.SCSynth
+﻿
+namespace SCSynth
 {
 
     

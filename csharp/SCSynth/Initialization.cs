@@ -2,13 +2,13 @@
 using System.Reactive.Linq;
 using VL.Core;
 using VL.Core.CompilerServices;
-using VL.SCSynth.Factory;
+using SCSynth.Factory;
 using VL.Lib.Basics.Resources;
 
 // Tell VL where to find our initializer
-[assembly: AssemblyInitializer(typeof(VL.SCSynth.Initialization))]
+[assembly: AssemblyInitializer(typeof(SCSynth.Initialization))]
 
-namespace VL.SCSynth
+namespace SCSynth
 {
 
     public class Initialization : AssemblyInitializer<Initialization>

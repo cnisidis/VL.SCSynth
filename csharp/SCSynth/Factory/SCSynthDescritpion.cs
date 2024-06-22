@@ -2,10 +2,9 @@
 using System.Reactive.Linq;
 using VL.Core;
 using VL.Core.Diagnostics;
-using VL.SCSynth;
-using VL.SCSynth.Factory;
 
-namespace VL.SCSynth.Factory
+
+namespace SCSynth.Factory
 {
     internal class SCSynthDescritpion: IVLNodeDescription, IInfo
     {

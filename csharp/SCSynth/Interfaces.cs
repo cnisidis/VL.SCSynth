@@ -1,5 +1,5 @@
 ﻿
-namespace VL.SCSynth;
+namespace SCSynth;
 
 public interface ISCNode
 {
