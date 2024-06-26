@@ -1,7 +1,6 @@
 # VL.SCSynth
 SuperCollider Server-Client Lib - foundation for vvvv and SC integration
 
-
 ## What is this?
 
 VL.SCSynth (SuperCollider Server)[^5] is a minimal implementation of a standalone server executor (scsynth)[^10] using the [VL.IO.OSC](https://github.com/vvvv/VL.IO.OSC) lib. 
@@ -18,7 +17,7 @@ SCServer comes with an integrated SCClient (for receiving scynth responses). How
 
 ## Use SynthDefs to Instanciate Synths
 
-<b>Check the Example in you Help Browser (F1) "Custom SynthDefs"</b>
+<b>Check the example in you Help Browser (F1) "Custom SynthDefs"</b>
 
 <ol>
 <li>Create a folder named "synthdefs" next to your project file (root)</li>
@@ -28,7 +27,7 @@ SCServer comes with an integrated SCClient (for receiving scynth responses). How
 <li>Pick and introduce a Synth (instance) based on the provided synthdef files</li>
 </ol>
 
-# Spnsoring
+# Sponsoring
 
 Development of this library was mainly sponsored by:
 
