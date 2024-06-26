@@ -51,7 +51,7 @@ namespace SCSynth.GraphNodes
         }
 
         //add this to get a node that can access the Instance from everywhere
-        public static DynamicSynthDefFile Instance => ManualDynamicEnumDefinitionBase<DynamicSynthDefFile>.Instance;
+        public static new DynamicSynthDefFile Instance => ManualDynamicEnumDefinitionBase<DynamicSynthDefFile>.Instance;
     }
 
     [Serializable]
