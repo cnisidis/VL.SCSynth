@@ -17,7 +17,7 @@ SCServer comes with an integrated SCClient (for receiving scynth responses). How
 
 ## Use SynthDefs to Instanciate Synths
 
-<b>Check the example in you Help Browser (F1) "Custom SynthDefs"</b>
+<b>Check the example in your Help Browser (F1) "Custom SynthDefs"</b>
 
 <ol>
 <li>Create a folder named "synthdefs" next to your project file (root)</li>
@@ -29,7 +29,7 @@ SCServer comes with an integrated SCClient (for receiving scynth responses). How
 
 # Sponsoring
 
-Development of this library was mainly sponsored by:
+The development of this library was mainly sponsored by:
 
  - [<b>3e8.studio</b>](https://www.3e8.studio) 
 <!-- ![](/img/3e8_logo_dark.png) -->
