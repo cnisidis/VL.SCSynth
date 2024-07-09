@@ -157,7 +157,7 @@
             <ControlPoint Id="OKeaNb7sHQdN1hzsviLg1Y" Bounds="1719,463" Alignment="Bottom" />
             <ControlPoint Id="VtntN4GxO3jMbrxHg6uVzN" Bounds="1817,463" Alignment="Bottom" />
           </Node>
-          <Node Bounds="777,558,105,19" Id="TAoSl0VhksJMcRsPtOw8Fz">
+          <Node Bounds="778,555,105,19" Id="TAoSl0VhksJMcRsPtOw8Fz">
             <p:NodeReference LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="SCSynth" NeedsToBeDirectParent="true" />
@@ -222,7 +222,7 @@
             <Pin Id="VvQWyYPikN0PL8qA9ehjGX" Name="Apply DumpOSC" Kind="InputPin" IsHidden="true" />
           </Node>
           <Pad Id="QgnPGpzAr77Pi637VjyO3V" SlotId="IHVFsOWSe2tMPPuwmGOZv0" Bounds="268,496" />
-          <Pad Id="EdsGhhNKPemP6bk54ksvR5" SlotId="IHVFsOWSe2tMPPuwmGOZv0" Bounds="778,477" />
+          <Pad Id="EdsGhhNKPemP6bk54ksvR5" SlotId="IHVFsOWSe2tMPPuwmGOZv0" Bounds="728,375" />
           <Pad Id="PugfIVZapEROZApKlKWwgv" Comment="Boot" Bounds="387,72,35,35" ShowValueBox="true" isIOBox="true" Value="false">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
@@ -315,7 +315,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="BNK4v4WvY6wP00TCDS69f4" Bounds="849,122,250,19" ShowValueBox="true" isIOBox="true" Value="3. Build Node Tree">
+          <Pad Id="BNK4v4WvY6wP00TCDS69f4" Bounds="849,122,250,19" ShowValueBox="true" isIOBox="true" Value="3. Evaluate Node Tree">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -334,6 +334,43 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
+          <Node Bounds="1130,734,105,19" Id="A7ivsiXDkyGOKsgJnheI8r">
+            <p:NodeReference LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="SCSynth" NeedsToBeDirectParent="true" />
+              <Choice Kind="ProcessAppFlag" Name="Root" />
+            </p:NodeReference>
+            <Pin Id="GcR3ns8jCHlO4mWL2lJgh3" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="UPNmy8v39AdQRDROdhqtoh" Name="SCSynth" Kind="InputPin" />
+            <Pin Id="GbICNCGTgY2QOe92cIKshQ" Name="Free All" Kind="InputPin" />
+            <Pin Id="SYKVz9gIfrJQUeHkpjNEmC" Name="ReBuild" Kind="InputPin" />
+            <Pin Id="HiXNfeXqLrLMfLrvDHBX5N" Name="Run" Kind="InputPin" DefaultValue="True" />
+            <Pin Id="MqNx8OvkKnjL6UIe0vGRUE" Name="SCNode" Kind="InputPin" />
+            <Pin Id="AnmTYttxDxuNy8uCzMRkln" Name="Synths" Kind="OutputPin" />
+            <Pin Id="Uhxwa27R4azLm9dV9UGKqQ" Name="SynthDefFilePaths" Kind="OutputPin" />
+            <Pin Id="B1QrtuX3FvTOit44rYpwBC" Name="Synth Def Name" Kind="OutputPin" />
+          </Node>
+          <Pad Id="CMA5G0bKiosNCYeg3PHiao" SlotId="IHVFsOWSe2tMPPuwmGOZv0" Bounds="1133,681" />
+          <Node Bounds="471,396,125,19" Id="GH7YPIe4Nh2Prju2SQ8QLD">
+            <p:NodeReference LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="SCClient" />
+            </p:NodeReference>
+            <Pin Id="IjRLfeEERN5Mqs4kkiKWMO" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="McmymIj8voOO0truLKrdKH" Name="SCSynth" Kind="InputPin" />
+            <Pin Id="TNuegv2swFtOT776ctbfDk" Name="Enabled" Kind="InputPin" />
+            <Pin Id="MyvxpPIf155PITKugW5bwg" Name="Update" Kind="ApplyPin" />
+            <Pin Id="RwsRpYXmZowMnFeREO67l5" Name="Console Log" Kind="InputPin" />
+            <Pin Id="GZVdmtyQzvbNHQ7LDrhmoX" Name="Id" Kind="InputPin" />
+            <Pin Id="JL8w7B19tWxQQpBjt1XGHx" Name="Server IP" Kind="InputPin" />
+            <Pin Id="DUJk4a6pnfMO5x3P3tZhWP" Name="Port" Kind="InputPin" />
+            <Pin Id="PT3Ny3a2qz4PM3rvOw6yDI" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="IHH3JE6SL02QRfq4Zqh7pM" Name="OSCClient" Kind="OutputPin" />
+            <Pin Id="A6t3Z06vqVgLTs6WOHSGjx" Name="Is Open" Kind="OutputPin" />
+            <Pin Id="CnMwOpRj2U4PCUfVLVVhQ8" Name="Response" Kind="OutputPin" />
+          </Node>
+          <Pad Id="FqatVVomWvYP7CK8cYRi6Y" SlotId="P6IMj428QoWMhXkIp6qF5v" Bounds="475,495" />
+          <Pad Id="Fm2O7hD1h4QMc9TzLLKI1b" SlotId="P6IMj428QoWMhXkIp6qF5v" Bounds="779,488" />
         </Canvas>
         <Patch Id="U5TjPXEqR4jQcdPyARGw7X" Name="Create" />
         <Patch Id="E1grQlKf8ssMatSpnHgFOH" Name="Update" />
@@ -352,7 +389,6 @@
         <Link Id="S9aVOHVvWYtNQFRrOboXDr" Ids="LyHkiUbG807MWD8DmzpNl7,G4498kxqOy0LOpXXVNUzc7" />
         <Slot Id="IHVFsOWSe2tMPPuwmGOZv0" Name="Server" />
         <Link Id="RspGobiKH8uMNqHDbBa2tj" Ids="SZpBj3GObfFOsntY6xU6rR,QgnPGpzAr77Pi637VjyO3V" />
-        <Link Id="A0d4dn4kw44MbmAUucvqxe" Ids="EdsGhhNKPemP6bk54ksvR5,IDgvZQqJ1JvQY3KO2Yt6KR" />
         <Link Id="LSaFxXExfh9ObBzIG2lk0x" Ids="PugfIVZapEROZApKlKWwgv,VLmuUoLldmUPuentCO8nJi" />
         <Link Id="EkbeKCBMQ6OPYbf1FX8lJG" Ids="L2IaV0C3LUeLglXyYCQxex,ASTmP9kXhdZLOIS3FbGHOt" />
         <Link Id="M3iUTQW0bJnNLo2ft4jWOx" Ids="LmTi8GTx1vmONluON2gyuT,RCAaj73iddSOz259XvofYM" />
@@ -375,6 +411,11 @@
         <Link Id="JniwvBbRT2bOQwxexZJVZl" Ids="NcQs1Ta0GBTQJpSokySEII,QIxoe2Ox5iXLLUGTFXw80J" />
         <Link Id="TQo3Bwb6sUdPB005gmqzD6" Ids="DO75hNg1N8OOEAgUj64YSe,J0RShQWI8UiPGfsNeXa5TK" />
         <Link Id="Bx9RFupnz6WMxRxfB8zZcB" Ids="JDaKQBJgSCZLh82jfsxKZ1,Ia2Rk5nomt9MuJJ6YQ6oiO" />
+        <Link Id="UOCvxhC5EdyPe3hXG3scru" Ids="Sp4ySIc0pxrPDBvQcchkaO,MqNx8OvkKnjL6UIe0vGRUE" />
+        <Link Id="DNFS58EzpyhQHNudYESY35" Ids="CMA5G0bKiosNCYeg3PHiao,UPNmy8v39AdQRDROdhqtoh" />
+        <Link Id="EAz0DmsNk3PMBdT7wRM8SJ" Ids="PT3Ny3a2qz4PM3rvOw6yDI,FqatVVomWvYP7CK8cYRi6Y" />
+        <Slot Id="P6IMj428QoWMhXkIp6qF5v" Name="Pi 1" />
+        <Link Id="OKS95SKdperMQPoc2q8SCL" Ids="Fm2O7hD1h4QMc9TzLLKI1b,IDgvZQqJ1JvQY3KO2Yt6KR" />
       </Patch>
     </Node>
   </Patch>
