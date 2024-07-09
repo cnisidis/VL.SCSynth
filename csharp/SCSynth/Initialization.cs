@@ -16,14 +16,22 @@ namespace SCSynth
 
         const string synthDefsSubdir = "synthdefs";
 
-
+        //private IResourceProvider<GlobalSCEngine>? _engineProvider;
         public override void Configure(AppHost appHost)
         {
-            
+            // Register the engine provider so patches can access it
+            /*
+            if (_engineProvider is null)
+            {
+                _engineProvider = ResourceProvider.NewPooledSystemWide("VL.SCSynth", _ => new GlobalSCEngine());
+            }
+            appHost.Services.RegisterService(_engineProvider);
+            */
+
             appHost.RegisterNodeFactory("VL.SCSynth-Factory", (directory, nodeFactory) =>
             {
                 var invalidated = NodeBuilding.WatchDir(directory)
-                    .Where(e => (e.ChangeType == WatcherChangeTypes.Created || e.ChangeType == WatcherChangeTypes.Deleted || e.ChangeType == WatcherChangeTypes.Renamed) && e.Name == synthDefsSubdir);
+                    .Where(e => (e.ChangeType == WatcherChangeTypes.Created || e.ChangeType == WatcherChangeTypes.Deleted || e.ChangeType == WatcherChangeTypes.Renamed || e.ChangeType == WatcherChangeTypes.All) && e.Name == synthDefsSubdir);
 
                 var builder = ImmutableArray.CreateBuilder<IVLNodeDescription>();
                 var synthDefsDir = Path.Combine(directory, synthDefsSubdir);
