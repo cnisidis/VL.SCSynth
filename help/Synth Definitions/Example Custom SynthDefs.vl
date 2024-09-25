@@ -206,6 +206,15 @@
               <Choice Kind="ProcessAppFlag" Name="SCServer (Executor)" />
             </p:NodeReference>
             <Pin Id="Fr2dQcenhltOZm2XFDj9S3" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="VLmuUoLldmUPuentCO8nJi" Name="Boot" Kind="InputPin" />
+            <Pin Id="G8b5yeKjJy9Nf6pbQ92ejz" Name="Quit" Kind="InputPin" />
+            <Pin Id="DqPeY5IJti4OpZmlSfdxOb" Name="Kill" Kind="InputPin" IsHidden="true" />
+            <Pin Id="SZpBj3GObfFOsntY6xU6rR" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="LmTi8GTx1vmONluON2gyuT" Name="Status" Kind="OutputPin" />
+            <Pin Id="HTbhjMst4JlL2WNTZKTui4" Name="Version" Kind="OutputPin" />
+            <Pin Id="Gu8Iz6XyMsMO64lFO7ypct" Name="isListening" Kind="OutputPin" />
+            <Pin Id="SzMn8eVF57sMyuyN052xtk" Name="DumpOSC" Kind="InputPin" IsHidden="true" />
+            <Pin Id="VvQWyYPikN0PL8qA9ehjGX" Name="Apply DumpOSC" Kind="InputPin" IsHidden="true" />
             <Pin Id="VpZzGustaeLOp4IFsENwRW" Name="SC Custom Folder Path" Kind="InputPin" IsHidden="true" />
             <Pin Id="C0szEkTYVnUP1ZPuofBs6q" Name="Reload" Kind="InputPin" IsHidden="true" />
             <Pin Id="E5O0SI32F5fLUhI0U7DTE3" Name="Protocol" Kind="InputPin" IsHidden="true" />
@@ -214,16 +223,7 @@
             <Pin Id="B8eCfELMU7iPh4YLZxHYme" Name="Verbosity" Kind="InputPin" IsHidden="true" />
             <Pin Id="ASTmP9kXhdZLOIS3FbGHOt" Name="Request Status" Kind="InputPin" />
             <Pin Id="AKhZz1GiMhlPglkJldPeaa" Name="Synths" Kind="InputPin" />
-            <Pin Id="VLmuUoLldmUPuentCO8nJi" Name="Boot" Kind="InputPin" />
-            <Pin Id="G8b5yeKjJy9Nf6pbQ92ejz" Name="Quit" Kind="InputPin" />
-            <Pin Id="DqPeY5IJti4OpZmlSfdxOb" Name="Kill" Kind="InputPin" IsHidden="true" />
-            <Pin Id="SZpBj3GObfFOsntY6xU6rR" Name="Output" Kind="StateOutputPin" />
-            <Pin Id="LmTi8GTx1vmONluON2gyuT" Name="Status" Kind="OutputPin" />
-            <Pin Id="HTbhjMst4JlL2WNTZKTui4" Name="Version" Kind="OutputPin" />
             <Pin Id="TwSBhCjVqntPGbt1s5ifWV" Name="isRunning" Kind="OutputPin" />
-            <Pin Id="Gu8Iz6XyMsMO64lFO7ypct" Name="isListening" Kind="OutputPin" />
-            <Pin Id="SzMn8eVF57sMyuyN052xtk" Name="DumpOSC" Kind="InputPin" IsHidden="true" />
-            <Pin Id="VvQWyYPikN0PL8qA9ehjGX" Name="Apply DumpOSC" Kind="InputPin" IsHidden="true" />
           </Node>
           <Pad Id="QgnPGpzAr77Pi637VjyO3V" SlotId="IHVFsOWSe2tMPPuwmGOZv0" Bounds="269,458" />
           <Pad Id="EdsGhhNKPemP6bk54ksvR5" SlotId="IHVFsOWSe2tMPPuwmGOZv0" Bounds="777,414" />
@@ -244,7 +244,7 @@
             </p:ValueBoxSettings>
           </Pad>
           <Pad Id="RCAaj73iddSOz259XvofYM" Comment="Status" Bounds="312,534,170,140" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="VcWgstNa6hGLKZbU8AXw8d" Comment="Run" Bounds="859,157,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+          <Pad Id="VcWgstNa6hGLKZbU8AXw8d" Comment="Run" Bounds="859,157,35,35" ShowValueBox="true" isIOBox="true" Value="True">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
@@ -293,7 +293,7 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="JDaKQBJgSCZLh82jfsxKZ1" Comment="Play" Bounds="1491,336,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+          <Pad Id="JDaKQBJgSCZLh82jfsxKZ1" Comment="Play" Bounds="1491,336,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
@@ -360,21 +360,6 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="Am5ifccPh2vNlXv3cZyzp1" Comment="SynthDefFilePaths" Bounds="798,671,497,49" ShowValueBox="true" isIOBox="true" />
-          <Node Bounds="1040,436,105,19" Id="TjuPsAilR8LPopZvB6zP60">
-            <p:NodeReference LastCategoryFullName="SYNTHDEFS" LastDependency="VL.SCSynth-Factory (D:\Projects\VL_Repos\VL.SCSynth\help\Synth Definitions)">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <CategoryReference Kind="Category" Name="SYNTHDEFS" />
-              <Choice Kind="ProcessNode" Name="vartest" />
-            </p:NodeReference>
-            <Pin Id="PVeFWUwnh3iL0nRbRKvpzy" Name="out" Kind="InputPin" />
-            <Pin Id="OqHB8gM7TGaNozc0EINzB5" Name="freq" Kind="InputPin" />
-            <Pin Id="VSXTk7brZFwMzf3XKzhXfg" Name="amp" Kind="InputPin" />
-            <Pin Id="M87rWaLl1NCMSk1f5J2zQR" Name="a" Kind="InputPin" />
-            <Pin Id="QhPqQCNZPyjNu3IUGVNtJ7" Name="r" Kind="InputPin" />
-            <Pin Id="NfemIq5zKFtMxx7luTEVQa" Name="Play" Kind="InputPin" />
-            <Pin Id="Rn38BDcEQvjLsyX5Wgfkcm" Name="Synth" Kind="OutputPin" />
-          </Node>
         </Canvas>
         <Patch Id="U5TjPXEqR4jQcdPyARGw7X" Name="Create" />
         <Patch Id="E1grQlKf8ssMatSpnHgFOH" Name="Update" />
@@ -417,8 +402,7 @@
         <Link Id="JU40sTijFrlPTcgReVIn7X" Ids="D761aLvCsx9N8ct50oQBGW,D6qFjNEshRqMx9sZbh8u6K" />
         <Link Id="PJcNGNeF4JgLHo6L0xU2cR" Ids="AJgo5Z57ks9MCELEmsBGeO,RAnEr2RzjyoMNyjnTdU35L" />
         <Link Id="PWSnBh5If1GLd444fnE85s" Ids="VVSB0xrTLXUNrJ5wUHnMBY,A6GMIb3zeeYMHiZywABwno" />
-        <Link Id="AfqFzI49eUaOae4Jive2L2" Ids="BZNvWajNa7SMu9keGKI4Qw,Am5ifccPh2vNlXv3cZyzp1" />
-        <Link Id="Id2g5MK6jZePjkN0nSvimh" Ids="Rn38BDcEQvjLsyX5Wgfkcm,VRdZSqbYX2iQQ7Ok8GMe4R" />
+        <Link Id="FJTQrZUCwkDNwDIPNvETY6" Ids="Sp4ySIc0pxrPDBvQcchkaO,VRdZSqbYX2iQQ7Ok8GMe4R" />
       </Patch>
     </Node>
   </Patch>
