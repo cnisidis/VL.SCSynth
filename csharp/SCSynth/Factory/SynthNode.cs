@@ -85,7 +85,7 @@ namespace SCSynth.Factory
 
         public void Dispose()
         {
-            Console.WriteLine("Dsiposed");
+            Console.WriteLine("Disposed {0:G}", synth.scId);
         }
 
 

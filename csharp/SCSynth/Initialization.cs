@@ -47,7 +47,8 @@ namespace SCSynth
                     Console.WriteLine("SynthDefs Directory: {0}", synthDefsSubdir);
                     // Additionaly watch out for new/deleted/renamed files
                     invalidated = invalidated.Merge(
-                    NodeBuilding.WatchDir(synthDefsDir).Where(e => e.ChangeType == WatcherChangeTypes.All));
+                    NodeBuilding.WatchDir(synthDefsDir).Where(e => e.ChangeType == WatcherChangeTypes.Changed || e.ChangeType == WatcherChangeTypes.Deleted || e.ChangeType == WatcherChangeTypes.Created || e.ChangeType == WatcherChangeTypes.Renamed || e.ChangeType == WatcherChangeTypes.All));
+                    //.Where(e => e.ChangeType == WatcherChangeTypes.All));
                     // || string.Equals(e.Name, runwayLocal, StringComparison.OrdinalIgnoreCase)
 
                     // Read files in folder decompile and store the data

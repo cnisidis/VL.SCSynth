@@ -11,14 +11,21 @@ namespace SCSynth
         public Guid Id { get; set; }
 
         public Spread<ISCNode> Inputs{get; set;}
+
+        public Boolean isChanged { get; set; }
         public SCGroup()
         {
             this.Id = Guid.NewGuid();
+            this.isChanged = false;
         }
 
         public List<ISCNode> GetInputs()
         {
             return Inputs.ToList();
+        }
+        public void ToString(out string Result)
+        {
+            Result = "Id:" + scId.ToString();
         }
     }
 }

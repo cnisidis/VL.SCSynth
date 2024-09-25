@@ -8,11 +8,13 @@ namespace SCSynth
         
         public string SynthDefName { get; set; }    
         public int scId { get; set; }
+
+        public Guid Id { get; set; }
         public string synthDefFilePath { get; set; }
 
         public bool isPlaying { get; set; }
 
-        public Guid Id { get; set; }
+        
 
         //Add synth parameters Enumerable* TODO 
         public Dictionary<string, Parameter> Parameters { get; set; }
@@ -57,7 +59,10 @@ namespace SCSynth
         {
             return new List<ISCNode>();
         }
+        public void ToString(out string Result)
+        {
+            Result = "Id:" + scId.ToString();
+        }
 
-        
     }
 }

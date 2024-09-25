@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="MSOWo9dzMKZOZMxx1L8BdT" LanguageVersion="2024.6.7-0008-g938f6989ff" Version="0.128">
-  <NugetDependency Id="H6XJQTsJEbTOMtBkLW5VPX" Location="VL.CoreLib" Version="2024.6.7-0008-g938f6989ff" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="MSOWo9dzMKZOZMxx1L8BdT" LanguageVersion="2024.6.7-0136-ga34ff89f71" Version="0.128">
+  <NugetDependency Id="H6XJQTsJEbTOMtBkLW5VPX" Location="VL.CoreLib" Version="2024.6.7-0136-ga34ff89f71" />
   <Patch Id="K0wA2NgabDOPc7d75IOWWa">
     <Canvas Id="Pd3pjC9ek1BOh3CbIx9HCw" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -55,7 +55,7 @@
               <Choice Kind="TypeFlag" Name="Path" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="UhSz1e3srbAPXPIdFpD6qA" Comment="SynthDef Name" Bounds="603,201,73,15" ShowValueBox="true" isIOBox="true" Value="test">
+          <Pad Id="UhSz1e3srbAPXPIdFpD6qA" Comment="SynthDef Name" Bounds="603,201,73,15" ShowValueBox="true" isIOBox="true" Value="vvvvExample">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -142,12 +142,12 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="Etb3S4kkmvtQWPXyeCA5lf" Comment="" Bounds="712,187,41,15" ShowValueBox="true" isIOBox="true" Value="439.88">
+          <Pad Id="Etb3S4kkmvtQWPXyeCA5lf" Comment="" Bounds="712,187,41,15" ShowValueBox="true" isIOBox="true" Value="396.32">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="R1W1N29XHIlO5Hg9kWn7zZ" Comment="" Bounds="750,271,35,15" ShowValueBox="true" isIOBox="true" Value="0.45">
+          <Pad Id="R1W1N29XHIlO5Hg9kWn7zZ" Comment="" Bounds="750,271,35,15" ShowValueBox="true" isIOBox="true" Value="0.05">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
@@ -187,7 +187,7 @@
             <Pin Id="DeZoVo3MVO4LFmvHP2nbjb" Name="Sc Id" Kind="OutputPin" />
           </Node>
           <Pad Id="UXT7wZ0oe3fLfijhJF9Cki" Comment="Sc Id" Bounds="716,491,35,15" ShowValueBox="true" isIOBox="true" />
-          <Node Bounds="650,479,44,19" Id="UDMxTP9huWXLUT6pqdxkXf">
+          <Node Bounds="576,388,44,19" Id="UDMxTP9huWXLUT6pqdxkXf">
             <p:NodeReference LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Group" />

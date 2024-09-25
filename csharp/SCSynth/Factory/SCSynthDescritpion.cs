@@ -76,7 +76,7 @@ namespace SCSynth.Factory
                 }
 
                 // Adds the trigger pin
-                inputs.Add(new PinDescription("Reset All", typeof(bool), false, "Reset All Parameters to their default values"));
+                //inputs.Add(new PinDescription("Reset All", typeof(bool), false, "Reset All Parameters to their default values"));
                 inputs.Add(new PinDescription("Play", typeof(bool), false, "Play the Synth"));
                 //inputs.Add(new PinDescription("ResetAll", typeof(bool), false, "Reset All Parameters to their intial values"));
 
@@ -131,7 +131,7 @@ namespace SCSynth.Factory
             get
             {
                 if (FError)
-                    yield return new Message(MessageType.Warning, "Grrrr");
+                    yield return new Message(MessageType.Warning, "");
                 else
                     yield break;
             }
