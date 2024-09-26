@@ -73,7 +73,7 @@ namespace SCSynth.Factory
                 {
                     this.synth.Parameters[input.OriginalName].Value = (float)input.Value;
                 }
-                if(input.Type == typeof(bool) && input.OriginalName == "Play")
+                if(input.Type == typeof(bool) && input.OriginalName == "Enable")
                 {
                     this.synth.isPlaying = (bool)input.Value;
 
