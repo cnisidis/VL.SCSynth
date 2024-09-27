@@ -13,14 +13,9 @@ namespace SCSynth.Factory
                 return string.Empty;
             }
 
-            var parts = s.Split('_');
-            var result = "";
-            foreach (var part in parts)
-            {
-                char[] a = part.ToCharArray();
-                a[0] = char.ToUpper(a[0]);
-                result += new string(a) + " ";
-            }
+            
+            var result = s;
+            result = result[0].ToString().ToUpper() + result.Substring(1);            
             return result.Trim();
         }
         public string Name { get; }
@@ -35,7 +30,7 @@ namespace SCSynth.Factory
         public PinDescription(string name, Type type, object defaultValue, string description)
         {
             this.OriginalName = name;
-            this.Name = name; //BeautifyPin(name);
+            this.Name = BeautifyPin(name);
             this.Type = type;
             this.DefaultValue = defaultValue;
             this.Summary = description;
