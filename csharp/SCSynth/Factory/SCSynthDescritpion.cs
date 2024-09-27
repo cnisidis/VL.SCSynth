@@ -99,7 +99,8 @@ namespace SCSynth.Factory
             string unit = "None";
             string[] featureNames = { };
 
-            desc = parameter.Name + "\n" + parameter.Value.ToString();
+            //desc = parameter.Name + "\n" + parameter.Value.ToString();
+            desc = "Initial Value: " + parameter.Value.ToString();
             type = typeof(float);
             dflt = parameter.Value;
 
