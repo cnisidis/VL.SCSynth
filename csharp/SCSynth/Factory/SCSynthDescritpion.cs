@@ -77,7 +77,7 @@ namespace SCSynth.Factory
 
                 // Adds the trigger pin
                 //inputs.Add(new PinDescription("Reset All", typeof(bool), false, "Reset All Parameters to their default values"));
-                inputs.Add(new PinDescription("Enable", typeof(bool), false, "Enable the Synth"));
+                inputs.Add(new PinDescription("Enable", typeof(bool), true, "Enable the Synth"));
                 //inputs.Add(new PinDescription("ResetAll", typeof(bool), false, "Reset All Parameters to their intial values"));
 
                 // For now let's just get the raw JSON response from Directus. Create a single string output pin
