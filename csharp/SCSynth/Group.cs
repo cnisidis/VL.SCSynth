@@ -3,7 +3,7 @@ using VL.Lib.Collections;
 
 namespace SCSynth
 {
-    public class SCGroup : ISCNode
+    public class Group : ISCNode
     {
         public int scId { get; set; }
         public AddActions AddAction { get; set; }
@@ -13,7 +13,7 @@ namespace SCSynth
         public Spread<ISCNode> Inputs{get; set;}
 
         public Boolean isChanged { get; set; }
-        public SCGroup()
+        public Group()
         {
             this.Id = Guid.NewGuid();
             this.isChanged = false;

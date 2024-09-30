@@ -6,7 +6,7 @@ using VL.Core.Diagnostics;
 
 namespace SCSynth.Factory
 {
-    internal class SCSynthDescritpion: IVLNodeDescription, IInfo
+    internal class SynthDescritpion: IVLNodeDescription, IInfo
     {
         // Fields
         bool FInitialized;
@@ -16,7 +16,7 @@ namespace SCSynth.Factory
         string? FSummary;
         string FCategory;
 
-        public SCSynth synth { get; set; }
+        public Synth synth { get; set; }
         public Guid id { get; set; }
 
         public string synthDefName { get; set; }
@@ -30,7 +30,7 @@ namespace SCSynth.Factory
         
         public Dictionary<string, Parameter> parameters = new Dictionary<string, Parameter>();
 
-        public SCSynthDescritpion(IVLNodeDescriptionFactory factory, string synthdefname, List<Parameter> parameters, string filepath)
+        public SynthDescritpion(IVLNodeDescriptionFactory factory, string synthdefname, List<Parameter> parameters, string filepath)
         {
 
             Factory = factory;
@@ -82,7 +82,7 @@ namespace SCSynth.Factory
 
                 // For now let's just get the raw JSON response from Directus. Create a single string output pin
                 
-                outputs.Add(new PinDescription("Synth", typeof(SCSynth), null , "Synth"));
+                outputs.Add(new PinDescription("Synth", typeof(Synth), null , "Synth"));
                 
 
                 FInitialized = true;

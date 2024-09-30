@@ -3,7 +3,7 @@ namespace SCSynth
 {
 
     
-    public class SCSynth : ISCNode
+    public class Synth : ISCNode
     {
         
         public string SynthDefName { get; set; }    
@@ -23,7 +23,7 @@ namespace SCSynth
 
         
 
-        public SCSynth(string SynthDefName)
+        public Synth(string SynthDefName)
         { 
             this.Parameters = new Dictionary<string, Parameter>();  
             this.SynthDefName = SynthDefName;
@@ -32,7 +32,7 @@ namespace SCSynth
             
         }
 
-        public SCSynth(string SynthDefName, Dictionary<string, Parameter> parameters)
+        public Synth(string SynthDefName, Dictionary<string, Parameter> parameters)
         {
             this.Parameters = parameters;
             this.SynthDefName = SynthDefName;

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="Q0QEHknMHL4NR1ofNzXWsA" LanguageVersion="2024.6.7-0175-gcdd82db431" Version="0.128">
-  <NugetDependency Id="GGxN2yiBdITM6CRoBZGJMF" Location="VL.CoreLib" Version="2024.6.7-0175-gcdd82db431" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="Q0QEHknMHL4NR1ofNzXWsA" LanguageVersion="2024.6.6" Version="0.128">
+  <NugetDependency Id="GGxN2yiBdITM6CRoBZGJMF" Location="VL.CoreLib" Version="2024.6.6" />
   <Patch Id="ScdLqbdqfboMngJ8j4NrX1">
     <Canvas Id="DwrWsGYDR3JQNlSZ1mQF0Y" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
@@ -18,7 +18,7 @@
           <Node Bounds="404,601,165,19" Id="KMepfthU4usPXsHcfaHcE9">
             <p:NodeReference LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="SCServer (Executor)" />
+              <Choice Kind="ProcessAppFlag" Name="SCSynth" />
             </p:NodeReference>
             <Pin Id="Fr2dQcenhltOZm2XFDj9S3" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="MexDpOxQiuLLK4HwwoA5FT" Name="Root" Kind="InputPin" />
@@ -35,8 +35,9 @@
             <Pin Id="C0szEkTYVnUP1ZPuofBs6q" Name="Reload" Kind="InputPin" IsHidden="true" />
             <Pin Id="E5O0SI32F5fLUhI0U7DTE3" Name="Protocol" Kind="InputPin" IsHidden="true" />
             <Pin Id="STr7ONko8ICNj3Xt00Paik" Name="Address" Kind="InputPin" IsHidden="true" />
-            <Pin Id="ApmDNGA1YW3Os4J0clpCiS" Name="Port" Kind="InputPin" IsHidden="true" />
             <Pin Id="B8eCfELMU7iPh4YLZxHYme" Name="Verbosity" Kind="InputPin" IsHidden="true" />
+            <Pin Id="ApmDNGA1YW3Os4J0clpCiS" Name="Port" Kind="InputPin" IsHidden="true" />
+            <Pin Id="FlrBm9OvelZP3YZRkeq60a" Name="Max Logins" Kind="InputPin" IsHidden="true" />
             <Pin Id="ASTmP9kXhdZLOIS3FbGHOt" Name="Request Status" Kind="InputPin" />
             <Pin Id="TwSBhCjVqntPGbt1s5ifWV" Name="isRunning" Kind="OutputPin" />
           </Node>
@@ -353,11 +354,9 @@
         <Link Id="EkbeKCBMQ6OPYbf1FX8lJG" Ids="L2IaV0C3LUeLglXyYCQxex,ASTmP9kXhdZLOIS3FbGHOt" />
         <Link Id="M3iUTQW0bJnNLo2ft4jWOx" Ids="LmTi8GTx1vmONluON2gyuT,RCAaj73iddSOz259XvofYM" />
         <Link Id="ALZEpZhQJBzOI9WIMS8rdx" Ids="J8B2usYJqafMfl65XO2pXi,G8b5yeKjJy9Nf6pbQ92ejz" />
-        <Link Id="GeZ5dT0OwmhLAAuQ1pSd2R" Ids="DZWNSGaQgODMiqVbT2ENe4,MexDpOxQiuLLK4HwwoA5FT" />
         <Link Id="CbtNKk3todeLQR8JycmQVE" Ids="GfVWtaVua1vMERLvY6jfgB,LAErbG04tnbOjb0D7V8PIz" />
         <Link Id="C1H628AhxbIMdddYkw8HTX" Ids="TwSBhCjVqntPGbt1s5ifWV,FcUNHjpDvROOB8VRFpisg3" />
         <Link Id="Sw5lb4gL6SiPTdSlh61ZGc" Ids="Gu8Iz6XyMsMO64lFO7ypct,CMcTWgHfg68L4JIb5EDmit" />
-        <Link Id="RV8GrmV55okNZT2koikfIT" Ids="UGk5RU2NO5OPSPOHpa0miz,JysDiofz1x9L0p4eNYRBgi" />
         <Link Id="PfbAJSLg9XNNKCkzHiXGrw" Ids="BcVE6GR5zrCQCHWDGpRJWD,NajE2TC4qyFPVJYLG1TLRK" />
         <Link Id="VL8ugkdSwsmPtoADYbUi2J" Ids="Phol1Qqm1d7NuE8WLsZa0l,P6heEs1d43vPhmmkalfXUS" />
         <Link Id="Aqjphl4Dp6SOJertJLAFb5" Ids="TQwKns18YuNMOyxpvgn2Al,VKSkObqUfLHMAAZhGLFdw1" />
@@ -382,14 +381,16 @@
         <Link Id="GYpRIGrHweJPjGGgmweoWw" Ids="B5KRT3OakRuK9ohVt3ldHn,M3E5ywwN2cKOBpihlP1MzV" />
         <Link Id="IeSOfBXxGK7NE3981PwsP9" Ids="J5wVAgpakvRPwu6ZIeZlb5,QZ4gjffl9K8PktevQqinrs" />
         <Link Id="A87v4po8d9QLIFMLHXzEOH" Ids="AmR0hi176YaQG8VmMREAGq,T8vpSwVNPZaM2pXG1KLJcV" />
+        <Link Id="DV4xmhpArAzNBmhnZVPazu" Ids="DZWNSGaQgODMiqVbT2ENe4,MexDpOxQiuLLK4HwwoA5FT" />
+        <Link Id="F294EMrpQx8NiLY8YVnj0N" Ids="UGk5RU2NO5OPSPOHpa0miz,JysDiofz1x9L0p4eNYRBgi" />
       </Patch>
     </Node>
   </Patch>
   <NugetDependency Id="M05V1aGya35OsB00L3HK0r" Location="VL.SCSynth" Version="0.0.0" />
   <NugetDependency Id="TvClxgcNmvvNqbWRFrUKkm" Location="VL.Orpheus" Version="0.0.0" />
-  <NugetDependency Id="MdoP9uCMqYIPpNzkrvpXst" Location="VL.Skia" Version="2024.6.7-0175-gcdd82db431" />
-  <NugetDependency Id="QKEzrNi4KdZNrRBNkC8kvQ" Location="VL.Audio.UI" Version="1.8.4" />
-  <NugetDependency Id="KVTtbAWnUriLa2wmkKlnHU" Location="VL.Audio" Version="1.8.4" />
-  <NugetDependency Id="GLm1K3Z9d6EO0wtgZbHbdv" Location="VL.Stride" Version="2024.6.7-0175-gcdd82db431" />
-  <NugetDependency Id="TUX0uQEht9XOtXYKmoFFJu" Location="VL.Stride.TextureFX" Version="2024.6.7-0175-gcdd82db431" />
+  <NugetDependency Id="MdoP9uCMqYIPpNzkrvpXst" Location="VL.Skia" Version="2024.6.6" />
+  <NugetDependency Id="QKEzrNi4KdZNrRBNkC8kvQ" Location="VL.Audio.UI" Version="1.8.2" />
+  <NugetDependency Id="KVTtbAWnUriLa2wmkKlnHU" Location="VL.Audio" Version="1.8.2" />
+  <NugetDependency Id="GLm1K3Z9d6EO0wtgZbHbdv" Location="VL.Stride" Version="2024.6.6" />
+  <NugetDependency Id="TUX0uQEht9XOtXYKmoFFJu" Location="VL.Stride.TextureFX" Version="2024.6.6" />
 </Document>

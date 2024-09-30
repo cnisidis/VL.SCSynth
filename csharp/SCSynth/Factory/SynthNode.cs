@@ -23,12 +23,12 @@ namespace SCSynth.Factory
             
         }
 
-        readonly SCSynthDescritpion description;
+        readonly SynthDescritpion description;
 
 
 
         
-        public SynthNode(SCSynthDescritpion description, NodeContext nodeContext) : base(nodeContext)
+        public SynthNode(SynthDescritpion description, NodeContext nodeContext) : base(nodeContext)
         {
             
             
@@ -44,15 +44,15 @@ namespace SCSynth.Factory
                 SynthParameters.Add(param.Key, synthParam);
             }
 
-            this.synth = new SCSynth(description.synthDefName, SynthParameters);
+            this.synth = new Synth(description.synthDefName, SynthParameters);
             this.synth.synthDefFilePath = description.filepath;
             Inputs = description.Inputs.Select(p => new Pin(p.Name, p.Type) { Value = p.DefaultValue}).ToArray();
-            Outputs = description.Outputs.Select(p => new Pin("Synth", typeof(SCSynth)) { Value = this.synth }).ToArray();
+            Outputs = description.Outputs.Select(p => new Pin("Synth", typeof(Synth)) { Value = this.synth }).ToArray();
             
             
         }
 
-        public SCSynth synth;
+        public Synth synth;
         public IVLNodeDescription NodeDescription => description;
 
         public IVLPin[] Inputs { get; }

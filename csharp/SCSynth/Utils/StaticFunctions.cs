@@ -10,8 +10,8 @@ namespace SCSynth.Utils
             var layer = new RootLayer();
             Stack<ISCNode> stack = new Stack<ISCNode>();
             List<ISCNode> Order = new List<ISCNode>(); // { SCNode }
-            List<SCSynth> Synths = new List<SCSynth>();
-            List<SCGroup>  Groups = new List<SCGroup>();
+            List<Synth> Synths = new List<Synth>();
+            List<Group>  Groups = new List<Group>();
             
             stack.Push(SCNode);
             var index = 0;
@@ -37,19 +37,19 @@ namespace SCSynth.Utils
                     }
                         
                     
-                    if (v.GetType() == typeof(SCSynth))
+                    if (v.GetType() == typeof(Synth))
                     {
                         index += 1;
                         v.scId = index;
-                        Synths.Add((SCSynth)v);
+                        Synths.Add((Synth)v);
                         
                         
                     }
-                    else if (v.GetType() == typeof(SCGroup))
+                    else if (v.GetType() == typeof(Group))
                     {
                         index += 1000;
                         v.scId = index;
-                        Groups.Add((SCGroup)v);
+                        Groups.Add((Group)v);
                         
 
                     }
