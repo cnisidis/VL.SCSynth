@@ -343,6 +343,7 @@
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
           </Pad>
+          <Pad Id="CxUVR8p6A27NvSmy6jCBrh" Comment="Synth" Bounds="756,400,162,182" ShowValueBox="true" isIOBox="true" />
         </Canvas>
         <Patch Id="U5TjPXEqR4jQcdPyARGw7X" Name="Create" />
         <Patch Id="E1grQlKf8ssMatSpnHgFOH" Name="Update" />
@@ -383,6 +384,7 @@
         <Link Id="A87v4po8d9QLIFMLHXzEOH" Ids="AmR0hi176YaQG8VmMREAGq,T8vpSwVNPZaM2pXG1KLJcV" />
         <Link Id="DV4xmhpArAzNBmhnZVPazu" Ids="DZWNSGaQgODMiqVbT2ENe4,MexDpOxQiuLLK4HwwoA5FT" />
         <Link Id="F294EMrpQx8NiLY8YVnj0N" Ids="UGk5RU2NO5OPSPOHpa0miz,JysDiofz1x9L0p4eNYRBgi" />
+        <Link Id="PAqHe2fSrg5L7CjhYFqa1F" Ids="UGk5RU2NO5OPSPOHpa0miz,CxUVR8p6A27NvSmy6jCBrh" />
       </Patch>
     </Node>
   </Patch>
