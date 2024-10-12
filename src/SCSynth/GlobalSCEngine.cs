@@ -4,38 +4,45 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VL.Lib.Basics.Resources;
 
 namespace SCSynth
 {
-    public class GlobalSCEngine
+    public class GlobalSCEngine : IDisposable
     {
         /// <summary>
         /// Synthdef (synthdefname, synthdefpath)
         /// </summary>
-        public Dictionary<String, String> SynthDefs { get; set; }
+        public static Dictionary<String, SynthDefEntry> SynthDefEntries = new Dictionary<String, SynthDefEntry>();  
         /// <summary>
         /// server scsynth filepath (ex. C:/ProgramFiles/Supercollider/scsynth.exe)
         /// </summary>
-        public string SCSynthFilePath { get; set; }
+        public static string SCSynthFilePath { get; set; }
 
 
         /// <summary>
         /// Nodegaph to be defined / one per session
         /// </summary>
-        public object NodeGraph { get; set; }
+        public static object NodeGraph { get; set; }
         /// <summary>
         /// Total Synths in current NodeGraph
         /// </summary>
-        public int SynthsCount { get; set; }
+        public static int SynthsCount { get; set; }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// Global Engine Constructor
         /// </summary>
-        public GlobalSCEngine()
-        {
-            SynthDefs = new Dictionary<String, String>();   
-        }
 
-        
+
+
+
+
+
 
     }
 }

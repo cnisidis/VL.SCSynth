@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="NylyTwVnXQxN9gZKSL6zeF" LanguageVersion="2024.6.6" Version="0.128">
-  <NugetDependency Id="CHl4kjm5afgQNbqskX3upM" Location="VL.CoreLib" Version="2024.6.6" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="NylyTwVnXQxN9gZKSL6zeF" LanguageVersion="2024.6.7-0178-g62ce298253" Version="0.128">
+  <NugetDependency Id="CHl4kjm5afgQNbqskX3upM" Location="VL.CoreLib" Version="2024.6.7-0178-g62ce298253" />
   <Patch Id="OkNZwt5yj5SLI5Z6rCbDue">
     <Canvas Id="AwyIswtQM0uMA77uZO68bz" DefaultCategory="VL.SCSynth" CanvasType="FullCategory">
       <!--
@@ -10929,6 +10929,7 @@
                     <Pin Id="C6uPrHTAdFQMtbhbdzF8Ow" Name="Changed" Kind="OutputPin" />
                     <Pin Id="ByLTOnDBnq1OqLjbRDFYvW" Name="Created" Kind="OutputPin" />
                     <Pin Id="JfhroqUgBsbMV6gIQO9fw5" Name="Deleted" Kind="OutputPin" />
+                    <Pin Id="Rj5yAVuwB7zMqLDQG2TjGQ" Name="Renamed" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="1042,716,65,19" Id="JWzJ3C2aNjNLlmKooodEmm">
                     <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
@@ -13195,7 +13196,7 @@
             <Patch Id="Lj5Zq6Qf9fLL3Ac3PdwzNj" ManuallySortedPins="true">
               <Patch Id="PTH35lNnQeJOy9KMZ75kUr" Name="Create" ManuallySortedPins="true" />
               <Patch Id="OwIGvAttHERMAxwYdrtLk0" Name="Then" ManuallySortedPins="true" />
-              <Node Bounds="675,729,46,26" AutoConnect="true" Id="CZB2hiwGDWTOwUJqL3qGb1">
+              <Node Bounds="675,729,46,19" AutoConnect="true" Id="CZB2hiwGDWTOwUJqL3qGb1">
                 <p:NodeReference LastCategoryFullName="VL.SCSynth.ISCNode" LastDependency="VL.SCSynth.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="MutableInterfaceType" Name="ISCNode" />
@@ -13601,7 +13602,7 @@
             <Patch Id="QMWcB4wh0iGPMeSgsRtK3F" ManuallySortedPins="true">
               <Patch Id="TkCa9L08umcPLYVcamOEdV" Name="Create" ManuallySortedPins="true" />
               <Patch Id="IIu27LI6eLOOGPKxLm2suZ" Name="Then" ManuallySortedPins="true" />
-              <Node Bounds="901,732,46,26" Id="GK5Iv66Vt6XPdjK8y4IWH8">
+              <Node Bounds="901,732,46,19" Id="GK5Iv66Vt6XPdjK8y4IWH8">
                 <p:NodeReference LastCategoryFullName="VL.SCSynth.ISCNode" LastDependency="VL.SCSynth.csproj">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="AssemblyCategory" Name="ISCNode" NeedsToBeDirectParent="true" />
@@ -16529,8 +16530,8 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="MCfiGmWIYphLgHCTCD3l8z" Location="VL.IO.OSC" IsForward="true" Version="1.1.3" />
+  <NugetDependency Id="MCfiGmWIYphLgHCTCD3l8z" Location="VL.IO.OSC" IsForward="true" Version="1.1.4" />
   <NugetDependency Id="VGLp0iLZSDfPyksikp21Iw" Location="VL.SCSynth" Version="0.0.0" />
   <NodeFactoryDependency Id="FMw69YeEa1PMN8391xkz9D" Location="VL.SCSynth-Factory" IsForward="true" />
-  <ProjectDependency Id="I7iXcY1kKvIN94mk6NJwpG" Location="./csharp/SCSynth/SCSynth.csproj" />
+  <ProjectDependency Id="AbKJs6ACvicQFwqIgafZZ6" Location="./src/SCSynth/SCSynth.csproj" />
 </Document>

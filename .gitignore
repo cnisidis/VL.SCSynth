@@ -1,4 +1,4 @@
-csharp/SCSynth/bin/
-csharp/SCSynth/obj/
-csharp/SCSynth/.vs/
+src/SCSynth/bin/
+src/SCSynth/obj/
+src/SCSynth/.vs/
 /texts

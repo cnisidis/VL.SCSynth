@@ -15,18 +15,18 @@ namespace SCSynth
     {
 
         const string synthDefsSubdir = "synthdefs";
-
-        //private IResourceProvider<GlobalSCEngine>? _engineProvider;
+        
+        public IResourceProvider<GlobalSCEngine>? _engineProvider;
         public override void Configure(AppHost appHost)
         {
             // Register the engine provider so patches can access it
-            /*
+            
             if (_engineProvider is null)
             {
                 _engineProvider = ResourceProvider.NewPooledSystemWide("VL.SCSynth", _ => new GlobalSCEngine());
             }
             appHost.Services.RegisterService(_engineProvider);
-            */
+            
 
             appHost.RegisterNodeFactory("VL.SCSynth-Factory", (directory, nodeFactory) =>
             {
@@ -35,6 +35,8 @@ namespace SCSynth
 
                 var builder = ImmutableArray.CreateBuilder<IVLNodeDescription>();
                 var synthDefsDir = Path.Combine(directory, synthDefsSubdir);
+
+                
 
                 Console.WriteLine("Factory initialized");
 
@@ -66,6 +68,9 @@ namespace SCSynth
                             {
                                 Console.WriteLine(synthDef.Key);
                                 builder.Add(new SynthDescritpion(nodeFactory, synthDef.Key, synthDef.Value, compiledSynthDef));
+                                /*
+                                   _engineProvider.Using<GlobalSCEngine>(). SynthDefEntries.TryAdd(synthDef.Key, new SynthDefEntry(synthDef.Key));
+                                */
                                 Console.WriteLine("Synthdef: {0} was added", synthDef.Key);
                             }
                             // builder.Add(new ModelDescription(nodeFactory, infos[0], infos[1], infos[2])); 
