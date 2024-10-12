@@ -56,7 +56,9 @@ namespace SCSynth
                     // Read files in folder decompile and store the data
                     //var ext = new List<string> { "scsyndef" };
                     //var compiledSynthDefs = Directory.EnumerateFiles(synthDefsDir, "*.*", SearchOption.TopDirectoryOnly).Where(s => ext.Contains(Path.GetExtension(s).TrimStart('.').ToLowerInvariant()));
-                    string[] compiledSynthDefs = Directory.GetFiles(synthDefsDir, "*.scsyndef");
+
+                    //Includes also subfolders
+                    string[] compiledSynthDefs = Directory.GetFiles(synthDefsDir, "*.scsyndef", SearchOption.AllDirectories);
                     if (compiledSynthDefs.Length != 0)
                     {
                         Console.WriteLine("Decompile available synthdefs");
