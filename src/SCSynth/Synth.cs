@@ -55,13 +55,23 @@ namespace SCSynth
             isPlaying = true;
         }
 
-        public List<ISCNode> GetInputs()
+        public IEnumerable<ISCNode> GetInputs()
         {
-            return new List<ISCNode>();
+            return null;
         }
         public void ToString(out string Result)
         {
             Result = "Id:" + scId.ToString();
+        }
+
+        public void SetSCId(int index)
+        {
+            this.scId = index;
+        }
+
+        public int GetSCId()
+        {
+            return this.scId;
         }
 
     }

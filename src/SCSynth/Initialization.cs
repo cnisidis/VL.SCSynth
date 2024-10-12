@@ -16,17 +16,17 @@ namespace SCSynth
 
         const string synthDefsSubdir = "synthdefs";
         
-        public IResourceProvider<GlobalSCEngine>? _engineProvider;
+        //public IResourceProvider<GlobalSCEngine>? _engineProvider;
         public override void Configure(AppHost appHost)
         {
             // Register the engine provider so patches can access it
-            
+            /*
             if (_engineProvider is null)
             {
                 _engineProvider = ResourceProvider.NewPooledSystemWide("VL.SCSynth", _ => new GlobalSCEngine());
             }
             appHost.Services.RegisterService(_engineProvider);
-            
+            */
 
             appHost.RegisterNodeFactory("VL.SCSynth-Factory", (directory, nodeFactory) =>
             {

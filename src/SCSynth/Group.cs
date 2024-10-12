@@ -1,11 +1,12 @@
 ﻿
+using System.CodeDom;
 using VL.Lib.Collections;
 
 namespace SCSynth
 {
     public class Group : ISCNode
     {
-        public int scId { get; set; }
+        private int scId;
         public AddActions AddAction { get; set; }
 
         public Guid Id { get; set; }
@@ -19,13 +20,47 @@ namespace SCSynth
             this.isChanged = false;
         }
 
-        public List<ISCNode> GetInputs()
+
+        public void SetSCId(int index)
         {
-            return Inputs.ToList();
+            this.scId = index;  
+        }
+
+        public int GetSCId()
+        {
+            return this.scId;
+        }
+
+        public IEnumerable<ISCNode> GetInputs()
+        {
+            return Inputs.ToSpread();
         }
         public void ToString(out string Result)
         {
             Result = "Id:" + scId.ToString();
+        }
+
+        public void AssignIDs()
+        {
+            if(this.Inputs != null) 
+            {
+                var index = this.GetSCId() + 1;
+                foreach (var input in this.Inputs)
+                {
+                    if(input.GetType() == typeof(Synth))
+                    {
+                        index += 1;
+                    }
+
+                    else if(input.GetType() == typeof(Group))
+                    {
+                        index += 1000;
+                    }
+                    
+                    input.SetSCId(index);
+                    
+                }
+            }
         }
     }
 }

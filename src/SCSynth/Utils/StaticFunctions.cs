@@ -7,7 +7,7 @@ namespace SCSynth.Utils
     {
         public static Spread<ISCNode> DFS(ISCNode SCNode)
         {
-            var layer = new RootLayer();
+            var layer = new RootNode();
             Stack<ISCNode> stack = new Stack<ISCNode>();
             List<ISCNode> Order = new List<ISCNode>(); // { SCNode }
             List<Synth> Synths = new List<Synth>();
@@ -25,7 +25,7 @@ namespace SCSynth.Utils
                     
                     var nei = (ISCNode)v;//.GetNeighbours();
                         
-                    if (nei.GetInputs() != null || nei.GetInputs().Count != 0) 
+                    if (nei.GetInputs() != null || nei.GetInputs().Count() != 0) 
                     {
                         foreach (ISCNode ne in nei.GetInputs())
                         {
@@ -40,7 +40,7 @@ namespace SCSynth.Utils
                     if (v.GetType() == typeof(Synth))
                     {
                         index += 1;
-                        v.scId = index;
+                        v.SetSCId(index);
                         Synths.Add((Synth)v);
                         
                         
@@ -48,7 +48,7 @@ namespace SCSynth.Utils
                     else if (v.GetType() == typeof(Group))
                     {
                         index += 1000;
-                        v.scId = index;
+                        v.SetSCId(index);
                         Groups.Add((Group)v);
                         
 
