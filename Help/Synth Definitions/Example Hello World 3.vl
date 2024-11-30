@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="Q0QEHknMHL4NR1ofNzXWsA" LanguageVersion="2024.6.7-0178-g62ce298253" Version="0.128">
-  <NugetDependency Id="GGxN2yiBdITM6CRoBZGJMF" Location="VL.CoreLib" Version="2024.6.7-0178-g62ce298253" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="GCiYwYsbqfuQFIDK3vgXvg" LanguageVersion="2024.6.7-0254-g03f33351e2" Version="0.128">
+  <NugetDependency Id="GGxN2yiBdITM6CRoBZGJMF" Location="VL.CoreLib" Version="2024.6.7-0254-g03f33351e2" />
   <Patch Id="ScdLqbdqfboMngJ8j4NrX1">
     <Canvas Id="DwrWsGYDR3JQNlSZ1mQF0Y" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
@@ -122,6 +122,7 @@
             <Pin Id="BpXqLeqVQdIPx9SC2uXUtY" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="NZxz7ZNb1R3MmlMN8KusrG" Name="Dialog If Document Changed" Kind="InputPin" IsHidden="true" />
             <Pin Id="T0CnBzENB6GPKKTNmci46h" Name="Input" Kind="InputPin" />
+            <Pin Id="Ga1UFkOsBc9OqNGCFoDxYW" Name="Title" Kind="InputPin" />
             <Pin Id="O8k7bw16Hq9NN85POlmHnG" Name="Color" Kind="InputPin" />
             <Pin Id="UlmEtciG2PgPtiZQMCAdFf" Name="Clear" Kind="InputPin" />
             <Pin Id="H19z12ZMCU3Ou3cXB2jMqG" Name="Space" Kind="InputPin" />
@@ -389,10 +390,9 @@
     </Node>
   </Patch>
   <NugetDependency Id="M05V1aGya35OsB00L3HK0r" Location="VL.SCSynth" Version="0.0.0" />
-  <NugetDependency Id="TvClxgcNmvvNqbWRFrUKkm" Location="VL.Orpheus" Version="0.0.0" />
-  <NugetDependency Id="MdoP9uCMqYIPpNzkrvpXst" Location="VL.Skia" Version="2024.6.7-0178-g62ce298253" />
-  <NugetDependency Id="QKEzrNi4KdZNrRBNkC8kvQ" Location="VL.Audio.UI" Version="1.8.4" />
-  <NugetDependency Id="KVTtbAWnUriLa2wmkKlnHU" Location="VL.Audio" Version="1.8.4" />
-  <NugetDependency Id="GLm1K3Z9d6EO0wtgZbHbdv" Location="VL.Stride" Version="2024.6.7-0178-g62ce298253" />
-  <NugetDependency Id="TUX0uQEht9XOtXYKmoFFJu" Location="VL.Stride.TextureFX" Version="2024.6.7-0178-g62ce298253" />
+  <NugetDependency Id="MdoP9uCMqYIPpNzkrvpXst" Location="VL.Skia" Version="2024.6.7-0254-g03f33351e2" />
+  <NugetDependency Id="QKEzrNi4KdZNrRBNkC8kvQ" Location="VL.Audio.UI" Version="1.9.2" />
+  <NugetDependency Id="KVTtbAWnUriLa2wmkKlnHU" Location="VL.Audio" Version="1.9.2" />
+  <NugetDependency Id="GLm1K3Z9d6EO0wtgZbHbdv" Location="VL.Stride" Version="2024.6.7-0254-g03f33351e2" />
+  <NugetDependency Id="TUX0uQEht9XOtXYKmoFFJu" Location="VL.Stride.TextureFX" Version="2024.6.7-0254-g03f33351e2" />
 </Document>
