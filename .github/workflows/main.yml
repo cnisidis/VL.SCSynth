@@ -7,17 +7,13 @@ on:
       - main
     paths-ignore:
       - README.md
-      - .github/FUNDING.yml
-      - deploy
-    paths-ignore:
-      - README.md
+
 
 jobs:
   build:
     runs-on: windows-latest
     steps:
     - name: Git Checkout
-      uses: actions/checkout@master
       uses: actions/checkout@main
     
     - name: Setup MSBuild.exe
