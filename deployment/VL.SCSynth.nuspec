@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>VL.SCSynth</id>
+    <version>0.0.1-alpha</version>
+    <title>VL.SCSynth</title>
+    <authors>cnisidis, chk</authors>
+    <projectUrl></projectUrl>
+    <repository type="git" url="https://github.com/cnisidis/VL.SCSynth.git" />
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>SuperCollider Server Library, foundation for vvvv and SC integration</description>
+    <tags>VL, vvvv, SuperCollider</tags>
+    <license type="expression">LGPL-3.0-only</license>
+    <icon>icon\nugeticon.png</icon>
+    <readme>docs\README.md</readme>
+  </metadata>
+  <files>
+    <!-- <file src="..\lib\**\*.dll" target="lib\" exclude="" /> -->
+	  <!-- <file src="..\runtimes\**\*.dll" target="runtimes\" exclude="" /> -->
+    <file src="..\*.vl" target="" exclude="" />
+    <file src="..\help\**" target="help\" exclude="" />
+    <file src="nugeticon.png" target="icon\" />
+    <file src="..\README.md" target="docs\" />
+  </files>
+</package>
