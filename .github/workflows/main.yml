@@ -30,7 +30,6 @@ jobs:
         icon-src: https://raw.githubusercontent.com/vvvv/PublicContent/master/nugeticon.png
         icon-dst: ./deployment/nugeticon.png
         # Provide the nuget key. See: https://thegraybook.vvvv.org/reference/extending/publishing.html#getting-a-nugetorg-api-key
-        nuget-key: ${{ secrets.NUGET_KEY }}
         csproj: csharp\SCSynth\SCSynth.csproj
         nuspec: deployment\VL.SCSynth.nuspec
         nuget-key: ${{ secrets.NUGET_KEY }}
