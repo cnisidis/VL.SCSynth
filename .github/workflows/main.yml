@@ -1,23 +1,36 @@
+<<<<<<< HEAD
 # For more information see:
 # https://thegraybook.vvvv.org/reference/extending/publishing.html
 
+=======
+>>>>>>> 83f3ff5f0a297dbcbcdaec46e73eaae119a0e813
 name: push_nuget
 
 # on push on main
 on:
   push:
     branches:
+<<<<<<< HEAD
       - main
     paths-ignore:
       - README.md
       - .github/FUNDING.yml
+=======
+      - deploy
+    paths-ignore:
+      - README.md
+>>>>>>> 83f3ff5f0a297dbcbcdaec46e73eaae119a0e813
 
 jobs:
   build:
     runs-on: windows-latest
     steps:
     - name: Git Checkout
+<<<<<<< HEAD
       uses: actions/checkout@master
+=======
+      uses: actions/checkout@deploy
+>>>>>>> 83f3ff5f0a297dbcbcdaec46e73eaae119a0e813
     
     - name: Setup MSBuild.exe
       uses: microsoft/setup-msbuild@v2
@@ -28,6 +41,7 @@ jobs:
     - name: Publish VL Nuget
       uses: vvvv/PublishVLNuget@1.0.43
       with:
+<<<<<<< HEAD
         csproj: src\VL.SuperCollider.csproj
         nuspec: deployment\VL.SuperCollider.nuspec
 
@@ -37,3 +51,10 @@ jobs:
         
         # Provide the nuget key. See: https://thegraybook.vvvv.org/reference/extending/publishing.html#getting-a-nugetorg-api-key
         nuget-key: ${{ secrets.NUGET_KEY }}
+=======
+        csproj: csharp\SCSynth\SCSynth.csproj
+        nuspec: deployment\VL.SCSynth.nuspec
+        icon-dst: ./nugeticon.png
+        nuget-key: ${{ secrets.NUGET_KEY }}
+
+>>>>>>> 83f3ff5f0a297dbcbcdaec46e73eaae119a0e813
