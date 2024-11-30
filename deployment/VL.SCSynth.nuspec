@@ -11,7 +11,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>SuperCollider Server Library, foundation for vvvv and SC integration</description>
     <tags>VL, vvvv, SuperCollider</tags>
-    <license type="expression">LGPL-3.0-only</license>
+    <license type="expression">MIT</license>
     <icon>icon\nugeticon.png</icon>
     <readme>docs\README.md</readme>
   </metadata>
