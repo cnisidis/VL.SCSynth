@@ -21,3 +21,11 @@ jobs:
     - name: Setup Nuget.exe
       uses: nuget/setup-nuget@v2.0.0
 
+    - name: Publish VL Nuget
+      uses: vvvv/PublishVLNuget@1.0.43
+      with:
+        csproj: csharp\SCSynth\SCSynth.csproj
+        nuspec: deployment\VL.SCSynth.nuspec
+        icon-dst: ./nugeticon.png
+        nuget-key: ${{ secrets.NUGET_KEY }}
+
