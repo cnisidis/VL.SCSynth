@@ -26,9 +26,6 @@ jobs:
       uses: vvvv/PublishVLNuget@1.0.43
       with:
 
-        csproj: src\VL.SuperCollider.csproj
-        nuspec: deployment\VL.SuperCollider.nuspec
-
         # Fill the Icon file
         icon-src: https://raw.githubusercontent.com/vvvv/PublicContent/master/nugeticon.png
         icon-dst: ./deployment/nugeticon.png
