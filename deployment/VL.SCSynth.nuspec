@@ -6,7 +6,7 @@
     <version>0.0.1-alpha</version>
     <title>VL.SCSynth</title>
     <authors>cnisidis, chk</authors>
-    <projectUrl></projectUrl>
+    <projectUrl>https://github.com/cnisidis/VL.SCSynth.git</projectUrl>
     <repository type="git" url="https://github.com/cnisidis/VL.SCSynth.git" />
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>SuperCollider Server Library, foundation for vvvv and SC integration</description>
