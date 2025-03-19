@@ -22,5 +22,6 @@
     <file src="..\help\**" target="help\" exclude="" />
     <file src="nugeticon.png" target="icon\" />
     <file src="..\README.md" target="docs\" />
+    <file src="..\csharp\SCSynth\SCSynth.csproj" />
   </files>
 </package>
