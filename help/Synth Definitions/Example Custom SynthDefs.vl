@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="Q0QEHknMHL4NR1ofNzXWsA" LanguageVersion="2024.6.6" Version="0.128">
-  <NugetDependency Id="GGxN2yiBdITM6CRoBZGJMF" Location="VL.CoreLib" Version="2024.6.6" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="PTv2ZOZBoTFPcNASGKYDyQ" LanguageVersion="2024.6.7" Version="0.128">
+  <NugetDependency Id="GGxN2yiBdITM6CRoBZGJMF" Location="VL.CoreLib" Version="2024.6.7" />
   <Patch Id="ScdLqbdqfboMngJ8j4NrX1">
     <Canvas Id="DwrWsGYDR3JQNlSZ1mQF0Y" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
@@ -84,7 +84,7 @@
                 <Pin Id="RRXxNVDxNeJQRIBg3mOb9A" Name="Input" Kind="InputPin" />
                 <Pin Id="Jyv9J3baHF5N9cGUeKaIKr" Name="Result" Kind="OutputPin" />
               </Node>
-              <Pad Id="I7CFTLtbm1GP89OssgKVv5" Comment="" Bounds="820,318,35,15" ShowValueBox="true" isIOBox="true" Value="80">
+              <Pad Id="I7CFTLtbm1GP89OssgKVv5" Comment="" Bounds="820,318,35,15" ShowValueBox="true" isIOBox="true" Value="78.93">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                   <Choice Kind="TypeFlag" Name="Float32" />
                 </p:TypeAnnotation>
@@ -98,14 +98,16 @@
                 <Pin Id="O0O52K8OM1vMZ7nsOqD3tH" Name="Input 2" Kind="InputPin" DefaultValue="90" />
                 <Pin Id="MQXdpTX9mTsPdBEZGrfDsU" Name="Output" Kind="OutputPin" />
               </Node>
-              <Node Bounds="723,415,74,19" Id="OIR2edu6WAFLkM6wFJTDyv">
+              <Node Bounds="723,415,145,19" Id="OIR2edu6WAFLkM6wFJTDyv">
                 <p:NodeReference LastCategoryFullName="SYNTHDEFS" LastDependency="VL.SCSynth-Factory (D:\Projects\VL_Repos\VL.SCSynth\help\Synth Definitions)">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessNode" Name="vvvvExample" />
                 </p:NodeReference>
-                <Pin Id="CabO8sb1vtlOmmjBeYyWmq" Name="freq" Kind="InputPin" />
-                <Pin Id="EgwLS2T8ykzMtBsXPKgi7s" Name="amp" Kind="InputPin" />
-                <Pin Id="IWT1VU40a4tLlBglqjEsAR" Name="lofreq" Kind="InputPin" />
+                <Pin Id="AihFtKFLOCWM1ROvALEm6D" Name="frequency" Kind="InputPin" />
+                <Pin Id="UQuJYQV80WuPcKBb0lDXLL" Name="modulator" Kind="InputPin" />
+                <Pin Id="AaEmen5x64iNMlg1d1OlNb" Name="level" Kind="InputPin" />
+                <Pin Id="NXcyPcYQraSN3CKTiZUkOQ" Name="position" Kind="InputPin" />
+                <Pin Id="DFAqIr7joSNQZwcBDV09nv" Name="out" Kind="InputPin" />
                 <Pin Id="AY5eEjHoHeXMXDxt3dAzEu" Name="Enable" Kind="InputPin" />
                 <Pin Id="JrlTDBq51CCMgaQE4VTH2y" Name="Synth" Kind="OutputPin" />
               </Node>
@@ -113,25 +115,10 @@
             <ControlPoint Id="OKeaNb7sHQdN1hzsviLg1Y" Bounds="724,460" Alignment="Bottom" />
             <ControlPoint Id="VtntN4GxO3jMbrxHg6uVzN" Bounds="822,460" Alignment="Bottom" />
           </Node>
-          <Pad Id="StSx1Hs3cxWORt4UVeHPRq" Comment="lofreq" Bounds="487,172,35,15" ShowValueBox="true" isIOBox="true" Value="0.56">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
-              <Choice Kind="TypeFlag" Name="Float32" />
-            </p:TypeAnnotation>
-          </Pad>
-          <Pad Id="IGd7KcNOmHkPqrSyqNidcW" Comment="freq" Bounds="416,105,47,15" ShowValueBox="true" isIOBox="true" Value="600">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
-              <Choice Kind="TypeFlag" Name="Float32" />
-            </p:TypeAnnotation>
-          </Pad>
-          <Pad Id="RU3FEQEfxsPN8Mp9egskia" Comment="amp" Bounds="454,143,35,15" ShowValueBox="true" isIOBox="true" Value="0.14">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
-              <Choice Kind="TypeFlag" Name="Float32" />
-            </p:TypeAnnotation>
-          </Pad>
           <Node Bounds="375,778,165,19" Id="KMepfthU4usPXsHcfaHcE9">
             <p:NodeReference LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="SCServer (Executor)" />
+              <Choice Kind="ProcessAppFlag" Name="SCSynth" />
             </p:NodeReference>
             <Pin Id="Fr2dQcenhltOZm2XFDj9S3" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="JWr80UNGNUfPlRCZJ8pnp9" Name="Root" Kind="InputPin" />
@@ -148,8 +135,9 @@
             <Pin Id="C0szEkTYVnUP1ZPuofBs6q" Name="Reload" Kind="InputPin" IsHidden="true" />
             <Pin Id="E5O0SI32F5fLUhI0U7DTE3" Name="Protocol" Kind="InputPin" IsHidden="true" />
             <Pin Id="STr7ONko8ICNj3Xt00Paik" Name="Address" Kind="InputPin" IsHidden="true" />
-            <Pin Id="ApmDNGA1YW3Os4J0clpCiS" Name="Port" Kind="InputPin" IsHidden="true" />
             <Pin Id="B8eCfELMU7iPh4YLZxHYme" Name="Verbosity" Kind="InputPin" IsHidden="true" />
+            <Pin Id="ApmDNGA1YW3Os4J0clpCiS" Name="Port" Kind="InputPin" IsHidden="true" />
+            <Pin Id="IFDOZXXdKFGN5rxFlcIOBb" Name="Max Logins" Kind="InputPin" IsHidden="true" />
             <Pin Id="ASTmP9kXhdZLOIS3FbGHOt" Name="Request Status" Kind="InputPin" />
             <Pin Id="TwSBhCjVqntPGbt1s5ifWV" Name="isRunning" Kind="OutputPin" />
           </Node>
@@ -217,7 +205,7 @@
               <Choice Kind="ProcessAppFlag" Name="SCClient" />
             </p:NodeReference>
             <Pin Id="Pwud9RuSKExQXRDY8O9TnM" Name="Node Context" Kind="InputPin" IsHidden="true" />
-            <Pin Id="P2mDmBc88ruO8SVRfVgV6i" Name="SCSynth" Kind="InputPin" />
+            <Pin Id="M8SOW5CoHUXMxJWw38MajM" Name="Root" Kind="InputPin" />
             <Pin Id="VozasT23DgxQA00IsnGA2x" Name="Enabled" Kind="InputPin" />
             <Pin Id="Ivk3igeJhZlMiFwkCFsgYk" Name="Update" Kind="ApplyPin" />
             <Pin Id="Ur9gWrya8xJMRmFIDqJeO0" Name="Console Log" Kind="InputPin" />
@@ -229,51 +217,66 @@
             <Pin Id="IJeTjhYtOkcOkpZ9SzFvFS" Name="Is Open" Kind="OutputPin" />
             <Pin Id="OFtWIf23SA1N6zOmHjeoMo" Name="Response" Kind="OutputPin" />
           </Node>
-          <Node Bounds="418,233,74,19" Id="Ukb9Q2BWMICOdTpRn4IvIe">
+          <Node Bounds="418,233,165,19" Id="Ukb9Q2BWMICOdTpRn4IvIe">
             <p:NodeReference LastCategoryFullName="SYNTHDEFS" LastDependency="VL.SCSynth-Factory (D:\Projects\VL_Repos\VL.SCSynth\help\Synth Definitions)">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="vvvvExample" />
             </p:NodeReference>
-            <Pin Id="AL9MTYXzGvuPL5oDivLBWo" Name="freq" Kind="InputPin" />
-            <Pin Id="Qo5skbqk2FeL9MtJQ6CXtk" Name="amp" Kind="InputPin" />
-            <Pin Id="EzVNxgtn8UvOI9SgHGRT2J" Name="lofreq" Kind="InputPin" />
+            <Pin Id="OKko069ySUrLvhZgEpXhZ6" Name="frequency" Kind="InputPin" />
+            <Pin Id="RrAj7Yf5DDXPVsSAUcEgZc" Name="modulator" Kind="InputPin" DefaultValue="95.74" />
+            <Pin Id="TDRvrZpT6yzQEEShUPzDFH" Name="level" Kind="InputPin" />
+            <Pin Id="QoXTQ2NVYc3N9Cv5TP4i3A" Name="position" Kind="InputPin" />
+            <Pin Id="VS00zDasz9bNsKfba0sKjZ" Name="out" Kind="InputPin" />
             <Pin Id="GuLdQ8UHTtHMJSrQYPBlrx" Name="Enable" Kind="InputPin" DefaultValue="False" />
             <Pin Id="LejgoGd6x64MP6JCKTchbO" Name="Synth" Kind="OutputPin" />
           </Node>
-          <Node Bounds="460,296,74,19" Id="L8SuZYK9JdlNN0L3jLST92">
+          <Node Bounds="460,296,165,19" Id="L8SuZYK9JdlNN0L3jLST92">
             <p:NodeReference LastCategoryFullName="SYNTHDEFS" LastDependency="VL.SCSynth-Factory (D:\Projects\VL_Repos\VL.SCSynth\help\Synth Definitions)">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="vvvvExample" />
             </p:NodeReference>
+            <Pin Id="ISN679YdSFYM56Wa4DdhYW" Name="frequency" Kind="InputPin" />
+            <Pin Id="Cdn47kJhPmLMTfBZwwkpZ8" Name="modulator" Kind="InputPin" DefaultValue="95.29" />
+            <Pin Id="BFupoB1GDb0NeXT3B0R1wO" Name="level" Kind="InputPin" />
+            <Pin Id="Qute1Q756E5QOtyw4Ws0Kh" Name="position" Kind="InputPin" />
+            <Pin Id="PrhRcg29iskQNT6IYcg8pE" Name="out" Kind="InputPin" />
+            <Pin Id="GNafBH0zNKkMAHJRW0vgLG" Name="Enable" Kind="InputPin" DefaultValue="True" />
+            <Pin Id="O6RzT670BZiPlfdpQgBoG7" Name="Synth" Kind="OutputPin" />
             <Pin Id="VS4TuIl2bZnQDDRyjbIXt9" Name="freq" Kind="InputPin" DefaultValue="1200" />
             <Pin Id="HdAj4ksr0ASM3YVp9M16Vf" Name="amp" Kind="InputPin" DefaultValue="0.12" />
             <Pin Id="SMq8E3Kxe4MPLwZB2JldVX" Name="lofreq" Kind="InputPin" DefaultValue="1.12" />
-            <Pin Id="GNafBH0zNKkMAHJRW0vgLG" Name="Enable" Kind="InputPin" DefaultValue="True" />
-            <Pin Id="O6RzT670BZiPlfdpQgBoG7" Name="Synth" Kind="OutputPin" />
           </Node>
-          <Node Bounds="500,367,74,19" Id="QkdJLGgC3hDNe4UjQN2UVH">
+          <Node Bounds="500,367,145,19" Id="QkdJLGgC3hDNe4UjQN2UVH">
             <p:NodeReference LastCategoryFullName="SYNTHDEFS" LastDependency="VL.SCSynth-Factory (D:\Projects\VL_Repos\VL.SCSynth\help\Synth Definitions)">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="vvvvExample" />
             </p:NodeReference>
-            <Pin Id="F3Agd4nyHhJLtw7QbV6PMc" Name="freq" Kind="InputPin" DefaultValue="1100" />
-            <Pin Id="E1vS6XpniLaLS3LtSBZ4U5" Name="amp" Kind="InputPin" DefaultValue="0.1" />
-            <Pin Id="IQDbf6B46U6NwmgMDjjdi5" Name="lofreq" Kind="InputPin" />
+            <Pin Id="AWo8jxT0a0dM4h4DiJKVxk" Name="frequency" Kind="InputPin" />
+            <Pin Id="BA00bqodDt6PkNNizJKQaq" Name="modulator" Kind="InputPin" />
+            <Pin Id="GFbRaNaaYXsNNqGn5exLxm" Name="level" Kind="InputPin" />
+            <Pin Id="JucLZaTq8UYMX5SWGioPj8" Name="position" Kind="InputPin" />
+            <Pin Id="B1yxReXZLi4PqPiLGX4FMe" Name="out" Kind="InputPin" />
             <Pin Id="B2eccTPR1amOrLfURikxXo" Name="Enable" Kind="InputPin" DefaultValue="True" />
             <Pin Id="B3zccz72SmoMNgjX1Uvtib" Name="Synth" Kind="OutputPin" />
+            <Pin Id="F3Agd4nyHhJLtw7QbV6PMc" Name="freq" Kind="InputPin" DefaultValue="1100" />
+            <Pin Id="E1vS6XpniLaLS3LtSBZ4U5" Name="amp" Kind="InputPin" DefaultValue="0.1" />
           </Node>
-          <Node Bounds="538,405,74,19" Id="MU7xUiTbf6mLJXAnDuNOuA">
+          <Node Bounds="538,405,145,19" Id="MU7xUiTbf6mLJXAnDuNOuA">
             <p:NodeReference LastCategoryFullName="SYNTHDEFS" LastDependency="VL.SCSynth-Factory (D:\Projects\VL_Repos\VL.SCSynth\help\Synth Definitions)">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="vvvvExample" />
             </p:NodeReference>
-            <Pin Id="UQtVL0vhbA2PduPIGVjBKP" Name="freq" Kind="InputPin" DefaultValue="121.56" />
-            <Pin Id="PXH8uJ1MZfTQKKfHDruAMD" Name="amp" Kind="InputPin" DefaultValue="0.08" />
-            <Pin Id="TyQn4rdddX4M6mBmnfKvC2" Name="lofreq" Kind="InputPin" />
+            <Pin Id="IxjgNIM88VeNdJyUvpeQ9k" Name="frequency" Kind="InputPin" />
+            <Pin Id="LFXp2483BuYLvYE3Qy1fGA" Name="modulator" Kind="InputPin" />
+            <Pin Id="IsFsveZDLjiPXcDCAxzFCI" Name="level" Kind="InputPin" />
+            <Pin Id="SvyzrMlzg7ELP6GwNvFcHy" Name="position" Kind="InputPin" />
+            <Pin Id="G8w7E1VaoeJM0G2JtxwVa0" Name="out" Kind="InputPin" />
             <Pin Id="Qg6cqGs77brMdrdDAS8I3H" Name="Enable" Kind="InputPin" DefaultValue="True" />
             <Pin Id="TedMX1BfSDGOAOClZl2iY8" Name="Synth" Kind="OutputPin" />
+            <Pin Id="UQtVL0vhbA2PduPIGVjBKP" Name="freq" Kind="InputPin" DefaultValue="121.56" />
+            <Pin Id="PXH8uJ1MZfTQKKfHDruAMD" Name="amp" Kind="InputPin" DefaultValue="0.08" />
           </Node>
-          <Pad Id="DouJUd7DpdgPdXKynGQG3l" Comment="Enable" Bounds="607,23,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+          <Pad Id="DouJUd7DpdgPdXKynGQG3l" Comment="Enable" Bounds="639,35,35,35" ShowValueBox="true" isIOBox="true" Value="True">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
@@ -299,7 +302,7 @@
             <Pin Id="EKgX8yUk89uMobbIPJYTZo" Name="Input 2" Kind="InputPin" />
             <Pin Id="IDJeg3U25PZOY7y4hzzTuo" Name="Output" Kind="OutputPin" />
           </Node>
-          <Pad Id="J3BT5ztB0mUNAzoHsawAkC" Comment="" Bounds="876,222,35,15" ShowValueBox="true" isIOBox="true" Value="0.23">
+          <Pad Id="J3BT5ztB0mUNAzoHsawAkC" Comment="" Bounds="876,222,35,15" ShowValueBox="true" isIOBox="true" Value="0.34">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
@@ -363,28 +366,24 @@
         <Link Id="LZvQoK556otMbREb9TSuBj" Ids="Cc23vzpDei7NO99I0F0zgz,OFVRWYMGPvYNr74SUX5AMs" />
         <Link Id="Qbfp3iiJBJ7LRJMIUtPH8W" Ids="Fm6GImj0KFYOG3L0qMOtK7,FAHUOXKf26YQHEem3B6RWn" />
         <Link Id="JU40sTijFrlPTcgReVIn7X" Ids="D761aLvCsx9N8ct50oQBGW,D6qFjNEshRqMx9sZbh8u6K" />
-        <Link Id="BxZPghqRUOXQQdTvaDYOVQ" Ids="IGd7KcNOmHkPqrSyqNidcW,AL9MTYXzGvuPL5oDivLBWo" />
-        <Link Id="JpTdAiYsBkyK9unG6CAbF9" Ids="RU3FEQEfxsPN8Mp9egskia,Qo5skbqk2FeL9MtJQ6CXtk" />
-        <Link Id="Gl4fdeNoKGhPl2A2cqxmHr" Ids="StSx1Hs3cxWORt4UVeHPRq,EzVNxgtn8UvOI9SgHGRT2J" />
         <Link Id="L3rZ7f7I7vmOY7oZfXVxYO" Ids="LejgoGd6x64MP6JCKTchbO,RAnEr2RzjyoMNyjnTdU35L" />
         <Link Id="CTW0eqiqIAbMi5YasBppoP" Ids="O6RzT670BZiPlfdpQgBoG7,G4498kxqOy0LOpXXVNUzc7" />
         <Link Id="Cn2LLu9n1uzPwp29PVCT8x" Ids="B3zccz72SmoMNgjX1Uvtib,EIqmQznq0boNL4vBijOwzO" />
         <Link Id="A7YfEyhAN45MLlUmr4GGfX" Ids="TedMX1BfSDGOAOClZl2iY8,HGriPPwHv9gLaWO2g9Mej1" />
         <Link Id="NseoHMkDK4sM2vvV9MRtyb" Ids="DouJUd7DpdgPdXKynGQG3l,GuLdQ8UHTtHMJSrQYPBlrx" />
-        <Link Id="RFJUzUTEW4LP8WV8TrPuPZ" Ids="MQXdpTX9mTsPdBEZGrfDsU,CabO8sb1vtlOmmjBeYyWmq" />
         <Link Id="SzYPFQpGdj5LXUcxzYVYZO" Ids="JrlTDBq51CCMgaQE4VTH2y,OKeaNb7sHQdN1hzsviLg1Y" />
         <Link Id="Ip7X68xr8pqOqcwh1UsvUK" Ids="Cc23vzpDei7NO99I0F0zgz,H38EvoYJWYiNZNRLfdGAf1" />
         <Link Id="FQnPH5S8WfIO87yyhrk1We" Ids="MWeo6frefWUPFW0XBtp42a,TMQY4R5EpmkLeYzlcLL7xu" />
         <Link Id="Rr7Nig7T2y9PkpO5teeXwc" Ids="J3BT5ztB0mUNAzoHsawAkC,EKgX8yUk89uMobbIPJYTZo" />
-        <Link Id="H5ceOwW5uvOQJizWg1XutK" Ids="IDJeg3U25PZOY7y4hzzTuo,EgwLS2T8ykzMtBsXPKgi7s" />
         <Link Id="OCICKLEzKBSPdchlnnlQ0M" Ids="JjdDhBI8j71PIQXTxWdsY9,AY5eEjHoHeXMXDxt3dAzEu" />
         <Link Id="Npyz9uuyVO9QTAmXcpifIQ" Ids="DouJUd7DpdgPdXKynGQG3l,GNafBH0zNKkMAHJRW0vgLG" />
         <Link Id="TMhcR2o99VeOs81ddBhNbt" Ids="DouJUd7DpdgPdXKynGQG3l,B2eccTPR1amOrLfURikxXo" />
         <Link Id="MP6wEZNoWzeNSO8iRKjPOB" Ids="DouJUd7DpdgPdXKynGQG3l,Qg6cqGs77brMdrdDAS8I3H" />
-        <Link Id="SxVZtZdfk2sMYs25yqsQSi" Ids="UZVR6KSK2HvMHOFTDAqH7k,JWr80UNGNUfPlRCZJ8pnp9" />
         <Link Id="JryFLffoyiwMHVSqepVmTQ" Ids="V4aUOGlGKqNQSLyuN7y0vH,GukxzmrDb4tM9Mi0EPPunu" />
         <Link Id="Q9jhwl5uZH3MbhhGlaoo4y" Ids="Sp4ySIc0pxrPDBvQcchkaO,KJd7DebbiWVPUkF6N9xPlN" />
         <Link Id="Hr0niJP3oCbOB46pJBJVaz" Ids="MOczDXo05yHPTRIAtwIiio,GhAhNz0GCskQRtMZkx9mIM" />
+        <Link Id="MbjBTRTgKcINjDqdMEmupK" Ids="UZVR6KSK2HvMHOFTDAqH7k,M8SOW5CoHUXMxJWw38MajM" />
+        <Link Id="E0MP0UPcMtkMOSdyP8Qfmh" Ids="UZVR6KSK2HvMHOFTDAqH7k,JWr80UNGNUfPlRCZJ8pnp9" />
       </Patch>
     </Node>
   </Patch>
