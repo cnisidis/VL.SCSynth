@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SCSynth</name>
+    </assembly>
+    <members>
+        <member name="T:SCSynth.Protocol">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SCSynth.Protocol.UDP">
+            <summary>
+            UDP 
+            </summary>
+        </member>
+        <member name="F:SCSynth.Protocol.TCP">
+            <summary>
+            TCP
+            </summary>
+        </member>
+        <member name="T:SCSynth.Verbosity">
+            <summary>
+            Verbosity Level
+            </summary>
+        </member>
+        <member name="F:SCSynth.Verbosity.Normal">
+            <summary>
+            Normal Verbosity
+            </summary>
+        </member>
+        <member name="F:SCSynth.Verbosity.SuppressMessages">
+            <summary>
+            Suppress Messages
+            </summary>
+        </member>
+        <member name="F:SCSynth.Verbosity.SuppressAll">
+            <summary>
+            Suppress All
+            </summary>
+        </member>
+        <member name="T:SCSynth.Commands">
+            <summary>
+            Server OSC Commands
+            </summary>
+        </member>
+        <member name="P:SCSynth.GlobalSCEngine.SynthDefs">
+            <summary>
+            Synthdef (synthdefname, synthdefpath)
+            </summary>
+        </member>
+        <member name="P:SCSynth.GlobalSCEngine.SCSynthFilePath">
+            <summary>
+            server scsynth filepath (ex. C:/ProgramFiles/Supercollider/scsynth.exe)
+            </summary>
+        </member>
+        <member name="P:SCSynth.GlobalSCEngine.NodeGraph">
+            <summary>
+            Nodegaph to be defined / one per session
+            </summary>
+        </member>
+        <member name="P:SCSynth.GlobalSCEngine.SynthsCount">
+            <summary>
+            Total Synths in current NodeGraph
+            </summary>
+        </member>
+        <member name="M:SCSynth.GlobalSCEngine.#ctor">
+            <summary>
+            Global Engine Constructor
+            </summary>
+        </member>
+    </members>
+</doc>
