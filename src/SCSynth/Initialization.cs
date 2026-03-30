@@ -61,11 +61,14 @@ namespace SCSynth
                         foreach (var compiledSynthDef in compiledSynthDefs)
                         {
                             Console.WriteLine(compiledSynthDef);
-                            var decompiledSynthdefs = Factory.Decompiler.DecompileSynthDefsFromFile(compiledSynthDef);
+                            byte[] bytes;
+                            var decompiledSynthdefs = Factory.Decompiler.DecompileSynthDefsFromFile(compiledSynthDef, out bytes);
                             foreach (var synthDef in decompiledSynthdefs)
                             {
                                 Console.WriteLine(synthDef.Key);
-                                builder.Add(new SynthDescritpion(nodeFactory, synthDef.Key, synthDef.Value, compiledSynthDef));
+                                var synthDefDesc = new SynthDescritpion(nodeFactory, synthDef.Key, synthDef.Value, compiledSynthDef);
+                                synthDefDesc.raw = bytes;
+                                builder.Add(synthDefDesc);
                                 Console.WriteLine("Synthdef: {0} was added", synthDef.Key);
                             }
                             // builder.Add(new ModelDescription(nodeFactory, infos[0], infos[1], infos[2])); 

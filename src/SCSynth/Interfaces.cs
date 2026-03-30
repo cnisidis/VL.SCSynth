@@ -9,6 +9,10 @@ public interface ISCNode
     //Generic VL Id for further handling
     public Guid Id { get; set; }
 
+    public int Order { get; set; }
+
+    public Group ParentGroup {get; set; }
+
     public AddActions AddAction { get; set; }
 
     public List<ISCNode> GetInputs();

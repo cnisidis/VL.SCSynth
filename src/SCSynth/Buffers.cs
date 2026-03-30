@@ -27,10 +27,11 @@ namespace SCSynth
 
     }
 
-    public class SCBuffer
+    public class Buffer:ISCNode
     {
         public int scID { get; set; }
-
+        public int Order { get; set; }
+        public Group ParentGroup { get; set; }
         private String FilePath { get; set; }
 
         public int FileStartFrame { get; set; } 
@@ -39,10 +40,11 @@ namespace SCSynth
         public int TotalFramesToRead { get; set; }
 
         public bool LeaveFileOpen { get; set; }
+        public int scId { get; set; }
+        public Guid Id { get; set; }
+        public AddActions AddAction { get; set; }
 
-        
-
-        public SCBuffer(string FilePath)
+        public Buffer(string FilePath)
         {
             FileStartFrame = 0;
             BufferStartFrame = 0;
@@ -68,5 +70,9 @@ namespace SCSynth
             return file;
         }
 
+        public List<ISCNode> GetInputs()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

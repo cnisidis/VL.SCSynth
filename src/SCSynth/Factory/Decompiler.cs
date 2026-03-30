@@ -4,27 +4,18 @@ using System.Text;
 
 namespace SCSynth.Factory
 {
-    public class SynthPack
-    {
-        int fileVersion {  get; set; }
-        string fileCode { get; set; }
-        int index {  set; get; }
-        public SynthPack()
-        {
-
-        }
-    }
+    
     public static class Decompiler
     {
 
 
-        public static Dictionary<string, List<Parameter>> DecompileSynthDefsFromFile(string synthdefPath)
+        public static Dictionary<string, List<Parameter>> DecompileSynthDefsFromFile(string synthdefPath, out byte[] bytes)
         {
             Console.WriteLine("Decompile Synthdef ...");
             Dictionary<string, List<Parameter>> SynthDefs = new Dictionary<string, List<Parameter>>();
             Console.WriteLine(synthdefPath);
             
-            byte[] bytes = File.ReadAllBytes(synthdefPath);
+            bytes = File.ReadAllBytes(synthdefPath);
             
             
 

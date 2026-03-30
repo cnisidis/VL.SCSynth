@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="H3ppcPPiJjkNWHXnEe3Ocp" LanguageVersion="2024.6.7" Version="0.128">
-  <NugetDependency Id="GGxN2yiBdITM6CRoBZGJMF" Location="VL.CoreLib" Version="2024.6.7" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="H3ppcPPiJjkNWHXnEe3Ocp" LanguageVersion="2025.7.1" Version="0.128">
+  <NugetDependency Id="GGxN2yiBdITM6CRoBZGJMF" Location="VL.CoreLib" Version="2025.7.1" />
   <Patch Id="ScdLqbdqfboMngJ8j4NrX1">
     <Canvas Id="DwrWsGYDR3JQNlSZ1mQF0Y" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
@@ -35,8 +35,8 @@
             <Pin Id="C0szEkTYVnUP1ZPuofBs6q" Name="Reload" Kind="InputPin" IsHidden="true" />
             <Pin Id="E5O0SI32F5fLUhI0U7DTE3" Name="Protocol" Kind="InputPin" IsHidden="true" />
             <Pin Id="STr7ONko8ICNj3Xt00Paik" Name="Address" Kind="InputPin" IsHidden="true" />
-            <Pin Id="B8eCfELMU7iPh4YLZxHYme" Name="Verbosity" Kind="InputPin" IsHidden="true" />
             <Pin Id="ApmDNGA1YW3Os4J0clpCiS" Name="Port" Kind="InputPin" IsHidden="true" />
+            <Pin Id="B8eCfELMU7iPh4YLZxHYme" Name="Verbosity" Kind="InputPin" IsHidden="true" />
             <Pin Id="FlrBm9OvelZP3YZRkeq60a" Name="Max Logins" Kind="InputPin" IsHidden="true" />
             <Pin Id="ASTmP9kXhdZLOIS3FbGHOt" Name="Request Status" Kind="InputPin" />
             <Pin Id="TwSBhCjVqntPGbt1s5ifWV" Name="isRunning" Kind="OutputPin" />
@@ -98,17 +98,21 @@
             <Pin Id="IhnCPv1gBQ2QcHJiC1NNNg" Name="Enable" Kind="InputPin" DefaultValue="True" />
             <Pin Id="UGk5RU2NO5OPSPOHpa0miz" Name="Synth" Kind="OutputPin" />
           </Node>
-          <Node Bounds="113,712,125,19" Id="GABW5kASaG1NVuhVcTAbCo">
+          <Node Bounds="113,712,145,19" Id="GABW5kASaG1NVuhVcTAbCo">
             <p:NodeReference LastCategoryFullName="Graphics.Skia" LastDependency="VL.Skia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="CntnuAQKbdfQFFAXa1IUVK" Name="Bounds" Kind="InputPin" DefaultValue="3561, 297, 613, 435" IsHidden="true" />
+            <Pin Id="BpXqLeqVQdIPx9SC2uXUtY" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="CntnuAQKbdfQFFAXa1IUVK" Name="Bounds" Kind="InputPin" DefaultValue="2279, 190, 392, 278" IsHidden="true" />
             <Pin Id="MXRtxHLcM3WPFo0QrcBpPh" Name="Save Bounds" Kind="InputPin" IsHidden="true" />
             <Pin Id="Vqux9T5XJs9MusSWzsmtgv" Name="Bound to Document" Kind="InputPin" IsHidden="true" />
-            <Pin Id="BpXqLeqVQdIPx9SC2uXUtY" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="NZxz7ZNb1R3MmlMN8KusrG" Name="Dialog If Document Changed" Kind="InputPin" IsHidden="true" />
+            <Pin Id="URubszAIjgYMHVj3xfDeoL" Name="Always On Top" Kind="InputPin" IsHidden="true" />
+            <Pin Id="T6ChnzLtKUjPrf2kO4K1r3" Name="Extend Into Title Bar" Kind="InputPin" IsHidden="true" />
             <Pin Id="T0CnBzENB6GPKKTNmci46h" Name="Input" Kind="InputPin" />
+            <Pin Id="CXckaIxWIZ6OTBQGXf595W" Name="Title" Kind="InputPin" />
+            <Pin Id="DZApHxi9sd4OM7laFQaOou" Name="Title Bar Interaction Width" Kind="InputPin" IsHidden="true" />
             <Pin Id="O8k7bw16Hq9NN85POlmHnG" Name="Color" Kind="InputPin" />
             <Pin Id="UlmEtciG2PgPtiZQMCAdFf" Name="Clear" Kind="InputPin" />
             <Pin Id="H19z12ZMCU3Ou3cXB2jMqG" Name="Space" Kind="InputPin" />
@@ -349,6 +353,46 @@
             <Pin Id="Ewa0EwsUBEnPg9VRA9vMot" Name="Output" Kind="StateOutputPin" />
             <Pin Id="LEiH1z82xpmPxolBpGPTc2" Name="Enabled" Kind="OutputPin" />
           </Node>
+          <Node Bounds="844,651,44,19" Id="LzOyasNq4YRQAGCnWOyzui">
+            <p:NodeReference LastCategoryFullName="VL.SCSynth.Group" LastDependency="VL.SCSynth.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Group" NeedsToBeDirectParent="true">
+                <p:OuterCategoryReference Kind="Category" Name="SCSynth" NeedsToBeDirectParent="true" />
+              </CategoryReference>
+              <Choice Kind="ProcessAppFlag" Name="Group" />
+            </p:NodeReference>
+            <Pin Id="HYBPpBrKLMuL88WbaDKsFe" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="OM4jjLh1FtCQORT3OgyQOV" Name="Input" Kind="InputPin" />
+            <Pin Id="AgUJLkR9TQsMo5E7louXXB" Name="Input 2" Kind="InputPin" />
+            <Pin Id="Ul2ktfGO9YzLVU0AUTgfs2" Name="Group" Kind="OutputPin" />
+            <Pin Id="KZGIH3i2ezhQa7paCvZZVS" Name="Count" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="844,590,105,19" Id="Ce6zCYQgnXWODidkXDDdB8">
+            <p:NodeReference LastCategoryFullName="SYNTHDEFS" LastDependency="VL.SCSynth-Factory (C:\vl-libs\VL.SCSynth\help\Synth Definitions)">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessNode" Name="vvvvExample" />
+            </p:NodeReference>
+            <Pin Id="OiYZ0kITsHFLU40USipzob" Name="frequency" Kind="InputPin" />
+            <Pin Id="Re0gEX0mnKMP1TvMWjtmuS" Name="modulator" Kind="InputPin" />
+            <Pin Id="EOng9oh2UBZM06KhFlakLg" Name="level" Kind="InputPin" DefaultValue="0.1" />
+            <Pin Id="HNFw6TbXHlZOdGpsfQIkfn" Name="position" Kind="InputPin" />
+            <Pin Id="PM3hhaqm2nRNE3Zp6MZrpt" Name="out" Kind="InputPin" DefaultValue="0" />
+            <Pin Id="J9fZO326bE2Nfvzxy2tlcq" Name="Enable" Kind="InputPin" DefaultValue="True" />
+            <Pin Id="HaDsW8i5tA5NbHYK9py9Wl" Name="Synth" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="966,590,105,19" Id="LFbub4GSVSLMFhpwkFDZwQ">
+            <p:NodeReference LastCategoryFullName="SYNTHDEFS" LastDependency="VL.SCSynth-Factory (C:\vl-libs\VL.SCSynth\help\Synth Definitions)">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessNode" Name="vvvvExample" />
+            </p:NodeReference>
+            <Pin Id="ABfnGZfzMs0PC6pvl0PF3S" Name="frequency" Kind="InputPin" />
+            <Pin Id="BeMheC01iWTQA3vnLXdacp" Name="modulator" Kind="InputPin" />
+            <Pin Id="UrEHQMM1coJPQxe8Mbrc9z" Name="level" Kind="InputPin" DefaultValue="0.1" />
+            <Pin Id="Rzb9XMtznj4Ly7hnTcRHo0" Name="position" Kind="InputPin" />
+            <Pin Id="TJ0MRt0geMIOWEmJvhWlnP" Name="out" Kind="InputPin" DefaultValue="0" />
+            <Pin Id="FfGZUX4UqErLhEJbklJBuu" Name="Enable" Kind="InputPin" DefaultValue="True" />
+            <Pin Id="Sq2CeNDjL2PN6SHKCoCXEN" Name="Synth" Kind="OutputPin" />
+          </Node>
         </Canvas>
         <Patch Id="U5TjPXEqR4jQcdPyARGw7X" Name="Create" />
         <Patch Id="E1grQlKf8ssMatSpnHgFOH" Name="Update" />
@@ -390,14 +434,16 @@
         <Link Id="V0NtfAeKuLbNti942ZnVni" Ids="U8jT7mfisuXP1XIg9uKXks,BrAxfEO8jc7PhsaZ03DOog" />
         <Link Id="Pc1Ua2j3cnrNeKyf2y7bzX" Ids="GfVWtaVua1vMERLvY6jfgB,VITxP0hRUjyMMOZfHc1Hx0" />
         <Link Id="Ol70dWgCaB2PvEpJ46JZrk" Ids="Ewa0EwsUBEnPg9VRA9vMot,MexDpOxQiuLLK4HwwoA5FT" />
-        <Link Id="UDU65DtFuY9N3gQeK9e1v9" Ids="UGk5RU2NO5OPSPOHpa0miz,UVDSqvvKKQGOBwLPmdV3jv" />
+        <Link Id="AxfuhxojqhTOLtVZJHqlH1" Ids="UGk5RU2NO5OPSPOHpa0miz,UVDSqvvKKQGOBwLPmdV3jv" />
+        <Link Id="FRSaaDrGmlYPMQLgfq6XKO" Ids="Sq2CeNDjL2PN6SHKCoCXEN,AgUJLkR9TQsMo5E7louXXB" />
+        <Link Id="Fs7SU9lSbHROLXO9Qn9Kgi" Ids="HaDsW8i5tA5NbHYK9py9Wl,OM4jjLh1FtCQORT3OgyQOV" />
       </Patch>
     </Node>
   </Patch>
   <NugetDependency Id="M05V1aGya35OsB00L3HK0r" Location="VL.SCSynth" Version="0.0.0" />
-  <NugetDependency Id="MdoP9uCMqYIPpNzkrvpXst" Location="VL.Skia" Version="2024.6.7" />
-  <NugetDependency Id="QKEzrNi4KdZNrRBNkC8kvQ" Location="VL.Audio.UI" Version="1.8.2" />
-  <NugetDependency Id="KVTtbAWnUriLa2wmkKlnHU" Location="VL.Audio" Version="1.8.2" />
-  <NugetDependency Id="GLm1K3Z9d6EO0wtgZbHbdv" Location="VL.Stride" Version="2024.6.7" />
-  <NugetDependency Id="TUX0uQEht9XOtXYKmoFFJu" Location="VL.Stride.TextureFX" Version="2024.6.7" />
+  <NugetDependency Id="MdoP9uCMqYIPpNzkrvpXst" Location="VL.Skia" Version="2025.7.1" />
+  <NugetDependency Id="QKEzrNi4KdZNrRBNkC8kvQ" Location="VL.Audio.UI" Version="1.9.17" />
+  <NugetDependency Id="KVTtbAWnUriLa2wmkKlnHU" Location="VL.Audio" Version="1.9.17" />
+  <NugetDependency Id="GLm1K3Z9d6EO0wtgZbHbdv" Location="VL.Stride" Version="2025.7.1" />
+  <NugetDependency Id="TUX0uQEht9XOtXYKmoFFJu" Location="VL.Stride.TextureFX" Version="2025.7.1" />
 </Document>

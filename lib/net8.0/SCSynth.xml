@@ -69,5 +69,12 @@
             Global Engine Constructor
             </summary>
         </member>
+        <member name="M:SCSynth.SCRoot.GetChildren(SCSynth.ISCNode)">
+            <summary>
+            GetChildrern of children (recursvive)
+            </summary>
+            <param name="node">Any given node (Group or Synth)</param>
+            <returns>A List with all found children of type ISCNode</returns>
+        </member>
     </members>
 </doc>

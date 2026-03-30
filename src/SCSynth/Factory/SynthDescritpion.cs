@@ -23,6 +23,8 @@ namespace SCSynth.Factory
 
         public string filepath { get; set; }
 
+        public byte[] raw { get; set; }
+
         // Inputs and outputs
         List<PinDescription> inputs = new List<PinDescription>();
         List<PinDescription> outputs = new List<PinDescription>();
@@ -80,9 +82,9 @@ namespace SCSynth.Factory
                 inputs.Add(new PinDescription("Enable", typeof(bool), true, "Enable the Synth"));
                 //inputs.Add(new PinDescription("ResetAll", typeof(bool), false, "Reset All Parameters to their intial values"));
 
-                // For now let's just get the raw JSON response from Directus. Create a single string output pin
                 
-                outputs.Add(new PinDescription("Synth", typeof(Synth), null , "Synth"));
+                
+                outputs.Add(new PinDescription("Synth", typeof(Synth), null , "A Synth Node"));
                 
 
                 FInitialized = true;
