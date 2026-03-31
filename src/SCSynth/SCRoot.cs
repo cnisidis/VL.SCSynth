@@ -45,10 +45,10 @@ namespace SCSynth
             nodes = GetChildren(node);
             var index = 1;
 
-            
-            nodes.Where(x => x != null).ForEach((x, idx) => {
-                if (x.ParentGroup == null && x.GetType().Equals(typeof(Group))) x.scId = 1000;
-                else if (x.GetType().Equals(typeof(Group))) x.scId = 1000 * (idx + 1);
+            var grpIdx = 0;
+            nodes.Where(x => x != null ).ForEach((x, idx) => {
+                if (x.ParentGroup == null && x.GetType().Equals(typeof(Group))) { x.scId = 1000; grpIdx += 1; }
+                else if (x.GetType().Equals(typeof(Group))) { x.scId = 1000 * (grpIdx + 1); grpIdx += 1; }
                 else x.scId = x.ParentGroup.scId + x.Order;
 
             
