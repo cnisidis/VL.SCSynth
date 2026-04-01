@@ -42,7 +42,7 @@ This is absolutely needful in order to get instances (synths) of your synth defi
 <ol>
 <li>Create a folder named "synthdefs" next to your project file (root)</li>
 <li>Populate the "synthdefs" folder with scsyndef files (compiled synthdefs)</li>
-<li>Call SYNTHDEFS category from your nodebrowser</li>
+<li>Call SYNTHDEFS category in your nodebrowser</li>
 <li>Pick and introduce a Synth (instance) based on the provided synthdef files</li>
 </ol>
 
@@ -51,6 +51,9 @@ This is absolutely needful in order to get instances (synths) of your synth defi
 ### How to save a SynthDef File
 
 In order to use a synthdef in vvvv context, first you have to compile and store it. Grace to the sclang.exe compilations is happenning under the hood, saving a file needs just a method to write/store your newly made synth definition on your disk.
+
+Then you can browse it and introduce it through your node browser.
+
 
 
 ### WriteDefFile
@@ -89,9 +92,24 @@ The other way is to predefine a custom folder (probably your projects' synthdef 
 
 ## Troubleshooting
 
-- Server 'localhost' exited with exit code -1073741819. : Most probably there is something in the default synthdef folder which is preventing scsynth.exe to boot properly. Discard all the files (or the last added once) and try to execute scsynth.exe again.
+### SCSynth fails with Error Code
+<b>Server 'localhost' exited with exit code -1073741819</b> 
+
+ Most probably there is something in the default synthdef folder which is preventing scsynth.exe to boot properly. Discard all the files (or the last added once) and try to execute scsynth.exe again.
 
 Another reason can be the port you are trying to reserve, keep in mind that the default port is ... and if the IDE (sclang) is up and running it will be bind on this one.
+
+### Wrong Parameters Values
+ If your synth's parameters looks messy then this happens because you are probably using a trigger control (t_argument), preferably declare "t_" arguments before any other argument, during the compilation SC prioritise triggers and brings them on top.
+
+ie. Swap t_gate and bring it in front, do the same if you have more triggers on the same synthdef.
+
+<code>|t_gate=1, out=0, amp=0.5, freq=200, rel=0.2, <s>t_gate=1</s>|</code>
+
+Set triggers first.
+
+<code>|t_gate, t_trigger, t_something, out=0, amp=0.5, freq=200 ...| </code>
+
 
 
 
