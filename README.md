@@ -87,6 +87,11 @@ The other way is to predefine a custom folder (probably your projects' synthdef 
 - prefer to add true on overwrite to avoid implications.
 
 
+## Troubleshooting
+
+- Server 'localhost' exited with exit code -1073741819. : Most probably there is something in the default synthdef folder which is preventing scsynth.exe to boot properly. Discard all the files (or the last added once) and try to execute scsynth.exe again.
+
+Another reason can be the port you are trying to reserve, keep in mind that the default port is ... and if the IDE (sclang) is up and running it will be bind on this one.
 
 
 
