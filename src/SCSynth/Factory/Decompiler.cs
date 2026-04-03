@@ -1,18 +1,23 @@
 ﻿
+using Stride.Core.Serialization.Serializers;
+using System;
 using System.Text;
+using VL.Lib.Collections;
 
 
 namespace SCSynth.Factory
 {
+
+
     
     public static class Decompiler
     {
-
-
+        
         public static Dictionary<string, List<Parameter>> DecompileSynthDefsFromFile(string synthdefPath, out byte[] bytes)
         {
             Console.WriteLine("Decompile Synthdef ...");
             Dictionary<string, List<Parameter>> SynthDefs = new Dictionary<string, List<Parameter>>();
+            
             Console.WriteLine(synthdefPath);
             
             bytes = File.ReadAllBytes(synthdefPath);
@@ -34,7 +39,7 @@ namespace SCSynth.Factory
             //decompile synthdefs
             for (int i = 0; i < synthDefsCount; i++)
             {
-                
+                Dictionary<int, string> _ugenSpecs = new Dictionary<int, string>();
                 //var synthDef = DecompileSynthdef(bytes.Skip(index).ToArray());
                 int nameLength = 0;
 
@@ -80,9 +85,10 @@ namespace SCSynth.Factory
 
                     int parameterIndex = BitConverter.ToInt32(SwapBytes(bytes.Skip(index), 4));
                     index += 4;
-
+                    
                     var parameter = new Parameter(parameterName, parametersInitValues[j]);
                     parameter.index = j;
+
                     parameters.Add(parameter);
 
                 }
@@ -133,6 +139,7 @@ namespace SCSynth.Factory
             int index = 0;
             int classNameLength = 0;
             string className = FromPString(bytes, out classNameLength);
+            Console.WriteLine(className);   
             index += classNameLength;
 
             //Calculation Rate
