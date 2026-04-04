@@ -1,5 +1,7 @@
 ﻿
 
+using SCSynth.Factory;
+
 namespace SCSynth
 {
     public class Parameter
@@ -40,6 +42,12 @@ namespace SCSynth
             Name = this.Name;
             InitValue = this.initValue;
             Value = this.Value;
+        }
+
+
+        public static Parameter FromControl(ASynth.Control control)
+        {
+            return null;
         }
 
     }

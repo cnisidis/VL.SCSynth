@@ -37,6 +37,7 @@
             <Pin Id="UuMQKSwHGNELlHvhQOPMxu" Name="SC Commands" Kind="InputPin" />
             <Pin Id="DqPeY5IJti4OpZmlSfdxOb" Name="Kill" Kind="InputPin" />
             <Pin Id="SZpBj3GObfFOsntY6xU6rR" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="TMSDG3NCABrOShkLBVNrsH" Name="SC Folder Path" Kind="OutputPin" />
             <Pin Id="LmTi8GTx1vmONluON2gyuT" Name="Status" Kind="OutputPin" />
           </Node>
           <Pad Id="PugfIVZapEROZApKlKWwgv" Comment="1. Boot" Bounds="344,461,35,35" ShowValueBox="true" isIOBox="true" Value="false">
@@ -56,7 +57,7 @@
             </p:ValueBoxSettings>
           </Pad>
           <Pad Id="RCAaj73iddSOz259XvofYM" Comment="Status" Bounds="524,678,170,140" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="J8B2usYJqafMfl65XO2pXi" Comment="Kill" Bounds="524,530,35,35" ShowValueBox="true" isIOBox="true" Value="false">
+          <Pad Id="J8B2usYJqafMfl65XO2pXi" Comment="Kill" Bounds="524,461,35,35" ShowValueBox="true" isIOBox="true" Value="false">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
@@ -92,7 +93,7 @@
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
             <Pin Id="BpXqLeqVQdIPx9SC2uXUtY" Name="Node Context" Kind="InputPin" IsHidden="true" />
-            <Pin Id="CntnuAQKbdfQFFAXa1IUVK" Name="Bounds" Kind="InputPin" DefaultValue="1823, 152, 314, 222" IsHidden="true" />
+            <Pin Id="CntnuAQKbdfQFFAXa1IUVK" Name="Bounds" Kind="InputPin" DefaultValue="1458, 122, 251, 178" IsHidden="true" />
             <Pin Id="MXRtxHLcM3WPFo0QrcBpPh" Name="Save Bounds" Kind="InputPin" IsHidden="true" />
             <Pin Id="Vqux9T5XJs9MusSWzsmtgv" Name="Bound to Document" Kind="InputPin" IsHidden="true" />
             <Pin Id="NZxz7ZNb1R3MmlMN8KusrG" Name="Dialog If Document Changed" Kind="InputPin" IsHidden="true" />
@@ -328,7 +329,7 @@
             <Pin Id="C8BNnEkIm9wN335gOMULyk" Name="Input" Kind="StateInputPin" />
             <Pin Id="Ooiy1Uryr4oMQE4Q6s948D" Name="Result" Kind="OutputPin" />
           </Node>
-          <Node Bounds="500,567,92,19" Id="TfQwrpr0mxcPhK7wdMxSsb">
+          <Node Bounds="500,530,92,19" Id="TfQwrpr0mxcPhK7wdMxSsb">
             <p:NodeReference LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="LoadSynthDefDir" />
@@ -347,6 +348,24 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
+          <Node Bounds="500,560,65,19" Id="Gsl15EYvd35NNXlxLI8X6N">
+            <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="RecordType" Name="Spread" NeedsToBeDirectParent="true" />
+              <Choice Kind="OperationCallFlag" Name="FromValue" />
+            </p:NodeReference>
+            <Pin Id="EO53qt7obldOM0BNkLELh8" Name="Input" Kind="InputPin" />
+            <Pin Id="VWWjBy2462pQCNAPrxG52G" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="877,151,73,19" Id="DCg5qgJt6VhPb6QCpyhKJk">
+            <p:NodeReference LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="TestProvider" />
+            </p:NodeReference>
+            <Pin Id="L9VryqwpNffOOrHMctYALh" Name="Result" Kind="OutputPin" />
+            <Pin Id="Sy9JHsXzyYQLcRvpIC6OCw" Name="Node Context" Kind="InputPin" IsHidden="true" />
+          </Node>
+          <Pad Id="TpChqSTYd4WPT0BLcXXsNL" Comment="" Bounds="879,200,35,15" ShowValueBox="true" isIOBox="true" />
         </Canvas>
         <Patch Id="U5TjPXEqR4jQcdPyARGw7X" Name="Create" />
         <Patch Id="E1grQlKf8ssMatSpnHgFOH" Name="Update" />
@@ -382,10 +401,12 @@
         <Link Id="JSsRCbfI02RLSKjZasBOXF" Ids="IWaxh0029WpMgiBBGIKNt8,C8BNnEkIm9wN335gOMULyk" />
         <Link Id="EKgGYXxf1RYMQHtvinjjUp" Ids="Ooiy1Uryr4oMQE4Q6s948D,R888nYEeLlRPfk530hYnsH" />
         <Link Id="RAocG36JBFXMd7rqYUJM5G" Ids="J8B2usYJqafMfl65XO2pXi,DqPeY5IJti4OpZmlSfdxOb" />
-        <Link Id="NrIH9QQiJOUL7rhQ1Cdgxm" Ids="BCDd2Halo1zOqbpSKNQonb,UuMQKSwHGNELlHvhQOPMxu" />
         <Link Id="CI1hcPkf9KAPJqSI5JmT9Q" Ids="L2IaV0C3LUeLglXyYCQxex,Im2r0K50viaPZ5rWOJzGdT" />
         <Link Id="VjcQEvyEhKyMgEsmNYh98d" Ids="BvbynPEniYLN7EMaZ7EhFr,AC43AMLAvw6QJW4X7pX9VG" />
-        <Link Id="NqJmXD5xbGANtPM6WuZLFu" Ids="UGk5RU2NO5OPSPOHpa0miz,Osshb8DRQO9LvTQxB5x2Ri" />
+        <Link Id="MqlTRyXIqUaO7va1wnGMCC" Ids="UGk5RU2NO5OPSPOHpa0miz,Osshb8DRQO9LvTQxB5x2Ri" />
+        <Link Id="MwHo99o4oRvN6f0QTnTIZL" Ids="BCDd2Halo1zOqbpSKNQonb,EO53qt7obldOM0BNkLELh8" />
+        <Link Id="CTgNXVnl6KELQJCwECIOsD" Ids="VWWjBy2462pQCNAPrxG52G,UuMQKSwHGNELlHvhQOPMxu" />
+        <Link Id="ByqzJIa9muOMFCH98wOT8i" Ids="L9VryqwpNffOOrHMctYALh,TpChqSTYd4WPT0BLcXXsNL" />
       </Patch>
     </Node>
   </Patch>

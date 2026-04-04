@@ -1,6 +1,7 @@
 ﻿
 
 
+using SCSynth.SCNodes;
 using VL.Lib.IO;
 
 namespace SCSynth
@@ -36,14 +37,14 @@ namespace SCSynth
 
         public int FileStartFrame { get; set; } 
         public int BufferStartFrame { get; set; }
-
+        public bool hasChildren => false;
         public int TotalFramesToRead { get; set; }
 
         public bool LeaveFileOpen { get; set; }
         public int scId { get; set; }
         public Guid Id { get; set; }
         public AddActions AddAction { get; set; }
-
+        public bool Enabled { get; set; }
         public Buffer(string FilePath)
         {
             FileStartFrame = 0;

@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 using VL.Lib.Collections;
 
 namespace SCSynth.Factory
 {
-    public class SCManager
+    public class SCManager:IDisposable
     {
         public class SynthDef
         {
@@ -256,10 +256,10 @@ namespace SCSynth.Factory
                 var length = 0;
                 this.Name = Decompiler.FromPString(bytes, out length);
                 index += length;
-                Console.WriteLine("index: {0} L:{1}", index, length);
+                //Console.WriteLine("index: {0} L:{1}", index, length);
 
                 this.Index = (int)BitConverter.ToInt32(bytes.Skip(length).Take(4).Reverse().ToArray());
-                Console.WriteLine(this.Index);
+                //Console.WriteLine(this.Index);
                 index += 4;
 
             }
@@ -271,22 +271,52 @@ namespace SCSynth.Factory
             }
         }
 
-        public int SynthDefsCount { private set; get; }
+        public int SynthDefsCountPerFile;
         public int FileVersion;
         public string FileCode;
         List<SynthDef> _synthDefs;
 
+        HashSet<string> _synthDefsDict;
 
         public SCManager()
         {
             _synthDefs = new List<SynthDef>();
+            _synthDefsDict = new HashSet<string>();
         }
 
 
+        public void LoadFiles(IEnumerable<string> files)
+        {
+            
+            Console.WriteLine("Loading files ... ");
+            foreach (var file in files) {
+                LoadFile(file);
+            }
+        }
+
+        public void LoadFile(string file)
+        {
+            _synthDefsDict.TryGetValue(file, out var synthdef);
+            
+            if (synthdef == null)
+            {
+                Console.WriteLine("Decompiling: {0:G}", file);
+                this.Decompile(file);
+                _synthDefsDict.Add(file);
+            }
+            else
+            {
+                Console.WriteLine("File {0:G} already exists in SC Manager {0:G}", file);
+                return;
+            }
+
+        }
+
         public void Decompile(string filePath)
         {
+            
             byte[] bytes;
-            Console.WriteLine("Decompile Synthdef ...");
+            Console.WriteLine("NEW DECOMP \n Decompile Synthdef ... ", filePath);
             bytes = File.ReadAllBytes(filePath);
             int index = 0;
             //file code
@@ -298,7 +328,7 @@ namespace SCSynth.Factory
             //synth defs in file
             var synthDefsCount = BitConverter.ToInt16(bytes.Skip(index).Take(2).Reverse().ToArray());
             index += 2;
-            this.SynthDefsCount = synthDefsCount;
+            this.SynthDefsCountPerFile = synthDefsCount;
             this.FileVersion = fileVersion;
             this.FileCode = fileCode;
 
@@ -314,8 +344,16 @@ namespace SCSynth.Factory
             SynthDefs = this._synthDefs.ToSpread();
         }
 
-       
-       
+        public void Dispose()
+        {
+           this.ClearAll();
+        }
+
+        public void ClearAll()
+        {
+            _synthDefs.Clear();
+            _synthDefsDict.Clear();
+        }
     }
 
 }

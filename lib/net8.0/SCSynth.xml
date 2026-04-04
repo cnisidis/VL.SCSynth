@@ -44,32 +44,12 @@
             Server OSC Commands
             </summary>
         </member>
-        <member name="P:SCSynth.GlobalSCEngine.SynthDefs">
+        <member name="F:SCSynth.Factory.SCManager.InputSpec.ConstantIndex">
             <summary>
-            Synthdef (synthdefname, synthdefpath)
+            Output or Constant index if isConstant == true
             </summary>
         </member>
-        <member name="P:SCSynth.GlobalSCEngine.SCSynthFilePath">
-            <summary>
-            server scsynth filepath (ex. C:/ProgramFiles/Supercollider/scsynth.exe)
-            </summary>
-        </member>
-        <member name="P:SCSynth.GlobalSCEngine.NodeGraph">
-            <summary>
-            Nodegaph to be defined / one per session
-            </summary>
-        </member>
-        <member name="P:SCSynth.GlobalSCEngine.SynthsCount">
-            <summary>
-            Total Synths in current NodeGraph
-            </summary>
-        </member>
-        <member name="M:SCSynth.GlobalSCEngine.#ctor">
-            <summary>
-            Global Engine Constructor
-            </summary>
-        </member>
-        <member name="M:SCSynth.SCRoot.GetChildren(SCSynth.ISCNode)">
+        <member name="M:SCSynth.SCRoot.GetChildren(SCSynth.SCNodes.ISCNode)">
             <summary>
             GetChildrern of children (recursvive)
             </summary>

@@ -1,9 +1,8 @@
-﻿
-using VL.Core;
+﻿using VL.Core;
 using VL.Lib.Collections;
 using static VL.Core.Import.ProcessNodeFactory;
 
-namespace SCSynth
+namespace SCSynth.SCNodes
 {
     public class Group : ISCNode
     {
@@ -13,19 +12,20 @@ namespace SCSynth
         public Guid Id { get; set; }
         public bool hasParentGroup { get; set; }
         public Spread<ISCNode> Inputs{get; set;}
-
-        public Boolean isChanged { get; set; }
+        public bool hasChildren => Inputs.Where(x=>x !=null).Any();
+        public bool Enabled { get; set; }
+        public bool isChanged { get; set; }
         public int Order { get; set; }
         Spread<ISCNode> _prevNodes;
         NodeContext _context;
         public Group(NodeContext context)
         {
-            this.Id = Guid.NewGuid();
-            this.isChanged = false;
+            Id = Guid.NewGuid();
+            isChanged = false;
             Inputs = new List<ISCNode>().ToSpread();
             _prevNodes = Inputs;
-            this.hasParentGroup = false;
-            this.ParentGroup = null;
+            hasParentGroup = false;
+            ParentGroup = null;
             _context = context;
         }
 
@@ -42,7 +42,7 @@ namespace SCSynth
             {
                 if (Inputs.Count > 0 && Inputs!=null)
                 {
-                    var chg = this.Inputs.Where(x=>x != null && x.GetType() == typeof(Group)).
+                    var chg = Inputs.Where(x=>x != null && x.GetType() == typeof(Group)).
                                                     Cast<Group>().Any(x=>x.isChanged) ? true : false;
                     
                     return chg;
@@ -65,11 +65,11 @@ namespace SCSynth
             
             
             if (ParentGroup != null) { 
-                this.hasParentGroup = true; 
+                hasParentGroup = true; 
             }
             else
             {
-                this.hasParentGroup= false;
+                hasParentGroup= false;
             }
             //Set Order of Input Nodes and Assign Parent Group
             if (isChanged)
@@ -81,6 +81,8 @@ namespace SCSynth
                 });
                    
             }
+
+            
             
         }
 

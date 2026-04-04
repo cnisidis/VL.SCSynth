@@ -16,17 +16,17 @@ namespace SCSynth
 
         const string synthDefsSubdir = "synthdefs";
 
-        //private IResourceProvider<GlobalSCEngine>? _engineProvider;
+        private IResourceProvider<SCManager>? _managerProvider;
         public override void Configure(AppHost appHost)
         {
-            // Register the engine provider so patches can access it
-            /*
-            if (_engineProvider is null)
+             //Register the engine provider so patches can access it
+            
+            if (_managerProvider is null)
             {
-                _engineProvider = ResourceProvider.NewPooledSystemWide("VL.SCSynth", _ => new GlobalSCEngine());
+                _managerProvider = ResourceProvider.NewPooledSystemWide("VL.SCSynth", _ => new SCManager());
             }
-            appHost.Services.RegisterService(_engineProvider);
-            */
+            appHost.Services.RegisterService(_managerProvider);
+            
 
             appHost.RegisterNodeFactory("VL.SCSynth-Factory", (directory, nodeFactory) =>
             {
@@ -38,7 +38,10 @@ namespace SCSynth
 
                 Console.WriteLine("Factory initialized");
 
+                //Create an scmanager on the fly, to track synthdefs and changes per patch here
+                //For Global Manager and its usage see the notes bellow.
 
+                SCManager manager = new SCManager();
 
                 if (Directory.Exists(synthDefsDir))
                 {
@@ -48,25 +51,29 @@ namespace SCSynth
                     // Additionaly watch out for new/deleted/renamed files
                     invalidated = invalidated.Merge(
                     NodeBuilding.WatchDir(synthDefsDir).Where(e => e.ChangeType == WatcherChangeTypes.Changed || e.ChangeType == WatcherChangeTypes.Deleted || e.ChangeType == WatcherChangeTypes.Created || e.ChangeType == WatcherChangeTypes.Renamed || e.ChangeType == WatcherChangeTypes.All));
-                    //.Where(e => e.ChangeType == WatcherChangeTypes.All));
-                    // || string.Equals(e.Name, runwayLocal, StringComparison.OrdinalIgnoreCase)
-
-                    // Read files in folder decompile and store the data
-                    //var ext = new List<string> { "scsyndef" };
-                    //var compiledSynthDefs = Directory.EnumerateFiles(synthDefsDir, "*.*", SearchOption.TopDirectoryOnly).Where(s => ext.Contains(Path.GetExtension(s).TrimStart('.').ToLowerInvariant()));
+                    
                     string[] compiledSynthDefs = Directory.GetFiles(synthDefsDir, "*.scsyndef");
                     if (compiledSynthDefs.Length != 0)
                     {
-                        Console.WriteLine("Decompile available synthdefs");
+                        //IMPORTANT:
+                        //USE SC Manager (Globally) to track changes and update files from standard folders, like the supercollider user library folder
+                        //_managerProvider.GetHandle().Resource.ClearAll();
+                        //_managerProvider.GetHandle().Resource.LoadFiles(compiledSynthDefs);
+
+                        manager.LoadFiles(compiledSynthDefs);
+                        
+                        
+                        //Console.WriteLine("Decompile available synthdefs");
                         foreach (var compiledSynthDef in compiledSynthDefs)
                         {
-                            Console.WriteLine(compiledSynthDef);
+                            
+                            //Console.WriteLine(compiledSynthDef);
                             byte[] bytes;
                             var decompiledSynthdefs = Factory.Decompiler.DecompileSynthDefsFromFile(compiledSynthDef, out bytes);
                             foreach (var synthDef in decompiledSynthdefs)
                             {
-                                Console.WriteLine(synthDef.Key);
-                                var synthDefDesc = new SynthDescritpion(nodeFactory, synthDef.Key, synthDef.Value, compiledSynthDef);
+                                //Console.WriteLine(synthDef.Key);
+                                var synthDefDesc = new SynthDescritpion(nodeFactory, _managerProvider, synthDef.Key, synthDef.Value, compiledSynthDef);
                                 synthDefDesc.raw = bytes;
                                 builder.Add(synthDefDesc);
                                 Console.WriteLine("Synthdef: {0} was added", synthDef.Key);

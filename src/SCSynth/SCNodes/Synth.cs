@@ -4,7 +4,7 @@ using System.Reactive.Subjects;
 using System.Reactive.Linq;
 
 
-namespace SCSynth
+namespace SCSynth.SCNodes
 {
     public struct ParameterChangedEvent
     {
@@ -21,7 +21,9 @@ namespace SCSynth
         public Group ParentGroup { get; set; }
         public Guid Id { get; set; }
         public string synthDefFilePath { get; set; }
-        
+        public bool hasChildren => false;
+        public bool Enabled { get; set; }
+
         public bool isPlaying { get; set; }
 
         private byte[] _rawData;
@@ -34,11 +36,11 @@ namespace SCSynth
 
         public Synth(string SynthDefName)
         { 
-            this.Parameters = new Dictionary<string, Parameter>();  
+            Parameters = new Dictionary<string, Parameter>();  
             this.SynthDefName = SynthDefName;
-            this.Id = Guid.NewGuid();
-            this.isPlaying = false;
-            this.ParentGroup = null;
+            Id = Guid.NewGuid();
+            isPlaying = false;
+            ParentGroup = null;
 
             // Wire every parameter to the central stream
             foreach (var param in Parameters.Values)
@@ -57,11 +59,11 @@ namespace SCSynth
 
         public Synth(string SynthDefName, Dictionary<string, Parameter> parameters)
         {
-            this.Parameters = parameters;
+            Parameters = parameters;
             this.SynthDefName = SynthDefName;
-            this.Id = Guid.NewGuid();
-            this.isPlaying = false;
-            this.ParentGroup = null;
+            Id = Guid.NewGuid();
+            isPlaying = false;
+            ParentGroup = null;
 
             // Wire every parameter to the central stream
             foreach (var param in Parameters.Values)

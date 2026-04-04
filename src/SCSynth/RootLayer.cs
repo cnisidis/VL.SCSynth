@@ -1,4 +1,5 @@
 ﻿
+using SCSynth.SCNodes;
 using VL.Lib.Collections;
 
 namespace SCSynth

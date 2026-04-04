@@ -1,7 +1,9 @@
 ﻿
+using SCSynth.SCNodes;
 using System.Reactive.Linq;
 using VL.Core;
 using VL.Core.Diagnostics;
+using VL.Lib.Basics.Resources;
 
 
 namespace SCSynth.Factory
@@ -32,9 +34,12 @@ namespace SCSynth.Factory
         
         public Dictionary<string, Parameter> parameters = new Dictionary<string, Parameter>();
 
-        public SynthDescritpion(IVLNodeDescriptionFactory factory, string synthdefname, List<Parameter> parameters, string filepath)
+        readonly IResourceProvider<SCManager> _managerProvider;
+
+        public SynthDescritpion(IVLNodeDescriptionFactory factory, IResourceProvider<SCManager> managerProvider, string synthdefname, List<Parameter> parameters, string filepath)
         {
 
+            
             Factory = factory;
             FFullName = synthdefname;
             Name = synthdefname;
@@ -43,6 +48,8 @@ namespace SCSynth.Factory
             FSummary = synthdefname;
             this.parameters = parameters.ToDictionary(x=>x.Name);
             this.filepath = filepath;
+
+            _managerProvider = managerProvider;
             
             
 
@@ -144,6 +151,7 @@ namespace SCSynth.Factory
         public IObservable<object> Invalidated => Observable.Empty<object>();
         public IVLNode CreateInstance(NodeContext context)
         {
+            var managerHandler = _managerProvider.GetHandle();
             return new SynthNode(this, context);
         }
         public bool OpenEditor()

@@ -1,12 +1,6 @@
-﻿using SCSynth.GraphNodes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SCSynth.Factory;
-using System.Diagnostics.Contracts;
+﻿
 using VL.Lib.Collections;
+using static SCSynth.Factory.ASynth;
 
 namespace SCSynth.Factory
 {
@@ -44,61 +38,41 @@ namespace SCSynth.Factory
             bool hasIputs = ugenspecs.FindAll(x => x.name == "In").Any();
             bool hasOutputs = ugenspecs.FindAll(x => x.name == "Out").Any();
 
-            Console.WriteLine("\nMap SynthDef \n--- \nHas Controls: {0:B} \nHas Triggers: {1:B} \nHas In(s): {2:B} \nHas Out(s): {3:B} \n", hasControl, hasTriggerControl, hasIputs, hasOutputs);
+            Dictionary<string, List<Tuple<SCManager.ParamName, float>>> parametersPerCategory = new() { {"trigger", new()}, {"simple", new() } };
 
-            param_names.ForEach((p, idx) =>
-            {
-                var pname = p.Name;
-                if(p.Name.StartsWith("t_")) pname = p.Name.Substring(2)+" Trigger";
-                controls.TryAdd(p.Name , new ASynth.Control(pname, p.Index, param_init_vals[p.Index]));
+            param_names.ForEach((x, idx) => { 
+                if (x.Name.StartsWith("t_")){
+                    parametersPerCategory["trigger"].Add(Tuple.Create(x, param_init_vals[idx]));
+                }
+                else
+                {
+                    parametersPerCategory["simple"].Add(Tuple.Create(x, param_init_vals[idx]));
+                }
             });
 
-            
-            
-            if(hasIputs || hasOutputs)
-            {
-                foreach (var ugenspec in ugenspecs)
-                {
-                    //Console.WriteLine("InpIndex:{0:G}   InputName:{1:G}   ParamName:{2:G}   Value: {3:G}",
-                    //                inp.Index,
-                    //                ugenspecs[inp.Index].name,
-                    //                //ugenspecs[inp.Index].Otuputs()[inp.ConstantIndex].calcRate, 
-                    //                param_names[inp.ConstantIndex].Name,
-                    //                param_init_vals[param_names[inp.ConstantIndex].Index]
-                    //                );
-                    if (ugenspec.name == "In")
-                    {
-                        Console.WriteLine("In|Inputs->: " + ugenspec.Inputs().Count);
-                        foreach (var inp in ugenspec.Inputs())
-                        {
-                            if (!inp.isConstant && ugenspecs[inp.Index].name == "Control")
-                            {
-                                var paramToUpdate = param_names[inp.ConstantIndex].Name;
-                                
-                                controls.TryGetValue(paramToUpdate, out var ctrl);
-                                if (ctrl != null) { Console.WriteLine("Create Bus"); }
-                            }
-                                
-                        }
-                        
+            Console.WriteLine("\nMap SynthDef \n--- \nHas Controls: {0:B} \nHas Triggers: {1:B} \nHas In(s): {2:B} \nHas Out(s): {3:B} \n", hasControl, hasTriggerControl, hasIputs, hasOutputs);
 
-                        Console.WriteLine("In|Outputs->: " + ugenspec.Inputs().Count);
-                    }
-                    if (ugenspec.name == "Out")
-                    {
-                        Console.WriteLine("Out|Inputs->: "+ugenspec.Inputs().Count);
-                        foreach(var inp in ugenspec.Inputs())
-                        {
-                            if(!inp.isConstant && ugenspecs[inp.Index].name == "Control")
-                            {
-                                Console.WriteLine(param_names[inp.ConstantIndex].Name);
-                            }
-                               
-                        }
-                        
-                    }
+            //Console.WriteLine("Trigger Parameters");
+            //parametersPerCategory["trigger"].ForEach(x => { Console.WriteLine(x.Item1.Name); });
+            //Console.WriteLine("Simple Parameters");
+            //parametersPerCategory["simple"].ForEach(x => { Console.WriteLine(x.Item1.Name); });
+
+            ugenspecs.ForEach(uspec => uspec.Inputs().Where(inp => !inp.isConstant).ForEach((inp, idx) => {
+                if (ugenspecs[inp.Index].name=="Control")
+                {
+                    
+                    Console.WriteLine("{0:G}\t\t--> {1:G}", parametersPerCategory["simple"][inp.ConstantIndex].Item1.Name, uspec.name);
                 }
-            }
+                else if (ugenspecs[inp.Index].name == "TrigControl")
+                {
+                    
+                    Console.WriteLine("{0:G}\t\t--> {1:G}", parametersPerCategory["trigger"][inp.ConstantIndex].Item1.Name, uspec.name);
+                }
+            
+            }));
+            
+            
+            
 
             foreach (var control in controls.Values)
             {
@@ -109,12 +83,7 @@ namespace SCSynth.Factory
 
     }
 
-    public class SCUGen
-    {
-        SCManager.UgenSpec specs;
-
-
-    }
+    
 
     public class ASynth
     {
@@ -139,8 +108,23 @@ namespace SCSynth.Factory
             {
                 return (Name +": "+ InitValue.ToString());
             }
-            
+            public static void CreateControlFromUGenSpec(SCManager.UgenSpec ugenspec, Tuple<List<SCManager.ParamName>, List<float>> parameters)
+            {
+                var ugenName = ugenspec.name;
+                switch (ugenName) 
+                {
+                    case "TrigControl":
+                        break;
+                    case "Out": //Out.ar(bus, channels[])
+                        var bus = ugenspec.Inputs().FirstOrDefault();
+                        if (!bus.isConstant) {  }
+                        break;
+                }
+            }
         }
+
+
+        
         public class Input 
         { 
             
