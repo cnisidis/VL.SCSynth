@@ -47,7 +47,7 @@ This is absolutely needful in order to get instances (synths) of your synth defi
 </ol>
 
 
-## Super Collider
+## Using Super Collider (IDE)
 ### How to save a SynthDef File
 
 In order to use a synthdef in vvvv context, first you have to compile and store it. Grace to the sclang.exe compilations is happenning under the hood, saving a file needs just a method to write/store your newly made synth definition on your disk.
@@ -60,21 +60,23 @@ Then you can browse it and introduce it through your node browser.
 
 There are two options atm, both are using the .writeDefFile method.  The most straight forward is to use the it without any arguments, this will compile and save (write on your disk) a .scsyndef file at your default synthdefs folder which can be found under the file menu (Open user support directory).
 
-<code>
+```sclang
 (
-SynthDef(\ASynth, { |out=0, freq=440, amp=0.1,  t_gate=1|
-    var sig = SinOsc.ar(freq) * EnvGen.kr(Env.perc,t_gate, doneAction: 0);
-    Out.ar(out, sig * amp);
-}).writeDefFile(); 
+    SynthDef(\ASynth, { |out=0, freq=440, amp=0.1,  t_gate=1|
+        var sig = SinOsc.ar(freq) * EnvGen.kr(Env.perc,t_gate, doneAction: 0);
+        Out.ar(out, sig * amp);
+    }).writeDefFile(); 
 )
-</code>
+```
 
 
 ### Copy&Paste your synthdef
 
-![Open user support directory image](img/SC_FileMenu.png)
 
-![synthdef folder at user support directory image](img/user_support_dir.png)
+
+<img src="img/SC_FileMenu.png" alt="Open user support directory image" height="300"/>
+<img src="img/user_support_dir.png" alt="synthdef folder at user support directory image" height="300"/>
+
 
 
 
