@@ -73,9 +73,10 @@ There are two options atm, both are using the .writeDefFile method.  The most st
 ### Copy&Paste your synthdef
 
 
-
-<img src="img/SC_FileMenu.png" alt="Open user support directory image" height="300"/>
+<p float="left">
+<img src="img/SC_FileMenu.png" alt="Open user support directory image" height="300"/> 
 <img src="img/user_support_dir.png" alt="synthdef folder at user support directory image" height="300"/>
+<p>
 
 
 
