@@ -95,21 +95,37 @@ The other way is to predefine a custom folder (probably your projects' synthdef 
 ### SCSynth fails with Error Code
 <b>Server 'localhost' exited with exit code -1073741819</b> 
 
- Most probably there is something in the default synthdef folder which is preventing scsynth.exe to boot properly. Discard all the files (or the last added once) and try to execute scsynth.exe again.
+ Most probably there is something in the default synthdef folder which is preventing scsynth.exe to boot properly. Discard all the files (or the last added / suspcisious ones) and try to execute scsynth.exe again.
 
-Another reason can be the port you are trying to reserve, keep in mind that the default port is ... and if the IDE (sclang) is up and running it will be bind on this one.
+Another reason can be the port you are trying to reserve, keep in mind that the default port is `57110` and if the IDE (sclang) is up and running it will be bind on this one.
 
 ### Wrong Parameters Values
  If your synth's parameters looks messy then this happens because you are probably using a trigger control (t_argument), preferably declare "t_" arguments before any other argument, during the compilation SC prioritise triggers and brings them on top.
 
 ie. Swap t_gate and bring it in front, do the same if you have more triggers on the same synthdef.
 
-<code>|t_gate=1, out=0, amp=0.5, freq=200, rel=0.2, <s>t_gate=1</s>|</code>
+```sclang
+|t_gate=1, out=0, amp=0.5, freq=200, rel=0.2, <s>t_gate=1</s>|
+```
 
 Set triggers first.
 
-<code>|t_gate, t_trigger, t_something, out=0, amp=0.5, freq=200 ...| </code>
+```sclang
+|t_gate, t_trigger, t_something, out=0, amp=0.5, freq=200 ...| 
+```
 
+### Unable To bind UDP port
+
+This may happen occasionaly, a good practice is first to start SC in case you wan to use its IDE along with VL.SCSynth.
+However you may find yourself several times in this terrible position where Net realted errors will appear in the SC console during its startup or when booting the Server.
+Most of the times, if anything else seems to work but a hard restart try first a Networking Restart, it my becomes handy to do these steps:
+
+
+1. Run Cmd prmpt as Administrator 
+2. `net stop winnat`
+3. `net start winnat`
+
+Usually this fixes the problem if not then try Reboot you computer, if the problem persists then you may have a look to [this thread](https://scsynth.org/t/win10-primitive-netaddr-sendmsg-failed-and-primitive-getlangport-failed/2085/4) in SC community forum.
 
 
 
