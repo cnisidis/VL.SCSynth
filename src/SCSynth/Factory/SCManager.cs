@@ -339,9 +339,9 @@ namespace SCSynth.Factory
                 this._synthDefs.Add(synthDef);
             }
         }
-        public void GetSynthDefs(out Spread<SynthDef> SynthDefs)
+        public Spread<SynthDef> GetSynthDefs()
         {
-            SynthDefs = this._synthDefs.ToSpread();
+            return this._synthDefs.ToSpread();
         }
 
         public void Dispose()

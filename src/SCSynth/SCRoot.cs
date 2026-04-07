@@ -22,8 +22,8 @@ namespace SCSynth
 
         private Dictionary<string, byte[]> _synthdefs;
 
-        List<Group> _groups;
-        List<Synth> _synths;
+        List<OldGroup> _groups;
+        List<OldSynth> _synths;
 
 
         public Dictionary<Guid, int> SynthsMap { get; private set; }
@@ -31,8 +31,8 @@ namespace SCSynth
         public SCRoot()
         {
             nodes = new List<ISCNode>();
-            _groups = new List<Group> { };
-            _synths = new List<Synth>();
+            _groups = new List<OldGroup> { };
+            _synths = new List<OldSynth>();
             SynthsMap = new Dictionary<Guid, int>();
         }
 
@@ -48,8 +48,8 @@ namespace SCSynth
 
             var grpIdx = 0;
             nodes.Where(x => x != null ).ForEach((x, idx) => {
-                if (x.ParentGroup == null && x.GetType().Equals(typeof(Group))) { x.scId = 1000; grpIdx += 1; }
-                else if (x.GetType().Equals(typeof(Group))) { x.scId = 1000 * (grpIdx + 1); grpIdx += 1; }
+                if (x.ParentGroup == null && x.GetType().Equals(typeof(OldGroup))) { x.scId = 1000; grpIdx += 1; }
+                else if (x.GetType().Equals(typeof(OldGroup))) { x.scId = 1000 * (grpIdx + 1); grpIdx += 1; }
                 else x.scId = x.ParentGroup.scId + x.Order;
 
             
@@ -65,7 +65,7 @@ namespace SCSynth
                 _node = node;
                 hasChanged = true;
             }
-            else if(nodes.Where(x => x != null && x.GetType() == typeof(Group)).Cast<Group>().Any(x => x.isChanged))
+            else if(nodes.Where(x => x != null && x.GetType() == typeof(OldGroup)).Cast<OldGroup>().Any(x => x.isChanged))
             {
                 hasChanged = true;
             }
@@ -87,13 +87,13 @@ namespace SCSynth
                 Console.WriteLine("preparing tree");
                 SynthsMap.Clear();
                 //collect all synth definitions
-                _groups = nodes.Where(x => x != null && x.GetType().Equals(typeof(Group))).Cast<Group>().ToList();
-                _synths = nodes.Where(x => x != null && x.GetType().Equals(typeof(Synth))).Cast<Synth>().ToList();
+                _groups = nodes.Where(x => x != null && x.GetType().Equals(typeof(OldGroup))).Cast<OldGroup>().ToList();
+                _synths = nodes.Where(x => x != null && x.GetType().Equals(typeof(OldSynth))).Cast<OldSynth>().ToList();
                 //var bufers = nodes.Where(x => x != null && x.GetType() == typeof(SCBuffer));
 
                 
                 
-                foreach(Synth synth in _synths)
+                foreach(OldSynth synth in _synths)
                 {
                     var path = synth.synthDefFilePath;
                     var filename = System.IO.Path.GetFileName(path);
@@ -104,7 +104,7 @@ namespace SCSynth
             }
         }
 
-        public int GetMappedSynthSCId(Synth synth)
+        public int GetMappedSynthSCId(OldSynth synth)
         {
             if (synth == null) return -1;
             var scid = -1;
@@ -143,12 +143,12 @@ namespace SCSynth
             return nodes;
         }
 
-        public Spread<Synth> GetSynths()
+        public Spread<OldSynth> GetSynths()
         {
             return _synths.ToSpread();
         }
 
-        public Spread<Group> GetGroups()
+        public Spread<OldGroup> GetGroups()
         {
             return _groups.ToSpread();
         }

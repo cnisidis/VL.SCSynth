@@ -61,25 +61,32 @@ namespace SCSynth
                         //_managerProvider.GetHandle().Resource.LoadFiles(compiledSynthDefs);
 
                         manager.LoadFiles(compiledSynthDefs);
-                        
+                        manager.GetSynthDefs().ForEach( synthDef => {
+                            var synthDesc = new SynthDescritpion(nodeFactory, null, synthDef);
+                            builder.Add(synthDesc);
+                        } );
+
+                        /*
+                         * OLD FACTORY
+                         */
                         
                         //Console.WriteLine("Decompile available synthdefs");
-                        foreach (var compiledSynthDef in compiledSynthDefs)
-                        {
+                        //foreach (var compiledSynthDef in compiledSynthDefs)
+                        //{
                             
-                            //Console.WriteLine(compiledSynthDef);
-                            byte[] bytes;
-                            var decompiledSynthdefs = Factory.Decompiler.DecompileSynthDefsFromFile(compiledSynthDef, out bytes);
-                            foreach (var synthDef in decompiledSynthdefs)
-                            {
-                                //Console.WriteLine(synthDef.Key);
-                                var synthDefDesc = new SynthDescritpion(nodeFactory, _managerProvider, synthDef.Key, synthDef.Value, compiledSynthDef);
-                                synthDefDesc.raw = bytes;
-                                builder.Add(synthDefDesc);
-                                Console.WriteLine("Synthdef: {0} was added", synthDef.Key);
-                            }
-                            // builder.Add(new ModelDescription(nodeFactory, infos[0], infos[1], infos[2])); 
-                        }
+                        //    //Console.WriteLine(compiledSynthDef);
+                        //    byte[] bytes;
+                        //    var decompiledSynthdefs = Factory.Decompiler.DecompileSynthDefsFromFile(compiledSynthDef, out bytes);
+                        //    foreach (var synthDef in decompiledSynthdefs)
+                        //    {
+                        //        //Console.WriteLine(synthDef.Key);
+                        //        var synthDefDesc = new SynthDescritpion(nodeFactory, _managerProvider, synthDef.Key, synthDef.Value, compiledSynthDef);
+                        //        synthDefDesc.raw = bytes;
+                        //        builder.Add(synthDefDesc);
+                        //        Console.WriteLine("Synthdef: {0} was added", synthDef.Key);
+                        //    }
+                        //    // builder.Add(new ModelDescription(nodeFactory, infos[0], infos[1], infos[2])); 
+                        //}
                     }
                     else
                     {

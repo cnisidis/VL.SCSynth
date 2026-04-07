@@ -1,18 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using VL.Lib.Basics.Resources;
 using SCSynth.Factory;
+using VL.Lib.Collections;
+
 namespace SCSynth.Utils
 {
     public class SCManagerStats
     {
-        public static int GetStats(IResourceHandle<SCManager> manager)
+        public static int GetStats(IResourceHandle<SCManager> manager, out Spread<SCManager.SynthDef> SynthDefs )
         {
-            manager.Resource.GetSynthDefs(out var synthdefs);
-            return synthdefs.Count;
+            SynthDefs = manager.Resource.GetSynthDefs();
+            return SynthDefs.Count;
+            
         }
     }
 }

@@ -18,7 +18,7 @@ namespace SCSynth.SCNodes
         public bool hasChildren { get; }
         public int Order { get; set; }
 
-        public Group ParentGroup { get; set; }
+        public OldGroup ParentGroup { get; set; }
 
         public AddActions AddAction { get; set; }
 

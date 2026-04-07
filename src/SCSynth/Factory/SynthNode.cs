@@ -35,20 +35,11 @@ namespace SCSynth.Factory
             
             this.description = description;
             
-            //this.description = description;
 
-            var SynthParameters = new Dictionary<string, Parameter>();
-
-            foreach(var param in description.parameters)
-            {
-                var synthParam = new Parameter(param.Key, param.Value.initValue);
-                SynthParameters.Add(param.Key, synthParam);
-            }
-
-            this.synth = new Synth(description.synthDefName, SynthParameters);
-            this.synth.synthDefFilePath = description.filepath;
-            Inputs = description.Inputs.Select(p => new Pin(p.Name, p.Type) { Value = p.DefaultValue}).ToArray();
-            Outputs = description.Outputs.Select(p => new Pin("Synth", typeof(Synth)) { Value = this.synth }).ToArray();
+            this.synth = SynthCreator.CreateASynth(description.synthDef);
+            
+            Inputs = description.Inputs.Cast<PinDescription>().Select(pin => new Pin(pin.OriginalName, pin.Type) { Value = pin.DefaultValue}).ToArray();
+            Outputs = description.Outputs.Select(pin => new Pin("Synth", typeof(Synth)) { Value = this.synth }).ToArray();
             
             
         }
@@ -67,18 +58,26 @@ namespace SCSynth.Factory
             if (!Inputs.Any())
                 return;
             //Console.Write("Update");  
-            foreach (var input in Inputs.Cast<Pin>())
+            foreach (var inputPin in Inputs.Cast<Pin>())
             {
-                //Console.WriteLine("Name: {0} \n Originan: {1}", input.Name, input.OriginalName);
-                if (input.Type == typeof(float) || input.Value.GetType() == typeof(Single) || input.Value.GetType() == typeof(float))
+                //Console.WriteLine("Name: {0} \n Originan: {1}", inputPin.Name, inputPin.OriginalName);
+                if (inputPin.Type == typeof(float) || inputPin.Value.GetType() == typeof(Single) || inputPin.Value.GetType() == typeof(float))
                 {
-                    this.synth.Parameters[input.OriginalName].Value = (float)input.Value;
+                    this.synth.ControlParameters[inputPin.OriginalName].Value = (float)inputPin.Value;
                 }
-                if(input.Type == typeof(bool) && input.OriginalName == "Enable")
+                else if(inputPin.Type == typeof(bool) && inputPin.OriginalName.StartsWith("t_"))
                 {
-                    this.synth.isPlaying = (bool)input.Value;
+
+                    TriggerControlParameter tr = (TriggerControlParameter)this.synth.ControlParameters[inputPin.OriginalName];
+                    tr.SetValue((bool)inputPin.Value);
 
                 }
+                else if (inputPin.Type == typeof(bool) && inputPin.OriginalName == "Enable")
+                {
+                    this.synth.Enabled = (bool)inputPin.Value;
+
+                }
+                
                 
             }
             
@@ -86,7 +85,7 @@ namespace SCSynth.Factory
 
         public void Dispose()
         {
-            Console.WriteLine("Disposed {0:G}", synth.scId);
+            Console.WriteLine("Disposed {0:G}", synth.SCId);
         }
 
 

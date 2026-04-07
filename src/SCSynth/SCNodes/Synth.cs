@@ -1,7 +1,8 @@
 ﻿
-using VL.Lib.Collections;
-using System.Reactive.Subjects;
+using SCSynth.Factory;
 using System.Reactive.Linq;
+using System.Reactive.Subjects;
+using VL.Lib.Collections;
 
 
 namespace SCSynth.SCNodes
@@ -9,16 +10,55 @@ namespace SCSynth.SCNodes
     public struct ParameterChangedEvent
     {
         
-        public Synth synth;
+        public OldSynth synth;
         public Parameter param;
     }
+    /// <summary>
+    /// A SuperCollider Synth Instance.
+    /// </summary>
+    public class Synth:SCNode
+    {
+        /// <summary>
+        /// SynthDef of the specific synth
+        /// </summary>
+        /// 
+        public SCManager.SynthDef? SynthDef;
+        /// <summary>
+        /// Synth Name -> can be found in the synthdef.
+        /// </summary>
+        public string Name;
 
-    public class Synth : ISCNode
+        private string _name;
+        
+        public Synth(SCManager.SynthDef? SynthDef, string Name="vvvv dummy synth"):base()
+        {
+            this.SynthDef = SynthDef;
+            this.Name = this.SynthDef != null ? this.SynthDef.name : Name ;
+            
+            base.Initialize();
+            
+        }
+
+        public override void Update()
+        {
+            if(_name != Name)
+            {
+                _name = Name;
+                Invalidate();
+            }
+            base.Update();
+        }
+
+        
+        
+    }
+
+    public class OldSynth : ISCNode
     {
         
         public string SynthDefName { get; set; }    
         public int scId { get; set; }
-        public Group ParentGroup { get; set; }
+        public OldGroup ParentGroup { get; set; }
         public Guid Id { get; set; }
         public string synthDefFilePath { get; set; }
         public bool hasChildren => false;
@@ -34,7 +74,7 @@ namespace SCSynth.SCNodes
         public AddActions AddAction { get; set; }
         public int Order { get; set; }
 
-        public Synth(string SynthDefName)
+        public OldSynth(string SynthDefName)
         { 
             Parameters = new Dictionary<string, Parameter>();  
             this.SynthDefName = SynthDefName;
@@ -57,7 +97,7 @@ namespace SCSynth.SCNodes
 
         }
 
-        public Synth(string SynthDefName, Dictionary<string, Parameter> parameters)
+        public OldSynth(string SynthDefName, Dictionary<string, Parameter> parameters)
         {
             Parameters = parameters;
             this.SynthDefName = SynthDefName;
@@ -70,6 +110,7 @@ namespace SCSynth.SCNodes
             {
                 param.OnChanged = (param) =>
                 {
+                    
                     _parameterStream.OnNext(new ParameterChangedEvent
                     {
                         

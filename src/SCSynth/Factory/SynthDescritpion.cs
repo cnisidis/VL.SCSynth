@@ -18,13 +18,9 @@ namespace SCSynth.Factory
         string? FSummary;
         string FCategory;
 
-        public Synth synth { get; set; }
         public Guid id { get; set; }
 
-        public string synthDefName { get; set; }
-
-        public string filepath { get; set; }
-
+        public SCManager.SynthDef synthDef { get; set; }
         public byte[] raw { get; set; }
 
         // Inputs and outputs
@@ -32,22 +28,21 @@ namespace SCSynth.Factory
         List<PinDescription> outputs = new List<PinDescription>();
 
         
-        public Dictionary<string, Parameter> parameters = new Dictionary<string, Parameter>();
+        public Dictionary<string, ControlParameter> parameters = new Dictionary<string, ControlParameter>();
 
         readonly IResourceProvider<SCManager> _managerProvider;
 
-        public SynthDescritpion(IVLNodeDescriptionFactory factory, IResourceProvider<SCManager> managerProvider, string synthdefname, List<Parameter> parameters, string filepath)
+        public SynthDescritpion(IVLNodeDescriptionFactory factory, IResourceProvider<SCManager> managerProvider, SCManager.SynthDef synthdef)
         {
 
-            
+            this.synthDef = synthdef;   
             Factory = factory;
-            FFullName = synthdefname;
-            Name = synthdefname;
-            synthDefName = synthdefname;
+            FFullName = synthdef.name;
+            Name = synthdef.name;
             FCategory = "SYNTHDEFS.";
-            FSummary = synthdefname;
-            this.parameters = parameters.ToDictionary(x=>x.Name);
-            this.filepath = filepath;
+            FSummary = synthdef.name;
+            this.parameters = SynthCreator.BuildParameters(synthdef);
+            
 
             _managerProvider = managerProvider;
             
@@ -62,7 +57,7 @@ namespace SCSynth.Factory
                 return;
 
             try
-            {
+            { 
                 Type type = typeof(object);
                 object dflt = "";
                 string name = "";
@@ -71,27 +66,32 @@ namespace SCSynth.Factory
                 
                 if (parameters.Count > 0)
                 {
-                    foreach (var param in parameters)
-                    {
-                        GetTypeDefaultAndDescription(param.Value, ref type, ref dflt, ref desc);
-                        inputs.Add(new PinDescription(param.Key, type, dflt, desc));
-                        Console.WriteLine(param.Key);
+                    parameters.Values.ForEach(parameter => {
                         
-                    }
+                        if(parameter.Type == ControlParameterType.Trigger)
+                            GetTypeDefaultAndDescription((TriggerControlParameter)parameter, ref type, ref dflt, ref desc);
+                            
+                        else
+                            GetTypeDefaultAndDescription((ValueControlParameter)parameter, ref type, ref dflt, ref desc);
+
+                        inputs.Add(new PinDescription(parameter.Name, type, dflt, desc));
+                    });
+
+                   
                 }
                 else
                 {
                     Console.WriteLine("This Synth has no Parameters exposed");
                 }
 
-                // Adds the trigger pin
-                //inputs.Add(new PinDescription("Reset All", typeof(bool), false, "Reset All Parameters to their default values"));
+                // Adds the Enable pin
+                
                 inputs.Add(new PinDescription("Enable", typeof(bool), true, "Enable the Synth"));
                 //inputs.Add(new PinDescription("ResetAll", typeof(bool), false, "Reset All Parameters to their intial values"));
 
                 
-                
-                outputs.Add(new PinDescription("Synth", typeof(Synth), null , "A Synth Node"));
+                //Adds the main Output Pin
+                outputs.Add(new PinDescription(synthDef.name, typeof(SCNode), null , "A Synth Node"));
                 
 
                 FInitialized = true;
@@ -102,16 +102,26 @@ namespace SCSynth.Factory
             }
         }
 
-        void GetTypeDefaultAndDescription(Parameter parameter, ref Type type, ref object dflt, ref string desc)
+        void GetTypeDefaultAndDescription(ControlParameter parameter, ref Type type, ref object dflt, ref string desc)
         {
 
             string unit = "None";
             string[] featureNames = { };
 
             //desc = parameter.Name + "\n" + parameter.Value.ToString();
-            desc = "Initial Value: " + parameter.Value.ToString();
-            type = typeof(float);
-            dflt = parameter.Value;
+            
+            if (parameter.Type == ControlParameterType.Trigger) {
+                type = typeof(bool);
+                dflt = parameter.InitValue==1f?true:false;
+                desc = "Trigger Parameter";
+            } 
+            else
+            {
+                type = typeof(float);
+                dflt = parameter.InitValue;
+                desc = "Value Parameter";
+            }
+                
 
         }
 
@@ -151,7 +161,7 @@ namespace SCSynth.Factory
         public IObservable<object> Invalidated => Observable.Empty<object>();
         public IVLNode CreateInstance(NodeContext context)
         {
-            var managerHandler = _managerProvider.GetHandle();
+            //var managerHandler = _managerProvider.GetHandle();
             return new SynthNode(this, context);
         }
         public bool OpenEditor()

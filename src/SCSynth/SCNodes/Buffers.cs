@@ -1,12 +1,15 @@
 ﻿
 
 
+using SCSynth.Messaging;
 using SCSynth.SCNodes;
+using System.Reactive.Subjects;
+using System.Runtime.CompilerServices;
 using VL.Lib.IO;
 
 namespace SCSynth
 {
-    public enum BufferFileTypes
+    public enum SCBufferFileType
     {
         aiff,
         next,
@@ -15,7 +18,7 @@ namespace SCSynth
         raw
     }
 
-    public enum BufferFormats
+    public enum SCBufferFormat
     {
         int8,
         int16,
@@ -28,52 +31,157 @@ namespace SCSynth
 
     }
 
-    public class Buffer:ISCNode
+    public class SCBuffer : IObservable<SCMessage>
     {
-        public int scID { get; set; }
-        public int Order { get; set; }
-        public Group ParentGroup { get; set; }
-        private String FilePath { get; set; }
+        public int bufferNumber;
+        public int numberOfFrames;
+        public int numberOfChannels;
+        public float sampleRate;
+        public string filePath;
 
-        public int FileStartFrame { get; set; } 
-        public int BufferStartFrame { get; set; }
-        public bool hasChildren => false;
-        public int TotalFramesToRead { get; set; }
+        public bool hasFilePath { get => 
+            
+                ((VL.Lib.IO.Path)filePath).Exists && ((VL.Lib.IO.Path)filePath).IsFile && ((VL.Lib.IO.Path)filePath).NameWithExtension.Split(".")[1].Contains("wav");
+             
+        }
 
-        public bool LeaveFileOpen { get; set; }
-        public int scId { get; set; }
-        public Guid Id { get; set; }
-        public AddActions AddAction { get; set; }
-        public bool Enabled { get; set; }
-        public Buffer(string FilePath)
+        public int startingFrame;
+        public int numberOfFramesToRead;
+
+
+        public bool? leaveFileOpen;
+
+        public SCBufferFileType headerFormat;
+        public SCBufferFormat sampleFormat;
+
+        private readonly Subject<SCMessage> _message = new();
+        public IObservable<SCMessage> message => _message;
+
+        public bool AutoLoad;
+
+        public SCBuffer(string? filePath, bool autoLoad=false)
         {
-            FileStartFrame = 0;
-            BufferStartFrame = 0;
-            TotalFramesToRead = -1;
-            LeaveFileOpen = false;
-            this.FilePath = FilePath;
+            this.filePath = filePath;
+            AutoLoad = autoLoad;
+            if (autoLoad) 
+            {
+                Read();
+            }
+        }
+
+        public static SCBuffer BufferFromFile(string filePath)
+        {
+            return new SCBuffer(filePath);
         }
 
 
-        public void SetFilePath(string filePath)
+        /// <summary>
+        /// Read sound file data into an existing buffer. (Asynchronous)
+        /// </summary>
+        public void Read()
         {
-            FilePath = filePath;
+            if(this.filePath!=null)
+            {
+                _message.OnNext(new SCMessage(SCMessageType.BufferScalar,""));
+            }
+            else
+            {
+                Console.WriteLine("First assign a file path before reading a buffer");
+            }
+        }
+        /// <summary>
+        /// Write sound file data.
+        /// </summary>
+        /// <param name="filePath"></param>
+        public void Write(string filePath)
+        {
+
+        }
+        /// <summary>
+        /// Allocate buffer space.
+        /// </summary>
+        public void Alloc()
+        {
+
+
+        }
+        /// <summary>
+        /// Allocate buffer space and read a sound file.
+        /// </summary>
+        public void AllocRead()
+        {
+
+        }
+        /// <summary>
+        /// Allocate buffer space and read channels from a sound file.
+        /// </summary>
+        public void AllocReadChannel()
+        {
+
+        }
+        /// <summary>
+        /// Free buffer data.
+        /// </summary>
+        public void Free()
+        {
+
+        }
+        /// <summary>
+        /// Zero sample data.
+        /// </summary>
+        public void Zero()
+        {
+
+        }
+        /// <summary>
+        /// Set sample value(s).
+        /// </summary>
+        public void Set()
+        {
+
+        }
+        /// <summary>
+        /// Set ranges of sample value(s).
+        /// </summary>
+        public void SetRange()
+        {
+
+        }
+        /// <summary>
+        /// Fill ranges of sample value(s).
+        /// </summary>
+        public void Fill()
+        {
+
+        }
+        
+        public void Gen()
+        {
+
         }
 
-        public string GetFilePath()
+        /// <summary>
+        /// Get buffer info.
+        /// </summary>
+        public void Query()
         {
-            return FilePath;
+
         }
 
-        public IEnumerable<byte> GetBytes()
+        /// <summary>
+        /// Get sample value(s).
+        /// </summary>
+        public void Get()
         {
-            byte[] file = System.IO.File.ReadAllBytes(FilePath);
-            return file;
-        }
 
-        public List<ISCNode> GetInputs()
-        {
-            throw new NotImplementedException();
         }
+        /// <summary>
+        /// Get ranges of sample value(s).
+        /// </summary>
+        public void GetRange()
+        {
+
+        }
+        public IDisposable Subscribe(IObserver<SCMessage> observer) => _message.Subscribe(observer);
     }
 }

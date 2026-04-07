@@ -30,7 +30,7 @@ namespace SCSynth.Factory
         public PinDescription(string name, Type type, object defaultValue, string description)
         {
             this.OriginalName = name;
-            this.Name = name; // BeautifyPin(name);
+            this.Name = BeautifyPin (name.Contains("t_") ? name.Substring(2) +" Trigger" : name ); // BeautifyPin(name);
             this.Type = type;
             this.DefaultValue = defaultValue;
             this.Summary = description;
