@@ -15,6 +15,11 @@ SCServer comes with an integrated SCClient (for receiving scynth responses). How
 
 [^10]: [scsynth](https://github.com/supercollider/supercollider/wiki/scsynth-development) – A real-time audio server
 
+
+## Development Status
+
+⚠️ This project is currently in active development and may be subject to breaking changes, deprecations, and unstable features. Not recommended for production use.
+
 ## The Basics
 
 #### Useful Notes
@@ -70,16 +75,14 @@ There are two options atm, both are using the .writeDefFile method.  The most st
 ```
 
 
-### Copy&Paste your synthdef
+**Find your SynthDefs in the default User Support Directory**
+
 
 
 <p float="left">
 <img src="img/SC_FileMenu.png" alt="Open user support directory image" height="300"/> 
 <img src="img/user_support_dir.png" alt="synthdef folder at user support directory image" height="300"/>
 <p>
-
-
-
 
 
 ### Save it directly 
