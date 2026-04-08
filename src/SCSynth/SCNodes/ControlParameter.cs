@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VL.Lib.Collections;
 
 namespace SCSynth.SCNodes
 {
@@ -19,10 +20,56 @@ namespace SCSynth.SCNodes
         string Name { get; }
         public Action<IControlParameter> OnChanged { get; set; }
     }
+
+    public class ObjectControParamer
+    {
+        public string Name;
+
+        public object? InitValue;
+        private object? _value;
+        public object? Value
+        {
+            get => _value;
+            set
+            {
+
+
+                if (value is float || value is int)
+                {
+                    if (!_value.Equals(value))
+                    {
+                        _value = value;
+                        //OnChanged?.Invoke(this);
+                        Console.WriteLine("Parameter Changed");
+                    }
+
+
+                }
+                if (value is Spread<float> || value is Spread<IComparable>)
+                {
+                    if (!ReferenceEquals(_value, value))
+                    {
+                        _value = value;
+                        Console.WriteLine("Parameter Sequence Changed");
+                    }
+                }
+
+            }
+        }
+
+        public ObjectControParamer(string name, object initValue)
+        {
+            this.Name = name;
+            this.InitValue = initValue; 
+            this._value = initValue;
+        }
+    }
+
     public class ControlParameter
     {
         public ControlParameterType Type { private set; get; }
         public string Name;
+        
         public float InitValue;
         private float _value;
         public float Value
