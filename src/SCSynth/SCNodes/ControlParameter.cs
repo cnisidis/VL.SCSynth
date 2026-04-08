@@ -40,7 +40,7 @@ namespace SCSynth.SCNodes
                     {
                         _value = value;
                         //OnChanged?.Invoke(this);
-                        Console.WriteLine("Parameter Changed");
+                        //Console.WriteLine("Parameter Changed");
                     }
 
 
@@ -50,7 +50,7 @@ namespace SCSynth.SCNodes
                     if (!ReferenceEquals(_value, value))
                     {
                         _value = value;
-                        Console.WriteLine("Parameter Sequence Changed");
+                        //Console.WriteLine("Parameter Sequence Changed");
                     }
                 }
 
