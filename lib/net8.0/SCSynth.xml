@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SCSynth</name>
+    </assembly>
+    <members>
+        <member name="T:SCSynth.Commands.SCCommandType">
+            <summary>
+            SuperCollider Server Command Types
+            </summary>
+        </member>
+        <member name="F:SCSynth.Factory.SCManager.InputSpec.ConstantIndex">
+            <summary>
+            Output or Constant index if isConstant == true
+            </summary>
+        </member>
+        <member name="M:SCSynth.Root.ClearTree">
+            <summary>
+            Clears Tree on SuperCollider Side
+            </summary>
+        </member>
+        <member name="T:SCSynth.Protocol">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SCSynth.Verbosity.Normal">
+            <summary>
+            Normal Verbosity
+            </summary>
+        </member>
+        <member name="F:SCSynth.Verbosity.SuppressMessages">
+            <summary>
+            Suppress Messages
+            </summary>
+        </member>
+        <member name="F:SCSynth.Verbosity.SuppressAll">
+            <summary>
+            Suppress All
+            </summary>
+        </member>
+        <member name="M:SCSynth.SCBuffer.Read">
+            <summary>
+            Read sound file data into an existing buffer. (Asynchronous)
+            </summary>
+        </member>
+        <member name="M:SCSynth.SCBuffer.Write(System.String)">
+            <summary>
+            Write sound file data.
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:SCSynth.SCBuffer.Alloc">
+            <summary>
+            Allocate buffer space.
+            </summary>
+        </member>
+        <member name="M:SCSynth.SCBuffer.AllocRead">
+            <summary>
+            Allocate buffer space and read a sound file.
+            </summary>
+        </member>
+        <member name="M:SCSynth.SCBuffer.AllocReadChannel">
+            <summary>
+            Allocate buffer space and read channels from a sound file.
+            </summary>
+        </member>
+        <member name="M:SCSynth.SCBuffer.Free">
+            <summary>
+            Free buffer data.
+            </summary>
+        </member>
+        <member name="M:SCSynth.SCBuffer.Zero">
+            <summary>
+            Zero sample data.
+            </summary>
+        </member>
+        <member name="M:SCSynth.SCBuffer.Set">
+            <summary>
+            Set sample value(s).
+            </summary>
+        </member>
+        <member name="M:SCSynth.SCBuffer.SetRange">
+            <summary>
+            Set ranges of sample value(s).
+            </summary>
+        </member>
+        <member name="M:SCSynth.SCBuffer.Fill">
+            <summary>
+            Fill ranges of sample value(s).
+            </summary>
+        </member>
+        <member name="M:SCSynth.SCBuffer.Query">
+            <summary>
+            Get buffer info.
+            </summary>
+        </member>
+        <member name="M:SCSynth.SCBuffer.Get">
+            <summary>
+            Get sample value(s).
+            </summary>
+        </member>
+        <member name="M:SCSynth.SCBuffer.GetRange">
+            <summary>
+            Get ranges of sample value(s).
+            </summary>
+        </member>
+        <member name="F:SCSynth.SCNodes.SCNode.innerObject">
+            <summary>
+            The inner Object (SCNode)
+            </summary>
+        </member>
+        <member name="P:SCSynth.SCNodes.SCNode.Invalidated">
+            <summary>
+            if the inner object or any of its children gets invalidated
+            </summary>
+        </member>
+        <member name="F:SCSynth.SCNodes.SCNode.Changed">
+            <summary>
+            On Change of any parameter
+            </summary>
+        </member>
+        <member name="P:SCSynth.SCNodes.SCNode.SCId">
+            <summary>
+            Itnernal auto assigned ID (during the Tree build) will be used by SuperCollider to track the specific node.
+            </summary>
+        </member>
+        <member name="P:SCSynth.SCNodes.SCNode.lastKnownParent">
+            <summary>
+            Last Known Parent is the last known group that the node was connected on. 
+            This will be used when it gets validated first, during the BuildTree procedure.
+            </summary>
+        </member>
+        <member name="P:SCSynth.SCNodes.SCNode.Id">
+            <summary>
+            This ID will be used only in vvvv context
+            </summary>
+        </member>
+        <member name="F:SCSynth.SCNodes.SCNode._enabled">
+            <summary>
+            Enable / Disbale a Node (this is invalidating the node and removes it temporarely from the Tree
+            </summary>
+            
+        </member>
+        <member name="T:SCSynth.SCNodes.Synth">
+            <summary>
+            A SuperCollider Synth Instance.
+            </summary>
+        </member>
+        <member name="F:SCSynth.SCNodes.Synth.SynthDef">
+            <summary>
+            SynthDef of the specific synth
+            </summary>
+            
+        </member>
+        <member name="F:SCSynth.SCNodes.Synth.Name">
+            <summary>
+            Synth Name -> can be found in the synthdef.
+            </summary>
+        </member>
+        <member name="F:SCSynth.Utils.Globals.SCSynthPort">
+            <summary>
+            Default Server Port
+            </summary>
+        </member>
+        <member name="F:SCSynth.Utils.Globals.SCLangPort">
+            <summary>
+            Default Language Port
+            </summary>
+        </member>
+    </members>
+</doc>
