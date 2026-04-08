@@ -131,7 +131,9 @@ namespace SCSynth.Commands
 
         public CreateNewSynth(Synth synth):base(SCCommandType.S_NEW)
         {
-            synthDefName = synth.SynthDef.name;
+            if (synthDefName == null) return;
+            synthDefName = synth.SynthDef?.name;
+            
             SCId = synth.SCId;
             this.Action = AddAction.AddToTail;
             TargetSCId = synth.lastKnownParent;
