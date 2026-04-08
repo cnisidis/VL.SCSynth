@@ -76,7 +76,7 @@ namespace SCSynth
                         
                         var encode = ((SCCommand)msg.value).GetBytes();
                         _frameBuffer.Add(encode);
-                        Console.WriteLine("Parameter Changed");
+                        //Console.WriteLine("Parameter Changed");
                         break;
 
                     case SCMessageType.Info:
@@ -111,7 +111,11 @@ namespace SCSynth
         {
             
             //messages = _activeNodes.Select(nodes => nodes.Merge()).Switch();
-            if (Node == null && _invalidated==false) { Console.WriteLine("Null"); _invalidated = true; ClearTree();  }
+            if (Node == null && _invalidated==false) {
+                //Console.WriteLine("Null");
+                _invalidated = true; 
+                ClearTree();  
+            }
             
             if (_node!=Node)
             {
@@ -174,7 +178,7 @@ namespace SCSynth
             }
             else if (_node!=null && _node.GetType() == typeof(Synth))
             {
-                Console.WriteLine("A Synth is Connected on Root");
+                Console.WriteLine("A Single Synth is Connected on Root");
                 Synths.Add((Synth)_node);
             }
 
@@ -289,7 +293,6 @@ namespace SCSynth
             _manualCommands.Dispose();
             _activeNodes.Dispose();
             
-        
         }
     }
 }
