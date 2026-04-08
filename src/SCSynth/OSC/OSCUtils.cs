@@ -32,7 +32,7 @@ namespace SCSynth.OSC
                     else if (arg is byte[]) typeTags.Append("b");
                     else if (arg is Spread<ControlParameter>)
                     {
-                        Console.WriteLine("Encode OSC Control Parameters stage 1");
+                        
                         var count = ((Spread<ControlParameter>)arg).Count();
                         for (int i = 0; i < count; i++) { typeTags.Append("s"); typeTags.Append("f"); }
                         
