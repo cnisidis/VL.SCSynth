@@ -1,7 +1,7 @@
-﻿using System.Xml.Linq;
+﻿
 using VL.Core;
 using VL.Lib.Collections;
-using static VL.Core.Import.ProcessNodeFactory;
+
 
 namespace SCSynth.SCNodes
 {
@@ -75,7 +75,7 @@ namespace SCSynth.SCNodes
     public class OldGroup : ISCNode
     {
         public int scId { get; set; }
-        public AddActions AddAction { get; set; }
+        public AddAction AddAction { get; set; }
         public OldGroup ParentGroup { get; set; }
         public Guid Id { get; set; }
         public bool hasParentGroup { get; set; }

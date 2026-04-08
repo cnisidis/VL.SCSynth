@@ -7,12 +7,15 @@ using VL.Lib.Collections;
 
 namespace SCSynth.Factory
 {
-
+    /*
+     * THIS SECTION IS DEPRECATED - SOME FUNCTIONS LIKE PSTRING ARE BEING USED BY NEWEST DECOMPILER, DO NOT REMOVE
+     * See SCManager
+     */
 
     
     public static class Decompiler
     {
-        
+        /*
         public static Dictionary<string, List<Parameter>> DecompileSynthDefsFromFile(string synthdefPath, out byte[] bytes)
         {
             Console.WriteLine("Decompile Synthdef ...");
@@ -131,7 +134,7 @@ namespace SCSynth.Factory
 
 
         }
-
+        */
         
         internal static void DecompileUGen(byte[] bytes, out int length)
         {

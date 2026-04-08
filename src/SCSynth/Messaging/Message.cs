@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace SCSynth.Messaging
 {
@@ -12,7 +8,6 @@ namespace SCSynth.Messaging
         Info,
         SCCommand,
         Invalidate,
-        UpdateControls,
         NodeScalar,
         NodeQuery,
         BufferScalar,

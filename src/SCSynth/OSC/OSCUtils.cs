@@ -24,7 +24,7 @@ namespace SCSynth.OSC
                 foreach (var arg in args)
                 {
                     if (arg is int) typeTags.Append("i");
-                    else if (arg is AddActions) typeTags.Append('i');
+                    else if (arg is AddAction) typeTags.Append('i');
                     else if (arg is float || arg is double) typeTags.Append("f");
                     else if (arg is string) typeTags.Append("s");
                     else if (arg is byte[]) typeTags.Append("b");

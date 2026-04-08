@@ -1,13 +1,10 @@
 ﻿
-using Microsoft.VisualBasic;
+
 using SCSynth.Commands;
-using SCSynth.Factory;
 using SCSynth.Messaging;
 using System.Data;
-using System.Diagnostics.CodeAnalysis;
 using System.Reactive.Linq;
 using System.Reactive.Subjects;
-using VL.Core;
 using VL.Lib.Collections;
 
 namespace SCSynth.SCNodes

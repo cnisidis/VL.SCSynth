@@ -9,24 +9,19 @@
             SuperCollider Server Command Types
             </summary>
         </member>
+        <member name="F:SCSynth.Factory.SCManager.InputSpec.ConstantIndex">
+            <summary>
+            Output or Constant index if isConstant == true
+            </summary>
+        </member>
+        <member name="M:SCSynth.Root.ClearTree">
+            <summary>
+            Clears Tree on SuperCollider Side
+            </summary>
+        </member>
         <member name="T:SCSynth.Protocol">
             <summary>
             
-            </summary>
-        </member>
-        <member name="F:SCSynth.Protocol.UDP">
-            <summary>
-            UDP 
-            </summary>
-        </member>
-        <member name="F:SCSynth.Protocol.TCP">
-            <summary>
-            TCP
-            </summary>
-        </member>
-        <member name="T:SCSynth.Verbosity">
-            <summary>
-            Verbosity Level
             </summary>
         </member>
         <member name="F:SCSynth.Verbosity.Normal">
@@ -42,21 +37,6 @@
         <member name="F:SCSynth.Verbosity.SuppressAll">
             <summary>
             Suppress All
-            </summary>
-        </member>
-        <member name="T:SCSynth.ServerCommands">
-            <summary>
-            Server OSC Commands
-            </summary>
-        </member>
-        <member name="F:SCSynth.Factory.SCManager.InputSpec.ConstantIndex">
-            <summary>
-            Output or Constant index if isConstant == true
-            </summary>
-        </member>
-        <member name="M:SCSynth.Root.ClearTree">
-            <summary>
-            Clears Tree on SuperCollider Side
             </summary>
         </member>
         <member name="M:SCSynth.SCBuffer.Read">
@@ -177,13 +157,6 @@
             <summary>
             Synth Name -> can be found in the synthdef.
             </summary>
-        </member>
-        <member name="M:SCSynth.SCRoot.GetChildren(SCSynth.SCNodes.ISCNode)">
-            <summary>
-            GetChildrern of children (recursvive)
-            </summary>
-            <param name="node">Any given node (Group or Synth)</param>
-            <returns>A List with all found children of type ISCNode</returns>
         </member>
         <member name="F:SCSynth.Utils.Globals.SCSynthPort">
             <summary>

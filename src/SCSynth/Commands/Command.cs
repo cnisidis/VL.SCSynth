@@ -1,15 +1,8 @@
 ﻿using SCSynth.OSC;
 using SCSynth.SCNodes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reactive.Linq;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using VL.Lib.Collections;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+
 
 namespace SCSynth.Commands
 {
@@ -81,11 +74,11 @@ namespace SCSynth.Commands
     public class CreateNewGroup:SCCommand
     {
         public int SCId;
-        AddActions Action;
+        AddAction Action;
         int Target;
 
         object args;
-        public CreateNewGroup(int SCId, int TargetSCId, AddActions Action= AddActions.AddToTail)
+        public CreateNewGroup(int SCId, int TargetSCId, AddAction Action= AddAction.AddToTail)
             :base(SCCommandType.G_NEW)
         {
             this.SCId = SCId;
@@ -104,7 +97,7 @@ namespace SCSynth.Commands
     public class CreateNewGroups:SCCommand
     {
         object[] args;
-        public CreateNewGroups(int[] SCIds, AddActions[] Actions, int[] Targets):base(SCCommandType.G_NEW)
+        public CreateNewGroups(int[] SCIds, AddAction[] Actions, int[] Targets):base(SCCommandType.G_NEW)
         {
             args = new object[] {SCIds, Actions, Targets};
         }
@@ -132,7 +125,7 @@ namespace SCSynth.Commands
     {
         string synthDefName;
         int SCId;
-        AddActions Action;
+        AddAction Action;
         int TargetSCId;
         object param;
 
@@ -140,7 +133,7 @@ namespace SCSynth.Commands
         {
             synthDefName = synth.SynthDef.name;
             SCId = synth.SCId;
-            this.Action = AddActions.AddToTail;
+            this.Action = AddAction.AddToTail;
             TargetSCId = synth.lastKnownParent;
 
             param = synth.ControlParameters.Values.SelectMany(x => new object[] {x.Name, x.Value }).ToArray();

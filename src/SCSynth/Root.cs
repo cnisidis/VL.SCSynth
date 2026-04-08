@@ -214,7 +214,7 @@ namespace SCSynth
             {
                 new FreeAll(1),
                 new ClearScheduled(),
-                new CreateNewGroup(1, 0, AddActions.AddToHead ),
+                new CreateNewGroup(1, 0, AddAction.AddToHead ),
 
             }, true));
         }
@@ -231,7 +231,7 @@ namespace SCSynth
                 {
                     var id = group.SCId;
                     var pID = group.lastKnownParent;
-                    pgr.Add(Tuple.Create(id, (int)AddActions.AddToTail, pID));
+                    pgr.Add(Tuple.Create(id, (int)AddAction.AddToTail, pID));
                 }
                 
             }

@@ -20,7 +20,7 @@ namespace SCSynth.SCNodes
 
         public OldGroup ParentGroup { get; set; }
 
-        public AddActions AddAction { get; set; }
+        public AddAction AddAction { get; set; }
 
         public List<ISCNode> GetInputs();
 
