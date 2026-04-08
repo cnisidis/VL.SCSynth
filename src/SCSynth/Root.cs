@@ -88,9 +88,11 @@ namespace SCSynth
             });
 
             _cleanup.Add(sub);
+            _invalidated = false;
             
-
-
+            Update(null);
+            //ClearTree();
+            
             // 2. IMPORTANT: Trigger the first build so we start listening to the first batch of nodes
             BuildTree();
         }
@@ -105,10 +107,12 @@ namespace SCSynth
 
         }
 
-        public void Update(SCNode? Node, out IObservable<SCMessage> messages)
+        public void Update(SCNode? Node)
         {
             
-            messages = _activeNodes.Select(nodes => nodes.Merge()).Switch();
+            //messages = _activeNodes.Select(nodes => nodes.Merge()).Switch();
+            if (Node == null && _invalidated==false) { Console.WriteLine("Null"); _invalidated = true; ClearTree();  }
+            
             if (_node!=Node)
             {
                 
@@ -116,7 +120,7 @@ namespace SCSynth
                 BuildTree();
                 
             }
-            if (_node == null) { ClearAll(); BuildTree(); return; }
+            if (_node == null) { BuildTree(); return; }
             if (_invalidated) { BuildTree(); }
 
         }
@@ -153,8 +157,8 @@ namespace SCSynth
 
             // 2. Gather children
             var children = Utils.Utils.GetAllChildren(_node, true).Where(x => x != null).ToList();
+            //children.ForEach(x => x.lastKnownParent = 0);
             this.AllNodes = children.ToSpread();
-         
 
             if (_node!=null && _node.GetType() == typeof(Group))
             {
@@ -237,14 +241,13 @@ namespace SCSynth
                 
             }
             var flatArgs = pgr.SelectMany(t => new object[] { t.Item1, t.Item2, t.Item3 }).ToArray();
-            _manualCommands.OnNext(new SCMessage(SCMessageType.System, "Create Tree", new CreateNewGroups(flatArgs)));
+            _manualCommands.OnNext(new SCMessage(SCMessageType.System, "Create Groups", new CreateNewGroups(flatArgs)));
             
-            foreach (var synth in Synths)
+            foreach (var synth in Synths.Where(x=>x !=null))
             {
-                if (synth != null)
-                {
-                    _manualCommands.OnNext(new SCMessage(SCMessageType.System, "Create Tree", new CreateNewSynth(synth)));
-                }
+                
+                
+                    _manualCommands.OnNext(new SCMessage(SCMessageType.System, "Create Synths", new CreateNewSynth(synth)));
             }
             
         }
@@ -277,8 +280,8 @@ namespace SCSynth
                 Console.WriteLine("Select a valid dir");
         }
 
-        public void Dispose() { 
-
+        public void Dispose() {
+            ClearTree();
             _frameBuffer.Clear();
             _cleanup.Dispose(); 
             _udpSender.Dispose();

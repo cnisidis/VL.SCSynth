@@ -1,5 +1,7 @@
-﻿using System;
+﻿using SCSynth.SCNodes;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +30,13 @@ namespace SCSynth.OSC
                     else if (arg is float || arg is double) typeTags.Append("f");
                     else if (arg is string) typeTags.Append("s");
                     else if (arg is byte[]) typeTags.Append("b");
+                    else if (arg is Spread<ControlParameter>)
+                    {
+                        Console.WriteLine("Encode OSC Control Parameters stage 1");
+                        var count = ((Spread<ControlParameter>)arg).Count();
+                        for (int i = 0; i < count; i++) { typeTags.Append("s"); typeTags.Append("f"); }
+                        
+                    }
                     else if (arg is IEnumerable<Tuple<int, int, int>>)
                     {
                         typeTags.Append("iii");
@@ -70,7 +79,22 @@ namespace SCSynth.OSC
                         ms.Write(b, 0, b.Length);
                         PadStream(ms, b.Length);
                     }
-                    
+                    else if (arg is Spread<ControlParameter> controlParams)
+                    {
+                        foreach (var control in controlParams)
+                        {
+                            // 1. Write the Name (The helper MUST handle null-termination and 4-byte padding)
+                            WriteOscString(ms, control.Name);
+
+                            // 2. Convert and Write the Float
+                            byte[] data = BitConverter.GetBytes((float)control.Value);
+                            if (BitConverter.IsLittleEndian) Array.Reverse(data);
+
+                            // Offset is 0 because we want the whole 4-byte 'data' array
+                            ms.Write(data, 0, 4);
+                        }
+                    }
+
                 }
 
                 return ms.ToArray().ToSpread();

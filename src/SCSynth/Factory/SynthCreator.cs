@@ -87,8 +87,6 @@ namespace SCSynth.Factory
         {
             if (synthDef == null) return null;
 
-            
-
             Synth synth = new Synth(synthDef);
 
             synth.ControlParameters = BuildParameters(synthDef);

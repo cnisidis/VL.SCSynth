@@ -91,7 +91,7 @@ namespace SCSynth.Factory
 
                 
                 //Adds the main Output Pin
-                outputs.Add(new PinDescription(synthDef.name, typeof(SCNode), null , "A Synth Node"));
+                outputs.Add(new PinDescription(synthDef.name, typeof(Synth), null , "A Synth Node"));
                 
 
                 FInitialized = true;

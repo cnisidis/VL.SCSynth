@@ -1,6 +1,8 @@
 ﻿using SCSynth.OSC;
 using SCSynth.SCNodes;
+using System.Collections.Generic;
 using System.Reactive.Linq;
+using System.Security.Cryptography;
 using VL.Lib.Collections;
 
 
@@ -87,11 +89,39 @@ namespace SCSynth.Commands
 
         }
 
+        public CreateNewGroup(Group group, AddAction Action=AddAction.AddToTail):base(SCCommandType.G_NEW, group)
+        {
+            this.SCId=group.SCId;
+            this.Action = Action;
+            this.Target = group.lastKnownParent;
+        }
+
         public override Spread<byte> GetBytes()
         {
             return OscEncoder.EncodeMessage("/g_new", new object[] {SCId, Action, Target });
         }
 
+    }
+
+    public class BulkCreateNewGroups:SCCommand
+    {
+        Spread<Spread<byte>> data;
+        Spread<CreateNewGroup> commands;
+        public BulkCreateNewGroups(Spread<CreateNewGroup> newGroupsCommands):base(SCCommandType.G_NEW)
+        {
+            commands = newGroupsCommands;
+            List<Spread<byte>> result = new();
+            foreach(var cmd in newGroupsCommands)
+            {
+                result.Add(cmd.GetBytes());
+            }
+
+            data = result.ToSpread();
+        }
+        public override Spread<byte> GetBytes()
+        {
+            return OSC.OscEncoder.EncodeBundle(data.ToSpread(), new byte[8] { 0, 0, 0, 0, 0, 0, 0, 0 });
+        }
     }
 
     public class CreateNewGroups:SCCommand
@@ -110,6 +140,7 @@ namespace SCSynth.Commands
         public CreateNewGroups(Spread<Group> groups):base(SCCommandType.G_NEW)
         {
             args = groups.SelectMany(x => new object[] { x.SCId }).ToArray();
+
         }
 
 
@@ -121,29 +152,33 @@ namespace SCSynth.Commands
 
     }
 
+    
+
     public class CreateNewSynth:SCCommand
     {
-        string synthDefName;
+        string? synthDefName;
         int SCId;
         AddAction Action;
         int TargetSCId;
-        object param;
+        Spread<ControlParameter> param;
 
         public CreateNewSynth(Synth synth):base(SCCommandType.S_NEW)
         {
-            if (synthDefName == null) return;
-            synthDefName = synth.SynthDef?.name;
+
+            if (synth.SynthDef?.name == null) { return; } 
+            this.synthDefName = synth.SynthDef.name;
             
             SCId = synth.SCId;
             this.Action = AddAction.AddToTail;
             TargetSCId = synth.lastKnownParent;
-
-            param = synth.ControlParameters.Values.SelectMany(x => new object[] {x.Name, x.Value }).ToArray();
+            param = synth.ControlParameters.Values.ToSpread();
+            //param = synth.ControlParameters.Values.Select(x => new object[] {x.Name, x.InitValue }).ToArray();
+            
         }
 
         public override Spread<byte> GetBytes()
         {
-            return OscEncoder.EncodeMessage("/s_new", new object[] { synthDefName, SCId, (int)this.Action, TargetSCId, param });
+            return OscEncoder.EncodeMessage("/s_new", new object[] { synthDefName, SCId, (int)this.Action, TargetSCId, param }.ToArray()); //param needs to ba added
         }
     }
 
