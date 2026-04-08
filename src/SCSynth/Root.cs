@@ -241,13 +241,14 @@ namespace SCSynth
                 
             }
             var flatArgs = pgr.SelectMany(t => new object[] { t.Item1, t.Item2, t.Item3 }).ToArray();
+            
             _manualCommands.OnNext(new SCMessage(SCMessageType.System, "Create Groups", new CreateNewGroups(flatArgs)));
             
             foreach (var synth in Synths.Where(x=>x !=null))
             {
                 
-                
                     _manualCommands.OnNext(new SCMessage(SCMessageType.System, "Create Synths", new CreateNewSynth(synth)));
+                    
             }
             
         }
