@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Pack>
+    
+	<Topic title="Introduction">
+        <UriItem title="The Basics of Supercollider" link="https://www.youtube.com/watch?v=yRzsOOiJ_p4" mediaType="video" />
+	</Topic>		
+	<Topic title="SC Nodes" >
+        <Subtopic title="Synth" />
+        <Subtopic title="Group" />
+    </Topic>
+    <Topic title="Buffers" >
+        
+    </Topic>
+    
+	
+</Pack>
