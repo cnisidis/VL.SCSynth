@@ -55,32 +55,10 @@ namespace SCSynth.Factory
 
             
 
-            Console.WriteLine("\nMap SynthDef \n--- \nHas Controls: {0:B} \nHas Triggers: {1:B} \nHas In(s): {2:B} \nHas Out(s): {3:B} \n", hasControl, hasTriggerControl, hasIputs, hasOutputs);
+            //Console.WriteLine("\nMap SynthDef \n--- \nHas Controls: {0:B} \nHas Triggers: {1:B} \nHas In(s): {2:B} \nHas Out(s): {3:B} \n", hasControl, hasTriggerControl, hasIputs, hasOutputs);
 
 
-            //Check Parameters .
-
-            //ugenspecs.ForEach(uspec => uspec.Inputs().Where(inp => !inp.isConstant).ForEach((inp, idx) => {
-            //    if (ugenspecs[inp.Index].name=="Control")
-            //    {
-
-            //        Console.WriteLine("{0:G}\t\t--> {1:G}", parametersPerCategory["V"][inp.ConstantIndex].Item1.Name, uspec.name);
-            //    }
-            //    else if (ugenspecs[inp.Index].name == "TrigControl")
-            //    {
-
-            //        Console.WriteLine("{0:G}\t\t--> {1:G}", parametersPerCategory["T"][inp.ConstantIndex].Item1.Name, uspec.name);
-            //    }
-
-            //}));
-
-
-
-
-            //foreach (var control in controls.Values)
-            //{
-            //    Console.WriteLine(control.ToString());
-            //}
+            
             return controls;
         }
         public static Synth CreateASynth(SCManager.SynthDef synthDef)
