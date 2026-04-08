@@ -43,6 +43,7 @@ namespace SCSynth
             AllNodes = new List<SCNode>().ToSpread();
             Groups = new List<Group>();
             Synths = new List<Synth>();
+            _frameBuffer = new List<Spread<byte>>();
             NodesCount = 0;
 
             var treeSource = _activeNodes
@@ -53,10 +54,10 @@ namespace SCSynth
             var manualSource = _manualCommands; // A simple Subject<SCMessage>
 
             // 3. THE MERGE (The River)
-            var finalPipeline = Observable.Merge(treeSource, manualSource);
+            //var finalPipeline = Observable.Merge(treeSource, manualSource);
 
             // 1. Setup the listener
-            var sub = finalPipeline.Subscribe(msg =>
+            var sub = treeSource.Subscribe(msg =>
             {
                 switch (msg.type)
                 {
@@ -68,11 +69,10 @@ namespace SCSynth
                         break;
 
                     case SCMessageType.NodeQuery:
-                        HandleQuery(msg);
+                        
                         break;
 
                     case SCMessageType.NodeScalar:
-                        // Useful for debugging or updating UI
                         
                         var encode = ((SCCommand)msg.value).GetBytes();
                         _frameBuffer.Add(encode);
@@ -88,13 +88,24 @@ namespace SCSynth
             });
 
             _cleanup.Add(sub);
+            
 
 
             // 2. IMPORTANT: Trigger the first build so we start listening to the first batch of nodes
             BuildTree();
         }
 
-        public void Update(SCNode? Node, out IObservable<SCMessage> messages, Spread<SCBuffer>? Buffers, Spread<SCCommand>? Commands)
+        public void SetBuffers(Spread<SCBuffer>? Buffers)
+        {
+
+        }
+
+        public void SetCommands(Spread<SCCommand>? Commands)
+        {
+
+        }
+
+        public void Update(SCNode? Node, out IObservable<SCMessage> messages)
         {
             
             messages = _activeNodes.Select(nodes => nodes.Merge()).Switch();
@@ -120,23 +131,13 @@ namespace SCSynth
                 byte[] timetag = OscEncoder.GetNtpTimestamp(20);
                 var bundle = OscEncoder.EncodeBundle(_frameBuffer.ToSpread(), timetag);
                 _udpSender.OnNext(bundle);
-                
                 _frameBuffer.Clear();
             }
         }
 
         
 
-        private void HandleQuery(SCMessage msg)
-        {
-            Console.WriteLine(msg.ToString());
-            var res = (SCCommand)msg.value;
-            res.SetResponse("done");
-            if (msg.value is SCCommand cmd && cmd.hasAResponse)
-            {
-                
-            }
-        }
+        
 
         public void BuildTree()
         {
@@ -237,6 +238,7 @@ namespace SCSynth
             }
             var flatArgs = pgr.SelectMany(t => new object[] { t.Item1, t.Item2, t.Item3 }).ToArray();
             _manualCommands.OnNext(new SCMessage(SCMessageType.System, "Create Tree", new CreateNewGroups(flatArgs)));
+            
             foreach (var synth in Synths)
             {
                 if (synth != null)
@@ -276,8 +278,13 @@ namespace SCSynth
         }
 
         public void Dispose() { 
+
+            _frameBuffer.Clear();
             _cleanup.Dispose(); 
             _udpSender.Dispose();
+            _manualCommands.Dispose();
+            _activeNodes.Dispose();
+            
         
         }
     }
