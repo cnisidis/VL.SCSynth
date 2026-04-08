@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="TY35JPaAmRZLOhXCVtn5m3" LanguageVersion="2025.7.1" Version="0.128">
+  <NugetDependency Id="GXlraVZlgIKPExXwufsaHv" Location="VL.CoreLib" Version="2025.7.1" />
+  <Patch Id="PaLK1CluksxLJN3ekwGQf0">
+    <Canvas Id="VPlEDVRR98hOdwg0iIVZaD" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="IuKAmdEDL12QKgWR2M0Ou1">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="K5sUOxVn5o7Qdh5zr5xLEq">
+        <Canvas Id="BUjIHpDQ0I7OQYGDbP8t3Y" CanvasType="Group">
+          <Node Bounds="241,350,44,19" Id="QSTmPCYKSJkNKgFBVuU6eI">
+            <p:NodeReference LastCategoryFullName="VL.SCSynth.Nodes.Buffer" LastDependency="VL.SCSynth.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Buffer" />
+            </p:NodeReference>
+            <Pin Id="BNBC4GT61HdQH4CsQFch2D" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="Bu833fg1UmPL8LW1fS15KT" Name="File" Kind="InputPin" />
+            <Pin Id="FwyUL4wBUiCL5JV2AgqLpj" Name="Buffer" Kind="OutputPin" />
+            <Pin Id="Qfs0z6M1Er5L8cQg8PSqm3" Name="Has File Path" Kind="OutputPin" />
+            <Pin Id="NFK0J2FAxTWLnIVyNR1SHF" Name="Read" Kind="InputPin" />
+          </Node>
+          <Node Bounds="241,480,205,19" Id="CTkVaXImdJ4M1W0jMyTgR2">
+            <p:NodeReference LastCategoryFullName="VL.SCSynth" LastDependency="VL.SCSynth.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="SCSynth" NeedsToBeDirectParent="true">
+                <p:OuterCategoryReference Kind="Category" Name="VL" NeedsToBeDirectParent="true" />
+              </CategoryReference>
+              <Choice Kind="ProcessAppFlag" Name="Root" />
+            </p:NodeReference>
+            <Pin Id="JMRVFoQEmASMIIhhlyQFOd" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="Hlyfg8cmB4mM2diIiLcrUp" Name="Buffers" Kind="InputPin" />
+            <Pin Id="QQylMBRlWLBL96XP6zfwTY" Name="Node" Kind="InputPin" />
+            <Pin Id="OUr98NUP1LkO6hD9UXQ87V" Name="Root" Kind="OutputPin" />
+            <Pin Id="GSUwSdiQldtLdeCxgvCMvf" Name="Messages" Kind="OutputPin" />
+            <Pin Id="QMQs6JhtVQJPHFQCq2JMqN" Name="Groups" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="241,450,65,19" Id="L1CQvxrPHuqMzvPt7wC3AX">
+            <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="RecordType" Name="Spread" NeedsToBeDirectParent="true" />
+              <Choice Kind="OperationCallFlag" Name="FromValue" />
+            </p:NodeReference>
+            <Pin Id="S0p6aomzoeYPicnj1cwuWf" Name="Input" Kind="InputPin" />
+            <Pin Id="FUTOtdMminYMlmjteK5RfW" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Pad Id="V40nQrZ6mkSMuXGKqSxh4S" Comment="Read" Bounds="282,240,35,37" ShowValueBox="true" isIOBox="true" Value="false">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="U6WSyYU4REFQbQjGGQGwyW" Comment="File" Bounds="243,320,140,15" ShowValueBox="true" isIOBox="true" Value="..\..\..\..\..\Users\rene.studio backup\Documents\vvvv\gamma\Sketches\\">
+            <p:TypeAnnotation LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Path" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="RZkORLgXmrhON3IKBBvTmu" Comment="Has File Path" Bounds="282,400,35,35" ShowValueBox="true" isIOBox="true" />
+        </Canvas>
+        <Patch Id="EIv42ZFugrfOzzuaCWKfCG" Name="Create" />
+        <Patch Id="ACHWOGkCXg2MyCbhWJWk5L" Name="Update" />
+        <ProcessDefinition Id="AWj5ZQxNSXBOJihHES8Klr">
+          <Fragment Id="UzslXrXWwL8LaPZmi7QTKW" Patch="EIv42ZFugrfOzzuaCWKfCG" Enabled="true" />
+          <Fragment Id="VZvjIImNROnMtzSkirBmXX" Patch="ACHWOGkCXg2MyCbhWJWk5L" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="K6bIBPpp6TgPZJtaCstxnj" Ids="FwyUL4wBUiCL5JV2AgqLpj,S0p6aomzoeYPicnj1cwuWf" />
+        <Link Id="JD4qfip2jaMLM8I3muFPlU" Ids="FUTOtdMminYMlmjteK5RfW,Hlyfg8cmB4mM2diIiLcrUp" />
+        <Link Id="TIfFSrmrkdKM7CRne5n44z" Ids="V40nQrZ6mkSMuXGKqSxh4S,NFK0J2FAxTWLnIVyNR1SHF" />
+        <Link Id="Dw5ZVz0B6XwMMBVpkQwuAm" Ids="U6WSyYU4REFQbQjGGQGwyW,Bu833fg1UmPL8LW1fS15KT" />
+        <Link Id="PGa98qgnVs9Ohix2Eu42Kd" Ids="Qfs0z6M1Er5L8cQg8PSqm3,RZkORLgXmrhON3IKBBvTmu" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="IX1HoVBBAJwOEhCqzdr9IM" Location="VL.SCSynth" Version="0.0.0" />
+</Document>
