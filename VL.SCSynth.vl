@@ -379,7 +379,7 @@
                 <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
               </p:ValueBoxSettings>
             </Pad>
-            <Pad Id="SDJd4hIm5LDM4gBsH6t5SB" SlotId="QnPF5YSKbRwMMqBuukF2TJ" Bounds="866,310" />
+            <Pad Id="SDJd4hIm5LDM4gBsH6t5SB" SlotId="QnPF5YSKbRwMMqBuukF2TJ" Bounds="865,281" />
             <Node Bounds="415,-20,55,19" Id="VDsmMCjGg1wP97GXrddp9E">
               <p:NodeReference LastCategoryFullName="System.Conversion" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -1546,7 +1546,7 @@
               <ControlPoint Id="IMzHBXdm7s5PKskieg1F2a" Bounds="456,-116" Alignment="Top" />
               <ControlPoint Id="OfXFAm2XLC6PNqPpXmj9cF" Bounds="417,-39" Alignment="Bottom" />
             </Node>
-            <ControlPoint Id="OrGcAB3UAKxLEP8vYfLP35" Bounds="456,-299" />
+            <ControlPoint Id="OrGcAB3UAKxLEP8vYfLP35" Bounds="456,-369" />
             <Node Bounds="341,-240,57,19" Id="Vln4hjKvQ51OxNWIBcOLx7">
               <p:NodeReference LastCategoryFullName="IO.Path" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -1604,7 +1604,7 @@
             <Pad Id="QnIZ6DcGY0jQdvdnvFAnCG" SlotId="FKarWbLc51hLLSp10xYsX4" Bounds="219,226" />
             <Pad Id="IXS7yAJfw9tNXpI7Nczfo2" SlotId="QHY7DqmhbSkMI0smmxqxH6" Bounds="610,-59" />
             <Pad Id="Qd07vlkRY8KPtGKm6F4dTp" SlotId="QHY7DqmhbSkMI0smmxqxH6" Bounds="333,226" />
-            <ControlPoint Id="PeQ0d1qX7UDOd4c1eqNz8r" Bounds="1133,661" />
+            <ControlPoint Id="PeQ0d1qX7UDOd4c1eqNz8r" Bounds="1145,661" />
             <ControlPoint Id="IvaLgBMHQ2KNKe8TdSF4ED" Bounds="1246,-204" />
             <Pad Id="EaYAnw5x4bZMhI75NsYMJe" SlotId="FKarWbLc51hLLSp10xYsX4" Bounds="1871,111" />
             <Pad Id="PmyaYKIfW4YNV4bLqecJEY" SlotId="QHY7DqmhbSkMI0smmxqxH6" Bounds="1891,80" />
@@ -1662,6 +1662,7 @@
               <Pin Id="FbvyUJf3vWaPxpu1ORQYYj" Name="Status" Kind="OutputPin" />
               <Pin Id="IWsWgBN12SGMgGXQKA1gGM" Name="Is Open" Kind="OutputPin" />
             </Node>
+            <ControlPoint Id="OW4V5GJeCwBL8A4cijKCD5" Bounds="1228,630" />
           </Canvas>
           <Slot Id="NULJ2bd0mDpQIcekACktYO" Name="isRunning" Summary="Indicates if the scsynth is executed properly and is up and running">
             <p:TypeAnnotation p:Type="TypeReference">
@@ -1772,7 +1773,7 @@
           <Link Id="Nmcp5AfvviQOizVQE8piw4" Ids="EckouCJ2hCoMGBcKdAWrMm,Nlk6kKuc9S0L9KCX7TQAqh" IsHidden="true" />
           <Patch Id="AmvxBQW0zpJM0JXdujMomX" Name="Create" ParticipatingElements="JWR0xd5IrC2OAAQMPXiEn3" />
           <Patch Id="UGMf3fV78CFNsaS1MrJhrb" Name="Update">
-            <Pin Id="IH4JwW2FQZFLyNawjBMhba" Name="SC Custom Folder Path" Kind="InputPin" Bounds="520,50" Visibility="Hidden">
+            <Pin Id="IH4JwW2FQZFLyNawjBMhba" Name="SC Custom Folder Path" Kind="InputPin" Bounds="520,50" Visibility="Optional">
               <p:TypeAnnotation LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="TypeFlag" Name="Path" />
               </p:TypeAnnotation>
@@ -1893,12 +1894,13 @@
             <Fragment Id="Sy10eJa9nbCOFPvUj11K1B" Patch="UNfKISfIc3VMOe7qXiHy7T" />
             <Fragment Id="DUk9J5LGweqN37DAv8LqZt" Patch="PcWbAwwMDdOL7Eqf6pW9Y8" />
             <Fragment Id="FBCS4AtmM7wNZ8L336HaEH" Patch="E7tBNDl8KJiNhjubVX5Ja4" />
-            <Fragment Id="LWzLyPnY5KkPPOvSXMilSs" Patch="PjhW6PMwFFdLnSwMlmx86e" />
+            <Fragment Id="LWzLyPnY5KkPPOvSXMilSs" Patch="PjhW6PMwFFdLnSwMlmx86e" Enabled="true" />
             <Fragment Id="R7HcPiJeN9nN9WgHugDD5u" Patch="CLNAOiIYlTWOnpkcAdSum0" />
             <Fragment Id="D6oHigeE2PHMbTTMNDkjS5" Patch="GwpOjQzhjodNujo24l69U2" />
             <Fragment Id="BrjKVtkoHvjOf0zstwpPpt" Patch="LWkHMLQc8EfNMtUyVquByl" />
             <Fragment Id="Lm4uPFDmjnrLTLujk4ugbL" Patch="Cud9ksBC4m1ODviWK4ORcD" Enabled="true" />
             <Fragment Id="NtXFXyjg4yaNBOy7ILzIzZ" Patch="QYiuuTlNDZfNrY8wxW5wJa" />
+            <Fragment Id="OBWphGJVxnqOHW6m32QxAE" Patch="Lor8NEo8KHMLAfzwKPlxcx" Enabled="true" />
           </ProcessDefinition>
           <Slot Id="Mo9oTgBn7gGPnROELiCKz0" Name="Host IP Address" />
           <Link Id="LRqB4eT9rKrPedaRUSDFV6" Ids="RWGQVK93UDjO5fqQ70MfSk,PPcs7m5TNVFMLi00z1Vpc3" />
@@ -1924,6 +1926,11 @@
           <Link Id="Em1ymYRP5JcMH0A4x1bxyv" Ids="RiZgJ6doZJsN2ZpKH78rhf,UKzh1VtGAKUMuSvZhl1NGY" />
           <Link Id="B1ebV6xdTiVPkAeVqvmLnU" Ids="FbvyUJf3vWaPxpu1ORQYYj,QrhURfd7qV2Mev3ap8dTmC" />
           <Link Id="UsGaPmDDxakLz8q5A42u8v" Ids="IWsWgBN12SGMgGXQKA1gGM,SvalNmXEUbYPuCQ7eK2yTB" />
+          <Link Id="VOpiGRVz4iOMIhCrjdKWQo" Ids="LkswCZ4T3lzLUbk6hArFrB,OW4V5GJeCwBL8A4cijKCD5" />
+          <Link Id="DSO82He7DrxQNaGCXk2Lam" Ids="OW4V5GJeCwBL8A4cijKCD5,CsGI2CCQzbYQZR0sj7aT04" IsHidden="true" />
+          <Patch Id="Lor8NEo8KHMLAfzwKPlxcx" Name="GetExitCode">
+            <Pin Id="CsGI2CCQzbYQZR0sj7aT04" Name="Exit Code" Kind="OutputPin" />
+          </Patch>
         </Patch>
       </Node>
       <!--
