@@ -8287,105 +8287,45 @@
           <Link Id="BnTMws7zu5sMu2ndqyKKOM" Ids="D1x8tGGBMZtNh5CqSpGEPq,LhXJH3reHAKLHcUGelGGce" IsHidden="true" />
         </Patch>
       </Node>
-      <!--
-
-    ************************ Globals ************************
-
--->
-      <Node Name="Globals" Bounds="403,66" Id="IyHoU1kCMfFOWIX1CqxI4a" Summary="Gloabls and Consts" Remarks="This is not diretly usefull for the end user">
-        <p:NodeReference>
-          <Choice Kind="ForwardDefinition" Name="Forward" />
-          <CategoryReference Kind="Category" Name="Primitive" />
-        </p:NodeReference>
-        <p:TypeAnnotation LastCategoryFullName="SCSynth.Utils" LastDependency="SCSynth.csproj">
-          <Choice Kind="TypeFlag" Name="Globals" />
-          <FullNameCategoryReference ID="SCSynth.Utils" />
-          <AssemblyReference ID="SCSynth.csproj" />
-        </p:TypeAnnotation>
-        <Patch Id="I9PmNMXHLNCNU1pYkmFUv4">
-          <Canvas Id="Kf9uOlmHewvQZ40DAFe8P4" BordersChecked="false" CanvasType="Group" />
-          <ProcessDefinition Id="T8UGmwD6zfbMLfxVEkSh6M" IsHidden="true" />
-        </Patch>
-      </Node>
-      <!--
-
-    ************************ SCCommand ************************
-
--->
-      <Node Name="SCCommand" Bounds="822,70" Id="CSutzNzWXcCPAqE3xOtDXI">
-        <p:NodeReference>
-          <Choice Kind="ForwardDefinition" Name="Forward" />
-          <CategoryReference Kind="Category" Name="Primitive" />
-        </p:NodeReference>
-        <p:TypeAnnotation LastCategoryFullName="SCSynth.Commands" LastDependency="SCSynth.csproj">
-          <Choice Kind="TypeFlag" Name="SCCommand" />
-          <FullNameCategoryReference ID="SCSynth.Commands" />
-          <AssemblyReference ID="SCSynth.csproj" />
-        </p:TypeAnnotation>
-        <Patch Id="R0LQja8SW2wLG7KOM5VKVG">
-          <Canvas Id="SH6FgotcimaNmWlpyzrFpN" CanvasType="Group" />
-          <ProcessDefinition Id="G4dXCMFvYjbLRTjuY90ZiS" IsHidden="true" />
-        </Patch>
-      </Node>
-      <!--
-
-    ************************ SCCommandType ************************
-
--->
-      <Node Name="SCCommandType" Bounds="822,140" Id="NAi8ZaCrUVVNAlxgkogZBN">
-        <p:NodeReference>
-          <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
-          <CategoryReference Kind="Category" Name="Primitive" />
-        </p:NodeReference>
-        <p:TypeAnnotation LastCategoryFullName="SCSynth.Commands" LastDependency="SCSynth.csproj">
-          <Choice Kind="TypeFlag" Name="SCCommandType" />
-          <FullNameCategoryReference ID="SCSynth.Commands" />
-          <AssemblyReference ID="SCSynth.csproj" />
-        </p:TypeAnnotation>
-        <Patch Id="QkGVtzwMaQEQUcrRTihErO">
-          <Canvas Id="VTG4kEOcemVMo92mHVI3mm" BordersChecked="false" CanvasType="Group" />
-          <ProcessDefinition Id="AI3pghbR3ccMF00gd7SqxL" IsHidden="true" />
-        </Patch>
-      </Node>
       <Canvas Id="F7GHEIgc1DeOI8nGKYbn3Q" Name="Messaging" Position="18,130">
-        <!--
-
-    ************************ SCMessageType ************************
-
--->
-        <Node Name="SCMessageType" Bounds="610,201" Id="JWXyRNDrvpgOb1sx4Xt8xa">
-          <p:NodeReference>
-            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
-            <CategoryReference Kind="Category" Name="Primitive" />
-          </p:NodeReference>
-          <p:TypeAnnotation LastCategoryFullName="SCSynth.Messaging" LastDependency="SCSynth.csproj">
-            <Choice Kind="TypeFlag" Name="SCMessageType" />
-            <FullNameCategoryReference ID="SCSynth.Messaging" />
-            <AssemblyReference ID="SCSynth.csproj" />
-          </p:TypeAnnotation>
-          <Patch Id="CrhaFidcCV7PTs3W66Kne5">
-            <Canvas Id="InaPT3GpwQrMBD7v3Yng5n" BordersChecked="false" CanvasType="Group" />
-            <ProcessDefinition Id="BYSwyzhjHx5OPC43IBdTkV" IsHidden="true" />
-          </Patch>
-        </Node>
         <!--
 
     ************************ SCMessage ************************
 
 -->
-        <Node Name="SCMessage" Bounds="621,240" Id="DG0sHdPhbP5OdlRxrjjFWJ">
+        <Node Name="SCMessage" Bounds="864,232" Id="VQH30r3iiyrOXPhYVTWzBo">
           <p:NodeReference>
             <Choice Kind="ForwardDefinition" Name="Forward" />
             <CategoryReference Kind="Category" Name="Primitive" />
           </p:NodeReference>
-          <p:TypeAnnotation LastCategoryFullName="SCSynth.Messaging" LastDependency="SCSynth.csproj">
+          <p:TypeAnnotation LastCategoryFullName="SCSynth.Messaging" LastDependency="SCSynth.dll">
             <Choice Kind="TypeFlag" Name="SCMessage" />
             <FullNameCategoryReference ID="SCSynth.Messaging" />
-            <AssemblyReference ID="SCSynth.csproj" />
+            <AssemblyReference ID="SCSynth.dll" />
           </p:TypeAnnotation>
-          <Patch Id="PSoMMq6vzW5PF4eceRWRGz">
-            <Canvas Id="GiUGX3n5vYtORUSCjSkxUV" BordersChecked="false" CanvasType="Group" />
-            <ProcessDefinition Id="NikSoprglEsO8cCOFXxQYK" IsHidden="true" />
+          <Patch Id="Tfkqf33ARsQMQBYshdrNL9">
+            <Canvas Id="ItQgVJqfBSiNaAIHECfYVJ" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="J7ic994NQqnQc6gqs1zOsK" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SCMessageType ************************
+
+-->
+        <Node Name="SCMessageType" Bounds="861,280" Id="EcV0FwjXy88PRsVtD3v1Tt">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="SCSynth.Messaging" LastDependency="SCSynth.dll">
+            <Choice Kind="TypeFlag" Name="SCMessageType" />
+            <FullNameCategoryReference ID="SCSynth.Messaging" />
+            <AssemblyReference ID="SCSynth.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="MDS5FZ7L2GGNBVBaXOW6bN">
+            <Canvas Id="VVtl7m7F1rFO7PnVW7PmKp" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="DndPtv83tfpOdmgxuiHKDC" IsHidden="true" />
           </Patch>
         </Node>
       </Canvas>
@@ -8753,6 +8693,66 @@
           <Link Id="Oht4cJmky7PLdx6euDKA5k" Ids="NjqfJCxKlizLPW2eufODRN,FKoNWggCNM1P7pqXTgzHju" />
         </Patch>
       </Node>
+      <!--
+
+    ************************ Globals ************************
+
+-->
+      <Node Name="Globals" Bounds="403,70" Id="KStgWUFe4U2L4zS7KJZzVo">
+        <p:NodeReference>
+          <Choice Kind="ForwardDefinition" Name="Forward" />
+          <CategoryReference Kind="Category" Name="Primitive" />
+        </p:NodeReference>
+        <p:TypeAnnotation LastCategoryFullName="SCSynth.Utils" LastDependency="SCSynth.dll">
+          <Choice Kind="TypeFlag" Name="Globals" />
+          <FullNameCategoryReference ID="SCSynth.Utils" />
+          <AssemblyReference ID="SCSynth.dll" />
+        </p:TypeAnnotation>
+        <Patch Id="EA3ql6nn5E7LGq644ex1NQ">
+          <Canvas Id="Gbejn8Puo3VOVwBBThJGEL" BordersChecked="false" CanvasType="Group" />
+          <ProcessDefinition Id="JySqU0Ikg9dORDus5vO3tC" IsHidden="true" />
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ SCCommand ************************
+
+-->
+      <Node Name="SCCommand" Bounds="818,60" Id="PQdgW6FgMGUOhJpyEyfytr">
+        <p:NodeReference>
+          <Choice Kind="ForwardDefinition" Name="Forward" />
+          <CategoryReference Kind="Category" Name="Primitive" />
+        </p:NodeReference>
+        <p:TypeAnnotation LastCategoryFullName="SCSynth.Commands" LastDependency="SCSynth.dll">
+          <Choice Kind="TypeFlag" Name="SCCommand" />
+          <FullNameCategoryReference ID="SCSynth.Commands" />
+          <AssemblyReference ID="SCSynth.dll" />
+        </p:TypeAnnotation>
+        <Patch Id="VWrF0xUsBpcMWThXIyUzS6">
+          <Canvas Id="BxT96JQuSXBPYbMJJkvXH9" BordersChecked="false" CanvasType="Group" />
+          <ProcessDefinition Id="JZAp39MoEAQPEFPkzFkvFc" IsHidden="true" />
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ SCCommandType ************************
+
+-->
+      <Node Name="SCCommandType" Bounds="822,160" Id="CBXoB6uaVcaMr19s0h9q5Q">
+        <p:NodeReference>
+          <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+          <CategoryReference Kind="Category" Name="Primitive" />
+        </p:NodeReference>
+        <p:TypeAnnotation LastCategoryFullName="SCSynth.Commands" LastDependency="SCSynth.dll">
+          <Choice Kind="TypeFlag" Name="SCCommandType" />
+          <FullNameCategoryReference ID="SCSynth.Commands" />
+          <AssemblyReference ID="SCSynth.dll" />
+        </p:TypeAnnotation>
+        <Patch Id="VX6akFhzRuGPSN88Ih5A8s">
+          <Canvas Id="TjGQf2z5drILI0b7gf9S78" BordersChecked="false" CanvasType="Group" />
+          <ProcessDefinition Id="NeSwJL3e1IdNTsNQTh5PB2" IsHidden="true" />
+        </Patch>
+      </Node>
     </Canvas>
     <!--
 
@@ -8778,5 +8778,5 @@
   <NugetDependency Id="MCfiGmWIYphLgHCTCD3l8z" Location="VL.IO.OSC" IsForward="true" Version="2.0.8" />
   <NugetDependency Id="VGLp0iLZSDfPyksikp21Iw" Location="VL.SCSynth" Version="0.0.0" />
   <NodeFactoryDependency Id="FMw69YeEa1PMN8391xkz9D" Location="VL.SCSynth-Factory" IsForward="true" />
-  <ProjectDependency Id="Au17aR6Eb3pPxy4tzTPXre" Location="./src/SCSynth/SCSynth.csproj" />
+  <PlatformDependency Id="JeE9g26rS5qO0rMpfSn3jh" Location="./lib/net8.0/SCSynth.dll" />
 </Document>
