@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>VL.SCSynth</id>
-    <version>0.0.4-alpha01</version>
+    <version>0.0.5-alpha</version>
     <title>VL.SCSynth</title>
     <authors>cnisidis, chk</authors>
     <projectUrl>https://github.com/cnisidis/VL.SCSynth.git</projectUrl>
