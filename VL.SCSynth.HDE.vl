@@ -396,8 +396,8 @@
                     <CategoryReference Kind="Category" Name="ControlParameters" />
                     <Choice Kind="OperationCallFlag" Name="GetName" />
                   </p:NodeReference>
-                  <Pin Id="N46lyjucaVqO9bsH8VRjKQ" Name="Input" Kind="InputPin" />
-                  <Pin Id="Dz6wGFKFudqLsKAt8ub0Ew" Name="Output" Kind="OutputPin" />
+                  <Pin Id="FVZiaV6BbFvOUK4VO6rcMc" Name="Control Parameter" Kind="InputPin" />
+                  <Pin Id="NUOb8EpXMNfPNeRjtTTJS6" Name="Control Parameter" Kind="OutputPin" />
                   <Pin Id="Dkovr4F17iwLCgm32wZnod" Name="Name" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="467,450,83,26" Id="GwtSuWCBXtuPxDS1ZzPzqV">
@@ -405,8 +405,8 @@
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="GetInitValue" />
                   </p:NodeReference>
-                  <Pin Id="Pe9ZFjwLpjaOceWCqyHVKp" Name="Input" Kind="InputPin" />
-                  <Pin Id="N0Rc8V2RsaOOb7G4SF0SNx" Name="Output" Kind="OutputPin" />
+                  <Pin Id="La4hmvqy36yQCwg6l04uzE" Name="Control Parameter" Kind="InputPin" />
+                  <Pin Id="VNHQLVxUsUzQXlw76hcqMp" Name="Control Parameter" Kind="OutputPin" />
                   <Pin Id="HT7YurxLKiRL0SXUkFy7lr" Name="Init Value" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="545,489,55,19" Id="GECIg79euhVLeFg3O1LaF9">
@@ -597,7 +597,7 @@
             <Node Bounds="143,320,52,26" Id="EB2ZCpZ9xUkOChgQhz6xbL">
               <p:NodeReference LastCategoryFullName="VL.SCSynth.Nodes" LastDependency="VL.SCSynth.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <CategoryReference Kind="Category" Name="Nodes" NeedsToBeDirectParent="true" />
+                <CategoryReference Kind="Category" Name="SCNodes" NeedsToBeDirectParent="true" />
                 <Choice Kind="OperationCallFlag" Name="GetSCId" />
               </p:NodeReference>
               <Pin Id="VQG3CuzZ6TdQU0UbvcUrXr" Name="SC Node" Kind="InputPin" />
@@ -660,14 +660,14 @@
           <Link Id="VZ4WESHdl3VLJaUnsaO9vT" Ids="F01RoV7jwtmMiEQhgV9qmX,Rclge8hsog7Oky36vcTHcK" />
           <Link Id="IiSKa2KYYV2P2LDZs3fDcy" Ids="AFnWoGNMGfCQH1inYDp4bR,Eu5fRMMUF9IPzuoqqGhktM" />
           <Link Id="QVGWgj5X0EHOoCfupJNm02" Ids="U5LaYCrIM5bNUOaJFAlYYu,OQlu1JGao1eMIzUDrbUXDr" />
-          <Link Id="BxIHh119yIFOd6ouyIX4D2" Ids="OQlu1JGao1eMIzUDrbUXDr,N46lyjucaVqO9bsH8VRjKQ" />
           <Link Id="UAOjLJgrIilNzCVLFhzix9" Ids="Dkovr4F17iwLCgm32wZnod,RGcaZOzxtJ4M5xg1oCnWKH" />
-          <Link Id="TSxVVt1dBkDOPMvlairFvy" Ids="OQlu1JGao1eMIzUDrbUXDr,Pe9ZFjwLpjaOceWCqyHVKp" />
           <Link Id="BK6OHGMHVenLlKnCA9HBK5" Ids="HT7YurxLKiRL0SXUkFy7lr,VO8VmeVwwF7OMGa55f5Pol" />
           <Link Id="DV1IwRkPUmaOKef7ugkoFS" Ids="IjukpvnEFCKLdLNQFuAk6M,PZefdtpa5vkNuN6BLqysKn" />
           <Link Id="Ul1eKbNyEP7OTNhir5CSbs" Ids="NIh4ZEmFbDlMhRjg5izzsN,VQG3CuzZ6TdQU0UbvcUrXr" />
           <Link Id="VpdAoA17aFyOaZfcjRiKQP" Ids="IReL0TGxmsRLh2jxBIW1RW,DmNNouTDUhjNgniuJLIlko" />
           <Link Id="QwxiSAwMnGQMFQgKbybSmF" Ids="QVdaiJfV3DCLGsGoXfYWVx,KWgW26V3NmFNTot3qqu2fB" />
+          <Link Id="Vz07E7vr00uNxaI4O0jsk9" Ids="OQlu1JGao1eMIzUDrbUXDr,FVZiaV6BbFvOUK4VO6rcMc" />
+          <Link Id="RIFRHtzLQvpLVruATggeXR" Ids="OQlu1JGao1eMIzUDrbUXDr,La4hmvqy36yQCwg6l04uzE" />
         </Patch>
       </Node>
       <!--
